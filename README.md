@@ -1,4 +1,8 @@
-dotfiles
-========
+YJ Park's dotfiles
+==================
 
-dotfiles
+Structure
+---------
+Using freshshell to manage these files
+
+- https://github.com/freshshell/fresh

@@ -1,0 +1,29 @@
+# freshshell.com
+#
+# Examples:
+#
+#   fresh twe4ked/dotfiles shell/functions/\*
+#   fresh jasoncodes/dotfiles shell/aliases/rails.sh
+#   fresh jasoncodes/dotfiles config/tmux.conf --file
+#
+# See http://freshshell.com/readme for documentation.
+
+# freshshell
+fresh freshshell/fresh bin/fresh --bin
+fresh freshshell/fresh-open bin/fresh-open --bin
+
+# janus settings
+# https://github.com/carlhuda/janus/
+# =====================================================
+fresh 'vim/vimrc.before/*' --file=~/.vimrc.before --marker='"'
+fresh 'vim/vimrc.after/*' --file=~/.vimrc.after --marker='"'
+
+# vpm for the vim plugins
+# https://github.com/KevinSjoberg/vpm
+# =====================================================
+fresh yjpark/vpm libexec --file=vpm/libexec/
+chmod 755 ~/.fresh/build/vpm/libexec/*
+rm ~/bin/vpm
+ln -s ~/.fresh/build/vpm/libexec/vpm ~/bin/vpm
+
+
