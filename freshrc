@@ -21,9 +21,8 @@ fresh 'vim/vimrc.after/*' --file=~/.vimrc.after --marker='"'
 # vpm for the vim plugins
 # https://github.com/KevinSjoberg/vpm
 # =====================================================
-fresh yjpark/vpm libexec --file=vpm/libexec/
-chmod 755 ~/.fresh/build/vpm/libexec/*
-rm ~/bin/vpm
-ln -s ~/.fresh/build/vpm/libexec/vpm ~/bin/vpm
+fresh yjpark/vpm 'libexec/*' --bin --ref=fresh_janus
+# plugin lists
+fresh 'vim/vimplugins' --file=~/.vimplugins
 
 
