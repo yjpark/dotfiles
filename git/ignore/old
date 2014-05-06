@@ -44,42 +44,7 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-# Folder Special
-.vim/.netrwhist
-.pentadactyl/info/default/command-history
-
-# YJPARK HOME
-.*
-
-# OSX folders
-Disk
-Documents
-Downloads
-Dropbox/
-Library/
-Movies
-Music
-Pictures
-SparkleShare
-VirtualBox VMs
-App
-
 # No need under home
 node_modules/
 temp/
 vimwiki_html/
-
-#other 
-blingstorm/
-mtk/
-pettyfun/
-projects/
-Backup/
-Desktop/
-Google\ Drive/
-android-sdks
-
-Applications
-Calibre\ Library/
-Public/
-substantial-games/

@@ -29,8 +29,14 @@ fresh 'vim/vimplugins' --file=~/.vimplugins
 # Fish shell settings
 fresh 'fish/config/*' --file=~/.config/fish/config.fish
 fresh 'fish/aliases/*' --file=~/.config/fish/aliases.fish
-fresh 'fish/functions/*' --file=~/.config/fish/functions/
+fresh 'fish/functions' --file=~/.config/fish/functions/
 
 # git
 fresh 'git/config/*' --file=~/.gitconfig
 fresh 'git/ignore/*' --file=~/.gitignore
+
+# tmux
+fresh 'tmux/*' --file=~/.tmux.conf
+
+# bin
+fresh 'bin/common/*' --bin
