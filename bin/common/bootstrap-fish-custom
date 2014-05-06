@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Bootstraping ~/.config/fish/custom/"
+
+mkdir -p ~/.config/fish/custom/
+cd ~/.config/fish/custom/
+
+bootstrap-github-repositories . ~/.dotfiles/fish/custom.bootstrap
+mu register --all
+

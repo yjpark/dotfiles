@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -e
+
+cd $1
+
+if [[ ! -f $2 ]]; then
+echo "bootstrap-github-repositories \`$2' is not present"
+  exit 1
+fi
+
+while read plugin; do
+plugin_name=${plugin##*/}
+  plugin_repository="git@github.com:$plugin.git"
+
+  if [[ -d "$plugin_name" ]]; then
+echo "bootstrap-github-repositories: using \`$plugin_name'"
+    continue
+fi
+
+if git clone $plugin_repository; then
+echo "bootstrap-github-repositories: \`$plugin_name' inserted"
+  else
+echo "bootstrap-github-repositories: \`$plugin_name' could not be inserted"
+  fi
+done < $2
