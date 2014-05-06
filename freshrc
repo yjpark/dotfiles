@@ -23,6 +23,7 @@ fresh 'vim/vimrc.after/*' --file=~/.vimrc.after --marker='"'
 # =====================================================
 fresh yjpark/vpm 'libexec/*' --bin --ref=fresh_janus
 # plugin lists
+mkdir -p ~/.janus
 fresh 'vim/vimplugins' --file=~/.vimplugins
 
 
