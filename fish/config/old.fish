@@ -21,11 +21,13 @@ set -x LC_ALL "en_US.UTF-8"
 
 . ~/.config/fish/aliases.fish
 
+. ~/_bin/settings/fish/custom/fishmarks/marks.fish
+
 set -x HOST (hostname)
 
 set -x PATH $PATH /usr/local/sbin
 set -x PATH $PATH ~/bin
-set -x PATH $PATH ~/bin/substantial-games ~/bin/pettyfun ~/pettyfun/dev/aws/bin
+set -x PATH $PATH ~/_bin/substantial-games ~/_bin/pettyfun ~/pettyfun/dev/aws/bin
 set -x PATH $PATH ~/pettyfun/libs/scripts ~/pettyfun/libs/tools
 
 
