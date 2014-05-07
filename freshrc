@@ -16,50 +16,19 @@ fresh freshshell/fresh-open 'bin/fresh-open' --bin
 
 # Fish shell settings
 #SILP: fish/fish.freshrc
-#!/bin/bash                                                            #__SILP__
 # Fish shell settings                                                  #__SILP__
 fresh 'fish/config/*' --file='~/.config/fish/config.fish'              #__SILP__
 fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'            #__SILP__
 fresh 'fish/functions' --file='~/.config/fish/functions/'              #__SILP__
                                                                        #__SILP__
-# Fish custom                                                          #__SILP__
-fresh yjpark/fishmarks '.' --file='~/.config/fish/custom/fishmarks/'   #__SILP__
-fresh yjpark/nvm-fish '.' --file='~/.config/fish/custom/nvm-fish/'     #__SILP__
 
 # Vim
 #SILP: vim/vim.freshrc
-#!/bin/bash                                                                   #__SILP__
 # janus settings                                                              #__SILP__
 # https://github.com/carlhuda/.janus/                                         #__SILP__
 # =====================================================                       #__SILP__
 fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'              #__SILP__
 fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'                #__SILP__
-                                                                              #__SILP__
-# plugins installed in ~/.janus                                               #__SILP__
-fresh aklt/plantuml-syntax '.' --file='~/.janus/plantuml-syntax/'             #__SILP__
-fresh dag/vim-fish '.' --file='~/.janus/vim-fish/'                            #__SILP__
-fresh digitaltoad/vim-jade '.' --file='~/.janus/vim-jade/'                    #__SILP__
-fresh jdonaldson/vaxe '.' --file='~/.janus/vaxe/'                             #__SILP__
-fresh kien/ctrlp.vim '.' --file='~/.janus/ctrlp.vim/'                         #__SILP__
-fresh mbbill/fencview '.' --file='~/.janus/fencview/'                         #__SILP__
-fresh milkypostman/vim-togglelist '.' --file='~/.janus/vim-togglelist/'       #__SILP__
-fresh mitechie/pyflakes-pathogen '.' --file='~/.janus/pyflakes-pathogen/'     #__SILP__
-fresh nanki/vim-objj '.' --file='~/.janus/vim-objj/'                          #__SILP__
-fresh sjl/gundo.vim '.' --file='~/.janus/gundo.vim/'                          #__SILP__
-fresh vim-scripts/BufOnly.vim '.' --file='~/.janus/BufOnly.vim/'              #__SILP__
-fresh vim-scripts/FuzzyFinder '.' --file='~/.janus/FuzzyFinder/'              #__SILP__
-fresh vim-scripts/L9 '.' --file='~/.janus/L9/'                                #__SILP__
-fresh vim-scripts/VOoM '.' --file='~/.janus/VOoM/'                            #__SILP__
-fresh vim-scripts/grep.vim '.' --file='~/.janus/grep.vim/'                    #__SILP__
-fresh yjpark/Mark--Karkat '.' --file='~/.janus/Mark--Karkat/'                 #__SILP__
-fresh yjpark/TabBar '.' --file='~/.janus/TabBar/'                             #__SILP__
-fresh yjpark/YouCompleteMe '.' --file='~/.janus/YouCompleteMe/'               #__SILP__
-fresh yjpark/ack.vim '.' --file='~/.janus/ack.vim/'                           #__SILP__
-fresh yjpark/quickfixsigns_vim '.' --file='~/.janus/quickfixsigns_vim/'       #__SILP__
-fresh yjpark/vim-airline '.' --file='~/.janus/vim-airline/'                   #__SILP__
-fresh yjpark/vim-colors-solarized '.' --file='~/.janus/vim-colors-solarize/'  #__SILP__
-fresh yjpark/vim-multiple-cursors '.' --file='~/.janus/vim-multiple-cursors/' #__SILP__
-fresh yjpark/vim-rst-tablesfresh  '.' --file='~/.janus/vim-rst-tablesfresh/'  #__SILP__
 
 # git
 fresh 'git/config/*' --file='~/.gitconfig'
