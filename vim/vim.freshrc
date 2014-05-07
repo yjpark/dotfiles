@@ -1,7 +1,0 @@
-# janus settings
-# https://github.com/carlhuda/.janus/
-# =====================================================
-fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'
-fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
-
-# run bootstrap-janus to install vim plugins in .janus

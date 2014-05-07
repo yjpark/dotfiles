@@ -1,0 +1,23 @@
+"2.1 (created: 2009/05/21 13:13:06)
+
+map ; :
+nmap ; :
+vmap ; :
+
+nnoremap ` ;
+noremap ` ;
+vnoremap ` ;
+
+map c :toggleusedocumentcolor<CR>
+map m :toggleshowingmenutoolbar<CR>
+
+map <A-w> :bdelete<CR>
+map <A-t> <C-t>
+map <A-n> :winopen<CR>
+
+set runtimepath=~/.pentadactyl
+set visualbell
+source! ~/.pentadactylrc.local
+
+set guioptions='Ns'
+colorscheme desert

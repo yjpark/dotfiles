@@ -14,35 +14,42 @@
 fresh freshshell/fresh 'bin/fresh' --bin
 fresh freshshell/fresh-open 'bin/fresh-open' --bin
 
-#SILP: fish.freshrc
-# Fish shell settings                                                  #__SILP__
-fresh 'fish/config/*' --file='~/.config/fish/config.fish'              #__SILP__
-fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'            #__SILP__
-fresh 'fish/functions' --file='~/.config/fish/functions/'              #__SILP__
-                                                                       #__SILP__
-# run bootstrap-fish-custom to install fish custom stuffs              #__SILP__
+# =====================================================
+# Fish shell settings
+# run bootstrap-oh-my-fish to install oh-my-fish
+fresh 'fish/config/*' --file='~/.config/fish/config.fish'
+fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'
+fresh 'fish/functions' --file='~/.config/fish/functions/'
+# run fresh-fish-custom to install fish custom stuffs
 
-#SILP: vim.freshrc
-# janus settings                                                       #__SILP__
-# https://github.com/carlhuda/.janus/                                  #__SILP__
-# =====================================================                #__SILP__
-fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'       #__SILP__
-fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'         #__SILP__
-                                                                       #__SILP__
-# run bootstrap-janus to install vim plugins in .janus                 #__SILP__
+# =====================================================
+# janus settings
+# https://github.com/carlhuda/.janus/
+# run bootstrap-janus to install janus
+fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'
+fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
+# run fresh-janus to install vim plugins in .janus
 
-#SILP: git.freshrc
-# GIT Settings                                                         #__SILP__
-fresh 'git/config/*' --file='~/.gitconfig' --marker='#'                #__SILP__
-fresh 'git/ignore_global/*' --file='~/.gitignore_global' --marker='#'  #__SILP__
+# =====================================================
+# GIT Settings
+fresh 'git/config/*' --file='~/.gitconfig' --marker='#'
+fresh 'git/ignore_global/*' --file='~/.gitignore_global' --marker='#'
 
+# =====================================================
 # tmux
 fresh 'tmux/*' --file='~/.tmux.conf'
 
+# =====================================================
 # mu-repo https://github.com/yjpark/mu-repo
 fresh yjpark/mu-repo 'mu' --bin
 fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
 
+# =====================================================
+# Pentadactyl
+fresh 'pentadactylrc' --file='~/.pentadactylrc'
+fresh 'pentadactyl' --file='~/.pentadactyl/'
+
+# =====================================================
 # bin
 fresh 'bin/common/*' --bin
 

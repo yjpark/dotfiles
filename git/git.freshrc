@@ -1,3 +1,0 @@
-# GIT Settings
-fresh 'git/config/*' --file='~/.gitconfig' --marker='#'
-fresh 'git/ignore_global/*' --file='~/.gitignore_global' --marker='#'
