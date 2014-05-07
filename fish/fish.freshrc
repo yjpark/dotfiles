@@ -1,4 +1,3 @@
-#!/bin/bash
 # Fish shell settings
 fresh 'fish/config/*' --file='~/.config/fish/config.fish'
 fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'

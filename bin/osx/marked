@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd /Applications/Marked.app/Contents/MacOS/
+./Marked $OLDPWD/$@
+
