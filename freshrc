@@ -14,15 +14,50 @@
 fresh freshshell/fresh 'bin/fresh' --bin
 fresh freshshell/fresh-open 'bin/fresh-open' --bin
 
-# fish
-fresh 'fish/fish.freshrc' --freshrc
+# Fish shell settings
+# =====================================================
+ffresh 'fish/config/*' --file='~/.config/fish/config.fish'
+fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'
+fresh 'fish/functions' --file='~/.config/fish/functions/'
 
-# vim
-fresh 'vim/vim.freshrc' --freshrc
+# Fish custom
+fresh yjpark/fishmarks '.' --file='~/.config/fish/custom/fishmarks/'
+fresh yjpark/nvm-fish '.' --file='~/.config/fish/custom/nvm-fish/'
 
+# Vim
+# janus settings
+# https://github.com/carlhuda/.janus/
+# =====================================================
+fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'
+fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
+
+# plugins installed in ~/.janus
+fresh aklt/plantuml-syntax '.' '~/.janus/plantuml-syntax/'
+fresh dag/vim-fish '.' '~/.janus/vim-fish/'
+fresh digitaltoad/vim-jade '.' '~/.janus/vim-jade/'
+fresh jdonaldson/vaxe '.' '~/.janus/vaxe/'
+fresh kien/ctrlp.vim '.' '~/.janus/ctrlp.vim/'
+fresh mbbill/fencview '.' '~/.janus/fencview/'
+fresh milkypostman/vim-togglelist '.' '~/.janus/vim-togglelist/'
+fresh mitechie/pyflakes-pathogen '.' '~/.janus/pyflakes-pathogen/'
+fresh nanki/vim-objj '.' '~/.janus/vim-objj/'
+fresh sjl/gundo.vim '.' '~/.janus/gundo.vim/'
+fresh vim-scripts/BufOnly.vim '.' '~/.janus/BufOnly.vim/'
+fresh vim-scripts/FuzzyFinder '.' '~/.janus/FuzzyFinder/'
+fresh vim-scripts/L9 '.' '~/.janus/L9/'
+fresh vim-scripts/VOoM '.' '~/.janus/VOoM/'
+fresh vim-scripts/grep.vim '.' '~/.janus/grep.vim/'
+fresh yjpark/MarkKarkat '.' '~/.janus/MarkKarkat/'
+fresh yjpark/TabBar '.' '~/.janus/TabBar/'
+fresh yjpark/YouCompleteMe '.' '~/.janus/YouCompleteMe/'
+fresh yjpark/ack.vim '.' '~/.janus/ack.vim/'
+fresh yjpark/quickfixsigns_vim '.' '~/.janus/quickfixsigns_vim/'
+fresh yjpark/vim-airline '.' '~/.janus/vim-airline/'
+fresh yjpark/vim-colors-solarized '.' '~/.janus/vim-colors-solarize/'
+fresh yjpark/vim-multiple-cursors '.' '~/.janus/vim-multiple-cursors/'
+fresh yjpark/vim-rst-tablesfresh  '.' '~/.janus/vim-rst-tablesfresh/'
 # git
 fresh 'git/config/*' --file='~/.gitconfig'
-fresh 'git/ignore/*' --file='~/.gitignore'
 
 # tmux
 fresh 'tmux/*' --file='~/.tmux.conf'
