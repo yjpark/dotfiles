@@ -50,9 +50,16 @@ fresh 'pentadactylrc' --file='~/.pentadactylrc'
 fresh 'pentadactyl' --file='~/.pentadactyl/'
 
 # =====================================================
+fresh 'misc/ctags' --file='~/.ctags'
+fresh 'misc/screenrc' --file='~/.screenrc'
+
+# =====================================================
 # bin
 fresh 'bin/common/*' --bin
 
 if [[ "$(uname)" == "Darwin" ]]; then
+  # =====================================================
+  # osx
   fresh 'bin/osx/*' --bin
+  fresh 'osx/sdirs' --file='~/.sdirs'
 fi

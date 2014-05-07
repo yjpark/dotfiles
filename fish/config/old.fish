@@ -21,7 +21,7 @@ set -x LC_ALL "en_US.UTF-8"
 
 . ~/.config/fish/aliases.fish
 
-. ~/_bin/settings/fish/custom/fishmarks/marks.fish
+. ~/.config/fish/custom/fishmarks/marks.fish
 
 set -x HOST (hostname)
 
