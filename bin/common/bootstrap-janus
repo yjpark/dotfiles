@@ -5,6 +5,6 @@ echo "Bootstraping ~/.janus/"
 mkdir -p ~/.janus/
 cd ~/.janus/
 
-bootstrap-github-repositories . ~/.dotfiles/vim/janus.bootstrap
+bootstrap-github-repositories ~/.dotfiles/vim/janus.bootstrap
 mu register --all
 

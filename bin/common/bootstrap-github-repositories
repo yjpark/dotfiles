@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-cd $1
-
-if [[ ! -f $2 ]]; then
-echo "bootstrap-github-repositories \`$2' is not present"
+if [[ ! -f $1 ]]; then
+echo "bootstrap-github-repositories \`$1' is not present"
   exit 1
 fi
 
@@ -22,4 +20,4 @@ echo "bootstrap-github-repositories: \`$plugin_name' inserted"
   else
 echo "bootstrap-github-repositories: \`$plugin_name' could not be inserted"
   fi
-done < $2
+done < $1
