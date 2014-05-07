@@ -1,32 +1,7 @@
-#!/bin/bash
 # janus settings
 # https://github.com/carlhuda/.janus/
 # =====================================================
 fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'
 fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
 
-# plugins installed in ~/.janus
-fresh aklt/plantuml-syntax '.' --file='~/.janus/plantuml-syntax/'
-fresh dag/vim-fish '.' --file='~/.janus/vim-fish/'
-fresh digitaltoad/vim-jade '.' --file='~/.janus/vim-jade/'
-fresh jdonaldson/vaxe '.' --file='~/.janus/vaxe/'
-fresh kien/ctrlp.vim '.' --file='~/.janus/ctrlp.vim/'
-fresh mbbill/fencview '.' --file='~/.janus/fencview/'
-fresh milkypostman/vim-togglelist '.' --file='~/.janus/vim-togglelist/'
-fresh mitechie/pyflakes-pathogen '.' --file='~/.janus/pyflakes-pathogen/'
-fresh nanki/vim-objj '.' --file='~/.janus/vim-objj/'
-fresh sjl/gundo.vim '.' --file='~/.janus/gundo.vim/'
-fresh vim-scripts/BufOnly.vim '.' --file='~/.janus/BufOnly.vim/'
-fresh vim-scripts/FuzzyFinder '.' --file='~/.janus/FuzzyFinder/'
-fresh vim-scripts/L9 '.' --file='~/.janus/L9/'
-fresh vim-scripts/VOoM '.' --file='~/.janus/VOoM/'
-fresh vim-scripts/grep.vim '.' --file='~/.janus/grep.vim/'
-fresh yjpark/Mark--Karkat '.' --file='~/.janus/Mark--Karkat/'
-fresh yjpark/TabBar '.' --file='~/.janus/TabBar/'
-fresh yjpark/YouCompleteMe '.' --file='~/.janus/YouCompleteMe/'
-fresh yjpark/ack.vim '.' --file='~/.janus/ack.vim/'
-fresh yjpark/quickfixsigns_vim '.' --file='~/.janus/quickfixsigns_vim/'
-fresh yjpark/vim-airline '.' --file='~/.janus/vim-airline/'
-fresh yjpark/vim-colors-solarized '.' --file='~/.janus/vim-colors-solarize/'
-fresh yjpark/vim-multiple-cursors '.' --file='~/.janus/vim-multiple-cursors/'
-fresh yjpark/vim-rst-tables '.' --file='~/.janus/vim-rst-tables/'
+# run bootstrap-janus to install vim plugins in .janus

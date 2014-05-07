@@ -1,0 +1,6 @@
+# vpm for the vim plugins
+# https://github.com/KevinSjoberg/vpm
+# =====================================================
+fresh yjpark/vpm 'libexec/*' --bin --ref=fresh_janus
+
+

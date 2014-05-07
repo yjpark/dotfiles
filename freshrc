@@ -16,19 +16,23 @@ fresh freshshell/fresh-open 'bin/fresh-open' --bin
 
 # Fish shell settings
 #SILP: fish/fish.freshrc
+#!/bin/bash                                                            #__SILP__
 # Fish shell settings                                                  #__SILP__
 fresh 'fish/config/*' --file='~/.config/fish/config.fish'              #__SILP__
 fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'            #__SILP__
 fresh 'fish/functions' --file='~/.config/fish/functions/'              #__SILP__
                                                                        #__SILP__
+# run bootstrap-fish-custom to install fish custom stuffs              #__SILP__
 
 # Vim
 #SILP: vim/vim.freshrc
-# janus settings                                                              #__SILP__
-# https://github.com/carlhuda/.janus/                                         #__SILP__
-# =====================================================                       #__SILP__
-fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'              #__SILP__
-fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'                #__SILP__
+# janus settings                                                       #__SILP__
+# https://github.com/carlhuda/.janus/                                  #__SILP__
+# =====================================================                #__SILP__
+fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'       #__SILP__
+fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'         #__SILP__
+                                                                       #__SILP__
+# run bootstrap-janus to install vim plugins in .janus                 #__SILP__
 
 # git
 fresh 'git/config/*' --file='~/.gitconfig'
@@ -39,11 +43,6 @@ fresh 'tmux/*' --file='~/.tmux.conf'
 # mu-repo https://github.com/yjpark/mu-repo
 fresh yjpark/mu-repo 'mu' --bin
 fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
-
-# vpm for the vim plugins
-# https://github.com/KevinSjoberg/vpm
-# =====================================================
-fresh yjpark/vpm 'libexec/*' --bin --ref=fresh_janus
 
 # bin
 fresh 'bin/common/*' --bin
