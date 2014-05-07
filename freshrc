@@ -1,3 +1,5 @@
+#!/bin/bash
+#
 # freshshell.com
 #
 # Examples:
@@ -12,11 +14,18 @@
 fresh freshshell/fresh 'bin/fresh' --bin
 fresh freshshell/fresh-open 'bin/fresh-open' --bin
 
-# janus settings
-# https://github.com/carlhuda/janus/
-# =====================================================
-fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'
-fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
+# fish
+fresh 'fish/fish.freshrc' --freshrc
+
+# vim
+fresh 'vim/vim.freshrc' --freshrc
+
+# git
+fresh 'git/config/*' --file='~/.gitconfig'
+fresh 'git/ignore/*' --file='~/.gitignore'
+
+# tmux
+fresh 'tmux/*' --file='~/.tmux.conf'
 
 # mu-repo https://github.com/yjpark/mu-repo
 fresh yjpark/mu-repo 'mu' --bin
@@ -26,21 +35,6 @@ fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
 # https://github.com/KevinSjoberg/vpm
 # =====================================================
 fresh yjpark/vpm 'libexec/*' --bin --ref=fresh_janus
-# plugin lists
-mkdir -p ~/.janus
-fresh 'vim/vimplugins' --file='~/.vimplugins'
-
-# Fish shell settings
-fresh 'fish/config/*' --file='~/.config/fish/config.fish'
-fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'
-fresh 'fish/functions' --file='~/.config/fish/functions/'
-
-# git
-fresh 'git/config/*' --file='~/.gitconfig'
-fresh 'git/ignore/*' --file='~/.gitignore'
-
-# tmux
-fresh 'tmux/*' --file='~/.tmux.conf'
 
 # bin
 fresh 'bin/common/*' --bin

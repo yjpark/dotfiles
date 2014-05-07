@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Fish shell settings
+fresh 'fish/config/*' --file='~/.config/fish/config.fish'
+fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'
+fresh 'fish/functions' --file='~/.config/fish/functions/'
+
+# Fish custom
+fresh yjpark/fishmarks '.' --file='~/.config/fish/custom/fishmarks/'
+fresh yjpark/nvm-fish '.' --file='~/.config/fish/custom/nvm-fish/'
+
