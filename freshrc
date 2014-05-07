@@ -33,8 +33,8 @@ fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'         #__SILP__
 
 #SILP: git.freshrc
 # GIT Settings                                                         #__SILP__
-fresh 'git/config/*' --file='~/.gitconfig'                             #__SILP__
-fresh 'git/ignore_global/*' --file='~/.gitignore_global'               #__SILP__
+fresh 'git/config/*' --file='~/.gitconfig' --marker='#'                #__SILP__
+fresh 'git/ignore_global/*' --file='~/.gitignore_global' --marker='#'  #__SILP__
 
 # tmux
 fresh 'tmux/*' --file='~/.tmux.conf'
