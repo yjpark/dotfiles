@@ -1,4 +1,0 @@
-# Marmalade SDK addition: please do not edit these lines
-export PATH=$PATH:"/Applications/Marmalade.app/Contents/s3e/bin"
-export S3E_DIR=/Applications/Marmalade.app/Contents/s3e
-# Marmalade SDK addition: end

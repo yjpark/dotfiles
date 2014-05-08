@@ -32,7 +32,8 @@ fresh 'bash/profile/*' --file='~/.bash_profile'
 fresh 'bash/aliases/*' --file='~/.bash_it/aliases/custom.aliases.bash'
 fresh 'bash/lib/*' --file='~/.bash_it/lib/custom.bash'
 if [[ "$(uname)" == "Darwin" ]]; then
-  fresh 'osx/profile' --file='~/.profile'
+  fresh 'bash/profile.osx/*' --file='~/.bash_profile'
+  fresh 'osx/bashrc' --file='~/.bashrc'
 fi
 
 # =====================================================
