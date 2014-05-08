@@ -1,0 +1,18 @@
+#!/bin/bash
+
+cd ~/projects/yjpark/forks/powerline-shell/
+
+echo 'Generating Fish Powerline'
+rm config.py
+ln -s fish.config.py config.py
+./install.py
+cp powerline-shell.py ~/.dotfiles/bin/external/powerline-shell_fish.py
+
+echo 'Generating Bash Powerline'
+rm config.py
+ln -s bash.config.py config.py
+./install.py
+cp powerline-shell.py ~/.dotfiles/bin/external/powerline-shell_bash.py
+
+echo 'Refreshing...'
+fresh

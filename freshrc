@@ -74,6 +74,7 @@ fresh 'misc/screenrc' --file='~/.screenrc'
 # =====================================================
 # bin
 fresh 'bin/common/*' --bin
+fresh 'bin/external/*' --bin
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'bin/osx/*' --bin
 fi
