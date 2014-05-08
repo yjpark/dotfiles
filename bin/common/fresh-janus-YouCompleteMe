@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/.janus/YouCompleteMe
+./install.sh --clang-completer --omnisharp-completer
