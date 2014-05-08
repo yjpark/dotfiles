@@ -51,6 +51,6 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
-# SILP
-.silp_backup/
-.silp_test/
+# ========================================================
+# .dotfiles ignore
+private/
