@@ -6,5 +6,12 @@ function fish_right_prompt -d "Write out the right prompt"
     echo $vi_mode
 end
 
-set -x GOPATH ~/.go
-set -x PATH $PATH ~/.go/bin
+# my stuffs
+set -x LANG "en_US.UTF-8"
+set -x LC_ALL "en_US.UTF-8"
+
+set -x HOST (hostname)
+set -x PATH $PATH /usr/local/sbin ~/bin
+
+. ~/.config/fish/aliases.fish
+. ~/.config/fish/custom/fishmarks/marks.fish

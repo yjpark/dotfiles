@@ -1,0 +1,23 @@
+#!/bin/sh
+xinput list | sed -ne 's/^[^ ][^V].*id=\([0-9]*\).*/\1/p' | while read id
+do
+        case `xinput list-props $id` in
+        *"Middle Button Emulation"*)
+                xinput set-int-prop $id "Evdev Wheel Emulation" 8 1
+                xinput set-int-prop $id "Evdev Wheel Emulation Button" 8 2
+                xinput set-int-prop $id "Evdev Wheel Emulation Timeout" 8 200
+                xinput set-int-prop $id "Evdev Wheel Emulation Axes" 8 6 7 4 5
+                xinput set-int-prop $id "Evdev Middle Button Emulation" 8 0
+                ;;
+        esac
+done
+
+# disable middle button 
+xmodmap -e "pointer = 1 9 3 4 5 6 7 8 2"
+
+xinput list-props "TPPS/2 IBM TrackPoint"
+
+#http://www.thinkwiki.org/wiki/How_to_configure_the_TrackPoint#Configuration_using_xinput
+
+# disable touchpad
+xinput set-int-prop 10 "Device Enabled" 8 0

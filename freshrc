@@ -84,6 +84,9 @@ fresh 'bin/external/*' --bin
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'bin/osx/*' --bin
 fi
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'bin/linux/*' --bin
+fi
 
 # =====================================================
 # Private stuffs

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# not searching the .svn folders to exclude duplication
+find . -path "*/.svn/*" -prune -o -print | grep --color=always -i $@

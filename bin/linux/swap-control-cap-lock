@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xmodmap ~/bin/swap-control-cap-lock.rc
