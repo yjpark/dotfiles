@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm -rf Temp
+rm -rf Library/ScriptAssemblies/
+
+nohup /Applications/Unity/Unity.app/Contents/MacOS/Unity -projectPath "$PWD" > /tmp/unity3d.nohup &
