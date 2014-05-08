@@ -32,16 +32,6 @@ alias e "vim"
 alias vi "vim"
 alias cp "cp -v"
 alias mv "mv -v"
-alias cd.. "cd .."
-alias cd... "cd ../.."
-alias cd.... "cd ../../.."
-alias cd..... "cd ../../../.."
-alias cd...... "cd ../../../../.."
-alias .. "cd .."
-alias ... "cd ../.."
-alias .... "cd ../../.."
-alias ..... "cd ../../../.."
-alias ...... "cd ../../../../.."
 
 alias nload "nload -u K"
 
@@ -52,9 +42,6 @@ alias root "sudo chown root:root -R"
 
 alias axel "axel -a"
 
-alias cdif "cdif -color"
 alias htop "htop --sort-key PERCENT_CPU"
 
 alias vimx "vim -u ~/.vimrcx -x"
-
-
