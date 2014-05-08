@@ -21,11 +21,19 @@ fresh 'fish/config/*' --file='~/.config/fish/config.fish'
 fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'
 fresh 'fish/functions' --file='~/.config/fish/functions/'
 # run fresh-fish-custom to install fish custom stuffs
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh 'fish/config.osx/*' --file='~/.config/fish/config.fish'
+fi
 
 # =====================================================
 # Bash settings
 # run bootstrap-bash_it to install bash_it
 fresh 'bash/profile/*' --file='~/.bash_profile'
+fresh 'bash/aliases/*' --file='~/.bash_it/aliases/custom.aliases.bash'
+fresh 'bash/lib/*' --file='~/.bash_it/lib/custom.bash'
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh 'osx/profile' --file='~/.profile'
+fi
 
 # =====================================================
 # janus settings
@@ -42,7 +50,10 @@ fresh 'git/ignore_global/*' --file='~/.gitignore_global' --marker='#'
 
 # =====================================================
 # tmux
-fresh 'tmux/*' --file='~/.tmux.conf'
+fresh 'tmux/common/*' --file='~/.tmux.conf'
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh 'tmux/osx/*' --file='~/.tmux.conf'
+fi
 
 # =====================================================
 # mu-repo https://github.com/yjpark/mu-repo
@@ -61,10 +72,6 @@ fresh 'misc/screenrc' --file='~/.screenrc'
 # =====================================================
 # bin
 fresh 'bin/common/*' --bin
-
 if [[ "$(uname)" == "Darwin" ]]; then
-  # =====================================================
-  # osx
   fresh 'bin/osx/*' --bin
-  fresh 'osx/sdirs' --file='~/.sdirs'
 fi
