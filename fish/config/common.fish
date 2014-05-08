@@ -14,4 +14,3 @@ set -x HOST (hostname)
 set -x PATH $PATH /usr/local/sbin ~/bin
 
 . ~/.config/fish/aliases.fish
-. ~/.config/fish/custom/fishmarks/marks.fish
