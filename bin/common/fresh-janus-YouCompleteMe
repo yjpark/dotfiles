@@ -1,4 +1,7 @@
 #!/bin/bash
 
 cd ~/.janus/YouCompleteMe
+git pull
+git submodule update --init --recursive
+
 ./install.sh --clang-completer --omnisharp-completer
