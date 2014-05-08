@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ $2 ] ; then
+    apt-cache search $1 | grep -i --color=always $2 
+else
+    apt-cache search $1 | grep -i --color=always $1
+fi

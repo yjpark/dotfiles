@@ -1,0 +1,5 @@
+#!/bin/bash
+
+apt-cache showpkg $1
+apt-cache show $1
+

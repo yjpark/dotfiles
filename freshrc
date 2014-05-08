@@ -24,6 +24,10 @@ fresh 'fish/functions' --file='~/.config/fish/functions/'
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'fish/config.osx/*' --file='~/.config/fish/config.fish'
 fi
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'fish/config.linux/*' --file='~/.config/fish/config.fish'
+fi
+
 
 # =====================================================
 # Bash settings
@@ -86,6 +90,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 if [[ "$(uname)" == "Linux" ]]; then
   fresh 'bin/linux/*' --bin
+  fresh 'bin/external.linux/*' --bin
 fi
 
 # =====================================================
