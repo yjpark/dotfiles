@@ -72,9 +72,21 @@ fresh 'misc/ctags' --file='~/.ctags'
 fresh 'misc/screenrc' --file='~/.screenrc'
 
 # =====================================================
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh yjpark/dayone2evernote 'dayone2evernote' --bin
+  fresh yjpark/dayone2evernote '*.applescript' --bin
+fi
+
+# =====================================================
 # bin
 fresh 'bin/common/*' --bin
 fresh 'bin/external/*' --bin
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'bin/osx/*' --bin
 fi
+
+# =====================================================
+# Private stuffs
+fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
+fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
+

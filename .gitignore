@@ -54,3 +54,4 @@ docs/_build/
 # ========================================================
 # .dotfiles ignore
 private/
+*.private/
