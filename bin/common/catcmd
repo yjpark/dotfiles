@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ ! $1 ] ; then 
+    echo "Please specify a name"
+    exit -1
+fi
+
+cmd=`which $1`
+
+if [ $cmd ] ; then
+    cat $cmd
+else
+    echo "This cmd does not exist: $1"
+fi
