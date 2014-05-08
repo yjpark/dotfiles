@@ -23,6 +23,11 @@ fresh 'fish/functions' --file='~/.config/fish/functions/'
 # run fresh-fish-custom to install fish custom stuffs
 
 # =====================================================
+# Bash settings
+# run bootstrap-bash_it to install bash_it
+fresh 'bash/profile/*' --file='~/.bash_profile'
+
+# =====================================================
 # janus settings
 # https://github.com/carlhuda/.janus/
 # run bootstrap-janus to install janus
