@@ -24,7 +24,7 @@ alias use-proxy ". setup-terminal-proxy"
 
 alias wget "wget --no-check-certificate"
 
-
+alias ssh "ssh -A"
 alias scp "scp -C -p"
 
 # some custom alias
