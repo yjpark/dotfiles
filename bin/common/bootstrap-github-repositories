@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# Mainly borrowed from https://github.com/KevinSjoberg/vpm/blob/master/libexec/vpm-bootstrap
+# since vpm hardcoded the folder and file name in it, I modified it a bit to bootstrap any
+# folder with a given list
+
 set -e
 
 if [[ ! -f $1 ]]; then

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Policies>
+  <PolicySet name="Default" id="Default">
+    <TextStylePolicy inheritsSet="null" scope="text/x-csharp" />
+    <CSharpFormattingPolicy inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp">
+      <NamespaceBraceStyle>EndOfLine</NamespaceBraceStyle>
+      <ClassBraceStyle>EndOfLine</ClassBraceStyle>
+      <InterfaceBraceStyle>EndOfLine</InterfaceBraceStyle>
+      <StructBraceStyle>EndOfLine</StructBraceStyle>
+      <EnumBraceStyle>EndOfLine</EnumBraceStyle>
+      <MethodBraceStyle>EndOfLine</MethodBraceStyle>
+      <ConstructorBraceStyle>EndOfLine</ConstructorBraceStyle>
+      <DestructorBraceStyle>EndOfLine</DestructorBraceStyle>
+      <EmbeddedStatementPlacement>DoNotCare</EmbeddedStatementPlacement>
+      <BeforeMethodDeclarationParentheses>False</BeforeMethodDeclarationParentheses>
+      <BeforeMethodCallParentheses>False</BeforeMethodCallParentheses>
+      <BeforeConstructorDeclarationParentheses>False</BeforeConstructorDeclarationParentheses>
+      <BeforeIndexerDeclarationBracket>False</BeforeIndexerDeclarationBracket>
+      <BeforeDelegateDeclarationParentheses>False</BeforeDelegateDeclarationParentheses>
+      <AfterDelegateDeclarationParameterComma>True</AfterDelegateDeclarationParameterComma>
+      <NewParentheses>False</NewParentheses>
+      <SpacesBeforeBrackets>False</SpacesBeforeBrackets>
+    </CSharpFormattingPolicy>
+    <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/plain">
+      <FileWidth>120</FileWidth>
+    </TextStylePolicy>
+  </PolicySet>
+</Policies>

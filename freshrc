@@ -79,6 +79,11 @@ fresh 'misc/screenrc' --file='~/.screenrc'
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh yjpark/dayone2evernote 'dayone2evernote' --bin
   fresh yjpark/dayone2evernote '*.applescript' --bin
+
+  fresh 'osx/XamarinStudio-4.0/KeyBindings/Custom.mac-kb.xml' \
+        --file='~/Library/XamarinStudio-4.0/KeyBindings/Custom.mac-kb.xml'
+  fresh 'osx/XamarinStudio-4.0/Policies/Default.mdpolicy.xml' \
+        --file='~/Library/XamarinStudio-4.0/Policies/Default.mdpolicy.xml'
 fi
 
 # =====================================================

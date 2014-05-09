@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/Applications/CacheServer
+nohup ./RunOSX.command > /tmp/CacheServer.log &

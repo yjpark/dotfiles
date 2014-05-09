@@ -1,0 +1,6 @@
+﻿<schemes version="1.0">
+  <scheme name="current">
+    <binding command="MonoDevelop.Ide.Commands.FileTabCommands.CloseAllButThis" shortcut="Shift+Meta+W" />
+    <binding command="MonoDevelop.Ide.Commands.FileCommands.CloseAllFiles" shortcut="" />
+  </scheme>
+</schemes>
