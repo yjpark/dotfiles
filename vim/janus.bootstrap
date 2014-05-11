@@ -22,3 +22,4 @@ yjpark/TabBar
 yjpark/quickfixsigns_vim
 yjpark/vim-colors-solarized
 yjpark/vim-rst-tables
+elzr/vim-json
