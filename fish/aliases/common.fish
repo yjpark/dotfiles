@@ -8,7 +8,6 @@ make_completion a ag
 alias cb "echo -en \\\\0033c; and tmux clear-history"
 alias l "ls -l"
 
-alias tmux "tmux -u"
 alias ll "ls -lh"
 alias la "ls -A"
 alias lal "ls -lhA"
