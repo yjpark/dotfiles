@@ -47,6 +47,9 @@ fi
 # run bootstrap-janus to install janus
 fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'
 fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'vim/vimrc.after.linux/*' --file='~/.vimrc.after' --marker='"'
+fi
 # run fresh-janus to install vim plugins in .janus
 
 # =====================================================
