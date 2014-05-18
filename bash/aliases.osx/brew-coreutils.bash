@@ -1,4 +1,4 @@
-brew_prefix=`brew --prefix`
+brew_prefix=`/usr/local/bin/brew --prefix`
 alias base64="$brew_prefix/bin/gbase64"
 alias basename="$brew_prefix/bin/gbasename"
 alias cat="$brew_prefix/bin/gcat"
