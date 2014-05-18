@@ -1,0 +1,4 @@
+#!/bin/bash
+# http://caskroom.io/
+
+brew install caskroom/cask/brew-cask
