@@ -1,0 +1,3 @@
+#!/bin/bash
+
+xclip -o | tmux load-buffer - && tmux paste-buffer
