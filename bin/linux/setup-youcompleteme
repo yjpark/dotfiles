@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo apt-get build-dep vim-youcompleteme
+
+cd ~/.janus/YouCompleteMe
+git submodule update --init --recursive
+./install.sh
