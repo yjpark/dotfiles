@@ -21,3 +21,14 @@ sudo add-apt-repository ppa:thefanclub/grive-tools
 sudo apt-get update
 sudo apt-get install grive-tools
 ```
+
+## ReText
+Markdown and ReS editor
+
+- http://sourceforge.net/p/retext/home/ReText/
+
+```
+sudo add-apt-repository ppa:mitya57/retext-beta
+sudo apt-get update
+sudo apt-get install retext
+```
