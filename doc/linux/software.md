@@ -5,7 +5,7 @@ Everpad is the client for Evernote, which is integrated to indicator
 - https://github.com/nvbn/everpad
 
 ```
-sudo add-apt-repository ppa:nvbn-rm/pp
+sudo add-apt-repository ppa:nvbn-rm/ppa
 sudo apt-get update
 sudo apt-get install everpad
 ```
