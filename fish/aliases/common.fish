@@ -19,7 +19,8 @@ alias air "sudo hostname air; . ~/bin/air/yjpark.fish"
 alias win ". ~/bin/win/fish.yjpark"
 alias iftop "sudo iftop -B -P"
 
-alias use-proxy ". setup-terminal-proxy"
+alias set-proxy-on "set -x http_proxy 127.0.0.1:8118"
+alias set-proxy-off "set -e http_proxy"
 
 alias wget "wget --no-check-certificate"
 
