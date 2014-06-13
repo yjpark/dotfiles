@@ -1,7 +1,7 @@
 autodetach on
 startup_message off
 
-#the bind settings are really important to make the mac/default terminal 
+#the bind settings are really important to make the mac/default terminal
 #working with screen here (not needed for iTerm)
 #bind k
 #bind ^k
@@ -11,8 +11,15 @@ startup_message off
 #bind ^h
 #bind h
 
-shelltitle "$ |bash"
+shelltitle "$ | shell"
 altscreen on
+
+# Get rid of screen 0 - http://www.linuxquestions.org/questions/linux-software-2/gnu-screen-start-window-numbering-at-1-keep-window-number-0-from-ever-being-used-772580/
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
+select 1
 
 #change the hardstatus settings to give an window list at the bottom of the
 #screen, with the time and date and with the current window highlighted
@@ -50,4 +57,4 @@ attrcolor b ".I"
 # tell screen how to set colors. AB = background, AF=foreground
 termcapinfo xterm*256* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 # erase background with current bg color
-defbce "on" 
+defbce "on"
