@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+import json
+import argparse
+
+def get_files(args):
+    result = []
+    if args.files:
+        for path in args.files:
+            result.append(path)
+    return result
+
+def list_key(path):
+    obj = json.load(open(path, 'r'))
+    print ','.join(["'%s'" % key for key in obj.keys()])
+
+def list_keys(args):
+    files = get_files(args);
+    for path in files:
+        list_key(path)
+
+def main():
+    parser = argparse.ArgumentParser()
+    subparsers = parser.add_subparsers()
+
+    parser_new_users = subparsers.add_parser('list_keys')
+    parser_new_users.set_defaults(func=list_keys)
+    parser_new_users.add_argument('files', nargs='*')
+
+    args = parser.parse_args()
+    args.func(args);
+
+if __name__ == '__main__':
+    main()
+
