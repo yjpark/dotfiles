@@ -24,4 +24,5 @@ yjpark/vim-colors-solarized
 yjpark/vim-rst-tables
 elzr/vim-json
 toyamarinyon/vim-swift
+cespare/vim-toml
 
