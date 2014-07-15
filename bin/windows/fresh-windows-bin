@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd ~/
+mkdir -p bin
+cd bin
+cp ~/.dotfiles/external/bin/* .
+cp ~/.dotfiles/bin/windows/* .

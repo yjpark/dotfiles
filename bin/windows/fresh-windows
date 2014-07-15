@@ -1,8 +1,20 @@
 #!/bin/bash
 
+
+
 cd ~
 
-ln -s .dotfiles/pentadactylrc .pentadactylrc
-ln -s .dotfiles/pentadactyl .pentadactyl
-ln -s .dotfiles/git/config .gitconfig
-ln -s .dotfiles/git/ignore_global .gitignore_global
+rm -rfv .pentadactylrc
+cp -v .dotfiles/pentadactylrc .pentadactylrc
+
+rm -rfv .pentadactyl
+cp -vr .dotfiles/pentadactyl .pentadactyl
+
+rm -rfv .gitconfig
+cat -v .dotfiles/git/config/* >> .gitconfig
+
+rm -rfv .gitignore_global
+cat -v .dotfiles/git/ignore_global/* >> .gitignore_global
+
+
+~/.dotfiles/bin/windows/fresh-windows-bin
