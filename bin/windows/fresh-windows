@@ -2,7 +2,7 @@
 
 cd ~
 
-ln -s .dotfiles/pentadactylrc ./pentadactylrc
-ln -s .dotfiles/pentadactyl ./pentadactyl
+ln -s .dotfiles/pentadactylrc ./.pentadactylrc
+ln -s .dotfiles/pentadactyl ./.pentadactyl
 ln -s .dotfiles/git/config .gitconfig
 ln -s .dotfiles/git/ignore_global .gitignore_global
