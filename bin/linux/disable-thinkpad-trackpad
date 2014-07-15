@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# http://askubuntu.com/questions/161532/how-to-permanently-disable-touchpad-in-12-04
+
+synclient TouchpadOff=1
