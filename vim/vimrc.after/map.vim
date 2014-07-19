@@ -1,6 +1,6 @@
 noremap ; :
 noremap ' "
-noremap <C-a> ^
+noremap <C-a> 0
 noremap <C-e> $
 noremap <C-n> :Tbbn<CR>
 noremap <C-p> :Tbbp<CR>
