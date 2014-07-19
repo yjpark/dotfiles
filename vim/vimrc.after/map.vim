@@ -1,5 +1,7 @@
 noremap ; :
 noremap ' "
+noremap <C-a> ^
+noremap <C-e> $
 noremap <C-n> :Tbbn<CR>
 noremap <C-p> :Tbbp<CR>
 noremap ,1 :!<CR> 

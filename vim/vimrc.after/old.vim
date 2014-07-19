@@ -1,4 +1,4 @@
-so $VIMRUNTIME/mswin.vim
+"so $VIMRUNTIME/mswin.vim
 set number
 syntax on
 set hlsearch

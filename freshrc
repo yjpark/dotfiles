@@ -85,6 +85,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fresh yjpark/dayone2evernote 'dayone2evernote' --bin
   fresh yjpark/dayone2evernote '*.applescript' --bin
 
+  fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
+  fresh 'osx/xvimrc' --file='~/.xvimrc'
   # Since xamarin's autoback will break symlink, copy over here
   cp -v ~/.dotfiles/osx/XamarinStudio-4.0/KeyBindings/Custom.mac-kb.xml \
         ~/Library/XamarinStudio-4.0/KeyBindings/
