@@ -1,0 +1,5 @@
+noremap ; :
+noremap ' "
+noremap <C-a> 0
+noremap <C-e> $
+
