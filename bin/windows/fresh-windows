@@ -20,7 +20,8 @@ cat -v .dotfiles/git/ignore_global/* >> .gitignore_global
 ~/.dotfiles/bin/windows/fresh-windows-bin
 
 cd ~
-cp .dotfiles/bash/bashrc ~/.bashrc
+rm ~/.bashrc
+cat .dotfiles/bash/bashrc/* >> ~/.bashrc
 rm ~/.bash_it/aliases/custom.aliases.bash
 cat .dotfiles/bash/aliases/* >> ~/.bash_it/aliases/custom.aliases.bash
 rm ~/.bash_it/lib/custom.bash
