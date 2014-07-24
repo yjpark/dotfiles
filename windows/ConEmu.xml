@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2014-07-24 17:12:50" build="131010">
+		<key name=".Vanilla" modified="2014-07-24 17:36:03" build="131010">
 			<value name="SingleInstance" type="hex" data="00"/>
 			<value name="KeyboardHooks" type="hex" data="01"/>
 			<value name="UseInjects" type="hex" data="01"/>
@@ -130,12 +130,12 @@
 			<value name="ColorKeyTransparent" type="hex" data="00"/>
 			<value name="ColorKeyValue" type="dword" data="00010101"/>
 			<value name="UseCurrentSizePos" type="hex" data="01"/>
-			<value name="WindowMode" type="dword" data="00000520"/>
+			<value name="WindowMode" type="dword" data="0000051f"/>
 			<value name="ConWnd Width" type="dword" data="000000d6"/>
-			<value name="ConWnd Height" type="dword" data="0000001d"/>
+			<value name="ConWnd Height" type="dword" data="0000001e"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="dword" data="fffffff8"/>
-			<value name="ConWnd Y" type="dword" data="fffffff8"/>
+			<value name="ConWnd X" type="dword" data="0000003d"/>
+			<value name="ConWnd Y" type="dword" data="0000009f"/>
 			<value name="16bit Height" type="dword" data="00000000"/>
 			<value name="AutoSaveSizePos" type="hex" data="00"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -298,7 +298,7 @@
 			<value name="AffinityMask" type="dword" data="00000000"/>
 			<value name="SkipFocusEvents" type="hex" data="00"/>
 			<value name="MonitorConsoleLang" type="hex" data="03"/>
-			<value name="DesktopMode" type="hex" data="01"/>
+			<value name="DesktopMode" type="hex" data="00"/>
 			<value name="SnapToDesktopEdges" type="hex" data="00"/>
 			<value name="AlwaysOnTop" type="hex" data="01"/>
 			<value name="SleepInBackground" type="hex" data="00"/>
@@ -504,13 +504,13 @@
 			<value name="DndLKey" type="hex" data="00"/>
 			<value name="DndRKey" type="hex" data="a2"/>
 			<value name="WndDragKey" type="dword" data="00121101"/>
-				<key name="Tasks" modified="2014-07-24 17:12:50" build="131010">
+				<key name="Tasks" modified="2014-07-24 17:36:03" build="131010">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-				<key name="Apps" modified="2014-07-24 17:12:50" build="131010">
+				<key name="Apps" modified="2014-07-24 17:36:03" build="131010">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
-				<key name="Colors" modified="2014-07-24 17:12:50" build="131010">
+				<key name="Colors" modified="2014-07-24 17:36:03" build="131010">
 				<value name="Count" type="dword" data="00000000"/>
 			</key>
 		</key>
