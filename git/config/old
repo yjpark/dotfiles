@@ -42,6 +42,7 @@
 	quotepath = false
 	excludesfile = /Users/yjpark/.gitignore_global
   whitespace = trailing-space,space-before-tab
+  autocrlf = true
 
 [apply]
   whitespace = fix
