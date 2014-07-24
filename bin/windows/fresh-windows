@@ -27,5 +27,6 @@ rm ~/.bash_it/lib/custom.bash
 cat .dotfiles/bash/lib/* >> ~/.bash_it/lib/custom.bash
 rm ~/.bash_it/custom/common.bash
 cat .dotfiles/bash/custom/* >> ~/.bash_it/custom/common.bash
+cat .dotfiles/bash/custom.windows/* >> ~/.bash_it/custom/common.bash
 
 cp .dotfiles/external/bin/powerline-shell_bash.py ~/bin/
