@@ -1,0 +1,4 @@
+#!/bin/bash
+
+xmonad --recompile
+xmonad --replace
