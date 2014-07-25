@@ -1,1 +1,1 @@
-:colorscheme desertEx
+:colorscheme desert256
