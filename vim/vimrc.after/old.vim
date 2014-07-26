@@ -140,7 +140,7 @@ endfunction
 " returns true iff focused window is NERDTree window
 function! rc:isNTFocused()
   return -1 != match(expand('%'), 'NERD_Tree')
-endfunction 
+endfunction
 
 " calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
 function! rc:syncTree()
@@ -163,7 +163,7 @@ if has("unix")
   else
     " Do Linux stuff here
     let g:solarized_termcolors=16
-    set gfn=Bitstream\ Vera\ Sans\ Mono\ 16 
+    set gfn=Bitstream\ Vera\ Sans\ Mono\ 16
   endif
 endif
 
