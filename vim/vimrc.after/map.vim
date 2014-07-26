@@ -2,6 +2,10 @@ noremap ; :
 noremap ' "
 noremap <C-a> 0
 noremap <C-e> $
+imap <C-a> <Esc>0i
+imap <C-e> <Esc>$a
+set whichwrap+=<,>,h,l,[,]
+
 noremap <C-n> :Tbbn<CR>
 noremap <C-p> :Tbbp<CR>
 noremap ,1 :!<CR> 
