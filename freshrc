@@ -101,6 +101,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh 'linux/terminator' --file='~/.config/terminator/'
   fresh 'linux/tilda' --file='~/.config/tilda/'
   fresh 'linux/Xmodmap' --file='~/.Xmodmap'
+  fresh 'linux/clipit' --file='~/.config/clipit/'
 fi
 # =====================================================
 # bin
