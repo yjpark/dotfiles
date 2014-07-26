@@ -46,7 +46,12 @@ myManageHook = composeAll [
 	-- , isInProperty "_NET_WM_WINDOW_TYPE" "_NET_WM_WINDOW_TYPE_SPLASH" --> doFloat
 	]
 
-gridSelectConfig = defaultGSConfig { gs_cellheight = 45, gs_cellwidth = 300, gs_font = "xft:Noto Sans S Chinese:size=18"}
+gridSelectConfig = defaultGSConfig {
+    gs_cellheight = 50
+    , gs_cellwidth = 400
+    , gs_originFractY = 0.4
+    , gs_font = "xft:Ubuntu:size=18"
+}
 
 myKeys = [
 	("<F1>", spawn "terminator")
