@@ -46,6 +46,8 @@ myManageHook = composeAll [
 	-- , isInProperty "_NET_WM_WINDOW_TYPE" "_NET_WM_WINDOW_TYPE_SPLASH" --> doFloat
 	]
 
+gridSelectConfig = defaultGSConfig { gs_cellheight = 45, gs_cellwidth = 300, gs_font = "xft:Noto Sans S Chinese:size=18"}
+
 myKeys = [
 	("<F1>", spawn "terminator")
 	, ("<F2>", spawn "firefox")
@@ -73,7 +75,7 @@ myKeys = [
 	, ("C-<Up>", shiftNextScreen)
 	, ("C-<Down>", swapPrevScreen)
 	-- GridSelect related
-	, ("C-<Tab>", goToSelected defaultGSConfig)
+	, ("C-<Tab>", goToSelected gridSelectConfig)
 	]
 	++ -- switch to workspace with Control-Num
 	[ (otherModMasks ++ "C-" ++ [key], action tag)
@@ -132,7 +134,6 @@ dbusOutput dbus str = do
     let signal = (D.signal (D.objectPath_ "/org/xmonad/Log") (D.interfaceName_ "org.xmonad.Log") (D.memberName_ "Update")) {
             D.signalBody = [D.toVariant ("<b>" ++ (UTF8.decodeString str) ++ "</b>")]
         }
-    putStrLn "Test"
     D.emit dbus signal
 
 pangoColor :: String -> String -> String
