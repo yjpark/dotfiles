@@ -46,14 +46,6 @@ nmap <silent>scd       <Plug>SQLU_GetColumnDef<CR>
 nmap <silent>scdt      <Plug>SQLU_GetColumnDataType<CR>
 nmap <silent>scp       <Plug>SQLU_CreateProcedure<CR> 
 
-if hostname() == 'mbp' || hostname() == 'YJ-Parks-MacBook-Pro'
-    " Cut/Copy/Paste under Mac OSX
-    vmap <C-X> x:new<CR>pggvG<End>:!pbcopy<CR>:q!<CR>
-    vmap <C-C> y:new<CR>pggvG<End>:!pbcopy<CR>:q!<CR>
-    map <C-V> :set paste<CR>:new<CR>:r !pbpaste<CR>ggv<End>xggvG<End>y:q!<CR>p
-    map! <C-V> <Esc>:set paste<CR>:new<CR>:r !pbpaste<CR>ggv<End>xggvG<End>y:q!<CR>pa
-endif
-
 "default leader is \
 nmap <Leader>s :source $MYVIMRC
 nmap <Leader>e :e $MYVIMRC

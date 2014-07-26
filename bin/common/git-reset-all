@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git rm --cached -r .
+# Remove everything from the index.
+
+git reset --hard
+# Write both the index and working directory from git's database.

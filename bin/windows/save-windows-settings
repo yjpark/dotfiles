@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+cp ~/AppData/Roaming/ConEmu.xml ~/.dotfiles/windows/

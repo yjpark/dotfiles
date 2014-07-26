@@ -34,7 +34,6 @@ fi
 # run bootstrap-bash_it to install bash_it
 fresh 'bash/bashrc' --file='~/.bashrc'
 fresh 'bash/aliases/*' --file='~/.bash_it/aliases/custom.aliases.bash'
-fresh 'bash/lib/*' --file='~/.bash_it/lib/custom.bash'
 fresh 'bash/custom/*' --file='~/.bash_it/custom/common.bash'
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'bash/aliases.osx/*' --file='~/.bash_it/aliases/custom.aliases.bash'
@@ -49,6 +48,9 @@ fresh 'vim/vimrc.before/*' --file='~/.vimrc.before' --marker='"'
 fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
 if [[ "$(uname)" == "Linux" ]]; then
   fresh 'vim/vimrc.after.linux/*' --file='~/.vimrc.after' --marker='"'
+fi
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh 'vim/vimrc.after.osx/*' --file='~/.vimrc.after' --marker='"'
 fi
 # run fresh-janus to install vim plugins in .janus
 

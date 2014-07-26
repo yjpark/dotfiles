@@ -40,7 +40,7 @@
 
 [core]
 	quotepath = false
-	excludesfile = /Users/yjpark/.gitignore_global
+	excludesfile = ~/.gitignore_global
   whitespace = trailing-space,space-before-tab
 
 [apply]
