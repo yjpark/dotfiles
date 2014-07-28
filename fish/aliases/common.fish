@@ -5,7 +5,7 @@ alias a "ag --smart-case"
 make_completion a ag
 
 # just aliases
-alias cb "clear ; tmux clear-history"
+alias cb "echo -e -n \\\\0033c ; tmux clear-history"
 alias l "ls -l"
 
 alias ll "ls -lh"
