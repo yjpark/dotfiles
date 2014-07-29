@@ -6,4 +6,5 @@ cat .dotfiles/vim/vimrc.before/* >> ~/.vimrc.before
 
 rm ~/.vimrc.after
 cat .dotfiles/vim/vimrc.after/* >> ~/.vimrc.after
+cat .dotfiles/vim/vimrc.after.windows/* >> ~/.vimrc.after
 
