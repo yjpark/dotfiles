@@ -20,6 +20,7 @@ fresh freshshell/fresh-open 'bin/fresh-open' --bin
 fresh 'fish/config/*' --file='~/.config/fish/config.fish'
 fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'
 fresh 'fish/functions' --file='~/.config/fish/functions/'
+fresh 'fish/custom' --file='~/.config/fish/custom/'
 # run fresh-fish-custom to install fish custom stuffs
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'fish/config.osx/*' --file='~/.config/fish/config.fish'
