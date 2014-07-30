@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Bootstraping ~/.bash_it/extras/"
+
+mkdir -p ~/.bash_it/extras/
+cd ~/.bash_it/extras/
+
+bootstrap-github-repositories ~/.dotfiles/bash/extras.bootstrap
+mu register --all
+
