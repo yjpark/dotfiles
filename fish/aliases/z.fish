@@ -1,0 +1,1 @@
+alias zc 'rm ~/.z'
