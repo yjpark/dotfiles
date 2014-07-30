@@ -1,3 +1,3 @@
 . ~/.config/fish/extras/fishmarks/marks.fish
 . ~/.config/fish/extras/nvm-fish/nvm.fish
-#. ~/.config/fish/extras/z-fish/z.fish
+. ~/.config/fish/extras/z-fish/z.fish
