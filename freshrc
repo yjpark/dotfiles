@@ -59,6 +59,12 @@ fi
 # GIT Settings
 fresh 'git/config/*' --file='~/.gitconfig' --marker='#'
 fresh 'git/ignore_global/*' --file='~/.gitignore_global' --marker='#'
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh 'git/config.osx/*' --file='~/.gitconfig' --marker='#'
+fi
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'git/config.linux/*' --file='~/.gitconfig' --marker='#'
+fi
 
 # =====================================================
 # tmux
