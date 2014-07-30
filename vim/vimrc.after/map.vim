@@ -20,8 +20,12 @@ noremap <silent> ,0 :nohl<CR>
 
 noremap ,p :CtrlP<CR>
 noremap ,. :Ack 
-nmap ,, <Leader><Leader>w
-nmap ,' <Leader><Leader>b
+noremap ,, <Leader><Leader>w
+noremap ,' <Leader><Leader>b
+
+noremap <C-g> :YcmCompleter GoToDeclaration<CR>
+noremap ,g :YcmCompleter GoToImplementationElseDeclaration<CR>
+noremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 noremap <silent> ,w :call yjpark:switchToFocusMode() <CR>
 noremap <silent> ,m :call yjpark:switchToMaxMode() <CR>
