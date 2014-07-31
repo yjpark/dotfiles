@@ -3,14 +3,6 @@ else
     set shell=/bin/bash
 endif
 
-call janus#disable_plugin('ack')
-
-if v:version < '703' || !has('python')
-    call add(g:pathogen_disabled, 'YouCompleteMe')
-else
-    call janus#disable_plugin('supertab')
-endif
-
 "quickfixsigns
 let g:quickfixsigns_classes = ['qfl', 'loc', 'marks', 'vcsdiff', 'breakpoints']", 'rel', 'cursor']
 let g:quickfixsigns_class_rel = {'sign': '*s:RelSign', 'get': 's:GetRelList(%s, "rel")', 'event': ['BufEnter', 'CursorHold', 'CursorHoldI', 'CursorMoved', 'CursorMovedI'], 'timeout': 0, 'max': 99, 'level': 9}
