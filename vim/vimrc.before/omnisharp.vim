@@ -1,5 +1,5 @@
-let g:Omnisharp_start_server = 0
-let g:Omnisharp_stop_server = 0
+"let g:Omnisharp_start_server = 0
+"let g:Omnisharp_stop_server = 0
 
 " OmniSharp won't work without this setting
 filetype plugin on
