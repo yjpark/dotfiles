@@ -4,7 +4,7 @@ if has("gui_running")
     set guioptions-=l
     set guioptions-=L
     set guioptions-=m
-    set fuoptions=maxvert,maxhorz
+    " set fuoptions=maxvert,maxhorz
     " au GUIEnter * set fullscreen
 endif
 
