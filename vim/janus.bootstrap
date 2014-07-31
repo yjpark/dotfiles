@@ -12,7 +12,6 @@ nanki/vim-objj
 sjl/gundo.vim
 terryma/vim-multiple-cursors
 vim-scripts/BufOnly.vim
-vim-scripts/FuzzyFinder
 vim-scripts/L9
 vim-scripts/VOoM
 vim-scripts/grep.vim

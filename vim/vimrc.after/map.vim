@@ -46,33 +46,10 @@ noremap <silent> ,f :Ack <C-r><C-w><CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 
-vmap <silent>sf        <Plug>SQLU_Formatter<CR>
-nmap <silent>scl       <Plug>SQLU_CreateColumnList<CR>
-nmap <silent>scd       <Plug>SQLU_GetColumnDef<CR>
-nmap <silent>scdt      <Plug>SQLU_GetColumnDataType<CR>
-nmap <silent>scp       <Plug>SQLU_CreateProcedure<CR> 
-
-"default leader is \
-nmap <Leader>s :source $MYVIMRC
-nmap <Leader>e :e $MYVIMRC
-
-" Temporary key mappings ============================================
-" change this.methodName -> \"methodName\", a trick when upgrade dojo
-map ,a  <ESC>bbbdwxi"<ESC>ea"<ESC>
-" Temporary key mappings end ========================================
-
 " Reflow a paragragh
 nnoremap Q gqap
 " Reflow selected lines
 vnoremap Q gq
 
-" FuzzyFinder from
-" http://rickey-nctu.blogspot.com/2009/02/vim-fuzzyfinder.html
-map ff <esc>:FufFile<cr>
-map fcd <esc>:FufDir<cr>
-map fba <esc>:FufAddBookmark<cr>
-map fbl <esc>:FufBookmark<cr>
-map fu <esc>:FufBuffer<cr>
-map <silent> <c-\> :FufTag! <c-r>=expand('<cword>')<cr><cr>
 map <c-f12> <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 
