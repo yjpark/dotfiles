@@ -1,1 +1,1 @@
-:colorscheme molokai
+:colorscheme desert256
