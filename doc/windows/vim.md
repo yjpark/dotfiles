@@ -7,5 +7,7 @@ For the OmniSharp for cs files, need to open the project with Visual Studio, and
 ycm_folder/python/ycm/completers/cs/OmniSharpServer/OmniSharp.sln
 ```
 
+Create an empty folder as `~/.janus/YouCompleteMe`
+
 Fullscreen support
 - https://github.com/xqin/gvimfullscreen
