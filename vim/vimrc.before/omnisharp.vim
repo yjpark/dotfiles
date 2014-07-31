@@ -40,7 +40,7 @@ set splitbelow
 
 " Get Code Issues and syntax errors
 let g:syntastic_cs_checkers = ['syntax', 'issues', 'warning']
-autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+autocmd BufEnter,InsertLeave *.cs SyntasticCheck
 
 "show type information automatically when the cursor stops moving
 autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
