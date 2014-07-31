@@ -6,3 +6,6 @@ For the OmniSharp for cs files, need to open the project with Visual Studio, and
 ```
 ycm_folder/python/ycm/completers/cs/OmniSharpServer/OmniSharp.sln
 ```
+
+Fullscreen support
+- https://github.com/xqin/gvimfullscreen

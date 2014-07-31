@@ -5,8 +5,8 @@ if has('gui_running') && has('libcall')
         call libcallnr(g:MyVimLib, "ToggleFullScreen", 0)
     endfunction
 
-    "Alt+Enter
-    map <A-Enter> <Esc>:call ToggleFullScreen()<CR>
+    "F11
+    map <F11> <Esc>:call ToggleFullScreen()<CR>
 
     let g:VimAlpha = 240
     function! SetAlpha(alpha)
