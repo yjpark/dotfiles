@@ -12,5 +12,3 @@ cat .dotfiles/bash/aliases.windows/* >> ~/.bash_it/aliases/custom.aliases.bash
 rm ~/.bash_it/custom/common.bash
 cat .dotfiles/bash/custom/* >> ~/.bash_it/custom/common.bash
 cat .dotfiles/bash/custom.windows/* >> ~/.bash_it/custom/common.bash
-
-cp .dotfiles/bin/windows/powerline-shell_bash_windows.py ~/bin/powerline-shell_bash.py
