@@ -9,8 +9,8 @@ set whichwrap+=<,>,h,l,[,]
 noremap <C-n> :Tbbn<CR>
 noremap <C-p> :Tbbp<CR>
 noremap ,1 :!<CR> 
-noremap <silent> ,3 :set guioptions-=b<CR>:set wrap<CR>
-noremap <silent> ,4 :set guioptions+=b<CR>:set nowrap<CR>
+noremap <silent> ,3 :set guioptions+=bm<CR>:set wrap<CR>
+noremap <silent> ,4 :set guioptions-=bm<CR>:set nowrap<CR>
 noremap ,5 :set paste<CR>
 noremap ,6 :set nopaste<CR>
 noremap <silent> ,7 :w<CR>:!view-latex-pdf %<CR>
