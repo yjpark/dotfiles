@@ -39,7 +39,8 @@ set completeopt=longest,menuone,preview
 set splitbelow
 
 " Get Code Issues and syntax errors
-let g:syntastic_cs_checkers = ['syntax', 'issues', 'warning']
+"let g:syntastic_cs_checkers = ['syntax', 'issues', 'warning']
+let g:syntastic_cs_checkers = ['syntax', 'issues']
 autocmd BufEnter,InsertLeave *.cs SyntasticCheck
 
 "show type information automatically when the cursor stops moving
