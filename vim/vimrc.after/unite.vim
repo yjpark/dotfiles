@@ -2,22 +2,24 @@ let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --smart-case --ignore=*.meta'
 let g:unite_source_grep_recursive_opt = ''
 
-let g:unite_quick_match_table =
-      \ get(g:, 'unite_quick_match_table', {
-      \ 'a' : 0, 'o' : 1, 'e' : 2, 'u' : 3, 'i' : 4, 'd' : 5, 'h' : 6, 't' : 7, 'n' : 8, 's' : 9,
-      \ 'p' : 10, 'y' : 11, 'f' : 12, 'g' : 13, 'c' : 14, 'r' : 15, 'l' : 16, 'q' : 17, 'j' : 18, 'k' : 19,
-      \ 'x' : 20, 'b' : 21, 'm' : 22, 'w' : 23, 'v' : 24, 'z' : 25
-      \ })
+
+"Since some keys are reserved for operation, so it's a bit hard to make the
+"dvorak version here
+"let g:unite_quick_match_table =
+"      \ get(g:, 'unite_quick_match_table', {
+"      \ 'a' : 0, 'o' : 1, 'e' : 2, 'u' : 3, 'i' : 4, 'd' : 5, 'h' : 6, 't' : 7, 'n' : 8, 's' : 9,
+"      \ '1' : 10, '2' : 11, '3' : 12, '4' : 13, '5' : 14, '6' : 15, '7' : 16, '8' : 17, '9' : 18, '0' : 19
+"      \ })
 
 call unite#custom#source(
-    \ 'file_rec/async,file_rec', 'matchers',
+    \ 'file_rec/async,file_rec,file_mru', 'matchers',
     \ ['converter_tail', 'matcher_default'])
 call unite#custom#source(
-    \ 'file_rec/async,file_rec', 'converters',
+    \ 'file_rec/async,file_rec,file_mru', 'converters',
     \ ['converter_file_directory'])
 call unite#custom#source('file,file/new,buffer',
     \ 'matchersers', 'matcher_fuzzy')
-call unite#filters#sorter_default#use(['sorter_rank'])
+" call unite#filters#sorter_default#use(['sorter_rank'])
 
 " http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html
 " http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
