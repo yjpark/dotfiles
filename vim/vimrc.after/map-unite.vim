@@ -23,3 +23,13 @@ function! s:unite_settings()
   imap <buffer> <C-j>   <Plug>(unite_select_next_line)
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
 endfunction
+
+" For searching the word in the cursor in the current directory,
+noremap <silent> ,. :Unite grep:.:<CR>
+
+" For searching the word in the cursor in the current buffer,
+noremap <silent> ,f :Unite grep:%::<C-r><C-w><CR>
+
+" For searching the word in the cursor in all opened buffer
+noremap <silent> <Leader>sa :Unite grep:$buffers::<C-r><C-w><CR>
+

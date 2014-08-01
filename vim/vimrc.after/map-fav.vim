@@ -30,7 +30,7 @@ noremap <silent> <leader>u :GundoToggle<CR>
 noremap <silent> ,q :QuickfixsignsToggle<CR>
 
 "Search the word under cursor, see :help cmdline-editing for more details
-noremap <silent> ,f :Ack <C-r><C-w><CR>
+"noremap <silent> ,f :Ack <C-r><C-w><CR>
 
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
