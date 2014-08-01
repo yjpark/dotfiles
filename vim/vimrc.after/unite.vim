@@ -16,7 +16,9 @@ call unite#custom#source(
     \ ['converter_file_directory'])
 call unite#custom#source('file,file/new,buffer',
     \ 'matchersers', 'matcher_fuzzy')
+
 " call unite#filters#sorter_default#use(['sorter_rank'])
+" call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 " http://www.codeography.com/2013/06/17/replacing-all-the-things-with-unite-vim.html
 " http://bling.github.io/blog/2013/06/02/unite-dot-vim-the-plugin-you-didnt-know-you-need/
@@ -25,7 +27,9 @@ call unite#custom#source('file,file/new,buffer',
 " Note: <C-u> here can remove range
 let g:unite_source_history_yank_enable = 1
 "nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
+nnoremap ,<Space> :<C-u>Unite -no-split -buffer-name=unite   -start-insert 
+
 nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async<cr>
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
 nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer  -quick-match buffer<cr>
