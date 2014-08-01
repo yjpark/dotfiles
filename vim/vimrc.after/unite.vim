@@ -47,16 +47,16 @@ function! s:unite_settings()
   " Enable navigation with control-j and control-k in insert mode
   imap <buffer> <C-j>   <Plug>(unite_select_next_line)
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-  imap <buffer> <C-d>   <Plug>(unite_exit)
-  nmap <buffer> <C-d>   <Plug>(unite_exit)
+  imap <buffer> <C-c>   <Plug>(unite_exit)
+  nmap <buffer> <C-c>   <Plug>(unite_exit)
   nmap <buffer> <BS>    <Plug>(unite_exit)
 endfunction
 
 
 " For searching the word in the cursor in the current directory,
-noremap <silent> ,. :Unite grep:.:<CR>
+noremap <silent> ,. -no-split -buffer-name=grep :Unite grep:.:<CR>
 " For searching the word in the cursor in the current buffer,
-noremap <silent> ,f :Unite grep:.:<CR><C-r><C-w><CR>
+noremap <silent> ,f -no-split -buffer-name=grep :Unite grep:.:<CR><C-r><C-w><CR>
 
 " For searching the word in the cursor in all opened buffer
 " noremap <silent> <Leader>sa :Unite grep:$buffers::<C-r><C-w><CR>
