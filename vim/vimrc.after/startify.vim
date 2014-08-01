@@ -1,5 +1,6 @@
 let g:startify_enable_special = 0
 let g:startify_session_dir = '~/.vim/session'
+let g:startify_change_to_dir = 0
 
 autocmd FileType startify setlocal buftype=
 
