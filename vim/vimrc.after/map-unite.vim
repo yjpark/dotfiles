@@ -5,7 +5,8 @@
 " Note: <C-u> here can remove range
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+"nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async<cr>
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
 nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer  -quick-match buffer<cr>
 nnoremap ,r :<C-u>Unite -no-split -buffer-name=register  register<cr>
