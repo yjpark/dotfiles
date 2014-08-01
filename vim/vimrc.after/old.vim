@@ -65,6 +65,9 @@ set backspace=2
 " allow backspace and cursor keys to cross line boundaries
 set whichwrap+=<,>,h,l
 
+au InsertLeave * set timeoutlen=2000
+au InsertEnter * set timeoutlen=20
+
 set cursorline
 if version > 700
     au InsertLeave * set nocursorcolumn
