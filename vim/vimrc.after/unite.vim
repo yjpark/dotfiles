@@ -40,7 +40,7 @@ nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
-  "Not showing the trailing space red
+  " Not showing the trailing space as red if has vim-trailing-color installed
   autocmd InsertLeave <buffer> match ExtraWhitespace //
   autocmd InsertEnter <buffer> match ExtraWhitespace //
   autocmd BufWinEnter <buffer> match ExtraWhitespace //
