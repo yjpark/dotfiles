@@ -15,8 +15,6 @@ nnoremap ,t :CtrlPBufTag<cr>
 nnoremap ,T :CtrlPBufTagAll<cr>
 nnoremap ,u :CtrlPFunky<Cr>
 
-noremap ,s :Startify<CR>
-
 noremap <C-g> :YcmCompleter GoToDeclaration<CR>
 noremap ,g :YcmCompleter GoToImplementationElseDeclaration<CR>
 noremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
