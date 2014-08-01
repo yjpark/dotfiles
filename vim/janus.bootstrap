@@ -27,5 +27,5 @@ lilydjwg/colorizer
 rosenfeld/conque-term
 yjpark/vim-airline
 yjpark/vim-startify
-yjpark/Omnisharp-YCM
-tacahiroy/ctrlp-funky
+yjpark/Omnisharp
+yjpark/ctrlp-funky

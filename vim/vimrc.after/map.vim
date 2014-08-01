@@ -24,7 +24,8 @@ noremap ,p :CtrlP<CR>
 noremap ,. :Ack 
 noremap ,, :CtrlPMRU<CR>
 "noremap ,' <Leader><Leader>b
-nnoremap ,t :CtrlPFunky<Cr>
+nnoremap ,t :CtrlPBufTag<cr>
+nnoremap ,u :CtrlPFunky<Cr>
 
 noremap ,s :Startify<CR>
 
@@ -40,7 +41,7 @@ noremap <silent> ,r :registers<CR>
 noremap <silent> ,b :NERDTreeToggle<CR>
 noremap <silent> ,l :TagbarToggle<CR>
 "noremap <silent> ,t :TagbarShowTag<CR>
-noremap <silent> ,u :GundoToggle<CR>
+noremap <silent> <leader>u :GundoToggle<CR>
 noremap <silent> ,q :QuickfixsignsToggle<CR>
 
 "Search the word under cursor, see :help cmdline-editing for more details

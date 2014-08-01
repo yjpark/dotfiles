@@ -3,3 +3,6 @@
 let g:ctrlp_root_markers = ['.ctrlp']
 
 let g:ctrlp_extensions = ['funky']
+
+let g:ctrlp_funky_syntax_highlight = 1
+
