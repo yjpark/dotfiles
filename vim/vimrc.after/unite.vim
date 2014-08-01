@@ -37,9 +37,9 @@ function! s:unite_settings()
   " Enable navigation with control-j and control-k in insert mode
   imap <buffer> <C-j>   <Plug>(unite_select_next_line)
   imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-  map <buffer> <BS>    <Plug>(unite_exit)
-  imap <buffer> <leader>q    <Plug>(unite_exit)
-ndfunction
+  nmap <buffer> <BS>    <Plug>(unite_exit)
+  imap <buffer> <leader>q <Plug>(unite_exit)
+endfunction
 
 " For searching the word in the cursor in the current directory,
 noremap <silent> ,. :Unite grep:.:<CR>
