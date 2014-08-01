@@ -28,6 +28,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 'Shougo/vimshell.vim'
 
 call neobundle#end()
 
@@ -38,4 +39,4 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-let g:vimfiler_as_default_explorer = 1
+" let g:vimfiler_as_default_explorer = 1

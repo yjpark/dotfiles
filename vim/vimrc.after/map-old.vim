@@ -1,5 +1,4 @@
 
-noremap ,1 :!<CR> 
 noremap <silent> ,3 :set guioptions+=bm<CR>:set wrap<CR>
 noremap <silent> ,4 :set guioptions-=bm<CR>:set nowrap<CR>
 noremap ,5 :set paste<CR>
