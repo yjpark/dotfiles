@@ -22,8 +22,8 @@ noremap <silent> ,0 :nohl<CR>
 
 noremap ,p :CtrlP<CR>
 noremap ,. :Ack 
-noremap ,, <Leader><Leader>w
-noremap ,' <Leader><Leader>b
+noremap ,, :CtrlPMRU<CR>
+"noremap ,' <Leader><Leader>b
 
 noremap ,s :Startify<CR>
 
