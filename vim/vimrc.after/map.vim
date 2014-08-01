@@ -6,8 +6,10 @@ imap <C-a> <Esc>0i
 imap <C-e> <Esc>$a
 set whichwrap+=<,>,h,l,[,]
 
-noremap <C-n> :Tbbn<CR>
-noremap <C-p> :Tbbp<CR>
+"noremap <C-n> :Tbbn<CR>
+"noremap <C-p> :Tbbp<CR>
+noremap <C-n> :bn<CR>
+noremap <C-p> :bp<CR>
 noremap ,1 :!<CR> 
 noremap <silent> ,3 :set guioptions+=bm<CR>:set wrap<CR>
 noremap <silent> ,4 :set guioptions-=bm<CR>:set nowrap<CR>
