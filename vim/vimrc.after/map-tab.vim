@@ -1,6 +1,6 @@
 nnoremap <C-n> gt
 nnoremap <C-p> gT
-nmap <C-t> :tabnew \| b 1 <CR>
+nmap <C-t> :tab split<CR>
 nnoremap ,w :tabclose<CR>
 
 nnoremap <leader>1 1gt
