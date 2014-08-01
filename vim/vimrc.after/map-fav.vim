@@ -8,7 +8,8 @@ set whichwrap+=<,>,h,l,[,]
 
 noremap ,p :CtrlP<CR>
 noremap ,. :Ack 
-noremap ,, :CtrlPMRU<CR>
+noremap ,, :CtrlPBuffer<CR>
+noremap ,' :CtrlPMRU<CR>
 "noremap ,' <Leader><Leader>b
 nnoremap ,t :CtrlPBufTag<cr>
 nnoremap ,T :CtrlPBufTagAll<cr>
