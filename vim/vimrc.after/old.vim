@@ -112,10 +112,6 @@ let g:multi_cursor_quit_key='\<Esc>'
 " let g:ackprg = 'ag --nogroup --nocolor --column'
 let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore=*.meta'
 
-" ctrlp bydefault will use .git as the root path, though it might not be the
-" correct one for projects holding a lot binary files, e.g. unity projects
-let g:ctrlp_root_markers = ['.ctrlp']
-
 " for the window control of TabBar
 let g:Tb_MaxSize = 0
 " let g:Tb_MoreThanOne = 0
