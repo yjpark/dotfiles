@@ -2,7 +2,6 @@ let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --smart-case --ignore=*.meta'
 let g:unite_source_grep_recursive_opt = ''
 
-
 "Since some keys are reserved for operation, so it's a bit hard to make the
 "dvorak version here
 "let g:unite_quick_match_table =
@@ -41,6 +40,10 @@ nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
 function! s:unite_settings()
+  "Not showing the trailing space red
+  autocmd InsertLeave <buffer> match ExtraWhitespace //
+  autocmd InsertEnter <buffer> match ExtraWhitespace //
+  autocmd BufWinEnter <buffer> match ExtraWhitespace //
   " Play nice with supertab
   let b:SuperTabDisabled=1
   " Enable navigation with control-j and control-k in insert mode
@@ -50,6 +53,7 @@ function! s:unite_settings()
   nmap <buffer> <C-d>   <Plug>(unite_exit)
   nmap <buffer> <BS>    <Plug>(unite_exit)
 endfunction
+
 
 " For searching the word in the cursor in the current directory,
 noremap <silent> ,. :Unite grep:.:<CR>
