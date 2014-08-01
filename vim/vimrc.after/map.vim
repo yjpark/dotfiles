@@ -25,6 +25,7 @@ noremap ,. :Ack
 noremap ,, :CtrlPMRU<CR>
 "noremap ,' <Leader><Leader>b
 nnoremap ,t :CtrlPBufTag<cr>
+nnoremap ,T :CtrlPBufTagAll<cr>
 nnoremap ,u :CtrlPFunky<Cr>
 
 noremap ,s :Startify<CR>
