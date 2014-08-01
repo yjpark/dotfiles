@@ -2,6 +2,13 @@ let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --smart-case --ignore=*.meta'
 let g:unite_source_grep_recursive_opt = ''
 
+let g:unite_quick_match_table =
+      \ get(g:, 'unite_quick_match_table', {
+      \ 'a' : 0, 'o' : 1, 'e' : 2, 'u' : 3, 'i' : 4, 'd' : 5, 'h' : 6, 't' : 7, 'n' : 8, 's' : 9,
+      \ 'p' : 10, 'y' : 11, 'f' : 12, 'g' : 13, 'c' : 14, 'r' : 15, 'l' : 16, 'q' : 17, 'j' : 18, 'k' : 19,
+      \ 'x' : 20, 'b' : 21, 'm' : 22, 'w' : 23, 'v' : 24, 'z' : 25
+      \ })
+
 call unite#custom#source(
     \ 'file_rec/async,file_rec', 'matchers',
     \ ['converter_tail', 'matcher_default'])
