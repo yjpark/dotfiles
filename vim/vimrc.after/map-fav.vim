@@ -9,9 +9,9 @@ set whichwrap+=<,>,h,l,[,]
 noremap <silent> ,1 :VimShell<CR>
 noremap <silent> ,2 :VimFiler<CR>
 
-noremap ,. :Ack 
+"noremap ,. :Ack 
 "Search the word under cursor, see :help cmdline-editing for more details
-noremap <silent> ,f :Ack <C-r><C-w><CR>
+"noremap <silent> ,f :Ack <C-r><C-w><CR>
 
 "noremap ,p :CtrlP<CR>
 "noremap ,, :CtrlPBuffer<CR>
