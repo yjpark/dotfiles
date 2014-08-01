@@ -2,13 +2,12 @@ let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --smart-case --ignore=*.meta'
 let g:unite_source_grep_recursive_opt = ''
 
-"Since some keys are reserved for operation, so it's a bit hard to make the
-"dvorak version here
-"let g:unite_quick_match_table =
-"      \ get(g:, 'unite_quick_match_table', {
-"      \ 'a' : 0, 'o' : 1, 'e' : 2, 'u' : 3, 'i' : 4, 'd' : 5, 'h' : 6, 't' : 7, 'n' : 8, 's' : 9,
-"      \ '1' : 10, '2' : 11, '3' : 12, '4' : 13, '5' : 14, '6' : 15, '7' : 16, '8' : 17, '9' : 18, '0' : 19
-"      \ })
+let g:unite_quick_match_table =
+      \ get(g:, 'unite_quick_match_table', {
+      \ '1' : 0, '2' : 1, '3' : 2, '4' : 3, '5' : 4, '6' : 5, '7' : 6, '8' : 7, '9' : 8, '0' : 9,
+      \ 'a' : 10, 's' : 11, 'd' : 12, 'f' : 13, 'g' : 14, 'h' : 15, 'j' : 16, 'k' : 17, 'l' : 18, ';' : 19,
+      \ 'q' : 20, 'w' : 21, 'e' : 22, 'r' : 23, 't' : 24, 'y' : 25, 'u' : 26, 'i' : 27, 'o' : 28, 'p' : 29,
+      \ })
 
 call unite#custom#source(
     \ 'file_rec/async,file_rec,file_mru', 'matchers',
