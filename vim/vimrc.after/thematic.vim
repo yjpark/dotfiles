@@ -1,3 +1,6 @@
+"nnoremap <silent> <D-9> <Plug>ThematicNarrow
+"nnoremap <silent> <D-0> <Plug>ThematicWiden
+
 let g:thematic#defaults = {
 \ 'background': 'dark',
 \ 'laststatus': 2,
@@ -7,17 +10,22 @@ let g:thematic#defaults = {
 \ 'font-size': 20,
 \ 'transparency': 0,
 \ 'linespace': 6,
+\ 'fullscreen': 1,
 \ }
 
 let g:thematic#themes = {
-\ 'pencil_dark' :{ 'colorscheme': 'pencil',
-\                  'airline-theme': 'pencil',
-\                },
-\ 'pencil_lite' :{ 'colorscheme': 'pencil',
-\                  'background': 'light',
-\                  'airline-theme': 'pencil',
-\                  'fullscreen': 1,
-\                },
+\ 'code' :{
+\   'colorscheme': 'pencil',
+\   'airline-theme': 'pencil',
+\ },
+\
+\ 'write' :{
+\   'colorscheme': 'pencil',
+\   'airline-theme': 'pencil',
+\   'laststatus': 0,
+\   'ruler': 1,
+\   'background': 'light',
+\ },
 \ }
 
-let g:thematic#theme_name = 'pencil_dark'
+let g:thematic#theme_name = 'code'
