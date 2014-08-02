@@ -31,6 +31,8 @@ NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 
+NeoBundle 'reedes/vim-colors-pencil'
+
 call neobundle#end()
 
 " Required:

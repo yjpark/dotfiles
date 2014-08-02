@@ -11,3 +11,6 @@ autocmd InsertEnter * let CursorColumnI = col('.')
 autocmd CursorMovedI * let CursorColumnI = col('.')
 autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) | endif"
 
+set timeoutlen=2000
+au InsertLeave * set timeoutlen=2000
+au InsertEnter * set timeoutlen=0

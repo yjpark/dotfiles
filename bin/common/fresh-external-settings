@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Bootstraping ~/.external/settings"
+
+mkdir -p ~/.external/settings
+cd ~/.external/settings
+
+bootstrap-github-repositories ~/.dotfiles/external/settings.bootstrap
+mu register --all
+

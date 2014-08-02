@@ -122,7 +122,6 @@ fi
 
 # =====================================================
 # External stuffs
-fresh 'external/fish.aliases/*' --file='~/.config/fish/aliases.fish'
 fresh 'external/bin/*' --bin
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'external/bin.osx/*' --bin
