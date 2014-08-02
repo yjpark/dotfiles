@@ -17,8 +17,9 @@ let g:vimim_shuangpin_microsoft=1
 "let g:vimim_tab_for_one_key=1
 imap <silent><C-L> <Plug>VimimChineseToggle
 
+set timeoutlen=2000
 au InsertLeave * set timeoutlen=2000
-au InsertEnter * set timeoutlen=20
+au InsertEnter * set timeoutlen=0
 
 set cursorline
 if version > 700
