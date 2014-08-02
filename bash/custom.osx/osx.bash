@@ -2,8 +2,8 @@ export PATH="/usr/local/sbin:/usr/local/bin/:/usr/texbin:$PATH"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 
+export EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim -n'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -n'
-alias cdf='cd "$(/opt/local/bin/posd)"'
 
 . /usr/local/etc/bash_completion 2>&1 > /dev/null &
 
