@@ -32,6 +32,7 @@ NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'jiangmiao/auto-pairs'
 
 NeoBundle 'reedes/vim-colors-pencil'
+NeoBundle 'reedes/vim-pencil'
 
 call neobundle#end()
 
