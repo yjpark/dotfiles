@@ -1,5 +1,22 @@
-nnoremap <C-n> gt
-nnoremap <C-p> gT
+nnoremap <C-n> :<C-u>call yjpark:next()<CR>
+nnoremap <C-p> :<C-u>call yjpark:prev()<CR>
+
+function! yjpark:next()
+    if tabpagenr('$') == 1
+        bnext
+    else
+        tabnext
+    endif
+endfunction
+
+function! yjpark:prev()
+    if tabpagenr('$') == 1
+        bprevious
+    else
+        tabprevious
+    endif
+endfunction
+
 nmap <C-t> :tab split<CR>
 nnoremap ,w :tabclose<CR>
 
