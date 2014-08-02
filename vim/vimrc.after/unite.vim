@@ -58,9 +58,9 @@ endfunction
 
 
 " For searching the word in the cursor in the current directory,
-noremap <silent> ,. :<C-u>Unite -no-split -buffer-name=grep grep:.:<CR>
+noremap <silent> ,. :<C-u>Unite -buffer-name=grep grep:.:<CR>
 " For searching the word in the cursor in the current buffer,
-noremap <silent> ,f :<C-u>Unite -no-split -buffer-name=grep grep:.:<CR><C-r><C-w><CR>
+noremap <silent> ,f :<C-u>Unite -buffer-name=grep grep:.:<CR><C-r><C-w><CR>
 
 " For searching the word in the cursor in all opened buffer
 " noremap <silent> <Leader>sa :Unite grep:$buffers::<C-r><C-w><CR>
