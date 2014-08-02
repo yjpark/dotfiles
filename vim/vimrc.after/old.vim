@@ -39,7 +39,6 @@ set laststatus=2
 
 call pathogen#infect()
 
-set paste
 set ignorecase smartcase
 
 set background=dark

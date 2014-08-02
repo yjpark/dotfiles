@@ -1,7 +1,10 @@
 " http://www.zfanw.com/blog/vimfiler.html
 
 " let g:vimfiler_as_default_explorer = 1
-" let g:vimfiler_safe_mode_by_default = 0
+
+nnoremap <leader>b :VimFilerExprorer<CR>
+
+let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_time_format = "%y-%m-%d %H:%H"
 
 let g:vimfiler_ignore_pattern = "^\%(.git\|.DS_Store\|*.meta\)$"
