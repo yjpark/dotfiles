@@ -2,6 +2,21 @@ let g:unite_source_grep_command = 'ag'
 let g:unite_source_grep_default_opts = '--nogroup --nocolor --column --smart-case --ignore=*.meta'
 let g:unite_source_grep_recursive_opt = ''
 
+" Ignore certain files and directories while searching
+call unite#custom_source('file,file_rec,file_rec/async,grep',
+            \ 'ignore_pattern', join([
+      \ '\.git/',
+      \ '\.bundle/',
+      \ '\.rubygems/',
+      \ 'vendor/',
+      \ 'node_modules/',
+      \ '\.meta$',
+      \ '\.ctrlp$',
+      \ '\.DS_Store$',
+      \ '\.silp_backup$',
+      \ '\.silp_test$',
+      \ ], '\|'))
+
 let g:unite_quick_match_table = {
       \ '1' : 0, '2' : 1, '3' : 2, '4' : 3, '5' : 4, '6' : 5, '7' : 6, '8' : 7, '9' : 8, '0' : 9,
       \ 'a' : 10, 's' : 11, 'd' : 12, 'f' : 13, 'g' : 14, 'h' : 15, 'j' : 16, 'k' : 17, 'l' : 18, ';' : 19,
