@@ -30,14 +30,14 @@ let g:unite_source_history_yank_enable = 1
 
 nnoremap ,<Space> :<C-u>Unite -no-split -buffer-name=unite   -start-insert 
 
-nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async<cr>
-nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
-nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer  -quick-match buffer<cr>
-nnoremap ,r :<C-u>Unite -no-split -buffer-name=register  register<cr>
+nnoremap ,p :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
+nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
+nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -quick-match buffer<cr>
+nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -quick-match register<cr>
 
 "Not really using
-nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
-nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+nnoremap ,o :<C-u>Unite -no-split -buffer-name=outline -quick-match outline<cr>
+nnoremap ,y :<C-u>Unite -no-split -buffer-name=yank -quick-match history/yank<cr>
 
 " Custom mappings for the unite buffer
 autocmd FileType unite call s:unite_settings()
