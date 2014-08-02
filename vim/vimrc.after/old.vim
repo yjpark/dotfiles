@@ -1,29 +1,3 @@
-"so $VIMRUNTIME/mswin.vim
-set number
-syntax on
-set hlsearch
-set incsearch
-
-set wrap
-
-set wildmenu
-
-set helplang=cn
-
-set expandtab       "Use softtabstop spaces instead of tab characters for indentation
-set shiftwidth=4    "Indent by 4 spaces when using >>, <<, == etc.
-set softtabstop=4   "Indent by 4 spaces when pressing <TAB>
-
-set autoindent      "Keep indentation from previous line
-set smartindent     "Automatically inserts indentation in some cases
-set cindent         "Like smartindent, but stricter and more customisable
-
-if has ("autocmd")
-    " File type detection. Indent based on filetype. Recommended.
-    filetype plugin indent on
-endif
-
-filetype plugin on
 let g:tex_flavor='latex'
 au BufNewFile,BufRead *.txt set filetype=text
 au BufNewFile,BufRead *.py set filetype=python
@@ -42,28 +16,6 @@ let g:miniBufExplUseSingleClick = 1
 let g:vimim_shuangpin_microsoft=1
 "let g:vimim_tab_for_one_key=1
 imap <silent><C-L> <Plug>VimimChineseToggle
-
-set foldlevelstart=99
-
- 
-set sidescroll=8
-set listchars+=precedes:<,extends:>
-
-behave xterm 
-
-" The ttymouse is for vim in screen's mouse support
-set ttymouse=xterm2
-set mouse=a
-set mousefocus
-
-" buffer becomes hidden when it is abandoned
-set hidden
-
-" make backspace work normal (indent, eol, start)
-set backspace=2
-
-" allow backspace and cursor keys to cross line boundaries
-set whichwrap+=<,>,h,l
 
 au InsertLeave * set timeoutlen=2000
 au InsertEnter * set timeoutlen=20
@@ -87,7 +39,7 @@ set laststatus=2
 
 call pathogen#infect()
 
-"set paste
+set paste
 set ignorecase smartcase
 
 set background=dark

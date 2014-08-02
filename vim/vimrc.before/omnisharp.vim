@@ -1,9 +1,6 @@
 "let g:Omnisharp_start_server = 0
 "let g:Omnisharp_stop_server = 0
 
-" OmniSharp won't work without this setting
-filetype plugin on
-
 "This is the default value, setting it isn't actually necessary
 let g:OmniSharp_host = "http://localhost:2000"
 

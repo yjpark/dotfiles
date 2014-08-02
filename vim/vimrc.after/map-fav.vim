@@ -4,7 +4,6 @@ noremap <C-a> 0
 noremap <C-e> $
 imap <C-a> <Esc>0i
 imap <C-e> <Esc>$a
-set whichwrap+=<,>,h,l,[,]
 
 noremap <silent> ,1 :VimShell<CR>
 noremap <silent> ,2 :VimFiler<CR>
@@ -39,3 +38,4 @@ nmap <leader>p :call AutoPairsToggle()<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 
+nnoremap <Leader><Leader>z :let &scrolloff=999-&scrolloff<CR>
