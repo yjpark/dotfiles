@@ -28,7 +28,7 @@ call unite#custom#source('file,file/new',
 let g:unite_source_history_yank_enable = 1
 "nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
 
-nnoremap ,<Space> :<C-u>Unite -no-split -buffer-name=unite   -start-insert 
+nnoremap ,<Space> :<C-u>Unite -no-split -buffer-name=unite 
 
 nnoremap ,p :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
