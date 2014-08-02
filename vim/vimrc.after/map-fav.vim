@@ -2,8 +2,12 @@ noremap ; :
 noremap ' "
 noremap <C-a> 0
 noremap <C-e> $
-imap <C-a> <Esc>0i
-imap <C-e> <Esc>$a
+
+"Send <C-o> in insert mode will run normal command
+imap <C-a> <C-o>0
+imap <C-e> <C-o>$
+"Delete from cursor to end of word
+imap <C-d> <C-o>dw
 
 noremap <silent> ,1 :VimShell<CR>
 noremap <silent> ,2 :VimFiler<CR>
