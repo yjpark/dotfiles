@@ -33,7 +33,7 @@ nnoremap ,<Space> :<C-u>Unite -no-split -buffer-name=unite   -start-insert
 nnoremap ,p :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
 nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -quick-match buffer<cr>
-nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -quick-match register<cr>
+nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -quick-match -default-action=yank register<cr>
 
 "Not really using
 nnoremap ,o :<C-u>Unite -no-split -buffer-name=outline -quick-match outline<cr>

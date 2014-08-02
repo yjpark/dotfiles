@@ -1,6 +1,7 @@
 
-"keep th current line in the center
-set scrolloff=996
+"keep th current line in the center in insert mode
+au InsertLeave * set sidescroll=0
+au InsertEnter * set sidescroll=999
 
 set sidescroll=8
 set sidescrolloff=8
