@@ -27,9 +27,9 @@ noremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "noremap <silent> ,r :registers<CR>
 
+"noremap <silent> ,t :TagbarShowTag<CR>
 noremap <silent> ,b :NERDTreeToggle<CR>
 noremap <silent> ,l :TagbarToggle<CR>
-"noremap <silent> ,t :TagbarShowTag<CR>
 noremap <silent> <leader>u :GundoToggle<CR>
 noremap <silent> ,q :QuickfixsignsToggle<CR>
 
@@ -39,3 +39,6 @@ map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 
 nnoremap <Leader><Leader>z :let &scrolloff=999-&scrolloff<CR>
+
+nnoremap <Leader>j :<C-u>m .+1<CR>
+nnoremap <Leader>k :<C-u>m .-2<CR>
