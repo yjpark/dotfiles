@@ -9,12 +9,12 @@ let g:unite_quick_match_table = {
       \ }
 
 call unite#custom#source(
-    \ 'file_rec/async,file_rec,file_mru', 'matchers',
+    \ 'file_rec/async,file_rec,file_mru,buffer', 'matchers',
     \ ['converter_tail', 'matcher_default'])
 call unite#custom#source(
-    \ 'file_rec/async,file_rec,file_mru', 'converters',
+    \ 'file_rec/async,file_rec,file_mru,buffer', 'converters',
     \ ['converter_file_directory'])
-call unite#custom#source('file,file/new,buffer',
+call unite#custom#source('file,file/new',
     \ 'matchersers', 'matcher_fuzzy')
 
 " call unite#filters#sorter_default#use(['sorter_rank'])
