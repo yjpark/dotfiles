@@ -16,6 +16,9 @@ set whichwrap+=<,>,h,l
 set whichwrap+=<,>,h,l
 " Don't know why need both of them to make it work
 
+" http://stackoverflow.com/questions/6113316/how-can-i-automatically-close-preview-window-after-i-move-cursor-to-another-wind
+autocmd WinLeave * pc
+
 " OmniSharp won't work without this setting
 filetype plugin on
 
