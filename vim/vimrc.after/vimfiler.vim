@@ -2,7 +2,7 @@
 
 " let g:vimfiler_as_default_explorer = 1
 
-nnoremap <leader>b :VimFilerExprorer<CR>
+nnoremap <leader>b :VimFilerExplorer<CR>
 
 let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_time_format = "%y-%m-%d %H:%H"
