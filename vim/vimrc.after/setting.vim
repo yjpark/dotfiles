@@ -1,6 +1,11 @@
 
 "keep th current line in the center
-let scrolloff = 996
+set scrolloff = 996
+
+set sidescroll=8
+set sidescrolloff=8
+
+set listchars+=precedes:<,extends:>
 
 " allow backspace and cursor keys to cross line boundaries
 " set whichwrap+=<,>,h,l,[,]
@@ -36,11 +41,6 @@ if has ("autocmd")
 endif
 
 set foldlevelstart=99
-
-set sidescroll=8
-set sidescrolloff=8
-
-set listchars+=precedes:<,extends:>
 
 behave xterm
 
