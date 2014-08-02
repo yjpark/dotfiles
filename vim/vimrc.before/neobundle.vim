@@ -29,6 +29,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'jiangmiao/auto-pairs'
 
 call neobundle#end()
 

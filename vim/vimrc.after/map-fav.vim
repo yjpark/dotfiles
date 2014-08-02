@@ -34,6 +34,8 @@ noremap <silent> ,l :TagbarToggle<CR>
 noremap <silent> <leader>u :GundoToggle<CR>
 noremap <silent> ,q :QuickfixsignsToggle<CR>
 
+nmap <leader>p :call AutoPairsToggle()<CR>
+
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 
