@@ -1,6 +1,6 @@
 
 "keep th current line in the center
-set scrolloff = 996
+set scrolloff=996
 
 set sidescroll=8
 set sidescrolloff=8
