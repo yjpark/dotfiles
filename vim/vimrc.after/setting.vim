@@ -8,6 +8,8 @@ set sidescrolloff=8
 
 set listchars+=precedes:<,extends:>
 
+set wildmode=longest:full
+
 " allow backspace and cursor keys to cross line boundaries
 " set whichwrap+=<,>,h,l,[,]
 set whichwrap+=<,>,h,l

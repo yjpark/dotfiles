@@ -25,6 +25,8 @@ autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 "don't autoselect first item in omnicomplete, show if only one item (for preview)
 "remove preview if you don't want to see any documentation whatsoever.
 set completeopt=longest,menuone,preview
+"YouCompleteMe will override this anyway""
+
 " Fetch full documentation during omnicomplete requests.
 " There is a performance penalty with this (especially on Mono)
 " By default, only Type/Method signatures are fetched. Full documentation can still be fetched when
