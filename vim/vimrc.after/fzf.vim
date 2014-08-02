@@ -1,4 +1,5 @@
 set rtp+=~/.external/tools/fzf
+source ~/.external/tools/fzf/plugin/fzf.vim
 
 " https://github.com/junegunn/fzf/wiki/examples
 " Search lines in all open vim buffers
@@ -44,14 +45,14 @@ function! CmdLineDirComplete(prefix, options, rawdir)
     let l:dirprefix = matchstr(a:rawdir,"^.*/")
     if isdirectory(expand(l:dirprefix))
         return join(a:prefix + map(fzf#run({
-                    \'options': a:options . ' --select-1  --query=' .
+                    \'options': a:options . ' -x --select-1  --query=' .
                     \ a:rawdir[matchend(a:rawdir,"^.*/"):len(a:rawdir)],
                     \'dir': expand(l:dirprefix)
                     \}),
                     \'"' . escape(l:dirprefix, " ") . '" . escape(v:val, " ")'))
     else
         return join(a:prefix + map(fzf#run({
-                    \'options': a:options . ' --query='. a:rawdir }),
+                    \'options': a:options . ' -x --query='. a:rawdir }),
                     \'escape(v:val, " ")'))
         "dropped --select-1 to speed things up on a long query
 endfunction
@@ -74,7 +75,7 @@ function! GetCompletions()
     else
         return join(l:Prefix + fzf#run({
                     \'source':l:FZF_Cmd_Completion_List,
-                    \'options': '--select-1 --query='.shellescape(l:cmdline_list[-1])
+                    \'options': '-x --select-1 --query='.shellescape(l:cmdline_list[-1])
                     \}))
     endif
 endfunction
