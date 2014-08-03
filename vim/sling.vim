@@ -442,10 +442,10 @@
         let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
         let g:neosnippet#enable_snipmate_compatibility=1
 
-        imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
-        smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-        imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-        smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+        """imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
+        """smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+        """imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
+        """smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
       "}}}
     endif "}}}
     if s:settings.autocomplete_method == 'neocomplete' "{{{
@@ -499,13 +499,13 @@
     NeoBundleLazy 'mbbill/undotree', {'autoload':{'commands':'UndotreeToggle'}} "{{{
       let g:undotree_SplitLocation='botright'
       let g:undotree_SetFocusWhenToggle=1
-      nnoremap <silent> <F5> :UndotreeToggle<CR>
+      """nnoremap <silent> <F5> :UndotreeToggle<CR>
     "}}}
     NeoBundleLazy 'EasyGrep', {'autoload':{'commands':'GrepOptions'}} "{{{
       let g:EasyGrepRecursive=1
       let g:EasyGrepAllOptionsInExplorer=1
       let g:EasyGrepCommand=1
-      nnoremap <leader>vo :GrepOptions<cr>
+      """nnoremap <leader>vo :GrepOptions<cr>
     "}}}
     NeoBundle 'kien/ctrlp.vim', { 'depends': 'tacahiroy/ctrlp-funky' } "{{{
       let g:ctrlp_clear_cache_on_exit=1
@@ -542,8 +542,8 @@
       let NERDTreeShowBookmarks=1
       let NERDTreeIgnore=['\.git','\.hg']
       let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
-      nnoremap <F2> :NERDTreeToggle<CR>
-      nnoremap <F3> :NERDTreeFind<CR>
+      """nnoremap <F2> :NERDTreeToggle<CR>
+      """nnoremap <F3> :NERDTreeFind<CR>
     "}}}
     NeoBundleLazy 'majutsushi/tagbar', {'autoload':{'commands':'TagbarToggle'}} "{{{
       nnoremap <silent> <F9> :TagbarToggle<CR>
@@ -602,23 +602,23 @@
     "}}}
     NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources':'file_mru'}}
     NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}} "{{{
-      nnoremap <silent> [unite]a :<C-u>Unite -winheight=10 -auto-preview -buffer-name=airline_themes airline_themes<cr>
+      "nnoremap <silent> [unite]a :<C-u>Unite -winheight=10 -auto-preview -buffer-name=airline_themes airline_themes<cr>
     "}}}
     NeoBundleLazy 'ujihisa/unite-colorscheme', {'autoload':{'unite_sources':'colorscheme'}} "{{{
-      nnoremap <silent> [unite]c :<C-u>Unite -winheight=10 -auto-preview -buffer-name=colorschemes colorscheme<cr>
+      """nnoremap <silent> [unite]c :<C-u>Unite -winheight=10 -auto-preview -buffer-name=colorschemes colorscheme<cr>
     "}}}
     NeoBundleLazy 'tsukkee/unite-tag', {'autoload':{'unite_sources':['tag','tag/file']}} "{{{
-      nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<cr>
+      """nnoremap <silent> [unite]t :<C-u>Unite -auto-resize -buffer-name=tag tag tag/file<cr>
     "}}}
     NeoBundleLazy 'Shougo/unite-outline', {'autoload':{'unite_sources':'outline'}} "{{{
-      nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
+      """nnoremap <silent> [unite]o :<C-u>Unite -auto-resize -buffer-name=outline outline<cr>
     "}}}
     NeoBundleLazy 'Shougo/unite-help', {'autoload':{'unite_sources':'help'}} "{{{
-      nnoremap <silent> [unite]h :<C-u>Unite -auto-resize -buffer-name=help help<cr>
+      """nnoremap <silent> [unite]h :<C-u>Unite -auto-resize -buffer-name=help help<cr>
     "}}}
     NeoBundleLazy 'Shougo/junkfile.vim', {'autoload':{'commands':'JunkfileOpen','unite_sources':['junkfile','junkfile/new']}} "{{{
       let g:junkfile#directory=s:get_cache_dir('junk')
-      nnoremap <silent> [unite]j :<C-u>Unite -auto-resize -buffer-name=junk junkfile junkfile/new<cr>
+      """nnoremap <silent> [unite]j :<C-u>Unite -auto-resize -buffer-name=junk junkfile junkfile/new<cr>
     "}}}
   endif "}}}
   if count(s:settings.plugin_groups, 'indents') "{{{
@@ -797,13 +797,13 @@
   nnoremap <leader>ff :execute 'vimgrep /'.@/.'/g %'<cr>:copen<cr>
 
   " shortcuts for windows {{{
-    nnoremap <leader>v <C-w>v<C-w>l
-    nnoremap <leader>s <C-w>s
-    nnoremap <leader>vsa :vert sba<cr>
-    nnoremap <C-h> <C-w>h
-    nnoremap <C-j> <C-w>j
-    nnoremap <C-k> <C-w>k
-    nnoremap <C-l> <C-w>l
+    """nnoremap <leader>v <C-w>v<C-w>l
+    """nnoremap <leader>s <C-w>s
+    """nnoremap <leader>vsa :vert sba<cr>
+    """nnoremap <C-h> <C-w>h
+    """nnoremap <C-j> <C-w>j
+    """nnoremap <C-k> <C-w>k
+    """nnoremap <C-l> <C-w>l
   "}}}
 
   " tab shortcuts

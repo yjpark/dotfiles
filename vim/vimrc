@@ -4,11 +4,13 @@ let g:dotvim_settings.version = 1
 let g:dotvim_settings.default_indent = 4
 let g:dotvim_settings.max_column = 0
 let g:dotvim_settings.enable_cursorcolumn = 1
+let g:dotvim_settings.autocomplete_method = 'ycm'
 
 let g:dotvim_settings.disabled_plugins = [
             \   "justinmk/vim-sneak",
             \   "tpope/vim-speeddating",
             \   "tpope/vim-dispatch"
+            \   "mbbill/undotree"
             \]
 source ~/.dotfiles/vim/sling.vim
 
