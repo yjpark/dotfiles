@@ -1,5 +1,5 @@
-nnoremap <C-n> :<C-u>call yjpark:next()<CR>
-nnoremap <C-p> :<C-u>call yjpark:prev()<CR>
+nnoremap <silent> <C-n> :<C-u>call yjpark:next()<CR>
+nnoremap <silent> <C-p> :<C-u>call yjpark:prev()<CR>
 
 function! yjpark:next()
     if tabpagenr('$') == 1

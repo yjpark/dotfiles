@@ -5,8 +5,9 @@ inoremap <C-e> <C-o>$
 " Cursor Move
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
-inoremap <C-h> <C-o>h
-inoremap <C-l> <C-o>l
+" Easymotion in insert mode,
+imap <A-h> <Esc><leader><leader>b
+imap <A-l> <Esc><leader><leader>w
 "Delete from cursor to end of word
 inoremap <C-d> <C-o>dw
 
