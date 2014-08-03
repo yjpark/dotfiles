@@ -68,7 +68,7 @@ endfunction
 
 autocmd BufEnter * call rc:syncTree()
 
-QuickfixsignsDisable
+" QuickfixsignsDisable
 
 "golint https://github.com/golang/lint
 set rtp+=~/.go/src/github.com/golang/lint/misc/vim
