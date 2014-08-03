@@ -1,3 +1,5 @@
+NeoBundle 'reedes/vim-thematic'
+
 "nnoremap <silent> <D-9> <Plug>ThematicNarrow
 "nnoremap <silent> <D-0> <Plug>ThematicWiden
 

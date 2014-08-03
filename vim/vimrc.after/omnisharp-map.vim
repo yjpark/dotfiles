@@ -1,3 +1,4 @@
+NeoBundle 'yjpark/Omnisharp'
 
 " Synchronous build (blocks Vim)
 "autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
