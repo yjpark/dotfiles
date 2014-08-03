@@ -77,6 +77,9 @@ noremap <silent> ,. :<C-u>Unite -no-quit -buffer-name=grep grep:.:<CR>
 " For searching the word in the cursor in the current buffer,
 noremap <silent> ,f :<C-u>Unite -no-quit -buffer-name=grep grep:.:<CR><C-r><C-w><CR>
 
+" showing quickfix with error only (mainly for the omnisharp build result for now)
+noremap <silent> ,x :<C-u>Unite -no-quit -buffer-name=quickfix -start-insert quickfix<CR>error
+
 " For searching the word in the cursor in all opened buffer
 " noremap <silent> <Leader>sa :Unite grep:$buffers::<C-r><C-w><CR>
 
