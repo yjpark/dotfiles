@@ -139,8 +139,8 @@
 "}}}
 
 " base configuration {{{
-  set timeoutlen=300                                  "mapping timeout
-  set ttimeoutlen=50                                  "keycode timeout
+  set timeoutlen=500                                  "mapping timeout
+  set ttimeoutlen=0                                   "keycode timeout
 
   set mouse=a                                         "enable mouse
   set mousehide                                       "hide when characters are typed
@@ -193,7 +193,7 @@
   set scrolljump=5                                    "minimum number of lines to scroll
   set display+=lastline
   set wildmenu                                        "show list for autocomplete
-  set wildmode=list:full
+  set wildmode=longest:full
   set wildignorecase
 
   set splitbelow
@@ -239,8 +239,8 @@
     call EnsureExists(&directory)
   "}}}
 
-  let mapleader = ","
-  let g:mapleader = ","
+  " let mapleader = ","
+  " let g:mapleader = ","
 "}}}
 
 " ui configuration {{{
@@ -260,9 +260,9 @@
   autocmd WinEnter * setlocal cursorline
   let &colorcolumn=s:settings.max_column
   if s:settings.enable_cursorcolumn
-    set cursorcolumn
-    autocmd WinLeave * setlocal nocursorcolumn
-    autocmd WinEnter * setlocal cursorcolumn
+    set nocursorcolumn
+    autocmd InsertLeave * setlocal nocursorcolumn
+    autocmd InsertEnter * setlocal cursorcolumn
   endif
 
   if has('conceal')
@@ -322,10 +322,10 @@
     NeoBundle 'tpope/vim-dispatch'
     NeoBundle 'tpope/vim-eunuch'
     NeoBundle 'tpope/vim-unimpaired' "{{{
-      nmap <c-up> [e
-      nmap <c-down> ]e
-      vmap <c-up> [egv
-      vmap <c-down> ]egv
+      """nmap <c-up> [e
+      """nmap <c-down> ]e
+      """vmap <c-up> [egv
+      """vmap <c-down> ]egv
     "}}}
     NeoBundle 'Shougo/vimproc.vim', {
       \ 'build': {
@@ -406,14 +406,14 @@
       NeoBundle 'bitbucket:ludovicchabant/vim-lawrencium'
     endif
     NeoBundle 'tpope/vim-fugitive' "{{{
-      nnoremap <silent> <leader>gs :Gstatus<CR>
-      nnoremap <silent> <leader>gd :Gdiff<CR>
-      nnoremap <silent> <leader>gc :Gcommit<CR>
-      nnoremap <silent> <leader>gb :Gblame<CR>
-      nnoremap <silent> <leader>gl :Glog<CR>
-      nnoremap <silent> <leader>gp :Git push<CR>
-      nnoremap <silent> <leader>gw :Gwrite<CR>
-      nnoremap <silent> <leader>gr :Gremove<CR>
+      """nnoremap <silent> <leader>gs :Gstatus<CR>
+      """nnoremap <silent> <leader>gd :Gdiff<CR>
+      """nnoremap <silent> <leader>gc :Gcommit<CR>
+      """nnoremap <silent> <leader>gb :Gblame<CR>
+      """nnoremap <silent> <leader>gl :Glog<CR>
+      """nnoremap <silent> <leader>gp :Git push<CR>
+      """nnoremap <silent> <leader>gw :Gwrite<CR>
+      """nnoremap <silent> <leader>gr :Gremove<CR>
       autocmd BufReadPost fugitive://* set bufhidden=delete
     "}}}
     NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} "{{{
@@ -465,7 +465,7 @@
   if count(s:settings.plugin_groups, 'editing') "{{{
     NeoBundleLazy 'editorconfig/editorconfig-vim', {'autoload':{'insert':1}}
     NeoBundle 'tpope/vim-endwise'
-    NeoBundle 'tpope/vim-speeddating'
+    """NeoBundle 'tpope/vim-speeddating'
     NeoBundle 'thinca/vim-visualstar'
     NeoBundle 'tomtom/tcomment_vim'
     NeoBundle 'terryma/vim-expand-region'
@@ -525,14 +525,14 @@
         let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
       endif
 
-      nmap \ [ctrlp]
-      nnoremap [ctrlp] <nop>
+      """nmap \ [ctrlp]
+      """nnoremap [ctrlp] <nop>
 
-      nnoremap [ctrlp]t :CtrlPBufTag<cr>
-      nnoremap [ctrlp]T :CtrlPTag<cr>
-      nnoremap [ctrlp]l :CtrlPLine<cr>
-      nnoremap [ctrlp]o :CtrlPFunky<cr>
-      nnoremap [ctrlp]b :CtrlPBuffer<cr>
+      """nnoremap [ctrlp]t :CtrlPBufTag<cr>
+      """nnoremap [ctrlp]T :CtrlPTag<cr>
+      """nnoremap [ctrlp]l :CtrlPLine<cr>
+      """nnoremap [ctrlp]o :CtrlPFunky<cr>
+      """nnoremap [ctrlp]b :CtrlPBuffer<cr>
     "}}}
     NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
       let NERDTreeShowHidden=1
@@ -560,7 +560,7 @@
       endfunction
 
       let g:unite_data_directory=s:get_cache_dir('unite')
-      let g:unite_enable_start_insert=1
+      """let g:unite_enable_start_insert=1
       let g:unite_source_history_yank_enable=1
       let g:unite_source_rec_max_cache_files=5000
       let g:unite_prompt='» '
@@ -575,30 +575,30 @@
         let g:unite_source_grep_recursive_opt=''
       endif
 
-      function! s:unite_settings()
-        nmap <buffer> Q <plug>(unite_exit)
-        nmap <buffer> <esc> <plug>(unite_exit)
-        imap <buffer> <esc> <plug>(unite_exit)
-      endfunction
-      autocmd FileType unite call s:unite_settings()
+      """function! s:unite_settings()
+        """nmap <buffer> Q <plug>(unite_exit)
+        """nmap <buffer> <esc> <plug>(unite_exit)
+        """imap <buffer> <esc> <plug>(unite_exit)
+      """endfunction
+      """autocmd FileType unite call s:unite_settings()
 
-      nmap <space> [unite]
-      nnoremap [unite] <nop>
+      """nmap <space> [unite]
+      """nnoremap [unite] <nop>
 
-      if s:is_windows
-        nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec:! buffer file_mru bookmark<cr><c-u>
-        nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec:!<cr><c-u>
-      else
-        nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<cr><c-u>
-        nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<cr><c-u>
-      endif
-      nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<cr>
-      nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
-      nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
-      nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
-      nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
-      nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
-      nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
+      """if s:is_windows
+        """nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec:! buffer file_mru bookmark<cr><c-u>
+        """nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec:!<cr><c-u>
+      """else
+        """nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<cr><c-u>
+        """nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<cr><c-u>
+      """endif
+      """nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<cr>
+      """nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
+      """nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
+      """nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
+      """nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
+      """nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
+      """nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
     "}}}
     NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources':'file_mru'}}
     NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}} "{{{
@@ -661,8 +661,16 @@
       let g:startify_session_dir = s:get_cache_dir('sessions')
       let g:startify_change_to_vcs_root = 1
       let g:startify_show_sessions = 1
-      nnoremap <F1> :Startify<cr>
-    "}}}
+      """nnoremap <F1> :Startify<cr>
+
+      let g:startify_skiplist = [
+            \ 'COMMIT_EDITMSG',
+            \ $VIMRUNTIME . '/doc',
+            \ '\.janus/.*/doc',
+            \ 'vim/.*/doc',
+            \ '\.DS_Store'
+            \ ]
+      "}}}
     NeoBundle 'scrooloose/syntastic' "{{{
       let g:syntastic_error_symbol = '✗'
       let g:syntastic_style_error_symbol = '✠'
@@ -712,46 +720,46 @@
   vmap <leader>s :sort<cr>
 
   " eval vimscript by line or visual selection
-  nmap <silent> <leader>e :call Source(line('.'), line('.'))<CR>
-  vmap <silent> <leader>e :call Source(line('v'), line('.'))<CR>
+  nmap <leader>e :call Source(line('.'), line('.'))<CR>
+  vmap <leader>e :call Source(line('v'), line('.'))<CR>
 
-  nnoremap <leader>w :w<cr>
+  """nnoremap <leader>w :w<cr>
 
   " toggle paste
   map <F6> :set invpaste<CR>:set paste?<CR>
 
   " remap arrow keys
-  nnoremap <left> :bprev<CR>
-  nnoremap <right> :bnext<CR>
-  nnoremap <up> :tabnext<CR>
-  nnoremap <down> :tabprev<CR>
+  """nnoremap <left> :bprev<CR>
+  """nnoremap <right> :bnext<CR>
+  """nnoremap <up> :tabnext<CR>
+  """nnoremap <down> :tabprev<CR>
 
   " smash escape
-  inoremap jk <esc>
-  inoremap kj <esc>
+  """inoremap jk <esc>
+  """inoremap kj <esc>
 
   " change cursor position in insert mode
-  inoremap <C-h> <left>
-  inoremap <C-l> <right>
+  """inoremap <C-h> <left>
+  """inoremap <C-l> <right>
 
-  inoremap <C-u> <C-g>u<C-u>
+  """inoremap <C-u> <C-g>u<C-u>
 
-  if mapcheck('<space>/') == ''
-    nnoremap <space>/ :vimgrep //gj **/*<left><left><left><left><left><left><left><left>
-  endif
+  """if mapcheck('<space>/') == ''
+  """  nnoremap <space>/ :vimgrep //gj **/*<left><left><left><left><left><left><left><left>
+  """endif
 
   " sane regex {{{
-    nnoremap / /\v
-    vnoremap / /\v
-    nnoremap ? ?\v
-    vnoremap ? ?\v
-    nnoremap :s/ :s/\v
+    """nnoremap / /\v
+    """nvnoremap / /\v
+    """nnnoremap ? ?\v
+    """nvnoremap ? ?\v
+    """nnnoremap :s/ :s/\v
   " }}}
 
   " command-line window {{{
-    nnoremap q: q:i
-    nnoremap q/ q/i
-    nnoremap q? q?i
+    """nnoremap q: q:i
+    """nnoremap q/ q/i
+    """nnoremap q? q?i
   " }}}
 
   " folds {{{
@@ -799,32 +807,32 @@
   "}}}
 
   " tab shortcuts
-  map <leader>tn :tabnew<CR>
-  map <leader>tc :tabclose<CR>
+  """map <leader>tn :tabnew<CR>
+  """map <leader>tc :tabclose<CR>
 
   " make Y consistent with C and D. See :help Y.
   nnoremap Y y$
 
   " hide annoying quit message
-  nnoremap <C-c> <C-c>:echo<cr>
+  """nnoremap <C-c> <C-c>:echo<cr>
 
   " window killer
   nnoremap <silent> Q :call CloseWindowOrKillBuffer()<cr>
 
   " quick buffer open
-  nnoremap gb :ls<cr>:e #
+  """nnoremap gb :ls<cr>:e #
 
-  if neobundle#is_sourced('vim-dispatch')
-    nnoremap <leader>tag :Dispatch ctags -R<cr>
-  endif
+  """if neobundle#is_sourced('vim-dispatch')
+  """  nnoremap <leader>tag :Dispatch ctags -R<cr>
+  """endif
 
   " general
   nmap <leader>l :set list! list?<cr>
   nnoremap <BS> :set hlsearch! hlsearch?<cr>
 
-  map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-        \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-        \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+  """map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+  """      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+  """      \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
   " helpers for profiling {{{
     nnoremap <silent> <leader>DD :exe ":profile start profile.log"<cr>:exe ":profile func *"<cr>:exe ":profile file *"<cr>
@@ -870,7 +878,7 @@
     let g:kolor_underlined=1
   "}}}
 
-  exec 'colorscheme '.s:settings.colorscheme
+  """exec 'colorscheme '.s:settings.colorscheme
 "}}}
 
 " finish loading {{{
