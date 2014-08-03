@@ -17,8 +17,6 @@ let g:vimim_shuangpin_microsoft=1
 "let g:vimim_tab_for_one_key=1
 imap <silent><C-L> <Plug>VimimChineseToggle
 
-call pathogen#infect()
-
 set ignorecase smartcase
 
 let NERDTreeIgnore=['\.meta$', '\.pyc$']
@@ -70,7 +68,7 @@ endfunction
 
 autocmd BufEnter * call rc:syncTree()
 
-QuickfixsignsDisable
+" QuickfixsignsDisable
 
 "golint https://github.com/golang/lint
 set rtp+=~/.go/src/github.com/golang/lint/misc/vim

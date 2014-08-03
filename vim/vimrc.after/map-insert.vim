@@ -1,9 +1,14 @@
 " Send <C-o> in insert mode will run normal command
+" Home/End under OSX
 inoremap <C-a> <C-o>0
 inoremap <C-e> <C-o>$
+" Cursor Move
+inoremap <C-j> <C-o>j
+inoremap <C-k> <C-o>k
+inoremap <C-h> <C-o>h
+inoremap <C-l> <C-o>l
 "Delete from cursor to end of word
 inoremap <C-d> <C-o>dw
-
 
 " http://vim.wikia.com/wiki/Prevent_escape_from_moving_the_cursor_one_character_to_the_left
 let CursorColumnI = 0 "the cursor column position in INSERT
