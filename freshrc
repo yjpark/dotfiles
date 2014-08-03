@@ -45,6 +45,7 @@ fi
 # janus settings
 # https://github.com/carlhuda/.janus/
 # run bootstrap-janus to install janus
+fresh 'vim/vimshrc' --file='~/.vim/vimshrc'
 fresh 'vim/vimrc' --file='~/.vimrc'
 fresh 'vim/vimrc.after/*' --file='~/.vimrc.after' --marker='"'
 if [[ "$(uname)" == "Linux" ]]; then

@@ -10,7 +10,7 @@ let g:dotvim_settings.disabled_plugins = [
             \   "tpope/vim-speeddating",
             \   "tpope/vim-dispatch"
             \]
-source ~/.vim/vimrc
+source ~/.dotfiles/vim/sling.vim
 
 source ~/.vimrc.after
 
