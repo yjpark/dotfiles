@@ -9,9 +9,9 @@ noremap <silent> ,9 :set norelativenumber<CR>
 noremap <silent> ,0 :nohl<CR>
 
 " Reflow a paragragh
-nnoremap Q gqap
+" nnoremap Q gqap
 " Reflow selected lines
-vnoremap Q gq
+" vnoremap Q gq
 
 map <c-f12> <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 
