@@ -13,4 +13,3 @@ let g:dotvim_settings.disabled_plugins = [
 source ~/.vim/vimrc
 
 source ~/.vimrc.after
-

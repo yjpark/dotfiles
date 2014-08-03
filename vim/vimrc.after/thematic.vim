@@ -29,3 +29,4 @@ let g:thematic#themes = {
 \ }
 
 let g:thematic#theme_name = 'code'
+ThematicFirst
