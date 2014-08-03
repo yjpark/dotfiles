@@ -1,5 +1,25 @@
 NeoBundle 'yjpark/Omnisharp'
 
+"let g:Omnisharp_start_server = 0
+"let g:Omnisharp_stop_server = 0
+
+"This is the default value, setting it isn't actually necessary
+let g:OmniSharp_host = "http://localhost:2000"
+
+"Set the type lookup function to use the preview window instead of the status line
+let g:OmniSharp_typeLookupInPreview = 1
+
+"Timeout in seconds to wait for a response from the server
+let g:OmniSharp_timeout = 2
+
+"Showmatch significantly slows down omnicomplete
+"when the first match contains parentheses.
+set noshowmatch
+"Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)
+autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+
+let g:syntastic_cs_checkers = ['syntax', 'issues']
+
 " Synchronous build (blocks Vim)
 "autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
 " Builds can also run asynchronously with vim-dispatch installed
