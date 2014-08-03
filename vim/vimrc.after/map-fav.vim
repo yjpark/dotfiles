@@ -36,7 +36,13 @@ nmap <leader>p :call AutoPairsToggle()<CR>
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
 
-nnoremap <Leader><Leader>z :let &scrolloff=999-&scrolloff<CR>
+nnoremap <Leader><Leader>z :<C-u>call yjpark:toggle_scroll_lock()<CR>
+
+function! yjpark:toggle_scroll_lock()
+    let &scrolloff=999-&scrolloff
+    set scrolloff
+endfunction
+
 
 nnoremap <Leader>j :<C-u>m .+1<CR>
 nnoremap <Leader>k :<C-u>m .-2<CR>

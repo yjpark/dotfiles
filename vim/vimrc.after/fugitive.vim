@@ -1,1 +1,1 @@
-nnoremap g :<C-u>G
+nnoremap <leader><leader>g :<C-u>G
