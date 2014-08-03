@@ -61,7 +61,7 @@ function! s:unite_settings()
   autocmd InsertLeave <buffer> match ExtraWhitespace //
   autocmd InsertEnter <buffer> match ExtraWhitespace //
   autocmd BufWinEnter <buffer> match ExtraWhitespace //
-  autocmd WinEnter <buffer> setlocal cursorcolumn
+  autocmd WinEnter <buffer> setlocal nocursorcolumn
   " Play nice with supertab
   let b:SuperTabDisabled=1
   " Enable navigation with control-j and control-k in insert mode
