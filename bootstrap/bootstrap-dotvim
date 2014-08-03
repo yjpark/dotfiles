@@ -1,7 +1,0 @@
-#!/bin/bash
-cd ~/
-mv .vim ~/.vim.old
-git clone git@github.com:yjpark/dotvim.git .vim
-cd .vim
-git co -b yjpark
-git submodule init && git submodule update
