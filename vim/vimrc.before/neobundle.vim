@@ -1,8 +1,8 @@
+" These are included in sling dotvim
 """NeoBundle 'Shougo/unite.vim'
 """NeoBundle 'Shougo/neomru.vim'
 """NeoBundle 'Shougo/vimfiler.vim'
 """NeoBundle 'Shougo/vimshell.vim'
-
 """NeoBundle 'jiangmiao/auto-pairs'
 
 NeoBundle 'reedes/vim-colors-pencil'
