@@ -9,7 +9,7 @@ let g:dotvim_settings.disabled_plugins = [
             \   "justinmk/vim-sneak",
             \   "tpope/vim-speeddating",
             \]
-
 source ~/.vim/vimrc
 
+source ~/.vimrc.before
 source ~/.vimrc.after
