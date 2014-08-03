@@ -15,7 +15,7 @@ let g:miniBufExplUseSingleClick = 1
 
 let g:vimim_shuangpin_microsoft=1
 "let g:vimim_tab_for_one_key=1
-imap <silent><C-L> <Plug>VimimChineseToggle
+" imap <silent><C-L> <Plug>VimimChineseToggle
 
 set ignorecase smartcase
 

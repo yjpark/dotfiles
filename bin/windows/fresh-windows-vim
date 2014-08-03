@@ -1,10 +1,10 @@
 #!/bin/bash
 
 cd ~
-rm ~/.vimrc.before
-cat .dotfiles/vim/vimrc.before/* >> ~/.vimrc.before
+rm ~/.vimrc
+cat .dotfiles/vim/vimrc.before/* >> ~/.vimrc
 
 rm ~/.vimrc.after
-cat .dotfiles/vim/vimrc.after/* >> ~/.vimrc.after
-cat .dotfiles/vim/vimrc.after.windows/* >> ~/.vimrc.after
+cat .dotfiles/vim/vimrc.after/* >> ~/.vimrc
+cat .dotfiles/vim/vimrc.after.windows/* >> ~/.vimrc
 
