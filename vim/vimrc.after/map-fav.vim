@@ -15,6 +15,9 @@ noremap <silent> ,2 :VimFiler<CR>
 "noremap ,' :CtrlPMRU<CR>
 "noremap ,' <Leader><Leader>b
 
+" Disable the ctrlp default mapping
+let g:ctrlp_map = '<leader><c-p>'
+
 nnoremap ,t :CtrlPBufTag<cr>
 nnoremap ,T :CtrlPBufTagAll<cr>
 nnoremap ,u :CtrlPFunky<Cr>
