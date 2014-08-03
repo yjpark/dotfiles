@@ -13,3 +13,5 @@ source ~/.vim/vimrc
 
 source ~/.vimrc.before
 source ~/.vimrc.after
+
+NeoBundleCheck

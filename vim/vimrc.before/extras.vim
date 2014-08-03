@@ -3,5 +3,3 @@ NeoBundle 'reedes/vim-pencil'
 NeoBundle 'reedes/vim-thematic'
 
 NeoBundle 'osyo-manga/unite-quickfix'
-
-NeoBundleCheck
