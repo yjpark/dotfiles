@@ -5,6 +5,6 @@ cp -v .~/.dotfiles/vim/vimrc .vimrc
 cp -v .~/.dotfiles/vim/vimshrc ~/.vim/vimshrc
 
 rm ~/.vimrc.after
-cat ..dotfiles/vim/vimrc.after/* >> ~/.vimrc.after
-cat ..dotfiles/vim/vimrc.after.windows/* >> ~/.vimrc.after
+cat ~/.dotfiles/vim/vimrc.after/* >> ~/.vimrc.after
+cat ~/.dotfiles/vim/vimrc.after.windows/* >> ~/.vimrc.after
 

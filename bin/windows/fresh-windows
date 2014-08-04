@@ -5,10 +5,10 @@
 cd ~
 
 rm -rfv .pentadactylrc
-cp -v .dotfiles/pentadactylrc .pentadactylrc
+cp -v ~/.dotfiles/pentadactylrc .pentadactylrc
 
 rm -rfv .pentadactyl
-cp -vr .dotfiles/pentadactyl .pentadactyl
+cp -vr ~/.dotfiles/pentadactyl .pentadactyl
 
 
 ~/.dotfiles/bin/windows/fresh-windows-bin

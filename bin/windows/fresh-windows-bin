@@ -3,5 +3,5 @@
 cd ~/
 mkdir -p bin
 cd bin
-cp -v .~/.dotfiles/external/bin/* .
-cp -v .~/.dotfiles/bin/windows/* .
+cp -v ~/.dotfiles/external/bin/* .
+cp -v ~/.dotfiles/bin/windows/* .
