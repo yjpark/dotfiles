@@ -1,12 +1,12 @@
 " https://github.com/xqin/gvimfullscreen
 if has('gui_running') && has('libcall')
     let g:MyVimLib = $VIMRUNTIME.'/gvimfullscreen.dll'
-    function ToggleFullScreen()
+    function! ToggleFullScreenWin()
         call libcallnr(g:MyVimLib, "ToggleFullScreen", 0)
     endfunction
 
     "F11
-    map <F11> <Esc>:call ToggleFullScreen()<CR>
+    map <F11> <Esc>:call ToggleFullScreenWin()<CR>
 
     let g:VimAlpha = 240
     function! SetAlpha(alpha)
