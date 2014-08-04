@@ -65,6 +65,6 @@
 # Integration with z, like normal z when used with arguments but displays an fzf prompt when used without.
 j() {
   local dir
-  dir=$(cat $HOME/.z | sed "s/|.*//" | fzf --query "$@" --select-1 --exit-0 +m -x) &&
+  dir=$(cat $HOME/.z 2> /dev/null | sed "s/|.*//" | fzf --query "$@" --select-1 --exit-0 +m -x) &&
   cd "$dir"
 }
