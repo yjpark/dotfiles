@@ -1,2 +1,4 @@
 . ~/.config/fish/custom/fzf_cmd.fish
 
+alias fzf "ruby --disable-gems ~/.external/tools/fzf/fzf"
+
