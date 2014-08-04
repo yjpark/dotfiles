@@ -20,7 +20,7 @@ let g:unite_quick_match_table = {
       \ }
 
 call unite#custom#source(
-    \ 'file_rec/async,file_rec,file_mru,buffer', 'matchers',
+    \ 'file_rec/async,file_rec,file_mru,buffer,quickfix', 'matchers',
     \ ['converter_tail', 'matcher_default'])
 call unite#custom#source(
     \ 'file_rec/async,file_rec,file_mru,buffer', 'converters',
