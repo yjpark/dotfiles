@@ -43,7 +43,7 @@
 
 # fkill - kill process
 ,kill() {
-  ps -ef | sed 1d | fzf --query "$@" --select-1 --exit-0 +m -x -x | awk '{print $2}' | xargs kill
+  ps -ef | sed 1d | fzf --query "$@" --select-1 --exit-0 +m -x | awk '{print $2}' | xargs kill
 }
 
 # fbr - checkout git branch
@@ -64,5 +64,7 @@
 
 # Integration with z, like normal z when used with arguments but displays an fzf prompt when used without.
 j() {
-  cd "$(_z -l 2>&1 | sed -n 's/^[ 0-9.,]*//p' | fzf --query "$@" --select-1 --exit-0 +m -x)"
+  local dir
+  dir=$(cat $HOME/.z | sed "s/|.*//" | fzf --query "$@" --select-1 --exit-0 +m -x) &&
+  cd "$dir"
 }

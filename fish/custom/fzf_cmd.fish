@@ -15,7 +15,7 @@ function ,e
 end
 
 function ,d
-    find . -path '*/\.*' -prune -o -type d -print 2> /dev/null | \
+    find . -path '*/\.*' -prune -o -type d -print > /dev/null | \
     fzf --query="$argv" --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
@@ -24,7 +24,7 @@ function ,d
 end
 
 function ,da
-    find . -type d 2> /dev/null | \
+    find . -type d > /dev/null | \
     fzf --query="$argv" --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
@@ -45,7 +45,7 @@ function ,kill
 end
 
 function j
-    cat $HOME/.z | sed "s/|.*//" | fzf --query "$argv" --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
+    cat $HOME/.z > /dev/null | sed "s/|.*//" | fzf --query "$argv" --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
         cd (cat /tmp/fzf_fish.last)
