@@ -3,12 +3,17 @@
 
 cd ~
 rm ~/.bashrc
-cat .dotfiles/bash/bashrc/* >> ~/.bashrc
+cat ~/.dotfiles/bash/bashrc/* >> ~/.bashrc
 
 rm ~/.bash_it/aliases/custom.aliases.bash
-cat .dotfiles/bash/aliases/* >> ~/.bash_it/aliases/custom.aliases.bash
-cat .dotfiles/bash/aliases.windows/* >> ~/.bash_it/aliases/custom.aliases.bash
+cat ~/.dotfiles/bash/aliases/* >> ~/.bash_it/aliases/custom.aliases.bash
+cat ~/.dotfiles/bash/aliases.windows/* >> ~/.bash_it/aliases/custom.aliases.bash
 
 rm ~/.bash_it/custom/common.bash
-cat .dotfiles/bash/custom/* >> ~/.bash_it/custom/common.bash
-cat .dotfiles/bash/custom.windows/* >> ~/.bash_it/custom/common.bash
+rm ~/.dotfiles/bash/custom/fzf*
+cat ~/.dotfiles/bash/custom/* >> ~/.bash_it/custom/common.bash
+cat ~/.dotfiles/bash/custom.windows/* >> ~/.bash_it/custom/common.bash
+
+cd ~/.dotfiles
+git checkout bash/custom/fzf.bash
+git checkout bash/custom/fzf_cmd.bash

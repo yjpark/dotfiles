@@ -40,6 +40,9 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'bash/aliases.osx/*' --file='~/.bash_it/aliases/custom.aliases.bash'
   fresh 'bash/custom.osx/*' --file='~/.bash_it/custom/osx.bash'
 fi
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'bash/custom.linux/*' --file='~/.bash_it/custom/linux.bash'
+fi
 
 # =====================================================
 # janus settings

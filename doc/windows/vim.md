@@ -20,3 +20,10 @@ choco install ctags
 
 Fullscreen support
 - https://github.com/xqin/gvimfullscreen
+
+To install the vimproc
+```
+choco install mingw
+cd ~/.vim/bundle/vimproc.vim/
+tools\\update-dll-mingw.bat
+```
