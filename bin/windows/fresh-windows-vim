@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd ~
-cp -v .~/.dotfiles/vim/vimrc .vimrc
+cp -v .~/.dotfiles/vim/vimrc ~/.vimrc
 cp -v .~/.dotfiles/vim/vimshrc ~/.vim/vimshrc
 
 rm ~/.vimrc.after
