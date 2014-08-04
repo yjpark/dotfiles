@@ -10,14 +10,9 @@ cp -v .dotfiles/pentadactylrc .pentadactylrc
 rm -rfv .pentadactyl
 cp -vr .dotfiles/pentadactyl .pentadactyl
 
-rm -rfv .gitconfig
-cat -v .dotfiles/git/config/* >> .gitconfig
-
-rm -rfv .gitignore_global
-cat -v .dotfiles/git/ignore_global/* >> .gitignore_global
-
 
 ~/.dotfiles/bin/windows/fresh-windows-bin
 ~/.dotfiles/bin/windows/fresh-windows-bash
 ~/.dotfiles/bin/windows/fresh-windows-vim
+~/.dotfiles/bin/windows/fresh-windows-git
 

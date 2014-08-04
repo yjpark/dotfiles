@@ -1,0 +1,6 @@
+rm -rfv .gitconfig
+cat -v .dotfiles/git/config/* >> .gitconfig
+cat -v .dotfiles/git/config.windows/* >> .gitconfig
+
+rm -rfv .gitignore_global
+cat -v .dotfiles/git/ignore_global/* >> .gitignore_global
