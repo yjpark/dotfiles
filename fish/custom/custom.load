@@ -1,5 +1,2 @@
 . ~/.config/fish/custom/fzf_cmd.fish
 
-# https://github.com/junegunn/fzf/issues/60
-alias fzf "ruby --disable-gems ~/.external/tools/fzf/fzf"
-
