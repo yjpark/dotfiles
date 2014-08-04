@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd ~
-rm ~/.vimrc
-cat .dotfiles/vim/vimrc.before/* >> ~/.vimrc
+cp ~/.dotfiles/vim/vimrc .vimrc
+cp ~/.dotfiles/vim/vimshrc ~/.vim/vimshrc
 
 rm ~/.vimrc.after
 cat .dotfiles/vim/vimrc.after/* >> ~/.vimrc
