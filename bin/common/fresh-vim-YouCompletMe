@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/.janus/YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
 git pull
 git submodule update --init --recursive
 
