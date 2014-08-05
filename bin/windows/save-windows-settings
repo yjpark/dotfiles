@@ -2,3 +2,5 @@
 
 
 cp ~/AppData/Roaming/ConEmu.xml ~/.dotfiles/windows/
+
+cp ~/.config/vs2013/* ~/.dotfiles/windows/vs2013/
