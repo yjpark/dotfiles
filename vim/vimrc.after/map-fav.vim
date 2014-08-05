@@ -1,5 +1,6 @@
 noremap ; :
 noremap ' "
+noremap <cr> i
 noremap <C-a> 0
 noremap <C-e> $
 
