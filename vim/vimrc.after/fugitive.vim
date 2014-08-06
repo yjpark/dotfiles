@@ -1,4 +1,4 @@
-set diffopt=filler,vertical,iwhite,context:3
+set diffopt=filler,vertical,iwhite
 
 nnoremap <leader><leader>g :<C-u>G
 

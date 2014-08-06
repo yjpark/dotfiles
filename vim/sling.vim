@@ -322,10 +322,6 @@
     NeoBundle 'tpope/vim-dispatch'
     NeoBundle 'tpope/vim-eunuch'
     NeoBundle 'tpope/vim-unimpaired' "{{{
-      """nmap <c-up> [e
-      """nmap <c-down> ]e
-      """vmap <c-up> [egv
-      """vmap <c-down> ]egv
     "}}}
     NeoBundle 'Shougo/vimproc.vim', {
       \ 'build': {
@@ -406,14 +402,6 @@
       NeoBundle 'bitbucket:ludovicchabant/vim-lawrencium'
     endif
     NeoBundle 'tpope/vim-fugitive' "{{{
-      """nnoremap <silent> <leader>gs :Gstatus<CR>
-      """nnoremap <silent> <leader>gd :Gdiff<CR>
-      """nnoremap <silent> <leader>gc :Gcommit<CR>
-      """nnoremap <silent> <leader>gb :Gblame<CR>
-      """nnoremap <silent> <leader>gl :Glog<CR>
-      """nnoremap <silent> <leader>gp :Git push<CR>
-      """nnoremap <silent> <leader>gw :Gwrite<CR>
-      """nnoremap <silent> <leader>gr :Gremove<CR>
       autocmd BufReadPost fugitive://* set bufhidden=delete
     "}}}
     NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} "{{{
@@ -442,10 +430,6 @@
         let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
         let g:neosnippet#enable_snipmate_compatibility=1
 
-        """imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : (pumvisible() ? "\<C-n>" : "\<TAB>")
-        """smap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-        """imap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
-        """smap <expr><S-TAB> pumvisible() ? "\<C-p>" : ""
       "}}}
     endif "}}}
     if s:settings.autocomplete_method == 'neocomplete' "{{{
@@ -525,14 +509,6 @@
         let g:ctrlp_user_command='ag %s -l --nocolor -g ""'
       endif
 
-      """nmap \ [ctrlp]
-      """nnoremap [ctrlp] <nop>
-
-      """nnoremap [ctrlp]t :CtrlPBufTag<cr>
-      """nnoremap [ctrlp]T :CtrlPTag<cr>
-      """nnoremap [ctrlp]l :CtrlPLine<cr>
-      """nnoremap [ctrlp]o :CtrlPFunky<cr>
-      """nnoremap [ctrlp]b :CtrlPBuffer<cr>
     "}}}
     NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
       let NERDTreeShowHidden=1
@@ -549,57 +525,6 @@
       nnoremap <silent> <F9> :TagbarToggle<CR>
     "}}}
   endif "}}}
-  if count(s:settings.plugin_groups, 'unite') "{{{
-    NeoBundle 'Shougo/unite.vim' "{{{
-      let bundle = neobundle#get('unite.vim')
-      """function! bundle.hooks.on_source(bundle)
-        """call unite#filters#matcher_default#use(['matcher_fuzzy'])
-        """call unite#filters#sorter_default#use(['sorter_rank'])
-        """call unite#set_profile('files', 'smartcase', 1)
-        """call unite#custom#source('line,outline','matchers','matcher_fuzzy')
-      """endfunction
-
-      let g:unite_data_directory=s:get_cache_dir('unite')
-      """let g:unite_enable_start_insert=1
-      let g:unite_source_history_yank_enable=1
-      let g:unite_source_rec_max_cache_files=5000
-      let g:unite_prompt='» '
-
-      if executable('ag')
-        let g:unite_source_grep_command='ag'
-        let g:unite_source_grep_default_opts='--nocolor --line-numbers --nogroup -S -C4'
-        let g:unite_source_grep_recursive_opt=''
-      elseif executable('ack')
-        let g:unite_source_grep_command='ack'
-        let g:unite_source_grep_default_opts='--no-heading --no-color -C4'
-        let g:unite_source_grep_recursive_opt=''
-      endif
-
-      """function! s:unite_settings()
-        """nmap <buffer> Q <plug>(unite_exit)
-        """nmap <buffer> <esc> <plug>(unite_exit)
-        """imap <buffer> <esc> <plug>(unite_exit)
-      """endfunction
-      """autocmd FileType unite call s:unite_settings()
-
-      """nmap <space> [unite]
-      """nnoremap [unite] <nop>
-
-      """if s:is_windows
-        """nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec:! buffer file_mru bookmark<cr><c-u>
-        """nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec:!<cr><c-u>
-      """else
-        """nnoremap <silent> [unite]<space> :<C-u>Unite -toggle -auto-resize -buffer-name=mixed file_rec/async:! buffer file_mru bookmark<cr><c-u>
-        """nnoremap <silent> [unite]f :<C-u>Unite -toggle -auto-resize -buffer-name=files file_rec/async:!<cr><c-u>
-      """endif
-      """nnoremap <silent> [unite]e :<C-u>Unite -buffer-name=recent file_mru<cr>
-      """nnoremap <silent> [unite]y :<C-u>Unite -buffer-name=yanks history/yank<cr>
-      """nnoremap <silent> [unite]l :<C-u>Unite -auto-resize -buffer-name=line line<cr>
-      """nnoremap <silent> [unite]b :<C-u>Unite -auto-resize -buffer-name=buffers buffer<cr>
-      """nnoremap <silent> [unite]/ :<C-u>Unite -no-quit -buffer-name=search grep:.<cr>
-      """nnoremap <silent> [unite]m :<C-u>Unite -auto-resize -buffer-name=mappings mapping<cr>
-      """nnoremap <silent> [unite]s :<C-u>Unite -quick-match buffer<cr>
-    "}}}
     NeoBundleLazy 'Shougo/neomru.vim', {'autoload':{'unite_sources':'file_mru'}}
     NeoBundleLazy 'osyo-manga/unite-airline_themes', {'autoload':{'unite_sources':'airline_themes'}} "{{{
       "nnoremap <silent> [unite]a :<C-u>Unite -winheight=10 -auto-preview -buffer-name=airline_themes airline_themes<cr>
