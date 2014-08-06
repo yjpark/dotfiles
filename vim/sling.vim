@@ -726,7 +726,7 @@
   """nnoremap <leader>w :w<cr>
 
   " toggle paste
-  map <F6> :set invpaste<CR>:set paste?<CR>
+  """map <F6> :set invpaste<CR>:set paste?<CR>
 
   " remap arrow keys
   """nnoremap <left> :bprev<CR>
@@ -828,7 +828,7 @@
 
   " general
   nmap <leader>l :set list! list?<cr>
-  nnoremap <BS> :set hlsearch! hlsearch?<cr>
+  """nnoremap <BS> :set hlsearch! hlsearch?<cr>
 
   """map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
   """      \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"

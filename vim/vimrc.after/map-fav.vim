@@ -1,11 +1,16 @@
 noremap ; :
 noremap ' "
-noremap <cr> i
+
 noremap <C-a> 0
 noremap <C-e> $
 
-noremap <silent> ,1 :VimShell<CR>
-noremap <silent> ,2 :VimFiler<CR>
+
+nnoremap <silent> ,1 :VimShell<CR>
+nnoremap <silent> ,2 :VimFiler<CR>
+
+nnoremap ,5 :set wrap! wrap?<cr>
+nnoremap ,6 :set paste! paste?<CR>
+nnoremap ,0 :set hlsearch! hlsearch?<cr>
 
 "noremap ,. :Ack 
 "Search the word under cursor, see :help cmdline-editing for more details
