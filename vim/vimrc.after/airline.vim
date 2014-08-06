@@ -1,3 +1,4 @@
+NeoBundle 'yjpark/vim-airline'
 " Using vim-airline for now, since powerline is a bit too much, and the font
 " is not patched properly yet on my computers
 " python from powerline.vim import setup as powerline_setup
