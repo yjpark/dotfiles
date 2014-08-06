@@ -545,7 +545,6 @@
       let g:junkfile#directory=s:get_cache_dir('junk')
       """nnoremap <silent> [unite]j :<C-u>Unite -auto-resize -buffer-name=junk junkfile junkfile/new<cr>
     "}}}
-  endif "}}}
   if count(s:settings.plugin_groups, 'indents') "{{{
     NeoBundle 'nathanaelkane/vim-indent-guides' "{{{
       let g:indent_guides_start_level=1
