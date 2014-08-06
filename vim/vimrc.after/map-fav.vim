@@ -8,9 +8,10 @@ noremap <C-e> $
 nnoremap <silent> ,1 :VimShell<CR>
 nnoremap <silent> ,2 :VimFiler<CR>
 
-nnoremap ,5 :set wrap! wrap?<cr>
+nnoremap ,5 :set wrap! wrap?<CR>
 nnoremap ,6 :set paste! paste?<CR>
-nnoremap ,0 :set hlsearch! hlsearch?<cr>
+nnoremap ,9 :set columns=1000<CR>
+nnoremap ,0 :set hlsearch! hlsearch?<CR>
 
 "noremap ,. :Ack 
 "Search the word under cursor, see :help cmdline-editing for more details
@@ -24,9 +25,9 @@ nnoremap ,0 :set hlsearch! hlsearch?<cr>
 " Disable the ctrlp default mapping
 let g:ctrlp_map = '<leader><c-p>'
 
-nnoremap ,t :CtrlPBufTag<cr>
-nnoremap ,T :CtrlPBufTagAll<cr>
-nnoremap ,u :CtrlPFunky<Cr>
+nnoremap ,t :CtrlPBufTag<CR>
+nnoremap ,T :CtrlPBufTagAll<CR>
+nnoremap ,u :CtrlPFunky<CR>
 
 noremap <C-g> :YcmCompleter GoToDeclaration<CR>
 noremap ,g :YcmCompleter GoToImplementationElseDeclaration<CR>
