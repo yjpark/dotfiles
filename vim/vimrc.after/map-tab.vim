@@ -44,7 +44,10 @@ endfunction
 
 function! yjpark:goto(n)
     if tabpagenr('$') == 1
-        execute ':buffer ' . a:n
+        let nr = airline#extensions#tabline#get_buffer_nr_by_visible_index(a:n)
+        if (nr > 0)
+            execute ':buffer ' . nr
+        endif
     else
         execute ':tabnext' . a:n
     endif
