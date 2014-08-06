@@ -1,3 +1,7 @@
+" Quickly switch to insert mode
+nnoremap <cr> i
+nnoremap <bs> i<bs>
+
 " Send <C-o> in insert mode will run normal command
 " Home/End under OSX
 inoremap <C-a> <C-o>0

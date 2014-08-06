@@ -1,3 +1,20 @@
+NeoBundle 'yjpark/unite.vim'
+
+let g:unite_data_directory='~/.vim/.cache/unite'
+let g:unite_source_history_yank_enable=1
+let g:unite_source_rec_max_cache_files=5000
+let g:unite_prompt='» '
+
+if executable('ag')
+    let g:unite_source_grep_command='ag'
+    let g:unite_source_grep_default_opts='--nocolor --line-numbers --nogroup -S'
+    let g:unite_source_grep_recursive_opt=''
+elseif executable('ack')
+    let g:unite_source_grep_command='ack'
+    let g:unite_source_grep_default_opts='--no-heading --no-color'
+    let g:unite_source_grep_recursive_opt=''
+endif
+
 " Ignore certain files and directories while searching
 call unite#custom_source('file,file_rec,file_rec/async,grep',
             \ 'ignore_pattern', join([
@@ -36,14 +53,13 @@ call unite#custom#source('file,file/new',
 " -auto-preview
 
 " Note: <C-u> here can remove range
-let g:unite_source_history_yank_enable = 1
 "nnoremap ,p :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
 
 nnoremap ,<Space> :<C-u>Unite -no-quit -buffer-name=unite 
 
 nnoremap ,p :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
-nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -quick-match buffer<cr>
+" nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -quick-match buffer<cr>
 nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -quick-match -default-action=yank -auto-quit register<cr>
 
 "Not really using

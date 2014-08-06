@@ -9,7 +9,7 @@ let g:thematic#defaults = {
 \ 'ruler': 0,
 \
 \ 'typeface': 'Sauce Code Powerline Light',
-\ 'font-size': 20,
+\ 'font-size': 16,
 \ 'transparency': 0,
 \ 'linespace': 6,
 \ 'fullscreen': 1,
