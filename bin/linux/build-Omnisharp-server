@@ -1,9 +1,0 @@
-#!/bin/bash
-# https://github.com/nosami/OmniSharpServer
-
-cd ~/.vim/bundle/Omnisharp
-git submodule update --init --recursive
-cd server
-git submodule update --init --recursive
-xbuild
-
