@@ -4,6 +4,6 @@ cd ~/.vim/bundle/YouCompleteMe
 git pull
 git submodule update --init --recursive
 
-echo "linux:\n apt-install cmake python-dev"
+echo "linux:\n apt-install cmake python-dev mono-xbuild"
 
 ./install.sh --clang-completer --omnisharp-completer
