@@ -1,5 +1,5 @@
 " Maps
-nnoremap ,, :FZFLines<cr>
+" nnoremap ,b :FZFLines<cr>
 
 set rtp+=~/.external/tools/fzf
 source ~/.external/tools/fzf/plugin/fzf.vim

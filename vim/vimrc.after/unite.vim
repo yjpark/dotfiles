@@ -61,7 +61,7 @@ nnoremap ,<Space> :<C-u>Unite -no-quit -buffer-name=unite
 
 nnoremap ,p :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async<cr>
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
-" nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -quick-match buffer<cr>
+nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -start-insert buffer<cr>
 nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -quick-match -default-action=yank -auto-quit register<cr>
 
 "Not really using
