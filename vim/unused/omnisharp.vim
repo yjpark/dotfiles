@@ -1,5 +1,5 @@
-"let g:Omnisharp_start_server = 0
-"let g:Omnisharp_stop_server = 0
+let g:Omnisharp_start_server = 0
+let g:Omnisharp_stop_server = 0
 
 "This is the default value, setting it isn't actually necessary
 let g:OmniSharp_host = "http://localhost:2000"
