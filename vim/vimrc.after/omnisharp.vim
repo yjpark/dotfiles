@@ -1,7 +1,7 @@
 NeoBundle 'yjpark/Omnisharp'
 
-"let g:Omnisharp_start_server = 0
-"let g:Omnisharp_stop_server = 0
+let g:Omnisharp_start_server = 0
+let g:Omnisharp_stop_server = 0
 
 "This is the default value, setting it isn't actually necessary
 let g:OmniSharp_host = "http://localhost:2000"
@@ -21,9 +21,9 @@ autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 let g:syntastic_cs_checkers = ['syntax', 'issues']
 
 " Synchronous build (blocks Vim)
-"autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
+"autocmd FileType cs nnoremap <F6> :wa!<cr>:OmniSharpBuild<cr>
 " Builds can also run asynchronously with vim-dispatch installed
-autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuildAsync<cr>
+autocmd FileType cs nnoremap <F6> :wa!<cr>:OmniSharpBuildAsync<cr>
 
 "The following commands are contextual, based on the current cursor position.
 
