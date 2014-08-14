@@ -1,6 +1,7 @@
 nnoremap <C-\> :vsplit<CR>
 nnoremap ,\ :split<CR>
 
+nmap ,m <C-w>o
 nmap ,h <C-w>c
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
