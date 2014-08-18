@@ -8,7 +8,7 @@ let g:thematic#defaults = {
 \ 'laststatus': 2,
 \ 'ruler': 0,
 \
-\ 'typeface': 'Sauce Code Powerline Light',
+\ 'typeface': 'Sauce Code Powerline Regular',
 \ 'font-size': 16,
 \ 'transparency': 0,
 \ 'linespace': 6,
@@ -16,9 +16,23 @@ let g:thematic#defaults = {
 \ }
 
 let g:thematic#themes = {
-\ 'code' :{
+\ 'code_pencil' :{
 \   'colorscheme': 'pencil',
 \   'airline-theme': 'pencil',
+\ },
+\
+\ 'code_molokai' :{
+\   'colorscheme': 'molokai',
+\   'airline-theme': 'pencil',
+\   'font-size': 12,
+\   'linespace': 3,
+\ },
+\
+\ 'code_pencil_small' :{
+\   'colorscheme': 'pencil',
+\   'airline-theme': 'pencil',
+\   'font-size': 12,
+\   'linespace': 3,
 \ },
 \
 \ 'write' :{
@@ -30,4 +44,8 @@ let g:thematic#themes = {
 \ },
 \ }
 
-let g:thematic#theme_name = 'code'
+if has("gui_running")
+    let g:thematic#theme_name = 'code_pencil_small'
+else
+    let g:thematic#theme_name = 'code_molokai'
+endif
