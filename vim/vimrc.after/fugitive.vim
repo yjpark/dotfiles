@@ -1,3 +1,6 @@
+NeoBundle 'tpope/vim-fugitive'
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
 set diffopt=filler,vertical,iwhite,context:3
 
 nnoremap <leader><leader>g :<C-u>G

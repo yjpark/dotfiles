@@ -394,21 +394,6 @@
     NeoBundleLazy 'jnwhiteh/vim-golang', {'autoload':{'filetypes':['go']}}
     NeoBundleLazy 'nsf/gocode', {'autoload': {'filetypes':['go']}, 'rtp': 'vim'}
   endif "}}}
-  if count(s:settings.plugin_groups, 'scm') "{{{
-    NeoBundle 'mhinz/vim-signify' "{{{
-      let g:signify_update_on_bufenter=0
-    "}}}
-    if executable('hg')
-      NeoBundle 'bitbucket:ludovicchabant/vim-lawrencium'
-    endif
-    NeoBundle 'tpope/vim-fugitive' "{{{
-      autocmd BufReadPost fugitive://* set bufhidden=delete
-    "}}}
-    NeoBundleLazy 'gregsexton/gitv', {'depends':['tpope/vim-fugitive'], 'autoload':{'commands':'Gitv'}} "{{{
-      nnoremap <silent> <leader>gv :Gitv<CR>
-      nnoremap <silent> <leader>gV :Gitv!<CR>
-    "}}}
-  endif "}}}
   if count(s:settings.plugin_groups, 'autocomplete') "{{{
     NeoBundle 'honza/vim-snippets'
     if s:settings.autocomplete_method == 'ycm' "{{{
