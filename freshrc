@@ -109,10 +109,17 @@ fi
 
 # =====================================================
 if [[ "$(uname)" == "Linux" ]]; then
-  fresh 'linux/terminator' --file='~/.config/terminator/'
+  if [[ "$(hostname)" == "t60" ]]; then
+    fresh 'linux/terminator/config.t60' --file='~/.config/terminator/config'
+  else
+    fresh 'linux/terminator/config' --file='~/.config/terminator/config'
+  fi
   fresh 'linux/tilda' --file='~/.config/tilda/'
-  fresh 'linux/Xmodmap' --file='~/.Xmodmap'
   fresh 'linux/clipit' --file='~/.config/clipit/'
+fi
+
+if [[ "$(hostname)" != "yjpark-pc-ubuntu64" ]]; then
+  fresh 'linux/Xmodmap' --file='~/.Xmodmap'
 fi
 # =====================================================
 # bin
