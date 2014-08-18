@@ -39,10 +39,13 @@
     font = Source Code Pro for Powerline Medium 14
     background_color = "#eee8d5"
   [[System]]
+    scrollbar_position = hidden
     palette = "#000000:#cd0000:#00cd00:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#ff0000:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
-    font = Monospace 14
-    use_system_font = False
     background_image = None
+    use_system_font = False
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    font = Source Code Pro for Powerline Medium 14
 [layouts]
   [[default]]
     [[[child1]]]
