@@ -13,6 +13,7 @@ fi
 
 if [[ "$(uname)" == "Linux" ]]; then
     echo "/opt/monodevelop/bin/monodevelop-launcher.sh ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/OmniSharpServer/OmniSharp.sln
+    ~/.dotfiles/vim/patches/YouCompleteMe_linux/patch_cs_completer_with_newer_mono
 fi
 
 echo "Windows: using visual studio or express version to build OmniSharpServer"
