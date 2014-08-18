@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp -v cs_completer.py ~/.vim/bundle/YouCompleteMe/third_party/ycmd/ycmd/completers/cs/cs_completer.py
