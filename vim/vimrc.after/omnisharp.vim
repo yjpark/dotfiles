@@ -19,6 +19,7 @@ set noshowmatch
 autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
 let g:syntastic_cs_checkers = ['syntax', 'issues']
+autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
 " Synchronous build (blocks Vim)
 "autocmd FileType cs nnoremap <F6> :wa!<cr>:OmniSharpBuild<cr>
