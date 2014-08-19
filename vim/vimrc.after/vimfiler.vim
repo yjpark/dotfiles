@@ -1,4 +1,5 @@
 " http://www.zfanw.com/blog/vimfiler.html
+NeoBundle 'Shougo/vimfiler'
 
 " let g:vimfiler_as_default_explorer = 1
 
