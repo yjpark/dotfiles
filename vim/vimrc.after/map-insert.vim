@@ -23,4 +23,4 @@ autocmd InsertLeave * if col('.') != CursorColumnI | call cursor(0, col('.')+1) 
 
 set timeoutlen=2000
 au InsertLeave * set timeoutlen=2000
-au InsertEnter * set timeoutlen=0
+au InsertEnter * set timeoutlen=10
