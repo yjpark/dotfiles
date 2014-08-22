@@ -25,7 +25,7 @@ let g:thematic#themes = {
 \
 \ 'code_molokai' :{
 \   'colorscheme': 'molokai',
-\   'airline-theme': 'pencil',
+\   'airline-theme': 'molokai',
 \   'font-size': 12,
 \   'linespace': 3,
 \ },
