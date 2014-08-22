@@ -770,7 +770,6 @@
     let g:solarized_termtrans=1
   "}}}
   NeoBundle 'nanotech/jellybeans.vim'
-  NeoBundle 'tomasr/molokai'
   NeoBundle 'chriskempson/vim-tomorrow-theme'
   NeoBundle 'chriskempson/base16-vim'
   NeoBundle 'w0ng/vim-hybrid'

@@ -1,5 +1,7 @@
 NeoBundle 'reedes/vim-thematic'
 
+NeoBundle 'tomasr/molokai'
+
 "nnoremap <silent> <D-9> <Plug>ThematicNarrow
 "nnoremap <silent> <D-0> <Plug>ThematicWiden
 
@@ -44,8 +46,4 @@ let g:thematic#themes = {
 \ },
 \ }
 
-if has("gui_running")
-    let g:thematic#theme_name = 'code_pencil_small'
-else
-    let g:thematic#theme_name = 'code_molokai'
-endif
+let g:thematic#theme_name = 'code_molokai'
