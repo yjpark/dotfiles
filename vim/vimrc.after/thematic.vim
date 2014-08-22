@@ -1,6 +1,6 @@
 NeoBundle 'reedes/vim-thematic'
 
-NeoBundle 'tomasr/molokai'
+NeoBundle 'yjpark/molokai'
 
 "nnoremap <silent> <D-9> <Plug>ThematicNarrow
 "nnoremap <silent> <D-0> <Plug>ThematicWiden
