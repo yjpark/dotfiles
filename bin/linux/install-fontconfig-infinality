@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# http://www.infinality.net/blog/
 # http://www.bestubuntu.com/better-font-rendering-in-linux-with-infinality.html
 
 sudo add-apt-repository ppa:no1wantdthisname/ppa
