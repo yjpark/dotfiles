@@ -10,7 +10,7 @@ nnoremap <silent> ,2 :VimFiler<CR>
 
 nnoremap ,5 :set wrap! wrap?<CR>
 nnoremap ,6 :set paste! paste?<CR>
-nnoremap ,9 :set columns=1000<CR>
+nnoremap ,9 :set lines=100<CR>:set columns=1000<CR>
 nnoremap ,0 :set hlsearch! hlsearch?<CR>
 
 "noremap ,. :Ack 
