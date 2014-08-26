@@ -23,5 +23,5 @@ set mousefocus
 " set backspace=2
 
 " http://vim.wikia.com/wiki/Accessing_the_system_clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
