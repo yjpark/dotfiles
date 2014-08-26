@@ -22,3 +22,6 @@ set mousefocus
 " make backspace work normal (indent, eol, start)
 " set backspace=2
 
+" http://vim.wikia.com/wiki/Accessing_the_system_clipboard
+set clipboard=unnamedplus
+

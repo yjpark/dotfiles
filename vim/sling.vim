@@ -148,11 +148,11 @@
   set ttyfast                                         "assume fast terminal connection
   set viewoptions=folds,options,cursor,unix,slash     "unix/windows compatibility
   set encoding=utf-8                                  "set encoding for text
-  if exists('$TMUX')
-    set clipboard=
-  else
-    set clipboard=unnamed                             "sync with OS clipboard
-  endif
+  "if exists('$TMUX')
+  "  set clipboard=
+  "else
+  "  set clipboard=unnamed                             "sync with OS clipboard
+  "endif
   set hidden                                          "allow buffer switching without saving
   set autoread                                        "auto reload if file saved externally
   set fileformats+=mac                                "add mac to auto-detection of file format line endings
