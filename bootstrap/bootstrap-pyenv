@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# https://github.com/yyuu/pyenv
+
+cd
+git clone git://github.com/yyuu/pyenv.git .pyenv
+
