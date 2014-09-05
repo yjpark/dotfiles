@@ -28,8 +28,8 @@ call unite#custom_source('file,file_rec,file_rec/async,grep',
       \ '\.swp$',
       \ '\.swo$',
       \ '\.DS_Store$',
-      \ '\.silp_backup$',
-      \ '\.silp_test$',
+      \ '\.silp_backup/',
+      \ '\.silp_test/',
       \ ], '\|'))
 
 let g:unite_quick_match_table = {
