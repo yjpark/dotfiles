@@ -1,7 +1,8 @@
 #!/bin/bash
 
-curl -vsL get.freshshell.com > ~/.dotfiles/bootstrap/bootstrap-fresh
-curl -vL https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish > ~/.dotfiles/bootstrap/bootstrap-oh-my-fish
+curl -vsSL get.freshshell.com > ~/.dotfiles/bootstrap/bootstrap-fresh
+curl -vsSL https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish > ~/.dotfiles/bootstrap/bootstrap-oh-my-fish
 curl -vsSL https://get.rvm.io > ~/.dotfiles/bootstrap/bootstrap-rvm
+curl -vsSL https://static.rust-lang.org/rustup.sh > ~/.dotfiles/bootstrap/bootstrap-rust-with-cargo
 
 chmod 755 ~/.dotfiles/bootstrap/*
