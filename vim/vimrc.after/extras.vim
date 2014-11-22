@@ -14,3 +14,4 @@ NeoBundle 'Rykka/colorv.vim'
 NeoBundle 'Rykka/galaxy.vim'
 
 NeoBundle 'cespare/vim-toml'
+NeoBundle 'Keithbsmiley/swift.vim'
