@@ -1,5 +1,5 @@
 function fish_prompt
-    ~/bin/powerline-shell_fish.py $status --shell bare ^/dev/null
+    echo (date "+%T") (~/bin/powerline-shell_fish.py $status --shell bare ^/dev/null)
 end
 
 function fish_right_prompt -d "Write out the right prompt"
