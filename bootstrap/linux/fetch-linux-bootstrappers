@@ -1,0 +1,5 @@
+#!/bin/bash
+
+curl -vsSL https://raw.github.com/Homebrew/linuxbrew/go/install > ~/.dotfiles/bootstrap/linux/bootstrap-linuxbrew
+
+chmod 755 ~/.dotfiles/bootstrap/linux/*
