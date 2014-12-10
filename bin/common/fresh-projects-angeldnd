@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Bootstraping ~/projects/angeldnd"
+
+mkdir -p ~/projects/angeldnd
+cd ~/projects/angeldnd
+
+bootstrap-github-repositories ~/.dotfiles/projects/angeldnd.bootstrap
+mu register --all
+
