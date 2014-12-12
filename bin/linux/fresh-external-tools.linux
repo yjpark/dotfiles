@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Bootstraping ~/.external/tools"
+echo "Bootstraping ~/.external/tools (linux)"
 
 mkdir -p ~/.external/tools
 cd ~/.external/tools

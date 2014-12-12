@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Bootstraping ~/.external/tools (osx)"
+
+mkdir -p ~/.external/tools
+cd ~/.external/tools
+
+bootstrap-github-repositories ~/.dotfiles/external/tools.osx.bootstrap
+mu register --all
+
