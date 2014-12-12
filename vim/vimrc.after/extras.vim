@@ -16,3 +16,5 @@ NeoBundle 'Rykka/galaxy.vim'
 NeoBundle 'cespare/vim-toml'
 NeoBundle 'Keithbsmiley/swift.vim'
 NeoBundle 'leafo/moonscript-vim'
+NeoBundle 'vim-scripts/hexman.vim'
+
