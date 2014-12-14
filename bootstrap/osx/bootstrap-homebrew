@@ -1,9 +1,10 @@
-#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby
+#!/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby
 # This script installs to /usr/local only. To install elsewhere you can just
 # untar https://github.com/Homebrew/homebrew/tarball/master anywhere you like or
 # change the value of HOMEBREW_PREFIX.
 HOMEBREW_PREFIX = '/usr/local'
 HOMEBREW_CACHE = '/Library/Caches/Homebrew'
+HOMEBREW_REPO = 'https://github.com/Homebrew/homebrew'
 
 module Tty extend self
   def blue; bold 34; end
@@ -96,6 +97,7 @@ at_exit { Kernel.system "/usr/bin/sudo", "-k" }
 Dir.chdir "/usr"
 
 ####################################################################### script
+abort "See Linuxbrew: http://brew.sh/linuxbrew/" if /linux/i === RUBY_PLATFORM
 abort "MacOS too old, see: https://github.com/mistydemeo/tigerbrew" if macos_version < "10.5"
 abort "Don't run this as root!" if Process.uid == 0
 abort <<-EOABORT unless `groups`.split.include? "admin"
@@ -156,8 +158,9 @@ end
 sudo "/bin/mkdir", HOMEBREW_CACHE unless File.directory? HOMEBREW_CACHE
 sudo "/bin/chmod", "g+rwx", HOMEBREW_CACHE
 
-if macos_version > "10.8"
-  unless File.exist? "/Library/Developer/CommandLineTools/usr/bin/clang"
+if macos_version >= "10.9"
+  developer_dir = `/usr/bin/xcode-select -print-path 2>/dev/null`.chomp
+  if developer_dir.empty? || !File.exist?("#{developer_dir}/usr/bin/git")
     ohai "Installing the Command Line Tools (expect a GUI popup):"
     sudo "/usr/bin/xcode-select", "--install"
     puts "Press any key when the installation has completed."
@@ -170,7 +173,10 @@ Dir.chdir HOMEBREW_PREFIX do
   if git
     # we do it in four steps to avoid merge errors when reinstalling
     system git, "init", "-q"
-    system git, "remote", "add", "origin", "https://github.com/Homebrew/homebrew"
+
+    # "git remote add" will fail if the remote is defined in the global config
+    system git, "config", "remote.origin.url", HOMEBREW_REPO
+    system git, "config", "remote.origin.fetch", "+refs/heads/*:refs/remotes/origin/*"
 
     args = git, "fetch", "origin", "master:refs/remotes/origin/master", "-n"
     args << "--depth=1" if ARGV.include? "--fast"
@@ -183,7 +189,7 @@ Dir.chdir HOMEBREW_PREFIX do
     # we use -k for curl because Leopard has a bunch of bad SSL certificates
     curl_flags = "fsSL"
     curl_flags << "k" if macos_version <= "10.5"
-    system "/bin/bash -o pipefail -c '/usr/bin/curl -#{curl_flags} https://github.com/Homebrew/homebrew/tarball/master | /usr/bin/tar xz -m --strip 1'"
+    system "/bin/bash -o pipefail -c '/usr/bin/curl -#{curl_flags} #{HOMEBREW_REPO}/tarball/master | /usr/bin/tar xz -m --strip 1'"
   end
 end
 
