@@ -17,3 +17,7 @@ set -x PATH $PATH ~/projects/pettyfun/libs/scripts
 #camlistore
 alias cam "cd /opt/camlistore"
 set -x PATH $PATH /opt/camlistore/bin
+
+# "lsregister -dump" can show the UIT (file extension)
+#http://stackoverflow.com/questions/9050035/how-to-make-xcode-recognize-a-custom-file-extension-as-objective-c-for-syntax-hi
+alias lsregister '/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister'
