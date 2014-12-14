@@ -1,3 +1,3 @@
 function fzf
-  ruby --disable-gems ~/.external/tools/fzf/fzf $argv
+  /usr/bin/ruby --disable-gems ~/.external/tools/fzf/fzf $argv
 end
