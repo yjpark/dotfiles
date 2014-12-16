@@ -1,12 +1,14 @@
+# http://jonas.nitro.dk/tig/tigrc.5.html
+
 [tig]
-	show-date = short
+	#show-date = short
 	#show-date = relative
-	show-author = abbreviated
-	author-width = 12
-	show-rev-graph = yes
+	#show-author = abbreviated
+	#author-width = 12
+	#show-rev-graph = yes
 	horizontal-scroll = 20%
-	show-line-numbers = yes 
-	line-number-interval = 1
+	#show-line-numbers = yes 
+	#line-number-interval = 1
 	tab-size = 4
 
 [tig "bind"]
