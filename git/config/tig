@@ -1,0 +1,17 @@
+[tig]
+	show-date = short
+	#show-date = relative
+	show-author = abbreviated
+	author-width = 12
+	show-rev-graph = yes
+	horizontal-scroll = 20%
+	show-line-numbers = yes 
+	line-number-interval = 1
+	tab-size = 4
+
+[tig "bind"]
+	main = K !git diff-kompare -U20 %(commit)^..%(commit)
+	diff = K !git diff-kompare -U20 %(commit)^..%(commit)
+
+	main = C !git diff-cdif -U20 %(commit)^..%(commit)
+	diff = C !git diff-cdif -U20 %(commit)^..%(commit)
