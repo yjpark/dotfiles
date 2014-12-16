@@ -49,24 +49,24 @@ let g:Tb_MaxSize = 0
 " sync the nerdtree to current buffer if it's opened
 " http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 " returns true iff is NERDTree open/active
-function! rc:isNTOpen()
+function! s:isNTOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
 " returns true iff focused window is NERDTree window
-function! rc:isNTFocused()
+function! s:isNTFocused()
   return -1 != match(expand('%'), 'NERD_Tree')
 endfunction
 
 " calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! rc:syncTree()
-  if &modifiable && rc:isNTOpen() && !rc:isNTFocused() && strlen(expand('%')) > 0 && !&diff
+function! s:syncTree()
+  if &modifiable && s:isNTOpen() && !s:isNTFocused() && strlen(expand('%')) > 0 && !&diff
     NERDTreeFind
     wincmd p
   endif
 endfunction
 
-autocmd BufEnter * call rc:syncTree()
+autocmd BufEnter * call s:syncTree()
 
 " QuickfixsignsDisable
 
