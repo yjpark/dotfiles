@@ -49,27 +49,27 @@ let g:Tb_MaxSize = 0
 " sync the nerdtree to current buffer if it's opened
 " http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
 " returns true iff is NERDTree open/active
-function! s:isNTOpen()
+function! YJParkIsNTOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
 " returns true iff focused window is NERDTree window
-function! s:isNTFocused()
+function! YJParkIsNTFocused()
   return -1 != match(expand('%'), 'NERD_Tree')
 endfunction
 
 " calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! s:syncTree()
-  if &modifiable && s:isNTOpen() && !s:isNTFocused() && strlen(expand('%')) > 0 && !&diff
+function! YJParkSyncTree()
+  if &modifiable && YJParkIsNTOpen() && !YJParkIsNTFocused() && strlen(expand('%')) > 0 && !&diff
     NERDTreeFind
     wincmd p
   endif
 endfunction
 
-autocmd BufEnter * call s:syncTree()
+autocmd BufEnter * call YJParkSyncTree()
 
 " QuickfixsignsDisable
 
-"golint https://github.com/golang/lint
+"golint httpYJPark//github.com/golang/lint
 set rtp+=~/.go/src/github.com/golang/lint/misc/vim
 autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
