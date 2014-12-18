@@ -5,6 +5,7 @@
 Option-Space        Next input source
 Option-`            Application Windows
 Option-Tab          Notification Center
+Cmd-Escape          Mission Control
 ```
 
 
