@@ -3,7 +3,6 @@
 ### Setup in System Preferences ###
 ```
 Option-Space        Next input source
-Cmd-`               Mission Control
 Option-`            Application Windows
 Option-Tab          Notification Center
 ```
@@ -24,5 +23,6 @@ Ctrl-Space          Common Prefix
 
 ### Witch ###
 ```
-Cmd-Escape          Switch (control will also send escape via Karabiner)
+Cmd-`               Next
+Cmd-Option-`        Prev
 ```
