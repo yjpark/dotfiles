@@ -21,4 +21,7 @@ Ctrl-`              iTerm
 Ctrl-Space          Common Prefix
 ```
 
-
+### Witch ###
+```
+Cmd-Escape          Switch (control will also send escape via Karabiner)
+```
