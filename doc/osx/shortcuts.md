@@ -3,8 +3,9 @@
 ### Setup in System Preferences ###
 ```
 Option-Space        Next input source
-Cmd-`            Mission Control
-Option-`               Application Windows
+Cmd-`               Mission Control
+Option-`            Application Windows
+Option-Tab          Notification Center
 ```
 
 
