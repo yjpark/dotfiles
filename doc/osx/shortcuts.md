@@ -28,7 +28,7 @@ Cmd-`               Next
 Cmd-Option-`        Prev
 ```
 
-### MenuPop ###
+### MenuMate ###
 ```
 Shift-Tab           Menu
 ```
