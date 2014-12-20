@@ -5,6 +5,7 @@
 Option-Space        Next input source
 Option-`            Application Windows
 Option-Tab          Notification Center
+Option-Escape          Mission Control
 ```
 
 
@@ -25,4 +26,9 @@ Ctrl-Space          Common Prefix
 ```
 Cmd-`               Next
 Cmd-Option-`        Prev
+```
+
+### MenuMate ###
+```
+Shift-Tab           Menu
 ```
