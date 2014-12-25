@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kextstat | grep -v com.apple
