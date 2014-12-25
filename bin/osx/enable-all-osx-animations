@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# http://apple.stackexchange.com/questions/14001/how-to-turn-off-all-animations-on-os-x/
+
+# opening and closing windows and popovers
+defaults delete -g NSAutomaticWindowAnimationsEnabled
+
+# smooth scrolling
+defaults delete -g NSScrollAnimationEnabled
+
+# showing and hiding sheets, resizing preference windows, zooming windows
+# float 0 doesn't work
+defaults delete -g NSWindowResizeTime
+
+# opening and closing Quick Look windows
+defaults delete -g QLPanelAnimationDuration
+
+# rubberband scrolling (doesn't affect web views)
+defaults delete -g NSScrollViewRubberbanding
+
+# resizing windows before and after showing the version browser
+# also disabled by NSWindowResizeTime
+defaults delete -g NSDocumentRevisionsWindowTransformAnimation
+
+# showing a toolbar or menu bar in full screen
+defaults delete -g NSToolbarFullScreenAnimationDuration
+
+# scrolling column views
+defaults delete -g NSBrowserColumnAnimationSpeedMultiplier
+
+# showing the Dock
+defaults delete com.apple.dock autohide-time-modifier
+defaults delete com.apple.dock autohide-delay
+
+# showing and hiding Mission Control, command+numbers
+defaults delete com.apple.dock expose-animation-duration
+
+# showing and hiding Launchpad
+defaults delete com.apple.dock springboard-show-duration
+defaults delete com.apple.dock springboard-hide-duration
+
+# changing pages in Launchpad
+defaults delete com.apple.dock springboard-page-duration
+
+# at least AnimateInfoPanes
+defaults delete com.apple.finder DisableAllAnimations
+
+# sending messages and opening windows for replies
+defaults delete com.apple.Mail DisableSendAnimations
+defaults delete com.apple.Mail DisableReplyAnimations
