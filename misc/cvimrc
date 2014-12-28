@@ -1,0 +1,15 @@
+# https://gist.github.com/yjpark/27301af644bec5c4a9d4
+
+# settings
+let barposition = "bottom"
+
+# mappings
+map ; :
+
+map <C-n> gt
+map <C-p> gT
+
+map <C-d> scrollPageDown
+map <C-u> scrollPageUp
+
+map y yankDocumentUrl
