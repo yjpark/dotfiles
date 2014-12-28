@@ -1,9 +1,11 @@
-# https://gist.github.com/yjpark/27301af644bec5c4a9d4
+" https://gist.github.com/yjpark/27301af644bec5c4a9d4
 
-# settings
+" settings
 let barposition = "bottom"
+set cncpcompletion
+let hintcharacters = "aoeuidhtnspyfgcrlqjkxbmwvz,"
 
-# mappings
+" mappings
 map ; :
 
 map <C-n> gt
@@ -13,3 +15,17 @@ map <C-d> scrollPageDown
 map <C-u> scrollPageUp
 
 map y yankDocumentUrl
+
+map ,, :buffer<Space>
+
+unmap X
+map u lastClosedTab
+
+" Insert mode
+imap <C-a> beginningOfLine
+imap <C-e> endOfLine
+imap <C-u> deleteToBeginning
+imap <C-k> deleteToEnd
+imap <C-w> deleteWord
+imap <C-f> forwardChar
+imap <C-b> backwardChar
