@@ -1,0 +1,33 @@
+" https://gist.github.com/yjpark/27301af644bec5c4a9d4
+
+" settings
+let barposition = "top"
+set cncpcompletion
+let hintcharacters = "aoeuidhtnspyfgcrlqjkxbmwvz,"
+
+" mappings
+map ; :
+
+map <C-n> gt
+map <C-p> gT
+
+map <C-d> scrollPageDown
+map <C-u> scrollPageUp
+
+map y yankDocumentUrl
+
+map ,, :buffer<Space>
+
+unmap X
+map u lastClosedTab
+map <C-o> goBack
+map <C-i> goForward
+
+" Insert mode
+imap <C-a> beginningOfLine
+imap <C-e> endOfLine
+imap <C-u> deleteToBeginning
+imap <C-k> deleteToEnd
+imap <C-w> deleteWord
+imap <C-f> forwardChar
+imap <C-b> backwardChar

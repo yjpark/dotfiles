@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Need to install gist command line tool
+# https://github.com/defunkt/gist
+# on osx, can `brew install gist`
+
+gist ~/.dotfiles/misc/cvimrc -u 27301af644bec5c4a9d4
