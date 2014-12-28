@@ -1,7 +1,7 @@
 " https://gist.github.com/yjpark/27301af644bec5c4a9d4
 
 " settings
-let barposition = "bottom"
+let barposition = "top"
 set cncpcompletion
 let hintcharacters = "aoeuidhtnspyfgcrlqjkxbmwvz,"
 
@@ -20,6 +20,8 @@ map ,, :buffer<Space>
 
 unmap X
 map u lastClosedTab
+map <C-o> goBack
+map <C-i> goForward
 
 " Insert mode
 imap <C-a> beginningOfLine
