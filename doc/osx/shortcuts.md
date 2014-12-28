@@ -30,5 +30,5 @@ Cmd-Option-`        Prev
 
 ### MenuMate ###
 ```
-Shift-Tab           Menu
+Ctrl-Shift-Tab           Menu
 ```
