@@ -21,7 +21,7 @@ fi
 MPAPP=/Volumes/install_app
 MPIMG=/Volumes/install_img
 IMGSPARSE=$TMP/install.sparseimage
-IMGDVD=$TMP/install.cdr
+IMGDVD=$TMP/install.iso
 
 detach_all() {
   if [ -d "$MPAPP" ]; then hdiutil detach "$MPAPP"; fi
