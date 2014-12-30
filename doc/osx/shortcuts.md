@@ -8,14 +8,6 @@ Option-Tab          Notification Center
 Option-Escape          Mission Control
 ```
 
-
-### Setup in individual applications ###
-```
-Ctrl-Shift-\        Show 1Password mini
-Ctrl-Shift-H        Toggle Dash
-Ctrl-Shift-D        New entry for Day One
-```
-
 ### Activate ###
 ```
 Ctrl-`              iTerm
@@ -32,3 +24,16 @@ Cmd-Option-`        Prev
 ```
 Ctrl-Shift-Tab           Menu
 ```
+
+### Setup in individual applications ###
+```
+Ctrl-Shift-\        Show 1Password mini
+Ctrl-Shift-H        Toggle Dash
+Ctrl-Shift-D        New entry for Day One
+Ctrl-Shift-B        Add bookmart to DelBar
+Ctrl-Shift-Cmd-B    Toggle DelBar
+Ctrl-Shift-T        Add Task to Todoist
+Ctrl-Shift-Cmd-T    Toggle Todoist
+```
+
+
