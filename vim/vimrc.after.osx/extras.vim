@@ -1,0 +1,1 @@
+NeoBundle 'rizzatti/dash.vim'
