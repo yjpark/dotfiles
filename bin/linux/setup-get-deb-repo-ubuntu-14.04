@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# http://www.ubuntuupdates.org/ppa/getdeb_apps?dist=trusty
+
+wget -q -O - http://archive.getdeb.net/getdeb-archive.key | sudo apt-key add -
+sudo sh -c 'echo "deb http://archive.getdeb.net/ubuntu trusty-getdeb apps" >> /etc/apt/sources.list.d/getdeb.list'

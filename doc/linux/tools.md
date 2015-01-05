@@ -1,8 +1,7 @@
+## Indicator utilities
+- indicator-multiload
+    Showing the performance in menu bar
 
-## Clipit
-Indicator integrated clipboard manager
+- clipit
+    Indicator integrated clipboard manager
 
-
-```
-sudo apt-get install clipit
-```
