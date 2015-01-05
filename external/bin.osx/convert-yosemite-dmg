@@ -1,0 +1,77 @@
+#!/bin/bash
+
+# http://www.insanelymac.com/forum/topic/290949-how-to-install-os-x-10x-snow-leopard-lion-mountain-lion-mavericks-and-yosemite-in-vmware-workstation-10-or-player-6/#entry1937757
+#
+# This executable converts a Yosemite .app (which allows to upgrade a machine
+# from Mac OS 10.6.7+ to Yosemite) into a Yosemite .dmg (which allows to
+# install Yosemite from scratch on a machine).
+#
+
+set -x
+set -e
+
+# The first argument is the path to the .app bundle (the input of the
+# executable).
+inputApp="$1"
+# The second argument is the path to the .dmg file (the output of the
+# executable), which must end with ".dmg".
+outputDmg="$2"
+[ "${outputDmg: -4}" = .dmg ]
+
+#
+# The problem: /System/Installation/Packages inside /BaseSystem.dmg inside
+# "$inputApp"/Contents/SharedSupport/InstallESD.dmg is a dangling symlink,
+# which prevents installing Yosemite from scratch.
+# The solution: Replace the symlink with the /Packages directory inside
+# "$inputApp"/Contents/SharedSupport/InstallESD.dmg.
+#
+
+tmpDir=`mktemp -d -t 'Create Yosemite Installer'`
+installMnt="$tmpDir"/install
+installPkg="$installMnt"/Packages
+outputMnt="$tmpDir"/output
+outputPkg="$outputMnt"/System/Installation/Packages
+
+cleanup() {
+   if [ -d "$outputMnt" ]; then
+      hdiutil detach "$outputMnt"
+   fi
+
+   if [ -d "$installMnt" ]; then
+      hdiutil detach "$installMnt"
+   fi
+
+   rmdir -- "$tmpDir"
+}
+
+# Cleanup on failure.
+trap cleanup ERR
+
+# Mount InstallESD.dmg so we can access /BaseSystem.dmg and /Packages inside.
+hdiutil attach "$inputApp"/Contents/SharedSupport/InstallESD.dmg \
+   -mountpoint "$installMnt" -noverify -nobrowse
+
+# Create "$outputDmg", a read/write copy of the read-only BaseSystem.dmg.
+hdiutil convert "$installMnt"/BaseSystem.dmg -format UDRW -o "$outputDmg"
+
+# Enlarge "$outputDmg" to accommodate for our modifications. The UDRW image
+# format is not sparse, so we must precisely compute the new size.
+curSectors=`hdiutil resize "$outputDmg" -limits | tail -1 | awk '{ print $2 }'`
+extraSectors=`BLOCKSIZE=512 du -s -- "$installMnt" | awk '{ print $1 }'`
+hdiutil resize "$outputDmg" -sectors $((curSectors + extraSectors))
+
+# Mount "$outputDmg".
+hdiutil attach "$outputDmg" -mountpoint "$outputMnt" -noverify -nobrowse
+
+# Modify "$outputDmg".
+rm -- "$outputPkg"
+cp -r -- "$installPkg" "$outputPkg"
+
+# It is the solution for the common error - The operation couldn't be completed. Undefined error: 0
+cp "$installMnt"/BaseSystem.chunklist "$outputMnt"/BaseSystem.chunklist
+cp "$installMnt"/BaseSystem.dmg "$outputMnt"/BaseSystem.dmg
+
+# Cleanup on success.
+trap ERR; cleanup
+
+ls -alh -- "$outputDmg"
