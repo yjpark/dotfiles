@@ -1,0 +1,5 @@
+#!/bin/bash
+
+curl -vsSL https://get.scoop.sh > ~/.dotfiles/bootstrap/windows/bootstrap-scoop.ps1
+curl -vsSL http://psget.net/GetPsGet.ps1 > ~/.dotfiles/bootstrap/windows/bootstrap-psget.ps1
+
