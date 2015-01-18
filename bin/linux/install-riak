@@ -1,15 +1,10 @@
 #!/bin/bash
 
-# http://docs.basho.com/riak/latest/ops/building/installing/debian-ubuntu/
+# https://packagecloud.io/basho/riak/install
+curl https://packagecloud.io/install/repositories/basho/riak/script.deb | sudo bash
 
-curl http://apt.basho.com/gpg/basho.apt.key | sudo apt-key add -
-
-#sudo bash -c "echo deb http://apt.basho.com $(lsb_release -sc) main > /etc/apt/sources.list.d/basho.list"
-#ubuntu 14.04 (trusty) not supported
-sudo bash -c "echo deb http://apt.basho.com precise main > /etc/apt/sources.list.d/basho.list"
-
-sudo apt-get update
-sudo apt-get install riak
+#sudo apt-get update
+#sudo apt-get install riak
 
 # http://docs.basho.com/riak/latest/ops/tuning/open-files-limit/#Linux
 sudo bash -c "echo ulimit -n 65536 > /etc/default/riak"

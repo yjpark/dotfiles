@@ -3,6 +3,11 @@ For portable apps, use scoop to install is easier
 
 - http://scoop.sh
 
+## Scoop packages
+
+- gow
+- git
+
 ## config to setup powershell theme
 
 ```
