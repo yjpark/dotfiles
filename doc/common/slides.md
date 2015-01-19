@@ -5,7 +5,6 @@
 ```
 npm install -g generator-reveal
 npm install -g yo
-npm install -g grunt
 npm install -g grunt-cli
 ```
 
