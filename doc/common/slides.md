@@ -6,6 +6,7 @@
 npm install -g generator-reveal
 npm install -g yo
 npm install -g grunt
+npm install -g grunt-cli
 ```
 
 Create new slide, create a folder, cd to it, then run
