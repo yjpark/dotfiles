@@ -27,24 +27,24 @@ main = do
   dbus <- D.connectSession
   getWellKnownName dbus
   xmonad $ gnomeConfig {
-  	modMask = mod4Mask	-- User Super instead of Alt
-	  , terminal = "terminator"
-	  , manageHook = manageHook defaultConfig <+> manageDocks <+> myManageHook
-	  , layoutHook = desktopLayoutModifiers $ smartBorders mouseResizableTile ||| smartBorders mouseResizableTileMirrored ||| smartBorders (tabbed shrinkText (theme kavonAutumnTheme))
-	  , logHook = dynamicLogWithPP(prettyPrinter dbus)
+      modMask = mod4Mask    -- User Super instead of Alt
+      , terminal = "terminator"
+      , manageHook = manageHook defaultConfig <+> manageDocks <+> myManageHook
+      , layoutHook = desktopLayoutModifiers $ smartBorders mouseResizableTile ||| smartBorders mouseResizableTileMirrored ||| smartBorders (tabbed shrinkText (theme kavonAutumnTheme))
+      , logHook = dynamicLogWithPP(prettyPrinter dbus)
   }
-
-	`additionalKeysP` myKeys
+    `additionalKeysP` myKeys
+    `removeKeys` myRemoveKeys
 
 myManageHook = composeAll [
-	resource =? "tilda" --> doFloat
-	, className =? "Guake.py" --> doFloat
-	, resource =? "qjackctl.bin" --> doFloat
-	, resource =? "stardict" --> doFloat
-	, resource =? "Do" --> doFloat
-	, className =? "Do" --> doFloat
-	-- , isInProperty "_NET_WM_WINDOW_TYPE" "_NET_WM_WINDOW_TYPE_SPLASH" --> doFloat
-	]
+    resource =? "tilda" --> doFloat
+    , className =? "Guake.py" --> doFloat
+    , resource =? "qjackctl.bin" --> doFloat
+    , resource =? "stardict" --> doFloat
+    , resource =? "Do" --> doFloat
+    , className =? "Do" --> doFloat
+    -- , isInProperty "_NET_WM_WINDOW_TYPE" "_NET_WM_WINDOW_TYPE_SPLASH" --> doFloat
+    ]
 
 gridSelectConfig = defaultGSConfig {
     gs_cellheight = 50
@@ -54,56 +54,60 @@ gridSelectConfig = defaultGSConfig {
 }
 
 myKeys = [
-	("<F1>", spawn "terminator")
-	, ("<F2>", spawn "firefox")
-	, ("<F3>", spawn "xbmc")
-	, ("M-f", sendMessage $ Toggle "Full")
-	, ("M1-<Tab>", windows W.swapDown)
-	, ("M1-S-<Tab>", windows W.swapUp)
-	-- , ("M-<KP_1>", toggleOrView "1")
-	, ("M-<Up>", sendMessage Shrink)
-	, ("M-<Down>", sendMessage Expand)
-	, ("M-<Left>", windows W.focusUp)
-	, ("M-<Right>", windows W.focusDown)
-	, ("M-h", sendMessage Shrink)
-	, ("M-l", sendMessage Expand)
-	, ("M-j", windows W.focusUp)
-	, ("M-k", windows W.focusDown)
-	-- workspace control
-	-- , ("C-<Left>", prevWS)
-	-- , ("C-<Right>", nextWS)
-	-- , ("C-<Up>", toggleWS)
-	-- , ("C-<Down>", toggleWS)
-	-- screen control
-	, ("C-<Left>", prevScreen)
-	, ("C-<Right>", nextScreen)
-	, ("C-<Up>", shiftNextScreen)
-	, ("C-<Down>", swapPrevScreen)
-	-- GridSelect related
-	, ("C-<Tab>", goToSelected gridSelectConfig)
-	]
-	++ -- switch to workspace with Control-Num
-	[ (otherModMasks ++ "C-" ++ [key], action tag)
-	     | (tag, key)  <- zip myWorkspaces "123456789"
-	     , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
-	                                  , ("S-", windows . W.shift)]
-	]
-	++ -- switch to workspace with Control-Num (numpad)
-	[ (otherModMasks ++ "C-" ++ key, action tag)
-	     | (tag, key)  <- zip myWorkspaces numPadKeys
-	     , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
-	                                  , ("S-", windows . W.shift)]
-	]
-	++ -- switch to window with Control-Num
-	[ (otherModMasks ++ "M-" ++ [key], action)
-	     | (key)  <- "123456789"
-	     , (otherModMasks, action) <- [ ("", windows W.focusUp)]
-	]
-	++ -- switch to window with Win-Num (numpad)
-	[ (otherModMasks ++ "M-" ++ key, action)
-	     | (key)  <- numPadKeys
-	     , (otherModMasks, action) <- [ ("", windows W.focusUp)]
-	]
+    ("<F1>", spawn "terminator")
+    , ("<F2>", spawn "firefox")
+    , ("<F3>", spawn "xbmc")
+    , ("M-f", sendMessage $ Toggle "Full")
+    , ("M1-<Tab>", windows W.swapDown)
+    , ("M1-S-<Tab>", windows W.swapUp)
+    -- , ("M-<KP_1>", toggleOrView "1")
+    , ("M-<Up>", sendMessage Shrink)
+    , ("M-<Down>", sendMessage Expand)
+    , ("M-<Left>", windows W.focusUp)
+    , ("M-<Right>", windows W.focusDown)
+    , ("M-h", sendMessage Shrink)
+    , ("M-l", sendMessage Expand)
+    , ("M-j", windows W.focusUp)
+    , ("M-k", windows W.focusDown)
+    -- workspace control
+    -- , ("C-<Left>", prevWS)
+    -- , ("C-<Right>", nextWS)
+    -- , ("C-<Up>", toggleWS)
+    -- , ("C-<Down>", toggleWS)
+    -- screen control
+    , ("C-<Left>", prevScreen)
+    , ("C-<Right>", nextScreen)
+    , ("C-<Up>", shiftNextScreen)
+    , ("C-<Down>", swapPrevScreen)
+    -- GridSelect related
+    , ("C-<Tab>", goToSelected gridSelectConfig)
+    , ("C-<Space>", sendMessage NextLayout)
+    ]
+    ++ -- switch to workspace with Control-Num
+    [ (otherModMasks ++ "C-" ++ [key], action tag)
+         | (tag, key)  <- zip myWorkspaces "123456789"
+         , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
+                                      , ("S-", windows . W.shift)]
+    ]
+    ++ -- switch to workspace with Control-Num (numpad)
+    [ (otherModMasks ++ "C-" ++ key, action tag)
+         | (tag, key)  <- zip myWorkspaces numPadKeys
+         , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
+                                      , ("S-", windows . W.shift)]
+    ]
+    ++ -- switch to window with Control-Num
+    [ (otherModMasks ++ "M-" ++ [key], action)
+         | (key)  <- "123456789"
+         , (otherModMasks, action) <- [ ("", windows W.focusUp)]
+    ]
+    ++ -- switch to window with Win-Num (numpad)
+    [ (otherModMasks ++ "M-" ++ key, action)
+         | (key)  <- numPadKeys
+         , (otherModMasks, action) <- [ ("", windows W.focusUp)]
+    ]
+
+myRemoveKeys = [
+    (mod1Mask, xK_space)]
 
 tall = Tall 1 (3/100) (55/100)
 
