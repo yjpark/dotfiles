@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Need to install gist command line tool
+# https://github.com/defunkt/gist
+# on osx, can `brew install gist`
+
+gist ~/.dotfiles/bin/osx/osx-for-hackers.sh -u 2e96376d4cf37a954e9e
