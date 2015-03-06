@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# My settings from osx-for-hackers.sh
+
+echo "Expanding the save panel by default"
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+echo "Save to disk, rather than iCloud, by default!"
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+echo "Enabling full keyboard access for all controls (enable Tab in modal dialogs, menu windows, etc.)"
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+echo "Speeding up Mission Control animations and grouping windows by application"
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock "expose-group-by-app" -bool true
+
+echo "Disable system-wide resume!"
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+
+echo "Disable the menubar transparency!"
+defaults write com.apple.universalaccess reduceTransparency -bool true
