@@ -14,7 +14,7 @@ echo "Enabling full keyboard access for all controls (enable Tab in modal dialog
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 echo "Speeding up Mission Control animations and grouping windows by application"
-defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock expose-animation-duration -float 0
 defaults write com.apple.dock "expose-group-by-app" -bool true
 
 echo "Disable system-wide resume!"
@@ -22,3 +22,22 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 echo "Disable the menubar transparency!"
 defaults write com.apple.universalaccess reduceTransparency -bool true
+
+# Other setups
+# http://osxdaily.com/2015/01/06/make-the-window-resizing-animation-speed-instant-in-mac-os-x/
+echo "Speedup the resize animation (need logout)"
+defaults write -g NSWindowResizeTime -float 0.001
+
+# http://osxdaily.com/2012/03/28/change-dock-animation-speed-mac-os-x/
+echo "Remove Dock Animation Completely"
+defaults write com.apple.dock autohide-time-modifier -int 0;
+
+# http://www.reddit.com/r/mac/comments/2ex2cn/how_to_remove_osx_animations_to_avoid_lag/
+echo "Disable opening and closing window animations"
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+echo "Don’t animate opening applications from the Dock"
+defaults write com.apple.dock launchanim -bool false
+
+echo "Restart Dock"
+killall Dock
