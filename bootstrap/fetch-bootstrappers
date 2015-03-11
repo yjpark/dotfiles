@@ -5,5 +5,6 @@ curl -vsSL https://github.com/bpinto/oh-my-fish/raw/master/tools/install.fish > 
 curl -vsSL https://get.rvm.io > ~/.dotfiles/bootstrap/bootstrap-rvm
 curl -vsSL https://static.rust-lang.org/rustup.sh > ~/.dotfiles/bootstrap/bootstrap-rust-with-cargo
 curl -vsSL https://www.parse.com/downloads/cloud_code/installer.sh > ~/.dotfiles/bootstrap/bootstrap-parse
+curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/bootstrap/bootstrap-nix
 
 chmod 755 ~/.dotfiles/bootstrap/*
