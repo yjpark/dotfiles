@@ -5,7 +5,8 @@
 Option-Space        Next input source
 Option-`            Application Windows
 Option-Tab          Notification Center
-Option-Escape          Mission Control
+Option-Escape       Mission Control
+Cmd-Escape          Move focus to the menu bar
 ```
 
 ### Activate ###
@@ -22,7 +23,7 @@ Cmd-Option-`        Prev
 
 ### MenuMate ###
 ```
-Ctrl-Shift-Tab           Menu
+Ctrl-Shift-Tab      Menu
 ```
 
 ### Setup in individual applications ###

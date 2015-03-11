@@ -18,3 +18,10 @@ NeoBundle 'Keithbsmiley/swift.vim'
 NeoBundle 'leafo/moonscript-vim'
 NeoBundle 'vim-scripts/hexman.vim'
 
+"https://github.com/clausreinke/typescript-tools/issues/27
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'clausreinke/typescript-tools'
+if !exists("g:ycm_semantic_triggers")
+   let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']

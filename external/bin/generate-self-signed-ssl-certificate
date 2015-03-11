@@ -13,7 +13,7 @@ openssl rsa -in myssl.key.org -out myssl.key
 rm myssl.key.org
 
 echo "Generating certificate..."
-openssl x509 -req -days 365 -in myssl.csr -signkey myssl.key -out myssl.crt
+openssl x509 -req -days 3650 -in myssl.csr -signkey myssl.key -out myssl.crt
 
 echo "Copying certificate (myssl.crt) to /etc/ssl/certs/"
 mkdir -p /etc/ssl/certs

@@ -6,9 +6,13 @@ alias vim "/Applications/MacVim.app/Contents/MacOS/Vim -n"
 
 set -x PATH $PATH ~/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools ~/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools ~/Applications/adt-bundle-mac-x86_64-20140702/sdk/build-tools/android-4.4W
 
-# Marmalade
+# Old Marmalade 
+# set -x PATH $PATH /Applications/Marmalade.app/Contents/tools/dzip
+
+# Marmalade SDK addition: please do not edit these lines
 set -x PATH $PATH /Applications/Marmalade.app/Contents/s3e/bin
-set -x PATH $PATH /Applications/Marmalade.app/Contents/tools/dzip
+set -x S3E_DIR /Applications/Marmalade.app/Contents/s3e
+# Marmalade SDK addition: end
 
 # PfGame
 set -x PFGAME_LIBS_ROOT ~/projects/pettyfun/libs

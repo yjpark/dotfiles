@@ -30,8 +30,12 @@ cd() {
 
 alias iftop='sudo iftop -B -P -i en1'
 
-# Marmalade
-export PATH=/Applications/Marmalade.app/Contents/s3e/bin:$PATH
-alias dzip=/Applications/Marmalade.app/Contents/tools/dzip/dzip
+# Old Marmalade One: 
+# alias dzip=/Applications/Marmalade.app/Contents/tools/dzip/dzip
+
+# Marmalade SDK addition: please do not edit these lines
+export PATH=$PATH:"/Applications/Marmalade.app/Contents/s3e/bin"
+export S3E_DIR=/Applications/Marmalade.app/Contents/s3e
+# Marmalade SDK addition: end
 
 export NDK_ROOT=/Users/yjpark/App/android-ndk-r8d
