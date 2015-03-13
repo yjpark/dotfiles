@@ -14,7 +14,6 @@ let g:vimim_shuangpin_microsoft=1
 
 set ignorecase smartcase
 
-let NERDTreeIgnore=['\.meta$', '\.pyc$']
 set wildignore+=*.meta
 
 " Disable the automatic linebreak in markdown files
@@ -40,28 +39,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column --smart-case --ignore=*.meta'
 let g:Tb_MaxSize = 0
 " let g:Tb_MoreThanOne = 0
 " let g:Tb_ModSelTarget = 1
-
-" sync the nerdtree to current buffer if it's opened
-" http://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
-" returns true iff is NERDTree open/active
-function! YJParkIsNTOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" returns true iff focused window is NERDTree window
-function! YJParkIsNTFocused()
-  return -1 != match(expand('%'), 'NERD_Tree')
-endfunction
-
-" calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! YJParkSyncTree()
-  if &modifiable && YJParkIsNTOpen() && !YJParkIsNTFocused() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
-autocmd BufEnter * call YJParkSyncTree()
 
 " QuickfixsignsDisable
 

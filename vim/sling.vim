@@ -495,17 +495,6 @@
       endif
 
     "}}}
-    NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
-      let NERDTreeShowHidden=1
-      let NERDTreeQuitOnOpen=0
-      let NERDTreeShowLineNumbers=1
-      let NERDTreeChDirMode=0
-      let NERDTreeShowBookmarks=1
-      let NERDTreeIgnore=['\.git','\.hg']
-      let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
-      """nnoremap <F2> :NERDTreeToggle<CR>
-      """nnoremap <F3> :NERDTreeFind<CR>
-    "}}}
     NeoBundleLazy 'majutsushi/tagbar', {'autoload':{'commands':'TagbarToggle'}} "{{{
       nnoremap <silent> <F9> :TagbarToggle<CR>
     "}}}
