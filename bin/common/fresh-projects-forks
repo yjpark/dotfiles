@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Bootstraping ~/projects/forks"
+
+mkdir -p ~/projects/forks
+cd ~/projects/forks
+
+bootstrap-github-repositories ~/.dotfiles/projects/forks.bootstrap
+mu register --all
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/projects/yjpark/forks/powerline-shell/
+cd ~/projects/forks/powerline-shell/
 
 echo 'Generating Fish Powerline'
 rm config.py
