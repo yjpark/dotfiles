@@ -1,3 +1,8 @@
 #!/bin/bash
 
+if [ $1 ] ; then 
+    nohup /Applications/Unity-$1/Unity.app/Contents/MacOS/Unity -projectPath "$PWD" > /tmp/unity3d-$1.nohup &
+    exit 0
+fi
+
 nohup /Applications/Unity/Unity.app/Contents/MacOS/Unity -projectPath "$PWD" > /tmp/unity3d.nohup &
