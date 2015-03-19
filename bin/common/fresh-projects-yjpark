@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Bootstraping ~/projects/yjpark"
+
+mkdir -p ~/projects/yjpark
+cd ~/projects/yjpark
+
+bootstrap-github-repositories ~/.dotfiles/projects/yjpark.bootstrap
+mu register --all
+
