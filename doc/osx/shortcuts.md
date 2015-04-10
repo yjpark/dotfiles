@@ -1,12 +1,32 @@
 ## Global Shortcuts ##
 
 ### Setup in System Preferences ###
+
+Mission Controls
+```
+Option-Escape       Mission Control
+Option-Tab          Show Notification Center
+Option-`            Application Windows
+```
+
+Input Source
 ```
 Option-Space        Next input source
-Option-`            Application Windows
-Option-Tab          Notification Center
-Option-Escape       Mission Control
-Cmd-Escape          Move focus to the menu bar
+```
+
+Keyboard Section
+```
+Ctrl-Cmd-0          Change the way Tab moves focus
+Ctrl-Cmd-1          Turn keyboard access on or off
+Ctrl-Cmd-2          Move focus to the menu bar
+Ctrl-Cmd-3          Move focus to the Dock
+Ctrl-Cmd-4          Move focus to active or next window
+Ctrl-Cmd-5          Move focus to the window toolbar
+Ctrl-Cmd-6          Move focus to the floating window
+Ctrl-Cmd-7          Move focus to the next window
+Ctrl-Cmd-8          Move focus to the window drawer
+Ctrl-Cmd-9          Move focus to the status menus
+
 ```
 
 ### Activate ###
