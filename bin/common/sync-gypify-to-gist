@@ -4,4 +4,4 @@
 # https://github.com/defunkt/gist
 # on osx, can `brew install gist`
 
-gist ~/.dotfiles/gists/cvimrc -u 27301af644bec5c4a9d4
+gist ~/.dotfiles/gists/gypify.py -u ee5569cb5eaa42924dd7

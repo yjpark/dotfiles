@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sync-cvimrc-to-gist
+sync-gypify-to-gist
+
