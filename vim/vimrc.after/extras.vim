@@ -27,3 +27,6 @@ endif
 let g:ycm_semantic_triggers['typescript'] = ['.']
 
 NeoBundle 'yjpark/Mark--Karkat'
+
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'mattreduce/vim-mix'
