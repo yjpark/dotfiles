@@ -142,6 +142,12 @@ if [[ "$(uname)" == "Linux" ]]; then
 fi
 
 # =====================================================
+# SSH
+fresh 'ssh/config/*' --file='~/.ssh/config'
+
+mkdir -p ~/.ssh/control
+
+# =====================================================
 # Private stuffs
 fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
 fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
