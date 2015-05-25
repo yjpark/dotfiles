@@ -12,8 +12,12 @@ let g:dotvim_settings.disabled_plugins = [
             \   "tpope/vim-dispatch",
             \   "mbbill/undotree",
             \]
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 source ~/.dotfiles/vim/sling.vim
 
 source ~/.vimrc.after
 
+call neobundle#end()
 NeoBundleCheck
