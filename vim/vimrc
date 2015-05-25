@@ -13,6 +13,15 @@ let g:dotvim_settings.disabled_plugins = [
             \   "mbbill/undotree",
             \]
 
+if has('vim_starting')
+    if &compatible
+        set nocompatible
+        " Be iMproved
+    endif
+    " Required:
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 source ~/.dotfiles/vim/sling.vim
