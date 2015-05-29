@@ -27,7 +27,7 @@ main = do
   dbus <- D.connectSession
   getWellKnownName dbus
   xmonad $ gnomeConfig {
-      modMask = mod1Mask .|. mod4Mask    -- User Super instead of Alt
+      modMask = mod1Mask .|. mod4Mask   -- User Super instead of Alt
       , terminal = "terminator"
       , manageHook = manageHook defaultConfig <+> manageDocks <+> myManageHook
       , layoutHook = desktopLayoutModifiers $ smartBorders mouseResizableTile ||| smartBorders mouseResizableTileMirrored ||| smartBorders (tabbed shrinkText (theme kavonAutumnTheme))
@@ -82,6 +82,7 @@ myKeys = [
     -- GridSelect related
     , ("C-<Tab>", goToSelected gridSelectConfig)
     , ("C-<Space>", sendMessage NextLayout)
+    , ("M1-b", sendMessage ToggleStruts)
     ]
     ++ -- switch to workspace with Control-Num
     [ (otherModMasks ++ "C-" ++ [key], action tag)
