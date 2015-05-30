@@ -12,11 +12,12 @@
   Zen:
     softWrap: true
   editor:
-    invisibles:
-      {}
+    invisibles: {}
     tabLength: 4
     fontSize: 18
-  "git-plus":
-    {}
+  "git-plus": {}
   date:
     timeFormat: "### HH24:MI"
+  linter: {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
