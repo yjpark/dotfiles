@@ -1,0 +1,22 @@
+"*":
+  "exception-reporting":
+    userId: "1c11f54d-7cce-3800-3256-345cb5618415"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-dark-ui"
+      "solarized-dark-syntax"
+    ]
+    autoHideMenuBar: true
+  Zen:
+    softWrap: true
+  editor:
+    invisibles:
+      {}
+    tabLength: 4
+    fontSize: 18
+  "git-plus":
+    {}
+  date:
+    timeFormat: "### HH24:MI"
