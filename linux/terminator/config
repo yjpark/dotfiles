@@ -24,7 +24,7 @@
     foreground_color = "#839496"
     scroll_on_output = False
     show_titlebar = False
-    font = Source Code Pro for Powerline Medium 14
+    font = Source Code Pro for Powerline Medium 13
     background_color = "#002b36"
   [[Light]]
     scrollbar_position = hidden
