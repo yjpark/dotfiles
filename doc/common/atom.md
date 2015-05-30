@@ -3,7 +3,8 @@
 - japanese-wrap
 - zen
 - language-fish-shell
-- git plus
+- git-plus
+- markdown-preview-plus
 - date (to insert current time in dairy)
 
 ## Themes
