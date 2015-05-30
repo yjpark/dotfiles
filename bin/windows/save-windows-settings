@@ -1,6 +1,6 @@
 #!/bin/bash
 
 
-cp ~/AppData/Roaming/ConEmu.xml ~/.dotfiles/windows/
+cp ~/Applications/cmder/config/ConEmu.xml ~/.dotfiles/windows/
 
 cp ~/.config/vs2013/* ~/.dotfiles/windows/vs2013/
