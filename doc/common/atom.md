@@ -5,7 +5,10 @@
 - language-fish-shell
 - git-plus
 - markdown-preview-plus
-- date (to insert current time in dairy)
+- atom-date (to insert current time in dairy)
+- atom-minimap
+- atom-ctags
+
 
 ## Themes
 - UI: Atom Dark

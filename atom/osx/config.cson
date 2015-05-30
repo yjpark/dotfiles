@@ -9,6 +9,10 @@
       "solarized-dark-syntax"
     ]
     autoHideMenuBar: true
+    disabledPackages: [
+      "vim-mode"
+      "symbols-view"
+    ]
   Zen:
     softWrap: true
   editor:
@@ -16,6 +20,10 @@
       {}
     tabLength: 4
     fontSize: 18
+    lineHeight: 1.4
+    fontFamily: "Source Code Pro for Powerline"
+    scrollPastEnd: true
+    softWrap: true
   "git-plus":
     {}
   date:
@@ -24,3 +32,8 @@
     {}
   "tree-view":
     hideVcsIgnoredFiles: true
+  minimap:
+    {}
+  "vim-mode":
+    useSmartcaseForSearch: true
+    useClipboardAsDefaultRegister: true
