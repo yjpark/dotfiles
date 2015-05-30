@@ -33,7 +33,16 @@
   "tree-view":
     hideVcsIgnoredFiles: true
   minimap:
-    {}
+    scrollAnimation: true
   "vim-mode":
     useSmartcaseForSearch: true
     useClipboardAsDefaultRegister: true
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  "symbols-tree-view":
+    {}
+  "atom-fuzzy-grep":
+    grepCommandString: "ag --nogroup --nocolor --column --smart-case --ignore=*.meta"
+    detectGitProjectAndUseGitGrep: false
+  "fuzzy-finder":
+    {}

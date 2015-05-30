@@ -9,6 +9,7 @@
 - atom-minimap
 - atom-ctags
 - symbols-tree-view
+- atom-fuzzy-grep
 
 ## Themes
 - UI: Atom Dark
