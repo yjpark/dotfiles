@@ -1,5 +1,3 @@
-NeoBundle 'yjpark/unite.vim'
-
 let g:unite_data_directory='~/.vim/.cache/unite'
 let g:unite_source_history_yank_enable=1
 let g:unite_source_rec_max_cache_files=5000
@@ -16,7 +14,7 @@ elseif executable('ack')
 endif
 
 " Ignore certain files and directories while searching
-call unite#custom_source('file,file_rec,file_rec/async,grep',
+call unite#custom#source('file,file_rec,file_rec/async,grep',
             \ 'ignore_pattern', join([
       \ '\.git/',
       \ '\.bundle/',

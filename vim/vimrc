@@ -29,4 +29,8 @@ source ~/.dotfiles/vim/sling.vim
 source ~/.vimrc.after
 
 call neobundle#end()
+
 NeoBundleCheck
+
+source ~/.vimrc.neo
+

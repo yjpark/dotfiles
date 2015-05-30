@@ -57,6 +57,7 @@ fi
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'vim/vimrc.after.osx/*' --file='~/.vimrc.after' --marker='"'
 fi
+fresh 'vim/vimrc.neo/*' --file='~/.vimrc.neo' --marker='"'
 # run fresh-janus to install vim plugins in .janus
 
 # =====================================================
