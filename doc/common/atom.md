@@ -9,6 +9,8 @@
 - atom-ctags
 - symbols-tree-view
 
+- color-picker
+
 - auto-encoding
 - convert-to-utf8
 
