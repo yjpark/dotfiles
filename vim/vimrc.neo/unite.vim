@@ -61,9 +61,10 @@ nnoremap ,p :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/asyn
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
 nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -start-insert buffer<cr>
 nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -quick-match -default-action=yank -auto-quit register<cr>
+nnoremap ,t :<C-u>Unite -no-split -buffer-name=tag -start-insert tag<cr>
 
 "Not really using
-nnoremap ,o :<C-u>Unite -no-split -buffer-name=outline -quick-match outline<cr>
+nnoremap ,o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
 nnoremap ,y :<C-u>Unite -no-split -buffer-name=yank -quick-match history/yank<cr>
 
 " Custom mappings for the unite buffer
@@ -85,7 +86,7 @@ function! s:unite_settings()
 endfunction
 
 
-" For searching the word in the cursor in the current directory,
+" Search with ag
 noremap <silent> ,. :<C-u>Unite -no-quit -buffer-name=grep grep:.:<CR>
 " For searching the word in the cursor in the current buffer,
 noremap <silent> ,f :<C-u>Unite -no-quit -buffer-name=grep grep:.:<CR><C-r><C-w><CR>

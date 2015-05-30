@@ -25,7 +25,7 @@ nnoremap ,0 :set hlsearch! hlsearch?<CR>
 " Disable the ctrlp default mapping
 let g:ctrlp_map = '<leader><c-p>'
 
-nnoremap ,t :CtrlPBufTag<CR>
+"nnoremap ,t :CtrlPBufTag<CR>
 nnoremap ,T :CtrlPBufTagAll<CR>
 nnoremap ,u :CtrlPFunky<CR>
 

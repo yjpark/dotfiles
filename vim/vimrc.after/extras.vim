@@ -1,4 +1,5 @@
 NeoBundle 'yjpark/unite.vim'
+NeoBundle 'tsukkee/unite-tag'
 
 NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'reedes/vim-pencil'
