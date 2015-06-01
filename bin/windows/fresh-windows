@@ -15,4 +15,5 @@ cp -vr ~/.dotfiles/pentadactyl .pentadactyl
 ~/.dotfiles/bin/windows/fresh-windows-bash
 ~/.dotfiles/bin/windows/fresh-windows-vim
 ~/.dotfiles/bin/windows/fresh-windows-git
+~/.dotfiles/bin/windows/fresh-windows-autohotkey
 
