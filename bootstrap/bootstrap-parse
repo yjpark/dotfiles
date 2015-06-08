@@ -6,7 +6,16 @@ if [ -e /tmp/parse.tmp ]; then
   rm -f /tmp/parse.tmp
 fi
 echo "Fetching latest version ..."
-curl --progress-bar https://www.parse.com/downloads/cloud_code/parse -o /tmp/parse.tmp
+
+case `uname` in
+  "Linux" )
+    curl --progress-bar -Lo /tmp/parse.tmp https://parse.com/downloads/cloud_code/cli/parse-linux/latest
+    ;;
+  "Darwin" )
+    curl --progress-bar -Lo /tmp/parse.tmp https://parse.com/downloads/cloud_code/cli/parse-osx/latest
+    ;;
+esac
+
 if [ ! -d /usr/local/bin ]; then
   echo "Making /usr/local/bin"
   mkdir -p /usr/local/bin

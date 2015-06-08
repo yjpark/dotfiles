@@ -6,12 +6,12 @@ set -o errexit
 
 rvm_install_initialize()
 {
-  DEFAULT_SOURCES=(github.com/wayneeseguin/rvm bitbucket.org/mpapis/rvm)
+  DEFAULT_SOURCES=(github.com/rvm/rvm bitbucket.org/mpapis/rvm)
 
   BASH_MIN_VERSION="3.2.25"
   if
     [[ -n "${BASH_VERSION:-}" &&
-      "$(\printf "%b" "${BASH_VERSION:-}\n${BASH_MIN_VERSION}\n" | LC_ALL=C \sort -n -t"." | \head -n1)" != "${BASH_MIN_VERSION}"
+      "$(\printf "%b" "${BASH_VERSION:-}\n${BASH_MIN_VERSION}\n" | LC_ALL=C \sort -t"." -k1,1n -k2,2n -k3,3n | \head -n1)" != "${BASH_MIN_VERSION}"
     ]]
   then
     echo "BASH ${BASH_MIN_VERSION} required (you have $BASH_VERSION)"
@@ -25,7 +25,7 @@ rvm_install_initialize()
 }
 
 log()  { printf "%b\n" "$*"; }
-debug(){ [[ ${rvm_debug_flag:-0} -eq 0 ]] || printf "Running($#): $*"; }
+debug(){ [[ ${rvm_debug_flag:-0} -eq 0 ]] || printf "%b\n" "Running($#): $*"; }
 fail() { log "\nERROR: $*\n" ; exit 1 ; }
 
 rvm_install_commands_setup()
@@ -81,7 +81,7 @@ rvm_install_commands_setup()
     fail "Could not find GNU compatible version of 'tar' command, make sure it's available first before continuing installation."
   fi
   if
-    [[ ! " ${rvm_tar_options:-} " =~ " --no-same-owner "  ]] &&
+    [[ " ${rvm_tar_options:-} " != *" --no-same-owner "*  ]] &&
     $rvm_tar_command --help 2>&1 | GREP_OPTIONS="" \grep -- --no-same-owner >/dev/null
   then
     rvm_tar_options="${rvm_tar_options:-}${rvm_tar_options:+ }--no-same-owner"
@@ -117,7 +117,7 @@ Options
 
         If account is wayneeseguin or mpapis, installs from one of the following:
 
-          https://github.com/wayneeseguin/rvm/archive/master.tar.gz
+          https://github.com/rvm/rvm/archive/master.tar.gz
           https://bitbucket.org/mpapis/rvm/get/master.tar.gz
 
        Otherwise, installs from:
@@ -128,7 +128,7 @@ Options
 
         If account is wayneeseguin or mpapis, installs from one of the following:
 
-          https://github.com/wayneeseguin/rvm/archive/<branch>.tar.gz
+          https://github.com/rvm/rvm/archive/<branch>.tar.gz
           https://bitbucket.org/mpapis/rvm/get/<branch>.tar.gz
 
         Otherwise, installs from:
@@ -139,7 +139,7 @@ Options
 
         Installs the branch from one of the following:
 
-          https://github.com/wayneeseguin/rvm/archive/<branch>.tar.gz
+          https://github.com/rvm/rvm/archive/<branch>.tar.gz
           https://bitbucket.org/mpapis/rvm/get/<branch>.tar.gz
 
       [--]source <source>
@@ -163,9 +163,9 @@ Options
         Provides debug logging for the installation script.
 Actions
 
-  master - Installs RVM from the master branch at wayneeseguin/rvm on github or mpapis/rvm
+  master - Installs RVM from the master branch at rvm/rvm on github or mpapis/rvm
            on bitbucket.org.
-  stable - Installs RVM from the stable branch a wayneeseguin/rvm on github or mpapis/rvm
+  stable - Installs RVM from the stable branch a rvm/rvm on github or mpapis/rvm
            on bitbucket.org.
   help   - Displays this output.
 
@@ -180,10 +180,10 @@ __rvm_curl_output_control()
   then
     __flags+=( "--silent" "--show-error" )
   elif
-    [[ " $*" =~ " -s" || " $*" =~ " --silent" ]]
+    [[ " $*" == *" -s"* || " $*" == *" --silent"* ]]
   then
     # make sure --show-error is used with --silent
-    [[ " $*" =~ " -S" || " $*" =~ " -sS" || " $*" =~ " --show-error" ]] ||
+    [[ " $*" == *" -S"* || " $*" == *" -sS"* || " $*" == *" --show-error"* ]] ||
     {
       __flags+=( "--show-error" )
     }
@@ -232,10 +232,10 @@ rvm_is_a_shell_function()
 }
 
 # Searches the tags for the highest available version matching a given pattern.
-# fetch_version (github.com/wayneeseguin/rvm bitbucket.org/mpapis/rvm) 1.10. -> 1.10.3
-# fetch_version (github.com/wayneeseguin/rvm bitbucket.org/mpapis/rvm) 1.10. -> 1.10.3
-# fetch_version (github.com/wayneeseguin/rvm bitbucket.org/mpapis/rvm) 1.    -> 1.11.0
-# fetch_version (github.com/wayneeseguin/rvm bitbucket.org/mpapis/rvm) ""    -> 2.0.1
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) 1.10. -> 1.10.3
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) 1.10. -> 1.10.3
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) 1.    -> 1.11.0
+# fetch_version (github.com/rvm/rvm bitbucket.org/mpapis/rvm) ""    -> 2.0.1
 fetch_version()
 {
   typeset _account _domain _pattern _repo _sources _values _version
@@ -283,7 +283,7 @@ fetch_versions()
 
 install_release()
 {
-  typeset _source _sources _url _version
+  typeset _source _sources _url _version _verify_pgp
   _sources=(${!1})
   _version=$2
   debug "Downloading RVM version ${_version}"
@@ -291,13 +291,15 @@ install_release()
   do
     case ${_source} in
       (bitbucket.org*)
-        _url=https://${_source}/get/${_version}.tar.gz
+        _url="https://${_source}/get/${_version}.tar.gz"
+        _verify_pgp="https://${_source}/downloads/${_version}.tar.gz.asc"
         ;;
       (*)
-        _url=https://${_source}/archive/${_version}.tar.gz
+        _url="https://${_source}/archive/${_version}.tar.gz"
+        _verify_pgp="https://${_source}/releases/download/${_version}/${_version}.tar.gz.asc"
         ;;
     esac
-    get_and_unpack ${_url} rvm-${_version}.tgz && return
+    get_and_unpack "${_url}" "rvm-${_version}.tgz" "$_verify_pgp" && return
   done
   return $?
 }
@@ -318,7 +320,7 @@ install_head()
         _url=https://${_source}/archive/${_branch}.tar.gz
         ;;
     esac
-    get_and_unpack ${_url} rvm-${_branch//\//_}.tgz && return
+    get_and_unpack "${_url}" "rvm-${_branch//\//_}.tgz" && return
   done
   return $?
 }
@@ -336,12 +338,11 @@ __rvm_cd()
   return $ret
 }
 
-get_and_unpack()
+get_package()
 {
-  typeset _url _file _patern _return
-  _url=$1
-  _file=$2
-
+  typeset _url _file
+  _url="$1"
+  _file="$2"
   log "Downloading ${_url}"
   __rvm_curl -sS ${_url} -o ${rvm_archives_path}/${_file} ||
   {
@@ -379,6 +380,88 @@ Could not download '${_url}'.
     esac
     return $_return
   }
+}
+
+# duplication marker flnglfdjkngjndkfjhsbdjgfghdsgfklgg
+rvm_install_gpg_setup()
+{
+  export rvm_gpg_command
+  {
+    rvm_gpg_command="$( \which gpg2 2>/dev/null )" &&
+    [[ ${rvm_gpg_command} != "/cygdrive/"* ]]
+  } ||
+    rvm_gpg_command="$( \which gpg 2>/dev/null )" ||
+    rvm_gpg_command=""
+  debug "Detected GPG program: '$rvm_gpg_command'"
+  [[ -n "$rvm_gpg_command" ]] || return $?
+}
+
+# duplication marker rdjgndfnghdfnhgfdhbghdbfhgbfdhbn
+verify_package_pgp()
+{
+  if
+    "${rvm_gpg_command}" --verify "$2" "$1"
+  then
+    log "GPG verified '$1'"
+  else
+    typeset _ret=$?
+    log "\
+Warning, RVM 1.26.0 introduces signed releases and \
+automated check of signatures when GPG software found.
+Assuming you trust Michal Papis import the mpapis public \
+key (downloading the signatures).
+
+GPG signature verification failed for '$1' - '$3'!
+try downloading the signatures:
+
+    ${SUDO_USER:+sudo }${rvm_gpg_command##*/} --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
+or if it fails:
+
+    command curl -sSL https://rvm.io/mpapis.asc | ${SUDO_USER:+sudo }${rvm_gpg_command##*/} --import -
+
+the key can be compared with:
+
+    https://rvm.io/mpapis.asc
+    https://keybase.io/mpapis
+"
+    exit $_ret
+  fi
+}
+
+verify_pgp()
+{
+  [[ -n "${1:-}" ]] ||
+  {
+    debug "No PGP url given, skipping."
+    return 0
+  }
+
+  get_package "$1" "$2.asc" ||
+  {
+    debug "PGP url given but does not exist: '$1'"
+    return 0
+  }
+
+  rvm_install_gpg_setup ||
+  {
+    log "Found PGP signature at: '$1',
+but no GPG software exists to validate it, skipping."
+    return 0
+  }
+
+  verify_package_pgp "${rvm_archives_path}/$2" "${rvm_archives_path}/$2.asc" "$1"
+}
+
+get_and_unpack()
+{
+  typeset _url _file _patern _return _verify_pgp
+  _url="$1"
+  _file="$2"
+  _verify_pgp="$3"
+
+  get_package "$_url" "$_file" || return $?
+  verify_pgp "$_verify_pgp" "$_file" || return $?
 
   [[ -d "${rvm_src_path}/rvm" ]] || \mkdir -p "${rvm_src_path}/rvm"
   __rvm_cd "${rvm_src_path}/rvm" ||
@@ -401,7 +484,7 @@ rvm_install_default_settings()
 {
   # Tracing, if asked for.
   if
-    [[ "$*" =~ --trace ]] || (( ${rvm_trace_flag:-0} > 0 ))
+    [[ "$*" == *--trace* ]] || (( ${rvm_trace_flag:-0} > 0 ))
   then
     set -o xtrace
     rvm_trace_flag=1
@@ -456,6 +539,7 @@ rvm_install_default_settings()
   fi
 
   # duplication marker kkdfkgnjfndgjkndfjkgnkfjdgn
+  [[ -n "${rvm_user_install_flag:-}" ]] ||
   case "$rvm_path" in
     (/usr/local/rvm)         rvm_user_install_flag=0 ;;
     ($HOME/*|/${USER// /_}*) rvm_user_install_flag=1 ;;
@@ -467,7 +551,7 @@ rvm_install_parse_params()
 {
   install_rubies=()
   install_gems=()
-  flags=()
+  flags=( ./scripts/install )
   forwarded_flags=()
   while
     (( $# > 0 ))
@@ -479,7 +563,7 @@ rvm_install_parse_params()
       (--trace)
         set -o xtrace
         rvm_trace_flag=1
-        flags+=( "$token" )
+        flags=( -x "${flags[@]}" "$token" )
         forwarded_flags+=( "$token" )
         ;;
 
@@ -596,14 +680,13 @@ rvm_install_parse_params()
         shift
         ;;
 
-      (head)
+      (head|master)
         version="head"
         branch="master"
         ;;
 
-      (stable|master)
-        version="head"
-        branch="$token"
+      (stable)
+        version="latest"
         ;;
 
       (latest|latest-*|+([[:digit:]]).+([[:digit:]]).+([[:digit:]]))
@@ -692,42 +775,41 @@ follow this link for details how to fix:
     ;;
   esac
 
-  if [[ "$rvm_path" != /* ]]
+  if [[ "$rvm_path" != "/"* ]]
   then fail "The rvm install path must be fully qualified. Tried $rvm_path"
   fi
 }
 
 rvm_install_select_and_get_version()
 {
+  typeset _version_release
+
   for dir in "$rvm_src_path" "$rvm_archives_path"
   do
     [[ -d "$dir" ]] || mkdir -p "$dir"
   done
 
+  _version_release="${version}"
   case "${version}" in
     (head)
-      echo "${branch}" > "$rvm_path/RELEASE"
+      _version_release="${branch}"
       install_head sources[@] ${branch:-master} || exit $?
       ;;
 
     (latest)
-      echo "${version}" > "$rvm_path/RELEASE"
       install_release sources[@] $(fetch_version sources[@]) || exit $?
       ;;
 
     (latest-minor)
-      echo "${version}" > "$rvm_path/RELEASE"
       version="$(\cat "$rvm_path/VERSION")"
       install_release sources[@] $(fetch_version sources[@] ${version%.*}) || exit $?
       ;;
 
     (latest-*)
-      echo "${version}" > "$rvm_path/RELEASE"
       install_release sources[@] $(fetch_version sources[@] ${version#latest-}) || exit $?
       ;;
 
     (+([[:digit:]]).+([[:digit:]]).+([[:digit:]])) # x.y.z
-      echo "version" > "$rvm_path/RELEASE"
       install_release sources[@] ${version} || exit $?
       ;;
 
@@ -735,14 +817,20 @@ rvm_install_select_and_get_version()
       fail "Something went wrong, unrecognized version '$version'"
       ;;
   esac
+  echo "${_version_release}" > "$rvm_path/RELEASE"
 }
 
 rvm_install_main()
 {
+  [[ -f ./scripts/install ]] ||
+  {
+    log "'./scripts/install' can not be found for installation, something went wrong, it usally means your 'tar' is broken, please report it here: https://github.com/rvm/rvm/issues"
+    return 127
+  }
+
   # required flag - path to install
   flags+=( --path "$rvm_path" )
-  chmod +x ./scripts/install
-  ./scripts/install "${flags[@]}"
+  \command bash "${flags[@]}"
 }
 
 rvm_install_ruby_and_gems()
@@ -774,7 +862,7 @@ rvm_install_ruby_and_gems()
 "
 
     if
-      [[ "${install_gems[*]}" =~ "rails" ]]
+      [[ "${install_gems[*]}" == *"rails"* ]]
     then
       printf "%b" "
   * To start using rails you need to run \`rails new <project_dir>\`.
