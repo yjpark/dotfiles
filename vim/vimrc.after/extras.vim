@@ -33,3 +33,4 @@ NeoBundle 'yjpark/Mark--Karkat'
 
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'mattreduce/vim-mix'
+NeoBundle 'jimenezrick/vimerl'
