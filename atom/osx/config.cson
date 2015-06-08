@@ -1,0 +1,48 @@
+"*":
+  "exception-reporting":
+    userId: "1c11f54d-7cce-3800-3256-345cb5618415"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-dark-ui"
+      "solarized-dark-syntax"
+    ]
+    autoHideMenuBar: true
+    disabledPackages: [
+      "vim-mode"
+      "symbols-view"
+    ]
+  Zen:
+    softWrap: true
+  editor:
+    invisibles:
+      {}
+    tabLength: 4
+    fontSize: 18
+    lineHeight: 1.4
+    fontFamily: "Source Code Pro for Powerline"
+    scrollPastEnd: true
+    softWrap: true
+  "git-plus":
+    {}
+  date:
+    timeFormat: "### HH24:MI"
+  linter:
+    {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  minimap:
+    scrollAnimation: true
+  "vim-mode":
+    useSmartcaseForSearch: true
+    useClipboardAsDefaultRegister: true
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  "symbols-tree-view":
+    {}
+  "atom-fuzzy-grep":
+    grepCommandString: "ag --nogroup --nocolor --column --smart-case --ignore=*.meta"
+    detectGitProjectAndUseGitGrep: false
+  "fuzzy-finder":
+    {}

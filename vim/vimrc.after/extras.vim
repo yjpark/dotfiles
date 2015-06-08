@@ -1,3 +1,6 @@
+NeoBundle 'yjpark/unite.vim'
+NeoBundle 'tsukkee/unite-tag'
+
 NeoBundle 'reedes/vim-colors-pencil'
 NeoBundle 'reedes/vim-pencil'
 
@@ -30,3 +33,4 @@ NeoBundle 'yjpark/Mark--Karkat'
 
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'mattreduce/vim-mix'
+NeoBundle 'jimenezrick/vimerl'

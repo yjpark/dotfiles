@@ -1,1 +1,1 @@
-alias vim="/c/Applications/vim/vim"
+#alias vim="/c/Applications/vim/vim"

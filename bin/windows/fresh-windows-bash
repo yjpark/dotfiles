@@ -3,7 +3,7 @@
 
 cd ~
 rm ~/.bashrc
-cat ~/.dotfiles/bash/bashrc/* >> ~/.bashrc
+cat ~/.dotfiles/bash/bashrc.windows/* >> ~/.bashrc
 
 rm ~/.bash_it/aliases/custom.aliases.bash
 cat ~/.dotfiles/bash/aliases/* >> ~/.bash_it/aliases/custom.aliases.bash

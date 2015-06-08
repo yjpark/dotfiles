@@ -1,7 +1,7 @@
 # enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
     color='--color=auto'
-    alias grep='grep $color'
+    # alias grep='grep $color'
     alias ls='ls -F $color'
     #alias dir='ls $color --format=vertical'
     #alias vdir='ls $color --format=long'

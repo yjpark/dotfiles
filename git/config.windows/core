@@ -1,3 +1,8 @@
 [core]
   autocrlf = true
 
+[credential]
+  helper = wincred
+
+
+
