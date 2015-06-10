@@ -55,8 +55,8 @@ gridSelectConfig = defaultGSConfig {
 
 myKeys = [
     ("<F1>", spawn "terminator")
-    , ("<F2>", spawn "firefox")
-    , ("<F3>", spawn "xbmc")
+    , ("<F2>", spawn "gvim")
+    , ("<F3>", spawn "nautilus")
     , ("M-f", sendMessage $ Toggle "Full")
     , ("M1-<Tab>", windows W.swapDown)
     , ("M1-S-<Tab>", windows W.swapUp)
