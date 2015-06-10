@@ -1,0 +1,53 @@
+#!/bin/sh
+
+# http://breandan.net/2014/08/18/shell-script/
+
+echo "Installing IntelliJ IDEA..."
+
+# We need root to install
+[ $(id -u) != "0" ] && exec sudo "$0" "$@"
+
+# Attempt to install a JDK
+# apt-get install openjdk-7-jdk
+echo "install java if you need"
+echo "add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer"
+
+# Prompt for edition
+while true; do
+    read -p "Enter 'U' for Ultimate or 'C' for Community: " ed 
+    case $ed in
+        [Uu]* ) ed=U; break;;
+        [Cc]* ) ed=C; break;;
+    esac
+done
+
+# Fetch the most recent community edition URL
+URL=$(wget "http://www.jetbrains.com/idea/download/download_thanks.jsp?edition=I${ed}&os=linux" -qO- | grep -o -m 1 "http://download.jetbrains.com/idea/.*gz")
+
+# Truncate filename
+FILE=$(basename ${URL})
+
+# Download binary
+wget -cO ~/Downloads/${FILE} ${URL} --read-timeout=5 --tries=0
+
+# Set directory name
+DIR="${FILE%\.tar\.gz}"
+
+# Untar file
+if mkdir /opt/${DIR}; then
+    tar -xvzf ~/Downloads/${FILE} -C /opt/${DIR} --strip-components=1
+fi
+
+# Grab executable folder
+BIN="/opt/$DIR/bin"
+
+# Add permissions to install directory
+chmod 755 ${BIN}/idea.sh
+
+# Set desktop shortcut path
+DESK=/usr/share/applications/IDEA.desktop
+
+# Add desktop shortcut
+echo "[Desktop Entry]\nEncoding=UTF-8\nName=IntelliJ IDEA\nComment=IntelliJ IDEA\nExec=${BIN}/idea.sh\nIcon=${BIN}/idea.png\nTerminal=false\nStartupNotify=true\nType=Application" -e > ${DESK}
+
+echo "Done."
