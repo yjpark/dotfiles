@@ -41,9 +41,9 @@ export ADB_TRACE=all
 
 adb install -r $SRC 2>&1 \
     | sed -n '/DATA/p' \
-    | awk -v T=$SIZE 'BEGIN{FS="[=:]"}{t+=$7;system("echo " sprintf("%d\n", t/T*100))}'
+    | awk -v T=$SIZE 'BEGIN{FS="[=:]"}{t+=$7;system("progressbar " sprintf("%d\n", t/T*100))}'
+#    | awk -v T=$SIZE 'BEGIN{FS="[=:]"}{t+=$7;system("echo " sprintf("%d\n", t/T*100))}'
 
-#    | awk -v T=$SIZE 'BEGIN{FS="[=:]"}{t+=$7;system("progressbar " sprintf("%d\n", t/T*100))}'
 
 export ADB_TRACE=
 

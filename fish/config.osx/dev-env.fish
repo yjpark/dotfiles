@@ -1,1 +1,3 @@
-set -x ANDROID_SDK_HOME "$HOME/Applications/adt-bundle-mac-x86_64-20140702/sdk"
+set -x ANDROID_SDK_HOME "$HOME/Applications/android-sdk-macosx_r23/platform-tools/"
+
+set -x PATH $PATH ~/Applications/android-sdk-macosx_r23/platform-tools
