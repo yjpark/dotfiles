@@ -2,7 +2,7 @@
 
 # http://breandan.net/2014/08/18/shell-script/
 
-echo "Installing IntelliJ IDEA..."
+echo "Installing IntelliJ IDEA 14.1.3 Community Version..."
 
 # We need root to install
 [ $(id -u) != "0" ] && exec sudo "$0" "$@"
@@ -12,30 +12,14 @@ echo "Installing IntelliJ IDEA..."
 echo "install java if you need"
 echo "add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java7-installer"
 
-# Prompt for edition
-while true; do
-    read -p "Enter 'U' for Ultimate or 'C' for Community: " ed 
-    case $ed in
-        [Uu]* ) ed=U; break;;
-        [Cc]* ) ed=C; break;;
-    esac
-done
+DIR='ideaIC-14.1.3'
 
-# Fetch the most recent community edition URL
-URL=$(wget "http://www.jetbrains.com/idea/download/download_thanks.jsp?edition=I${ed}&os=linux" -qO- | grep -o -m 1 "http://download.jetbrains.com/idea/.*gz")
-
-# Truncate filename
-FILE=$(basename ${URL})
-
-# Download binary
-wget -cO ~/Downloads/${FILE} ${URL} --read-timeout=5 --tries=0
-
-# Set directory name
-DIR="${FILE%\.tar\.gz}"
+cd ~/Downloads
+#axel https://d1opms6zj7jotq.cloudfront.net/idea/${DIR}.tar.gz
 
 # Untar file
 if mkdir /opt/${DIR}; then
-    tar -xvzf ~/Downloads/${FILE} -C /opt/${DIR} --strip-components=1
+    tar -xvzf ~/Downloads/${DIR}.tar.gz -C /opt/${DIR} --strip-components=1
 fi
 
 # Grab executable folder
