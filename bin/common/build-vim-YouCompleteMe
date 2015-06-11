@@ -6,14 +6,15 @@ git submodule update --init --recursive
 
 if [[ "$(uname)" == "Linux" ]]; then
     sudo apt-get install cmake build-essential python-dev mono-xbuild
-    sudo install-current-mono
+    sudo apt-get install monodevelop
+    # sudo install-current-mono
 fi
 
 ./install.sh --clang-completer --omnisharp-completer
 
 if [[ "$(uname)" == "Linux" ]]; then
-    echo "/opt/monodevelop/bin/monodevelop-launcher.sh ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/OmniSharpServer/OmniSharp.sln
-    ~/.dotfiles/vim/patches/YouCompleteMe_linux/patch_cs_completer_with_newer_mono
+    # echo "/opt/monodevelop/bin/monodevelop-launcher.sh ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/OmniSharpServer/OmniSharp.sln
+    # ~/.dotfiles/vim/patches/YouCompleteMe_linux/patch_cs_completer_with_newer_mono
 fi
 
 echo "Windows: using visual studio or express version to build OmniSharpServer"
