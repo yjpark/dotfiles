@@ -119,7 +119,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh 'linux/clipit' --file='~/.config/clipit/'
 fi
 
-if [[ "$(hostname)" != "yjpark-pc--" ]]; then
+if [[ "$(hostname)" != "ubuntu" ]]; then
   fresh 'linux/Xmodmap' --file='~/.Xmodmap'
 fi
 # =====================================================
