@@ -28,6 +28,7 @@ call unite#custom#source('file,file_rec,file_rec/async,grep',
       \ '\.DS_Store$',
       \ '\.silp_backup/',
       \ '\.silp_test/',
+      \ '\.beam$',
       \ ], '\|'))
 
 let g:unite_quick_match_table = {
