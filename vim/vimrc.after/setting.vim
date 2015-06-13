@@ -25,3 +25,7 @@ set mousefocus
 " http://vim.wikia.com/wiki/Accessing_the_system_clipboard
 set clipboard=unnamed
 
+" To allow showing GBK files properly
+" http://blog.csdn.net/nyist327/article/details/38873739
+set fileencodings=ucs-bom,utf-8,cp936
+set fileencoding=utf-8
