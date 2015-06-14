@@ -27,3 +27,7 @@ A pretty nice package manager for windows
 ## Ditto
 Clipboard manager
 
+## Borderless Gaming
+Can turn any application to be borderless mode, e.g. Unity3d Editor has no fullscreen mode, use this can add one easily.
+
+- https://github.com/Codeusa/Borderless-Gaming
