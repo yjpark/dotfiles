@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="default_show_menubar" mtime="1434262597" type="bool" value="false"/>
+	<entry name="font" mtime="1434262597" type="string">
+		<stringvalue>Source Code Pro for Powerline Medium 14</stringvalue>
+	</entry>
+	<entry name="use_system_font" mtime="1434262597" type="bool" value="false"/>
+	<entry name="bold_color_same_as_fg" mtime="1434262597" type="bool" value="false"/>
+	<entry name="use_theme_colors" mtime="1434262597" type="bool" value="false"/>
+	<entry name="palette" mtime="1434262597" type="string">
+		<stringvalue>#000000000000:#FFFF55555555:#5050FAFA7B7B:#F1F1FAFA8C8C:#BDBD9393F9F9:#FFFF7979C6C6:#8B8BE9E9FDFD:#BBBBBBBBBBBB:#555555555555:#FFFF55555555:#5050FAFA7B7B:#F1F1FAFA8C8C:#BDBD9393F9F9:#FFFF7979C6C6:#8B8BE9E9FDFD:#FFFFFFFFFFFF</stringvalue>
+	</entry>
+	<entry name="alternate_screen_scroll" mtime="1434262597" type="bool" value="true"/>
+	<entry name="background_color" mtime="1434262597" type="string">
+		<stringvalue>#1E1F1F4528E7</stringvalue>
+	</entry>
+	<entry name="visible_name" mtime="1434262597" type="string">
+		<stringvalue>Default</stringvalue>
+	</entry>
+	<entry name="bold_color" mtime="1434262597" type="string">
+		<stringvalue>#FFFFFFFFFFFF</stringvalue>
+	</entry>
+	<entry name="foreground_color" mtime="1434262597" type="string">
+		<stringvalue>#F8F8F8F8F2F2</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="next_tab" mtime="1434262357" type="string">
+		<stringvalue>&lt;Alt&gt;Right</stringvalue>
+	</entry>
+	<entry name="prev_tab" mtime="1434262355" type="string">
+		<stringvalue>&lt;Alt&gt;Left</stringvalue>
+	</entry>
+	<entry name="zoom_normal" mtime="1434262340" type="string">
+		<stringvalue>disabled</stringvalue>
+	</entry>
+	<entry name="zoom_out" mtime="1434262335" type="string">
+		<stringvalue>&lt;Alt&gt;minus</stringvalue>
+	</entry>
+	<entry name="zoom_in" mtime="1434262330" type="string">
+		<stringvalue>&lt;Alt&gt;equal</stringvalue>
+	</entry>
+	<entry name="toggle_menubar" mtime="1434262327" type="string">
+		<stringvalue>F10</stringvalue>
+	</entry>
+	<entry name="paste" mtime="1434262319" type="string">
+		<stringvalue>&lt;Primary&gt;v</stringvalue>
+	</entry>
+	<entry name="copy" mtime="1434262299" type="string">
+		<stringvalue>&lt;Primary&gt;c</stringvalue>
+	</entry>
+	<entry name="close_window" mtime="1434262258" type="string">
+		<stringvalue>disabled</stringvalue>
+	</entry>
+	<entry name="close_tab" mtime="1434262264" type="string">
+		<stringvalue>disabled</stringvalue>
+	</entry>
+	<entry name="new_window" mtime="1434262270" type="string">
+		<stringvalue>disabled</stringvalue>
+	</entry>
+	<entry name="new_tab" mtime="1434262217" type="string">
+		<stringvalue>&lt;Alt&gt;t</stringvalue>
+	</entry>
+</gconf>
