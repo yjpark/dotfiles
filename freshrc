@@ -93,6 +93,7 @@ fresh 'pentadactyl' --file='~/.pentadactyl/'
 # misc settings
 fresh 'misc/ctags' --file='~/.ctags'
 fresh 'misc/screenrc' --file='~/.screenrc'
+fresh 'misc/ideavimrc/*' --file='~/.ideavimrc'
 
 # =====================================================
 if [[ "$(uname)" == "Darwin" ]]; then
