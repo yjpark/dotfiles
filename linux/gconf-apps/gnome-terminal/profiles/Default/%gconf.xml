@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <gconf>
 	<entry name="default_show_menubar" mtime="1434262597" type="bool" value="false"/>
-	<entry name="font" mtime="1434262597" type="string">
-		<stringvalue>Source Code Pro for Powerline Medium 14</stringvalue>
+	<entry name="font" mtime="1434263136" type="string">
+		<stringvalue>Source Code Pro for Powerline Light 14</stringvalue>
 	</entry>
 	<entry name="use_system_font" mtime="1434262597" type="bool" value="false"/>
 	<entry name="bold_color_same_as_fg" mtime="1434262597" type="bool" value="false"/>
