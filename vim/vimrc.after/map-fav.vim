@@ -37,6 +37,10 @@ noremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "noremap <silent> ,t :TagbarShowTag<CR>
 noremap <silent> ,b :NERDTreeToggle<CR>
+"Sometime the nerdtree windows will take all space, before fix that, can use
+"this map to fix it temporary
+noremap <silent> ,B :vertical resize 32<CR>
+
 noremap <silent> ,l :TagbarToggle<CR>
 noremap <silent> <leader>u :GundoToggle<CR>
 noremap <silent> ,q :QuickfixsignsToggle<CR>
