@@ -2,9 +2,7 @@ set sidescroll=8
 set sidescrolloff=8
 
 " allow backspace and cursor keys to cross line boundaries
-" set whichwrap+=<,>,h,l,[,]
-set whichwrap+=<,>,h,l
-set whichwrap+=<,>,h,l
+set whichwrap+=<,>,h,l,[,]
 " Don't know why need both of them to make it work
 
 set wrap
