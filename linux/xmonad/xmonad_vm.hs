@@ -28,7 +28,7 @@ main = do
   getWellKnownName dbus
   xmonad $ gnomeConfig {
       modMask = mod4Mask .|. mod1Mask   -- User Super + Alt
-      , terminal = "gnome-terminal"
+      , terminal = "terminator"
       , manageHook = manageHook defaultConfig <+> manageDocks <+> myManageHook
       , layoutHook = desktopLayoutModifiers $ smartBorders mouseResizableTile ||| smartBorders mouseResizableTileMirrored ||| smartBorders (tabbed shrinkText (theme kavonAutumnTheme))
       , logHook = dynamicLogWithPP(prettyPrinter dbus)
@@ -54,7 +54,7 @@ gridSelectConfig = defaultGSConfig {
 }
 
 myKeys = [
-    ("<F1>", spawn "gnome-terminal")
+    ("<F1>", spawn "terminator")
     , ("<F2>", spawn "gvim")
     , ("<F3>", spawn "nautilus")
     , ("M-f", sendMessage $ Toggle "Full")
