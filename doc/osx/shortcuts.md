@@ -56,6 +56,7 @@ Ctrl-Shift-Cmd-B    Toggle DelBar
 Ctrl-Shift-T        Add Task to Todoist
 Ctrl-Shift-Cmd-T    Toggle Todoist
 Ctrl-Shift-C        Capture Screenshot with Snip
+Ctrl-Shift-V        ClipMenu
 ```
 
 
