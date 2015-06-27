@@ -1,3 +1,3 @@
-" Copy/Paste under Mac OSX
+" Select Font in gvim
 nmap <S-A-f> :set guifont=*<CR>
 
