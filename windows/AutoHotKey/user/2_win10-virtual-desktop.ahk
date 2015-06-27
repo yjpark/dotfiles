@@ -12,10 +12,11 @@ Send ^#{Right}
 return
 
 ^!3::
-Send ^#{Right}
-Send ^#{Right}
-Send ^#{Right}
 Send ^#{Left}
+Send ^#{Left}
+Send ^#{Left}
+Send ^#{Right}
+Send ^#{Right}
 return
 
 ^!4::
@@ -24,10 +25,10 @@ Send ^#{Right}
 Send ^#{Right}
 return
 
-^!<::
+^!Left::
 Send ^#{Left}
 return
 
-^!>::
+^!Right::
 Send ^#{Right}
 return

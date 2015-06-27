@@ -3,3 +3,5 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+SetKeyDelay , 30, 30 ; first is delay between keypresses, and second is press duration
+
