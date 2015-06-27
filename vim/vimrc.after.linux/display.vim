@@ -1,3 +1,3 @@
 " :colorscheme desert256
 
-" set guifont='Sauce Code Powerline Regular 12'
+" set guifont='Sauce Code Powerline Regular 14'
