@@ -7,4 +7,6 @@ cat ~/.dotfiles/windows/AutoHotKey/admin/1_* >> ~/Applications/_admin.ahk
 
 rm ~/Applications/_user.ahk
 cat ~/.dotfiles/windows/AutoHotKey/user/0_* >> ~/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/1_* >> ~/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/2_* >> ~/Applications/_user.ahk
 
