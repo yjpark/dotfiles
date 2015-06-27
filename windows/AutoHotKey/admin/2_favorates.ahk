@@ -26,6 +26,13 @@ else
     WinActivate ahk_exe Unity.exe
 return
 
+^!a::
+IfWinActive, ahk_exe atom.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe atom.exe
+return
+
 ^!v::
 IfWinActive, ahk_exe gvim.exe
     Send !{Tab}
