@@ -10,6 +10,7 @@ cp -v ~/.dotfiles/pentadactylrc .pentadactylrc
 rm -rfv .pentadactyl
 cp -vr ~/.dotfiles/pentadactyl .pentadactyl
 
+cp -vr ~/.dotfiles/misc/gtkrc-2.0 .gtkrc-2.0
 
 ~/.dotfiles/bin/windows/fresh-windows-bin
 ~/.dotfiles/bin/windows/fresh-windows-bash

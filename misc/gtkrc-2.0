@@ -1,0 +1,2 @@
+style "vim-background" { bg[NORMAL] = "#000000" }
+widget "vim-main-window.*.GtkForm" style "vim-background" 

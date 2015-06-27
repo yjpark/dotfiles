@@ -94,6 +94,7 @@ fresh 'pentadactyl' --file='~/.pentadactyl/'
 fresh 'misc/ctags' --file='~/.ctags'
 fresh 'misc/screenrc' --file='~/.screenrc'
 fresh 'misc/ideavimrc/*' --file='~/.ideavimrc'
+fresh 'misc/gtkrc-2.0' --file='~/.gtkrc-2.0'
 
 # =====================================================
 if [[ "$(uname)" == "Darwin" ]]; then
