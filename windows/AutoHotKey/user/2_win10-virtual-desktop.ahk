@@ -19,12 +19,6 @@ Send ^#{Right}
 Send ^#{Right}
 return
 
-^!4::
-Send ^#{Right}
-Send ^#{Right}
-Send ^#{Right}
-return
-
 ^!Left::
 Send ^#{Left}
 return
