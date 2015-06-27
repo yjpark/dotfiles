@@ -18,7 +18,7 @@ Send ^#{Right}
 Send ^#{Left}
 return
 
-^!3::
+^!4::
 Send ^#{Right}
 Send ^#{Right}
 Send ^#{Right}
