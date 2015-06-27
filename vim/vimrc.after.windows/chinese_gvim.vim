@@ -1,6 +1,6 @@
 " http://rongmayisheng.com/post/windows%E4%B8%8Bgvim%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88
 
-set guifont=Sauce_Code_Powerline:h12:cANSI
+set guifont=Sauce_Code_Powerline:h11:cANSI
 set encoding=utf-8
 set fileencodings=utf-8,chinese
 set termencoding=utf-8
