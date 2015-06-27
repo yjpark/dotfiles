@@ -1,0 +1,9 @@
+#!/bin/bash
+
+apm install japanese-wrap zen language-fish-shell git-plus
+apm install date minimap atom-ctags symbols-tree-view color-picker
+
+apm install auto-encoding convert-to-utf8
+
+apm install markdown-preview-plus terminal-status atom-fuzzy-grep
+

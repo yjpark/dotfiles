@@ -1,5 +1,7 @@
 ## Extensions
 
+Run bin/common/install-atom-packages to install these packages.
+
 - japanese-wrap
 - zen
 - language-fish-shell
