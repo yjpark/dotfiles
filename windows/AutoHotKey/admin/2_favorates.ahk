@@ -1,3 +1,7 @@
+^Tab::
+Send #{Tab}
+return
+
 ^`::
 IfWinActive, ahk_exe VirtualBox.exe
     Send !{Tab}
