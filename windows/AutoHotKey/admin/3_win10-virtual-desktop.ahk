@@ -12,9 +12,14 @@ Send ^#{Right}
 return
 
 ^!3::
+Send ^#{Right}
+Send ^#{Right}
+Send ^#{Right}
 Send ^#{Left}
-Send ^#{Left}
-Send ^#{Left}
+return
+
+^!4::
+Send ^#{Right}
 Send ^#{Right}
 Send ^#{Right}
 return
