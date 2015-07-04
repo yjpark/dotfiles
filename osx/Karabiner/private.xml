@@ -20,6 +20,14 @@
     <name>KeyCode::VK_OPEN_URL_UNITY</name>
     <url type="file">/Applications/Unity.app</url>
   </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_EVERNOTE</name>
+    <url type="file">/Applications/Evernote.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_TELEGRAM</name>
+    <url type="file">/Applications/Telegram.app</url>
+  </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -64,6 +72,16 @@
         __KeyToKey__
         KeyCode::F, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_UNITY,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::D, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_EVERNOTE,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::K, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_TELEGRAM,
     </autogen>
   </item>
 </root>
