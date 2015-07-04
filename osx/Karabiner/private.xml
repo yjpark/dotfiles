@@ -1,5 +1,36 @@
 <?xml version="1.0"?>
 <root>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_CHROME</name>
+    <url type="file">/Applications/Google Chrome.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_MACVIM</name>
+    <url type="file">/Applications/MacVim.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_ATOM</name>
+    <url type="file">/Applications/Atom.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_XCODE</name>
+    <url type="file">/Applications/Xcode.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_UNITY</name>
+    <url type="file">/Applications/Unity.app</url>
+<<<<<<< HEAD
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_EVERNOTE</name>
+    <url type="file">/Applications/Evernote.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_TELEGRAM</name>
+    <url type="file">/Applications/Telegram.app</url>
+=======
+>>>>>>> origin/master
+  </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -16,5 +47,44 @@
       </block>
       <autogen>__KeyToKey__ FROMKEYCODE_HOME,             KeyCode::A, ModifierFlag::CONTROL_L</autogen>
       <autogen>__KeyToKey__ FROMKEYCODE_END,              KeyCode::D, ModifierFlag::CONTROL_L</autogen>
+  </item>
+  <item>
+    <name>Favorite Apps (Dovrak)</name>
+    <identifier>private.favorite.apps</identifier>
+    <autogen>
+        __KeyToKey__
+        KeyCode::I, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_CHROME,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::DOT, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_MACVIM,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::A, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_ATOM,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::X, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_XCODE,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::F, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_UNITY,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::D, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_EVERNOTE,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::K, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_TELEGRAM,
+    </autogen>
   </item>
 </root>
