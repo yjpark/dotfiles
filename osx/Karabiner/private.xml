@@ -19,7 +19,6 @@
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_UNITY</name>
     <url type="file">/Applications/Unity.app</url>
-<<<<<<< HEAD
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_EVERNOTE</name>
@@ -28,8 +27,6 @@
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_TELEGRAM</name>
     <url type="file">/Applications/Telegram.app</url>
-=======
->>>>>>> origin/master
   </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
