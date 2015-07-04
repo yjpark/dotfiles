@@ -1,5 +1,13 @@
 <?xml version="1.0"?>
 <root>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_CHROME</name>
+    <url>file:///Applications/Google\ Chrome.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_MACVIM</name>
+    <url>file:///Applications/MacVim.app</url>
+  </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -16,5 +24,11 @@
       </block>
       <autogen>__KeyToKey__ FROMKEYCODE_HOME,             KeyCode::A, ModifierFlag::CONTROL_L</autogen>
       <autogen>__KeyToKey__ FROMKEYCODE_END,              KeyCode::D, ModifierFlag::CONTROL_L</autogen>
+  </item>
+  <item>
+    <name>Favorite Apps</name>
+    <identifier>private.favorite.apps</identifier>
+    <autogen>__KeyToKey__ KeyCode::C, VK_COMMAND | VK_CONTROL, KeyCode::VK_OPEN_URL_CHROME</autogen>
+    <autogen>__KeyToKey__ KeyCode::V, VK_COMMAND | VK_CONTROL, KeyCode::VK_OPEN_URL_MACVIM</autogen>
   </item>
 </root>
