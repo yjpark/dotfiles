@@ -36,4 +36,4 @@ NeoBundle 'mattreduce/vim-mix'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'skwp/greplace.vim'
 
-NoaBundle 'Chiel92/vim-autoformat'
+NeoBundle 'Chiel92/vim-autoformat'
