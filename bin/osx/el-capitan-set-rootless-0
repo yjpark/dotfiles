@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo nvram boot-args="rootless=0"
+
+echo "Need to Reboot!"

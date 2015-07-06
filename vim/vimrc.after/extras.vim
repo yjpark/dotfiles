@@ -35,3 +35,5 @@ NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'mattreduce/vim-mix'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'skwp/greplace.vim'
+
+NeoBundle 'Chiel92/vim-autoformat'
