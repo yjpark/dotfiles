@@ -20,6 +20,8 @@ Run bin/common/install-atom-packages to install these packages.
 - terminal-status
 - atom-fuzzy-grep (slow for big project)
 
+- tab-numbers
+
 ## Themes
 - UI: Atom Dark
 - Syntax: Solarized Dark

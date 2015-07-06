@@ -7,3 +7,4 @@ apm install auto-encoding convert-to-utf8
 
 apm install markdown-preview-plus terminal-status atom-fuzzy-grep
 
+apm install tab-numbers
