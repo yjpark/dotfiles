@@ -11,7 +11,7 @@ Option-`            Application Windows
 
 Input Source
 ```
-Option-Space        Next input source
+Option-Space        Previous Input Source
 ```
 
 Keyboard Section
@@ -29,9 +29,21 @@ Ctrl-Cmd-9          Move focus to the status menus
 
 ```
 
-### Activate ###
+### Better Snap Tools ###
 ```
-Ctrl-`              iTerm
+Control-Shift-Space     Menu
+Option-Up               Maximize
+Option-Left             Left Half
+Option-Right            Right Half
+```
+
+### iTerm ###
+```
+Ctrl-`              Global
+```
+
+### Activate (Depricated) ###
+```
 Ctrl-Space          Common Prefix
 ```
 
@@ -43,20 +55,30 @@ Cmd-Option-`        Prev
 
 ### MenuMate ###
 ```
-Ctrl-Shift-Tab      Menu
+Option-Z            Menu
+```
+
+### Service Shortcuts ###
+```
+Ctrl-Shift-H        Look Up in Dash
 ```
 
 ### Setup in individual applications ###
 ```
-Ctrl-Shift-\        Show 1Password mini
-Ctrl-Shift-H        Toggle Dash
+Ctrl-Cmd-\          Show 1Password mini
+Ctrl-Shift-V        ClipMenu
+Ctrl-Cmd-H          Toggle Dash
+
 Ctrl-Shift-D        New entry for Day One
+```
+
+### Setup in individual applications (Depricated) ###
+```
 Ctrl-Shift-B        Add bookmart to DelBar
 Ctrl-Shift-Cmd-B    Toggle DelBar
 Ctrl-Shift-T        Add Task to Todoist
 Ctrl-Shift-Cmd-T    Toggle Todoist
 Ctrl-Shift-C        Capture Screenshot with Snip
-Ctrl-Shift-V        ClipMenu
 ```
 
 
