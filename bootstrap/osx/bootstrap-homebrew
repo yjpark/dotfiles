@@ -1,6 +1,6 @@
 #!/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/bin/ruby
 # This script installs to /usr/local only. To install elsewhere you can just
-# untar https://github.com/Homebrew/homebrew/tarball/master anywhere you like or
+# untar https://github.com/Homebrew/homebrew/tarball/master anywhere you like or
 # change the value of HOMEBREW_PREFIX.
 HOMEBREW_PREFIX = '/usr/local'
 HOMEBREW_CACHE = '/Library/Caches/Homebrew'
@@ -60,14 +60,21 @@ def wait_for_user
   abort unless c == 13 or c == 10
 end
 
-module Version
+class Version
+  include Comparable
+  attr_reader :parts
+
+  def initialize(str)
+    @parts = str.split(".").map { |i| i.to_i }
+  end
+
   def <=>(other)
-    split(".").map { |i| i.to_i } <=> other.split(".").map { |i| i.to_i }
+    parts <=> self.class.new(other).parts
   end
 end
 
 def macos_version
-  @macos_version ||= `/usr/bin/sw_vers -productVersion`.chomp[/10\.\d+/].extend(Version)
+  @macos_version ||= Version.new(`/usr/bin/sw_vers -productVersion`.chomp[/10\.\d+/])
 end
 
 def git
@@ -84,9 +91,17 @@ def git
   # Github only supports HTTPS fetches on 1.7.10 or later:
   # https://help.github.com/articles/https-cloning-errors
   `#{@git} --version` =~ /git version (\d\.\d+\.\d+)/
-  return if $1.nil? or $1.extend(Version) < "1.7.10"
+  return if $1.nil? or Version.new($1) < "1.7.10"
 
   @git
+end
+
+def chmod?(d)
+  File.directory?(d) && !(File.readable?(d) && File.writable?(d) && File.executable?(d))
+end
+
+def chgrp?(d)
+  !File.grpowned?(d)
 end
 
 # Invalidate sudo timestamp before exiting
@@ -98,7 +113,7 @@ Dir.chdir "/usr"
 
 ####################################################################### script
 abort "See Linuxbrew: http://brew.sh/linuxbrew/" if /linux/i === RUBY_PLATFORM
-abort "MacOS too old, see: https://github.com/mistydemeo/tigerbrew" if macos_version < "10.5"
+abort "MacOS too old, see: https://github.com/mistydemeo/tigerbrew" if macos_version < "10.6"
 abort "Don't run this as root!" if Process.uid == 0
 abort <<-EOABORT unless `groups`.split.include? "admin"
 This script requires the user #{ENV['USER']} to be an Administrator. If this
@@ -120,6 +135,12 @@ not intentional, please restore the default permissions and try running the
 installer again:
     sudo chmod 775 #{HOMEBREW_PREFIX}
 EOABORT
+abort <<-EOABORT if `/usr/bin/xcrun clang 2>&1` =~ /license/ && !$?.success?
+You have not agreed to the Xcode license.
+Before running the installer again please agree to the license by opening
+Xcode.app or running:
+    sudo xcodebuild -license
+EOABORT
 
 ohai "This script will install:"
 puts "#{HOMEBREW_PREFIX}/bin/brew"
@@ -130,9 +151,8 @@ chmods = %w( . bin etc include lib lib/pkgconfig Library sbin share var var/log 
              share/man/man1 share/man/man2 share/man/man3 share/man/man4
              share/man/man5 share/man/man6 share/man/man7 share/man/man8
              share/info share/doc share/aclocal ).
-            map{ |d| "#{HOMEBREW_PREFIX}/#{d}" }.
-            select{ |d| File.directory? d and (not File.readable? d or not File.writable? d or not File.executable? d) }
-chgrps = chmods.reject{ |d| File.stat(d).grpowned? }
+             map { |d| File.join(HOMEBREW_PREFIX, d) }.select { |d| chmod?(d) }
+chgrps = chmods.select { |d| chgrp?(d) }
 
 unless chmods.empty?
   ohai "The following directories will be made group writable:"
@@ -156,7 +176,7 @@ else
 end
 
 sudo "/bin/mkdir", HOMEBREW_CACHE unless File.directory? HOMEBREW_CACHE
-sudo "/bin/chmod", "g+rwx", HOMEBREW_CACHE
+sudo "/bin/chmod", "g+rwx", HOMEBREW_CACHE if chmod? HOMEBREW_CACHE
 
 if macos_version >= "10.9"
   developer_dir = `/usr/bin/xcode-select -print-path 2>/dev/null`.chomp
@@ -179,16 +199,14 @@ Dir.chdir HOMEBREW_PREFIX do
     system git, "config", "remote.origin.fetch", "+refs/heads/*:refs/remotes/origin/*"
 
     args = git, "fetch", "origin", "master:refs/remotes/origin/master", "-n"
-    args << "--depth=1" if ARGV.include? "--fast"
+    args << "--depth=1" unless ARGV.include?("--full") || !ENV["HOMEBREW_DEVELOPER"].nil?
     system(*args)
 
     system git, "reset", "--hard", "origin/master"
   else
     # -m to stop tar erroring out if it can't modify the mtime for root owned directories
-    # pipefail to cause the exit status from curl to propogate if it fails
-    # we use -k for curl because Leopard has a bunch of bad SSL certificates
+    # pipefail to cause the exit status from curl to propagate if it fails
     curl_flags = "fsSL"
-    curl_flags << "k" if macos_version <= "10.5"
     system "/bin/bash -o pipefail -c '/usr/bin/curl -#{curl_flags} #{HOMEBREW_REPO}/tarball/master | /usr/bin/tar xz -m --strip 1'"
   end
 end
@@ -206,5 +224,4 @@ else
   puts "Install #{Tty.white}Xcode#{Tty.reset}: https://developer.apple.com/xcode" unless File.exist? "/usr/bin/cc"
 end
 
-puts "Run `brew doctor` #{Tty.white}before#{Tty.reset} you install anything"
 puts "Run `brew help` to get started"

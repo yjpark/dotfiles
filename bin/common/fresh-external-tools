@@ -6,5 +6,16 @@ mkdir -p ~/.external/tools
 cd ~/.external/tools
 
 bootstrap-github-repositories ~/.dotfiles/external/tools.bootstrap
+
+if [[ "$(uname)" == "Linux" ]]; then
+  echo "Bootstraping ~/.external/tools (Linux)"
+  bootstrap-github-repositories ~/.dotfiles/external/tools.linux.bootstrap
+fi
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  echo "Bootstraping ~/.external/tools (OS X)"
+  bootstrap-github-repositories ~/.dotfiles/external/tools.osx.bootstrap
+fi
+
 mu register --all
 

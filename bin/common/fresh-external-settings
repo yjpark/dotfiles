@@ -6,5 +6,11 @@ mkdir -p ~/.external/settings
 cd ~/.external/settings
 
 bootstrap-github-repositories ~/.dotfiles/external/settings.bootstrap
+
+if [[ "$(uname)" == "Linux" ]]; then
+    echo "Bootstraping ~/.external/settings (Linux)"
+  bootstrap-github-repositories ~/.dotfiles/external/settings.linux.bootstrap
+fi
+
 mu register --all
 
