@@ -27,6 +27,8 @@ alias wget "wget --no-check-certificate"
 alias ssh "ssh -A"
 alias scp "scp -C -p"
 
+alias mosh "mosh --ssh='ssh -A'"
+
 # some custom alias
 alias e "vim"
 alias vi "vim"
