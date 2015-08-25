@@ -86,6 +86,13 @@ else
     WinActivate ahk_exe Evernote.exe
 return
 
+^!p::
+IfWinActive, ahk_exe xmind.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe xmind.exe
+return
+
 ^!Space::
 Process,close,explorer.exe
 sleep, 50 ;This sleep 5000 is to let you see what actually happens. Decrease it later
