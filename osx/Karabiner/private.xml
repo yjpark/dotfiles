@@ -32,6 +32,10 @@
     <name>KeyCode::VK_OPEN_URL_FIREFOX</name>
     <url type="file">/Applications/Firefox.app</url>
   </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_XMIND</name>
+    <url type="file">/Applications/XMind.app</url>
+  </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -91,6 +95,11 @@
         __KeyToKey__
         KeyCode::Y, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_FIREFOX,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::R, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_XMIND,
     </autogen>
   </item>
 </root>
