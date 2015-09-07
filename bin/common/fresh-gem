@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Install GEM Packages"
+
+while read package; do
+    gem install $package
+done < ~/.dotfiles/common/gem.bootstrap
