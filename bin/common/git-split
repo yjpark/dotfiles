@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# set the variables.
+SRC_REPO=$1
+SRC_DIR=$2
+OUTPUT_REPO=$3
+
+mkdir $OUTPUT_REPO
+
+# clone the repo
+git clone $SRC_REPO $OUTPUT_REPO
+
+cd $OUTPUT_REPO
+git filter-branch --subdirectory-filter $SRC_DIR -- --all
+
