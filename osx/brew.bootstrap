@@ -12,3 +12,4 @@ mono
 hub
 git-extras
 git-flow-avh
+svn --devel
