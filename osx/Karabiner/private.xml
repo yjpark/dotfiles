@@ -36,6 +36,10 @@
     <name>KeyCode::VK_OPEN_URL_XMIND</name>
     <url type="file">/Applications/XMind.app</url>
   </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SAFARI</name>
+    <url type="file">/Applications/Safari.app</url>
+  </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -100,6 +104,11 @@
         __KeyToKey__
         KeyCode::R, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_XMIND,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::SEMICOLON, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SAFARI,
     </autogen>
   </item>
 </root>
