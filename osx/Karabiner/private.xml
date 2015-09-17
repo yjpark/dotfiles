@@ -77,7 +77,7 @@
     </autogen>
     <autogen>
         __KeyToKey__
-        KeyCode::X, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::B, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_XCODE,
     </autogen>
     <autogen>

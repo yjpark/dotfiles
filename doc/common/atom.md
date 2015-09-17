@@ -29,3 +29,9 @@ Run bin/common/install-atom-packages to install these packages.
 
 ## Shortcuts
 Ctrl-Shift-u    select encoding
+
+## Package Settings
+
+### Autocomplete Plus
+
+- `Keymap For Comfirming A Suggestion` -> `tab` (default as tab and enter, which is super annoying for last word)
