@@ -1,10 +1,10 @@
 NeoBundle 'yjpark/Omnisharp'
 
-let g:Omnisharp_start_server = 1
-let g:Omnisharp_stop_server = 1
+let g:Omnisharp_start_server = 0
+let g:Omnisharp_stop_server = 0
 
 "This is the default value, setting it isn't actually necessary
-"let g:OmniSharp_host = "http://localhost:2000"
+let g:OmniSharp_host = "http://localhost:2000"
 
 "Set the type lookup function to use the preview window instead of the status line
 let g:OmniSharp_typeLookupInPreview = 1
