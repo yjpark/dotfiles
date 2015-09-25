@@ -1,0 +1,15 @@
+coreutils
+direnv
+bash-completion
+reattach-to-user-namespace
+tmux
+fish
+ag
+git
+tig
+axel
+mono
+hub
+git-extras
+git-flow-avh
+svn --devel

@@ -32,6 +32,18 @@
     <name>KeyCode::VK_OPEN_URL_FIREFOX</name>
     <url type="file">/Applications/Firefox.app</url>
   </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_XMIND</name>
+    <url type="file">/Applications/XMind.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SAFARI</name>
+    <url type="file">/Applications/Safari.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_MONODEVELOP</name>
+    <url type="file">/Applications/MonoDevelop.app</url>
+  </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -69,7 +81,7 @@
     </autogen>
     <autogen>
         __KeyToKey__
-        KeyCode::X, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::B, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_XCODE,
     </autogen>
     <autogen>
@@ -91,6 +103,21 @@
         __KeyToKey__
         KeyCode::Y, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_FIREFOX,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::R, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_XMIND,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::O, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_SAFARI,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::SEMICOLON, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_MONODEVELOP,
     </autogen>
   </item>
 </root>

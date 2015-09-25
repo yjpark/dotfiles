@@ -104,10 +104,10 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
   fresh 'osx/xvimrc' --file='~/.xvimrc'
   # Since xamarin's autoback will break symlink, copy over here
-  cp -v ~/.dotfiles/osx/XamarinStudio-4.0/KeyBindings/Custom.mac-kb.xml \
-        ~/Library/XamarinStudio-4.0/KeyBindings/
-  cp -v ~/.dotfiles/osx/XamarinStudio-4.0/Policies/Default.mdpolicy.xml \
-        ~/Library/XamarinStudio-4.0/Policies/
+  #cp -v ~/.dotfiles/osx/XamarinStudio-4.0/KeyBindings/Custom.mac-kb.xml \
+  #      ~/Library/XamarinStudio-4.0/KeyBindings/
+  #cp -v ~/.dotfiles/osx/XamarinStudio-4.0/Policies/Default.mdpolicy.xml \
+  #      ~/Library/XamarinStudio-4.0/Policies/
 fi
 
 # =====================================================

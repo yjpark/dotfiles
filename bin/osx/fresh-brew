@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Install Brew Packages"
+
+while read package; do
+    brew install $package
+done < ~/.dotfiles/osx/brew.bootstrap

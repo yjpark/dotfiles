@@ -19,13 +19,15 @@ alias air "sudo hostname air; . ~/bin/air/yjpark.fish"
 alias win ". ~/bin/win/fish.yjpark"
 alias iftop "sudo iftop -B -P"
 
-alias set-proxy-on "set -x http_proxy 127.0.0.1:8118"
+alias set-proxy-on "set -x http_proxy 127.0.0.1:1102"
 alias set-proxy-off "set -e http_proxy"
 
 alias wget "wget --no-check-certificate"
 
 alias ssh "ssh -A"
 alias scp "scp -C -p"
+
+alias mosh "mosh --ssh='ssh -A'"
 
 # some custom alias
 alias e "vim"
