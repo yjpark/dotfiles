@@ -15,7 +15,9 @@ choco install boot2docker
 
 choco install x2go
 
-
+cinst python
+cinst easy.install
+cinst pip
 
 
 ## Cygwin's install problem is fine with the cyg-get, though the running speed

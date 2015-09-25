@@ -9,6 +9,13 @@ else
     WinActivate, ahk_exe VirtualBox.exe
 return
 
+^!`::
+IfWinActive, ahk_exe mintty.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe mintty.exe
+return
+
 ^!c::
 IfWinActive, ahk_exe chrome.exe
     Send !{Tab}
@@ -84,6 +91,13 @@ IfWinActive, ahk_exe Evernote.exe
     Send !{Tab}
 else
     WinActivate ahk_exe Evernote.exe
+return
+
+^!p::
+IfWinActive, ahk_exe xmind.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe xmind.exe
 return
 
 ^!Space::
