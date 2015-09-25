@@ -154,4 +154,5 @@ mkdir -p ~/.ssh/control
 # Private stuffs
 fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
 fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
+fresh 'ssh/config.private/*' --file='~/.ssh/config'
 
