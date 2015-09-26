@@ -4,3 +4,6 @@ noremap <C-a> 0
 noremap <C-e> $
 imap <C-a> <Esc>0i
 imap <C-e> <Esc>$a
+set whichwrap+=<,>,h,l,[,]
+set wrap
+
