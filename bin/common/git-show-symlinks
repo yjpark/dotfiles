@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git ls-files -s | awk '/120000/{print $4}'
+git ls-files -s | awk '/120000/{ printf("\""); for (i = 4; i < NF; i++) { printf("%s ", $i); } printf("%s", $NF); printf("\"\n"); }' | xargs ls -l
