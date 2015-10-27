@@ -5,3 +5,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 SetKeyDelay , 30, 30 ; first is delay between keypresses, and second is press duration
 
+Capslock::
+   Send {LCtrl Down}
+   KeyWait, Capslock ; wait until the Capslock button is released
+   Send, {LCtrl Up}
+Return

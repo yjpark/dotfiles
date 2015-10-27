@@ -1,21 +1,25 @@
 #!/bin/bash
 
 TMP_FILE=/tmp/parse.tmp
-if [ -e /tmp/parse.tmp ]; then
+if [ -e ${TMP_FILE} ]; then
   echo "Cleaning up from previous install failure"
-  rm -f /tmp/parse.tmp
+  rm -rf ${TMP_FILE}
 fi
 echo "Fetching latest version ..."
 
 case `uname` in
   "Linux" )
-    curl --progress-bar -Lo /tmp/parse.tmp https://parse.com/downloads/cloud_code/cli/parse-linux/latest
-    ;;
+    export latest=`curl -X GET https://api.parse.com/1/supported?version=latest|grep -Po '(\d.\d.\d)'`
+    export url="https://github.com/ParsePlatform/parse-cli/releases/download/release_${latest}/parse_linux"
+   ;;
   "Darwin" )
-    curl --progress-bar -Lo /tmp/parse.tmp https://parse.com/downloads/cloud_code/cli/parse-osx/latest
+    export latest=`curl -X GET https://api.parse.com/1/supported?version=latest|grep -Eo '(\d.\d.\d)'`
+    export url="https://github.com/ParsePlatform/parse-cli/releases/download/release_${latest}/parse"
     ;;
 esac
 
+curl --progress-bar --compressed -Lo ${TMP_FILE} ${url}
+ 
 if [ ! -d /usr/local/bin ]; then
   echo "Making /usr/local/bin"
   mkdir -p /usr/local/bin
