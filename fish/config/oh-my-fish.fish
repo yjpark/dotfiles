@@ -14,13 +14,13 @@ set fish_custom ~/.config/fish/custom
 . $fish_path/oh-my-fish.fish
 
 # Theme
-Theme "agnoster"
+omf theme agnoster
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Example format: set fish_plugins autojump bundler
-Plugin "brew"
-Plugin "node"
-Plugin "python"
-Plugin "rvm"
-Plugin "theme"
+omf plugin brew
+omf plugin node
+omf plugin python
+omf plugin rvm
+omf plugin theme
