@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# https://github.com/mixu/tmux-cpu
+npm install -g tmux-cpu
+
+# https://github.com/mixu/tmux-mem
+npm install -g tmux-mem
