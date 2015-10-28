@@ -1,2 +1,3 @@
 # Path to your custom folder (default path is $FISH/custom)
-set fish_custom ~/.config/fish/custom
+. ~/.config/fish/custom/custom.load
+. ~/.config/fish/custom/extras.load
