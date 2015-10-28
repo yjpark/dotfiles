@@ -78,6 +78,9 @@ fresh 'tmux/common/*' --file='~/.tmux.conf'
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'tmux/osx/*' --file='~/.tmux.conf'
 fi
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'tmux/linux/*' --file='~/.tmux.conf'
+fi
 
 
 # =====================================================

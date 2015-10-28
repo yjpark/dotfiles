@@ -1,3 +1,5 @@
 . ~/.config/fish/extras/fishmarks/marks.fish
 . ~/.config/fish/extras/z-fish/z.fish
 . ~/.config/fish/extras/bass/bass.fish
+
+. ~/.config/fish/custom/bass_aliases.fish
