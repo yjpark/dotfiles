@@ -1,13 +1,10 @@
 #!/bin/bash
 
 
-rm ~/Applications/_admin.ahk
-cat ~/.dotfiles/windows/AutoHotKey/admin/0_* >> ~/Applications/_admin.ahk
-cat ~/.dotfiles/windows/AutoHotKey/admin/1_* >> ~/Applications/_admin.ahk
-cat ~/.dotfiles/windows/AutoHotKey/admin/2_* >> ~/Applications/_admin.ahk
-cat ~/.dotfiles/windows/AutoHotKey/admin/3_* >> ~/Applications/_admin.ahk
+rm ~/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/0_* >> ~/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/1_* >> ~/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/2_* >> ~/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/3_* >> ~/Applications/_user.ahk
 
-# rm ~/Applications/_user.ahk
-# cat ~/.dotfiles/windows/AutoHotKey/user/0_* >> ~/Applications/_user.ahk
-# cat ~/.dotfiles/windows/AutoHotKey/user/1_* >> ~/Applications/_user.ahk
 
