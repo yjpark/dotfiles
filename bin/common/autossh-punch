@@ -1,0 +1,3 @@
+#!/bin/bash
+
+autossh -f -M 0 -4 -N -o "ServerAliveInterval 60" -o "ServerAliveCountMax 3" -R "*:$3:localhost:$1" $2
