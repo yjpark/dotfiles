@@ -1,18 +1,22 @@
 #!/bin/bash
 #
-# freshshell.com
-#
-# Examples:
-#
-#   fresh twe4ked/dotfiles shell/functions/\*
-#   fresh jasoncodes/dotfiles shell/aliases/rails.sh
-#   fresh jasoncodes/dotfiles config/tmux.conf --file
-#
-# See http://freshshell.com/readme for documentation.
+# Used to use freshshell, later switched to a simple own version
+# I don't need most of its feature (e.g. from another git repo).
+# It's a bit slow, also not working on windows' cygwin environment
+# Keep following the syntax, so no need to change this file, and also
+# can switch back later if wanted.
 
-# freshshell
-fresh freshshell/fresh 'bin/fresh' --bin
-fresh freshshell/fresh-open 'bin/fresh-open' --bin
+USE_OWN_FRESH=1
+
+if [ -z $USE_OWN_FRESH ] ; then
+    # freshshell
+    fresh freshshell/fresh 'bin/fresh' --bin
+    fresh freshshell/fresh-open 'bin/fresh-open' --bin
+else
+    alias fresh='~/.dotfiles/fresh/fresh'
+    fresh --begin
+fi
+
 
 # =====================================================
 # Fish shell settings
@@ -163,4 +167,9 @@ fi
 fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
 fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
 fresh 'ssh/config.private/*' --file='~/.ssh/config'
+
+if [ -z $USE_OWN_FRESH ] ; then
+else
+    fresh --end
+fi
 
