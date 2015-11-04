@@ -124,7 +124,9 @@ if [[ "$(uname)" == "Darwin" ]]; then
   else
     cd ~/Library/Application\ Support/Karabiner/
     rm private.xml
+    _info "ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml"
     ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml
+    echo ""
     cd ~/.dotfiles
   fi
 
