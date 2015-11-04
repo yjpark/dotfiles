@@ -1,16 +1,20 @@
 #!/bin/bash
 
 _fatal_error() {
-    echo $'\033[0;31m' "$1"
+    echo $'\033[0;31m'"$1"
     exit 1
 }
 
+_error() {
+    echo $'\033[0;31m'"$1"
+}
+
 _verbose() {
-    echo $'\033[0;36m' "$1"
+    echo $'\033[0;36m'"$1"
 }
 
 _info() {
-    echo $'\033[0;32m' "$1"
+    echo $'\033[0;32m'"$1"
 }
 
 _parse_fresh_dsl_args() {
@@ -70,22 +74,39 @@ _parse_fresh_dsl_args() {
         fi
     fi
 
-    if [ "$MODE_ARG" ]; then
+    if [ ! -z "$MODE_ARG" ]; then
         MODE_ARG="${MODE_ARG/~\//}"
     fi
 }
 
 fresh-file() {
-    _info "cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG"
+    LAST_CHAR="${MODE_ARG: -1}"
+    if [ $LAST_CHAR == "/" ]; then
+        FILE_FOLDER="/tmp/_fresh_build/$MODE_ARG"
+    else
+        FILE_FOLDER=`dirname /tmp/_fresh_build/$MODE_ARG`
+    fi
+    _info "$LAST_CHAR -> $FILE_FOLDER"
+    if [ ! -d "$FILE_FOLDER" ] ; then
+        _verbose "mkdir -p $FILE_FOLDER"
+        mkdir -p $FILE_FOLDER
+    fi
+
+    _verbose "cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG"
+    _error ""
+    cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG
 }
 
 fresh-bin() {
-    cp -vr $FILE_NAME /tmp/_fresh_build/bin
+    _verbose "cp -R $FILE_NAME /tmp/_fresh_build/bin"
+    _error ""
+    cp -R $FILE_NAME /tmp/_fresh_build/bin
 }
 
 fresh-begin() {
     rm -rf /tmp/_fresh_build
-    mkdir /tmp/_fresh_build
+    mkdir -p /tmp/_fresh_build/bin
+    cd ~/.dotfiles
 }
 
 fresh-end() {
@@ -99,7 +120,7 @@ fresh() {
     FILE_NAME=""
     MARKER="$DEFAULT_MARKER"
 
-    _verbose "fresh $1 $2 $3 $4 $5 $6"
+    _info "fresh $1 $2 $3 $4 $5 $6"
     _parse_fresh_dsl_args "$@"
 
     if [[ "$MODE" == file ]]; then

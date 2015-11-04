@@ -93,8 +93,8 @@ if [ -z $USE_OWN_FRESH ] ; then
   fresh yjpark/mu-repo 'mu' --bin
   fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
 else
-  fresh 'fresh/yjpark/mu-repo' 'mu' --bin
-  fresh 'fresh/yjpark/mu-repo' 'mu_repo' --bin
+  fresh 'fresh/yjpark/mu-repo/mu' --bin
+  fresh 'fresh/yjpark/mu-repo/mu_repo' --bin
 fi
 
 # =====================================================
@@ -115,8 +115,8 @@ if [[ "$(uname)" == "Darwin" ]]; then
     fresh yjpark/dayone2evernote 'dayone2evernote' --bin
     fresh yjpark/dayone2evernote '*.applescript' --bin
   else
-    fresh 'fresh/yjpark/dayone2evernote' 'dayone2evernote' --bin
-    fresh 'fresh/yjpark/dayone2evernote' '*.applescript' --bin
+    fresh 'fresh/yjpark/dayone2evernote/dayone2evernote' --bin
+    fresh 'fresh/yjpark/dayone2evernote/*.applescript' --bin
   fi
 
   fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
@@ -178,8 +178,7 @@ fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
 fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
 fresh 'ssh/config.private/*' --file='~/.ssh/config'
 
-if [ -z $USE_OWN_FRESH ] ; then
-else
+if [ ! -z $USE_OWN_FRESH ] ; then
     fresh --end
 fi
 
