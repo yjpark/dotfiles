@@ -1,18 +1,22 @@
 #!/bin/bash
 #
-# freshshell.com
-#
-# Examples:
-#
-#   fresh twe4ked/dotfiles shell/functions/\*
-#   fresh jasoncodes/dotfiles shell/aliases/rails.sh
-#   fresh jasoncodes/dotfiles config/tmux.conf --file
-#
-# See http://freshshell.com/readme for documentation.
+# Used to use freshshell, later switched to a simple own version
+# I don't need most of its feature (e.g. from another git repo).
+# It's a bit slow, also not working on windows' cygwin environment
+# Keep following the syntax, so no need to change this file, and also
+# can switch back later if wanted.
 
-# freshshell
-fresh freshshell/fresh 'bin/fresh' --bin
-fresh freshshell/fresh-open 'bin/fresh-open' --bin
+USE_OWN_FRESH=1
+
+if [ -z $USE_OWN_FRESH ] ; then
+    # freshshell
+    fresh freshshell/fresh 'bin/fresh' --bin
+    fresh freshshell/fresh-open 'bin/fresh-open' --bin
+else
+    . ~/.dotfiles/fresh/fresh
+    fresh --begin
+fi
+
 
 # =====================================================
 # Fish shell settings
@@ -34,7 +38,7 @@ fi
 # =====================================================
 # Bash settings
 # run bootstrap-bash_it to install bash_it
-fresh 'bash/bashrc' --file='~/.bashrc'
+fresh 'bash/bashrc/*' --file='~/.bashrc'
 fresh 'bash/aliases/*' --file='~/.bash_it/aliases/custom.aliases.bash'
 fresh 'bash/custom/*' --file='~/.bash_it/custom/common.bash'
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -85,8 +89,13 @@ fi
 
 # =====================================================
 # mu-repo https://github.com/yjpark/mu-repo
-fresh yjpark/mu-repo 'mu' --bin
-fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
+if [ -z $USE_OWN_FRESH ] ; then
+  fresh yjpark/mu-repo 'mu' --bin
+  fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
+else
+  fresh 'fresh/yjpark/mu-repo/mu' --bin
+  fresh 'fresh/yjpark/mu-repo/mu_repo' --bin
+fi
 
 # =====================================================
 # Pentadactyl
@@ -102,10 +111,25 @@ fresh 'misc/gtkrc-2.0' --file='~/.gtkrc-2.0'
 
 # =====================================================
 if [[ "$(uname)" == "Darwin" ]]; then
-  fresh yjpark/dayone2evernote 'dayone2evernote' --bin
-  fresh yjpark/dayone2evernote '*.applescript' --bin
+  if [ -z $USE_OWN_FRESH ] ; then
+    fresh yjpark/dayone2evernote 'dayone2evernote' --bin
+    fresh yjpark/dayone2evernote '*.applescript' --bin
+  else
+    fresh 'fresh/yjpark/dayone2evernote/dayone2evernote' --bin
+    fresh 'fresh/yjpark/dayone2evernote/*.applescript' --bin
+  fi
 
-  fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
+  if [ -z $USE_OWN_FRESH ] ; then
+    fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
+  else
+    cd ~/Library/Application\ Support/Karabiner/
+    rm private.xml
+    _info "ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml"
+    ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml
+    echo ""
+    cd ~/.dotfiles
+  fi
+
   fresh 'osx/xvimrc' --file='~/.xvimrc'
   # Since xamarin's autoback will break symlink, copy over here
   #cp -v ~/.dotfiles/osx/XamarinStudio-4.0/KeyBindings/Custom.mac-kb.xml \
@@ -163,4 +187,8 @@ fi
 fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
 fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
 fresh 'ssh/config.private/*' --file='~/.ssh/config'
+
+if [ ! -z $USE_OWN_FRESH ] ; then
+    fresh --end
+fi
 

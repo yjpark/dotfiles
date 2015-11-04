@@ -1,0 +1,159 @@
+#!/bin/bash
+
+_fatal_error() {
+    echo $'\033[0;31m'"$1"
+    exit 1
+}
+
+_error() {
+    echo $'\033[0;31m'"$1"
+}
+
+_verbose() {
+    echo $'\033[0;36m'"$1"
+}
+
+_info() {
+    echo $'\033[0;32m'"$1"
+}
+
+_parse_fresh_dsl_args() {
+    while [ $# -gt 0 ]
+    do
+    case "$1" in
+        --file|--file=*|--bin|--begin|--end)
+        if [ -n "$MODE" ]; then
+            _fatal_error "Cannot have more than one mode."
+        fi
+        MODE="$(echo "$1" | sed -e 's/^--//' -e 's/=.*//')"
+        MODE_ARG="$(echo "$1" | sed 's/^--[^=]*=*//')"
+        ;;
+        --marker|--marker=*)
+        if [[ "$MODE" != file ]]; then
+            _fatal_error "--marker is only valid with --file."
+        fi
+        if [[ "$1" == --marker ]]; then
+            MARKER='#'
+        else
+            MARKER="$(echo "$1" | sed 's/^--[^=]*=*//')"
+            if [[ -z "$MARKER" ]]; then
+            _fatal_error "Marker not specified."
+            fi
+        fi
+        ;;
+        -*)
+        _fatal_error "Unknown option: $1"
+        ;;
+        *)
+        if [ -n "$FILE_NAME" ]; then
+            _fatal_error "FILE_NAME Already Exist: $FILE_NAME -> $1"
+        else
+            FILE_NAME="$1"
+        fi
+        ;;
+    esac
+    shift
+    done
+
+    if [ -z "$MODE" ]; then
+        _fatal_error "Mode is required"
+    fi
+
+    if [[ "$MODE" == file ]]; then
+        if [ -z "$MODE_ARG" ]; then
+            _fatal_error "arg is required for --file"
+        fi
+        if [ -z "$FILE_NAME" ]; then
+            _fatal_error "Filename is required for --file"
+        fi
+    fi
+
+    if [[ "$MODE" == bin ]]; then
+        if [ -z "$FILE_NAME" ]; then
+            _fatal_error "Filename is required for --bin"
+        fi
+    fi
+
+    if [ ! -z "$MODE_ARG" ]; then
+        MODE_ARG="${MODE_ARG/~\//}"
+    fi
+}
+
+fresh-file() {
+    LAST_CHAR="${MODE_ARG: -1}"
+    if [ $LAST_CHAR == "/" ]; then
+        FILE_FOLDER="/tmp/_fresh/_build/$MODE_ARG"
+    else
+        FILE_FOLDER=`dirname /tmp/_fresh/_build/$MODE_ARG`
+    fi
+    _info "$LAST_CHAR -> $FILE_FOLDER"
+    if [ ! -d "$FILE_FOLDER" ] ; then
+        _verbose "mkdir -p $FILE_FOLDER"
+        mkdir -p $FILE_FOLDER
+    fi
+
+    if [ $LAST_CHAR == "/" ]; then
+        _verbose "cp -R $FILE_NAME/* $FILE_FOLDER"
+        _error ""
+        cp -R $FILE_NAME/* $FILE_FOLDER
+    else
+        _verbose "cat $FILE_NAME >> /tmp/_fresh/_build/$MODE_ARG"
+        _error ""
+        cat $FILE_NAME >> /tmp/_fresh/_build/$MODE_ARG
+    fi
+}
+
+fresh-bin() {
+    _verbose "cp -R $FILE_NAME /tmp/_fresh/_build/bin/"
+    _error ""
+    cp -R $FILE_NAME /tmp/_fresh/_build/bin/
+}
+
+fresh-begin() {
+    rm -rf /tmp/_fresh
+    mkdir -p /tmp/_fresh/_build/bin
+    cd ~/.dotfiles
+}
+
+fresh-end() {
+    _verbose "cp -R /tmp/_fresh/_build/.* ~/"
+    _error ""
+    cp -R /tmp/_fresh/_build/.* ~/
+
+    # For some reason, the last cp with get ../*
+    rm -rf ~/_build
+
+    _verbose "cp -R /tmp/_fresh/_build/* ~/"
+    _error ""
+    cp -R /tmp/_fresh/_build/* ~/
+
+    echo $'Your dot files are now \033[1;32mfresh\033[0m.'
+}
+
+fresh() {
+    MODE=""
+    MODE_ARG=""
+    FILE_NAME=""
+    MARKER="$DEFAULT_MARKER"
+
+    _info "fresh $1 $2 $3 $4 $5 $6"
+    _parse_fresh_dsl_args "$@"
+
+    if [[ "$MODE" == file ]]; then
+        fresh-file $FILE_NAME $MODE_ARG
+    fi
+
+    if [[ "$MODE" == bin ]]; then
+        fresh-bin $FILE_NAME
+    fi
+
+    if [[ "$MODE" == begin ]]; then
+        fresh-begin
+    fi
+
+    if [[ "$MODE" == end ]]; then
+        fresh-end
+    fi
+}
+
+
