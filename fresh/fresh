@@ -1,13 +1,16 @@
 #!/bin/bash
 
-MODE=""
-MODE_ARG=""
-FILE_NAME=""
-MARKER="$DEFAULT_MARKER"
-
 _fatal_error() {
-    echo $'\033[4;31mError\033[0m:' "$1"
+    echo $'\033[0;31m' "$1"
     exit 1
+}
+
+_verbose() {
+    echo $'\033[0;36m' "$1"
+}
+
+_info() {
+    echo $'\033[0;32m' "$1"
 }
 
 _parse_fresh_dsl_args() {
@@ -39,7 +42,7 @@ _parse_fresh_dsl_args() {
         ;;
         *)
         if [ -n "$FILE_NAME" ]; then
-            _fatal_error "FILE_NAME Already Exist"
+            _fatal_error "FILE_NAME Already Exist: $FILE_NAME -> $1"
         else
             FILE_NAME="$1"
         fi
@@ -47,10 +50,6 @@ _parse_fresh_dsl_args() {
     esac
     shift
     done
-
-    if [ -z "$FILE_NAME" ]; then
-        _fatal_error "Filename is required"
-    fi
 
     if [ -z "$MODE" ]; then
         _fatal_error "Mode is required"
@@ -60,15 +59,28 @@ _parse_fresh_dsl_args() {
         if [ -z "$MODE_ARG" ]; then
             _fatal_error "arg is required for --file"
         fi
+        if [ -z "$FILE_NAME" ]; then
+            _fatal_error "Filename is required for --file"
+        fi
+    fi
+
+    if [[ "$MODE" == bin ]]; then
+        if [ -z "$FILE_NAME" ]; then
+            _fatal_error "Filename is required for --bin"
+        fi
+    fi
+
+    if [ "$MODE_ARG" ]; then
+        MODE_ARG="${MODE_ARG/~\//}"
     fi
 }
 
 fresh-file() {
-    cat $FILE_NAME > /tmp/_fresh_build/$MODE_ARG
+    _info "cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG"
 }
 
 fresh-bin() {
-    cp -v $FILE_NAME /tmp/_fresh_build/
+    cp -vr $FILE_NAME /tmp/_fresh_build/bin
 }
 
 fresh-begin() {
@@ -77,25 +89,34 @@ fresh-begin() {
 }
 
 fresh-end() {
+    echo "DONE"
     #cp -vr /tmp/_fresh_build/* ~/
 }
 
-_parse_fresh_dsl_args "$@"
+fresh() {
+    MODE=""
+    MODE_ARG=""
+    FILE_NAME=""
+    MARKER="$DEFAULT_MARKER"
 
-if [[ "$MODE" == file ]]; then
-    fresh-file $FILE_NAME $MODE_ARG
-fi
+    _verbose "fresh $1 $2 $3 $4 $5 $6"
+    _parse_fresh_dsl_args "$@"
 
-if [[ "$MODE" == bin ]]; then
-    fresh-bin $FILE_NAME
-fi
+    if [[ "$MODE" == file ]]; then
+        fresh-file $FILE_NAME $MODE_ARG
+    fi
 
-if [[ "$MODE" == begin ]]; then
-    fresh-begin
-fi
+    if [[ "$MODE" == bin ]]; then
+        fresh-bin $FILE_NAME
+    fi
 
-if [[ "$MODE" == end ]]; then
-    fresh-end
-fi
+    if [[ "$MODE" == begin ]]; then
+        fresh-begin
+    fi
+
+    if [[ "$MODE" == end ]]; then
+        fresh-end
+    fi
+}
 
 

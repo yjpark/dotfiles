@@ -13,7 +13,7 @@ if [ -z $USE_OWN_FRESH ] ; then
     fresh freshshell/fresh 'bin/fresh' --bin
     fresh freshshell/fresh-open 'bin/fresh-open' --bin
 else
-    alias fresh='~/.dotfiles/fresh/fresh'
+    . ~/.dotfiles/fresh/fresh
     fresh --begin
 fi
 
@@ -89,8 +89,13 @@ fi
 
 # =====================================================
 # mu-repo https://github.com/yjpark/mu-repo
-fresh yjpark/mu-repo 'mu' --bin
-fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
+if [ -z $USE_OWN_FRESH ] ; then
+  fresh yjpark/mu-repo 'mu' --bin
+  fresh yjpark/mu-repo 'mu_repo' --file='bin/mu_repo/'
+else
+  fresh 'fresh/yjpark/mu-repo' 'mu' --bin
+  fresh 'fresh/yjpark/mu-repo' 'mu_repo' --bin
+fi
 
 # =====================================================
 # Pentadactyl
@@ -106,8 +111,13 @@ fresh 'misc/gtkrc-2.0' --file='~/.gtkrc-2.0'
 
 # =====================================================
 if [[ "$(uname)" == "Darwin" ]]; then
-  fresh yjpark/dayone2evernote 'dayone2evernote' --bin
-  fresh yjpark/dayone2evernote '*.applescript' --bin
+  if [ -z $USE_OWN_FRESH ] ; then
+    fresh yjpark/dayone2evernote 'dayone2evernote' --bin
+    fresh yjpark/dayone2evernote '*.applescript' --bin
+  else
+    fresh 'fresh/yjpark/dayone2evernote' 'dayone2evernote' --bin
+    fresh 'fresh/yjpark/dayone2evernote' '*.applescript' --bin
+  fi
 
   fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
   fresh 'osx/xvimrc' --file='~/.xvimrc'
