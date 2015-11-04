@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd ~/
-mkdir -p bin
-cd bin
-cp -v ~/.dotfiles/external/bin/* .
-cp -v ~/.dotfiles/bin/common/* .
-cp -v ~/.dotfiles/bin/windows/* .
