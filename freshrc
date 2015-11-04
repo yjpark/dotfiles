@@ -38,7 +38,7 @@ fi
 # =====================================================
 # Bash settings
 # run bootstrap-bash_it to install bash_it
-fresh 'bash/bashrc' --file='~/.bashrc'
+fresh 'bash/bashrc/*' --file='~/.bashrc'
 fresh 'bash/aliases/*' --file='~/.bash_it/aliases/custom.aliases.bash'
 fresh 'bash/custom/*' --file='~/.bash_it/custom/common.bash'
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -119,7 +119,15 @@ if [[ "$(uname)" == "Darwin" ]]; then
     fresh 'fresh/yjpark/dayone2evernote/*.applescript' --bin
   fi
 
-  fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
+  if [ -z $USE_OWN_FRESH ] ; then
+    fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
+  else
+    cd ~/Library/Application\ Support/Karabiner/
+    rm private.xml
+    ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml
+    cd ~/.dotfiles
+  fi
+
   fresh 'osx/xvimrc' --file='~/.xvimrc'
   # Since xamarin's autoback will break symlink, copy over here
   #cp -v ~/.dotfiles/osx/XamarinStudio-4.0/KeyBindings/Custom.mac-kb.xml \

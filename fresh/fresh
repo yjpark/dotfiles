@@ -92,15 +92,21 @@ fresh-file() {
         mkdir -p $FILE_FOLDER
     fi
 
-    _verbose "cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG"
-    _error ""
-    cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG
+    if [ $LAST_CHAR == "/" ]; then
+        _verbose "cp -R $FILE_NAME/* $FILE_FOLDER"
+        _error ""
+        cp -R $FILE_NAME/* $FILE_FOLDER
+    else
+        _verbose "cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG"
+        _error ""
+        cat $FILE_NAME >> /tmp/_fresh_build/$MODE_ARG
+    fi
 }
 
 fresh-bin() {
-    _verbose "cp -R $FILE_NAME /tmp/_fresh_build/bin"
+    _verbose "cp -R $FILE_NAME /tmp/_fresh_build/bin/"
     _error ""
-    cp -R $FILE_NAME /tmp/_fresh_build/bin
+    cp -R $FILE_NAME /tmp/_fresh_build/bin/
 }
 
 fresh-begin() {
