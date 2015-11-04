@@ -1,0 +1,3 @@
+#!/bin/bash
+
+curl -vsSL get.freshshell.com > ~/.dotfiles/bootstrap/bootstrap-fresh
