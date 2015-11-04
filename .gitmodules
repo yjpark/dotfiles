@@ -1,6 +1,0 @@
-[submodule "fresh/mu-repo"]
-	path = fresh/yjpark/mu-repo
-	url = git@github.com:yjpark/mu-repo.git
-[submodule "fresh/dayone2evernote"]
-	path = fresh/yjpark/dayone2evernote
-	url = git@github.com:yjpark/dayone2evernote.git
