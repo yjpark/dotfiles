@@ -100,6 +100,10 @@ def chmod?(d)
   File.directory?(d) && !(File.readable?(d) && File.writable?(d) && File.executable?(d))
 end
 
+def chown?(d)
+  !File.owned?(d)
+end
+
 def chgrp?(d)
   !File.grpowned?(d)
 end
@@ -125,7 +129,7 @@ EOABORT
 abort <<-EOABORT unless Dir["#{HOMEBREW_PREFIX}/.git/*"].empty?
 It appears Homebrew is already installed. If your intent is to reinstall you
 should do the following before running this installer again:
-    rm -rf #{HOMEBREW_PREFIX}/Cellar #{HOMEBREW_PREFIX}/.git && brew cleanup
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
 EOABORT
 # Tests will fail if the prefix exists, but we don't have execution
 # permissions. Abort in this case.
@@ -141,6 +145,13 @@ Before running the installer again please agree to the license by opening
 Xcode.app or running:
     sudo xcodebuild -license
 EOABORT
+sandbox_paths_file = "/System/Library/Sandbox/Compatibility.bundle/Contents/Resources/paths"
+abort <<-EOABORT if !File.directory?(HOMEBREW_PREFIX) && macos_version >= "10.11" \
+  && !(File.exist?(sandbox_paths_file) && IO.read(sandbox_paths_file).include?("/usr/local\n"))
+Your OS X 10.11 install requires an additional step to write into #{HOMEBREW_PREFIX}.
+Please follow the steps described here and then run the install script again:
+  https://git.io/vnC7w
+EOABORT
 
 ohai "This script will install:"
 puts "#{HOMEBREW_PREFIX}/bin/brew"
@@ -152,11 +163,16 @@ chmods = %w( . bin etc include lib lib/pkgconfig Library sbin share var var/log 
              share/man/man5 share/man/man6 share/man/man7 share/man/man8
              share/info share/doc share/aclocal ).
              map { |d| File.join(HOMEBREW_PREFIX, d) }.select { |d| chmod?(d) }
+chowns = chmods.select { |d| chown?(d) }
 chgrps = chmods.select { |d| chgrp?(d) }
 
 unless chmods.empty?
   ohai "The following directories will be made group writable:"
   puts(*chmods)
+end
+unless chowns.empty?
+  ohai "The following directories will have their owner set to #{Tty.underline 39}#{ENV['USER']}#{Tty.reset}:"
+  puts(*chowns)
 end
 unless chgrps.empty?
   ohai "The following directories will have their group set to #{Tty.underline 39}admin#{Tty.reset}:"
@@ -167,16 +183,19 @@ wait_for_user if STDIN.tty?
 
 if File.directory? HOMEBREW_PREFIX
   sudo "/bin/chmod", "g+rwx", *chmods unless chmods.empty?
+  sudo "/usr/sbin/chown", ENV['USER'], *chowns unless chowns.empty?
   sudo "/usr/bin/chgrp", "admin", *chgrps unless chgrps.empty?
 else
   sudo "/bin/mkdir", HOMEBREW_PREFIX
   sudo "/bin/chmod", "g+rwx", HOMEBREW_PREFIX
   # the group is set to wheel by default for some reason
-  sudo "/usr/bin/chgrp", "admin", HOMEBREW_PREFIX
+  sudo "/usr/sbin/chown", "#{ENV['USER']}:admin", HOMEBREW_PREFIX
 end
 
 sudo "/bin/mkdir", HOMEBREW_CACHE unless File.directory? HOMEBREW_CACHE
 sudo "/bin/chmod", "g+rwx", HOMEBREW_CACHE if chmod? HOMEBREW_CACHE
+sudo "/usr/sbin/chown", ENV['USER'], HOMEBREW_CACHE if chown? HOMEBREW_CACHE
+sudo "/usr/bin/chgrp", "admin", HOMEBREW_CACHE if chgrp? HOMEBREW_CACHE
 
 if macos_version >= "10.9"
   developer_dir = `/usr/bin/xcode-select -print-path 2>/dev/null`.chomp
