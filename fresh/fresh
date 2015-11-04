@@ -110,7 +110,7 @@ fresh-bin() {
 }
 
 fresh-begin() {
-    rm -rf /tmp/_fresh/_build
+    rm -rf /tmp/_fresh
     mkdir -p /tmp/_fresh/_build/bin
     cd ~/.dotfiles
 }
@@ -119,6 +119,9 @@ fresh-end() {
     _verbose "cp -R /tmp/_fresh/_build/.* ~/"
     _error ""
     cp -R /tmp/_fresh/_build/.* ~/
+
+    # For some reason, the last cp with get ../*
+    rm -rf ~/_build
 
     _verbose "cp -R /tmp/_fresh/_build/* ~/"
     _error ""
