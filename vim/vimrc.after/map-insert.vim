@@ -9,6 +9,8 @@ inoremap <C-e> <C-o>$
 " Cursor Move
 inoremap <C-j> <C-o>j
 inoremap <C-k> <C-o>k
+inoremap <C-h> <C-o>h
+inoremap <C-l> <C-o>l
 " Easymotion in insert mode,
 imap <C-w> <C-o><leader><leader>b
 imap <C-v> <C-o><leader><leader>w
