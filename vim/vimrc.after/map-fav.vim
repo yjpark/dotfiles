@@ -3,7 +3,7 @@ noremap ' "
 
 noremap <C-a> 0
 noremap <C-e> $
-
+noremap <C-h> X
 
 nnoremap <silent> ,1 :VimShell<CR>
 nnoremap <silent> ,2 :VimFiler<CR>
