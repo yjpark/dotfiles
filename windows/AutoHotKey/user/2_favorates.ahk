@@ -52,10 +52,10 @@ else
 return
 
 ^!s::
-IfWinActive, ahk_exe WDExpress.exe
+IfWinActive, ahk_exe devenv.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe WDExpress.exe
+    WinActivate ahk_exe devenv.exe
 return
 
 ^!i::
