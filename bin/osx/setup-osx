@@ -39,5 +39,8 @@ defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 echo "Don’t animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
 
+echo "Don’t show bouncing notification in Dock"
+defaults write com.apple.dock no-bouncing -bool true
+
 echo "Restart Dock"
 killall Dock
