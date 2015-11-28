@@ -1,1 +1,1 @@
-alias uo unity3d-open
+alias uo unity-open
