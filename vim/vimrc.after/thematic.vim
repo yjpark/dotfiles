@@ -14,7 +14,7 @@ let g:thematic#defaults = {
 \ 'font-size': 16,
 \ 'transparency': 0,
 \ 'linespace': 6,
-\ 'fullscreen': 1,
+\ 'fullscreen': 0,
 \ }
 
 let g:thematic#themes = {
