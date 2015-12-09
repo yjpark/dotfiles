@@ -5,3 +5,5 @@ git rm --cached -r .
 
 git reset --hard
 # Write both the index and working directory from git's database.
+
+git clean -df

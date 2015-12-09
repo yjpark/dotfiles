@@ -1,0 +1,116 @@
+#!/bin/sh
+
+# Set the colours you can use
+black='\033[0;30m'
+white='\033[0;37m'
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+blue='\033[0;34m'
+magenta='\033[0;35m'
+cyan='\033[0;36m'
+
+# Resets the style
+reset=`tput sgr0`
+
+# Color-echo
+# arg $1 = message
+# arg $2 = Color
+cecho() {
+    echo "${2}${1}${reset}"
+    return
+}
+
+clear_buffer() {
+    echo -en \\0033c && tmux clear-history
+    return
+}
+
+left_line() {
+    cecho "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<" $cyan
+}
+
+left_cmd() {
+    left_line
+    cecho "$@" $green
+    left_line
+    eval $@
+}
+
+right_line() {
+    cecho ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" $magenta
+}
+
+right_cmd() {
+    right_line
+    cecho "$@" $green
+    right_line
+    eval $@
+}
+
+merge_line() {
+    cecho "==========================================================================================================================" $yellow
+}
+
+merge_cmd() {
+    merge_line
+    cecho "$@" $green
+    merge_line
+    eval $@
+}
+
+REV=$1
+
+if [ -z "$REV" ]; then
+    REV="HEAD"
+fi
+
+BASE=`git merge-base ${REV}^1 ${REV}^2`
+
+if [ ! "${BASE}" ]; then
+    cecho "HEAD is not merge commit" $red
+    exit 1
+fi
+
+clear_buffer
+alias git='git --no-pager'
+
+cecho "HEAD: ${REV}" $yellow
+cecho "BASE: ${BASE}" $yellow
+echo ""
+
+left_cmd "git log -1 ${REV}^1"
+CMD="git diff-tree -r ${BASE} ${REV}^1"
+left_cmd "${CMD}"
+LEFT_CHANGES=`${CMD}| wc -l`
+CMD="git diff-tree -r ${REV}^1 ${REV}"
+left_cmd "${CMD}"
+RIGHT_MERGES=`${CMD}| wc -l`
+left_line
+
+echo ""
+right_cmd "git log -1 ${REV}^2"
+CMD="git diff-tree -r ${BASE} ${REV}^2"
+right_cmd "${CMD}"
+RIGHT_CHANGES=`${CMD}| wc -l`
+CMD="git diff-tree -r ${REV}^2 ${REV}"
+right_cmd "${CMD}"
+LEFT_MERGES=`${CMD}| wc -l`
+right_line
+
+echo ""
+merge_cmd "git log -1 ${REV}"
+merge_cmd "git show --cc ${REV}"
+merge_line
+
+COLOR=$green
+if [ ${LEFT_CHANGES} != ${LEFT_MERGES} ] ; then
+    COLOR=$red
+fi
+if [ ${RIGHT_CHANGES} != ${RIGHT_MERGES} ] ; then
+    COLOR=$red
+fi
+cecho "Left: \t\tChanges: ${LEFT_CHANGES} \t\tMerges: ${LEFT_MERGES}" $COLOR
+cecho "Right: \t\tChanges: ${RIGHT_CHANGES} \t\tMerges: ${RIGHT_MERGES}" $COLOR
+merge_line
+
