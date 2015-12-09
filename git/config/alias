@@ -8,11 +8,9 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     rg = reflog --color --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
-    show-merge = "!f() { git diff-tree -c head^1 head ; git diff-tree -c head^2 head }; f"
-
     graphviz = "!f() { echo 'digraph git {' ; git log --pretty='format: %h -> { %p }'\"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
 
-    diff-word = "!f() { git diff --word-diff=color $1^..$1 ; }; f"
-    diff-c = "!f() { git diff $1^..$1 ; }; f"
-    diff-kompare = "!f() { git diff \"$@\" | kompare - ; }; f"
-    diff-cdif = "!f() { git diff \"$@\" | cdif ; }; f"
+    # diff-word = "!f() { git diff --word-diff=color $1^..$1 ; }; f"
+    # diff-c = "!f() { git diff $1^1..$1 ; }; f"
+    # diff-kompare = "!f() { git diff \"$@\" | kompare - ; }; f"
+    # diff-cdif = "!f() { git diff \"$@\" | cdif ; }; f"
