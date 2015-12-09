@@ -32,9 +32,9 @@ left_line() {
 
 left_cmd() {
     left_line
-    cecho "$@" $green
+    cecho "$1: \t\t $2" $cyan
     left_line
-    eval $@
+    eval $2
 }
 
 right_line() {
@@ -43,9 +43,9 @@ right_line() {
 
 right_cmd() {
     right_line
-    cecho "$@" $green
+    cecho "$1: \t\t $2" $magenta
     right_line
-    eval $@
+    eval $2
 }
 
 merge_line() {
@@ -54,9 +54,9 @@ merge_line() {
 
 merge_cmd() {
     merge_line
-    cecho "$@" $green
+    cecho "$1: \t\t $2" $yellow
     merge_line
-    eval $@
+    eval $2
 }
 
 REV=$1
@@ -79,28 +79,28 @@ cecho "HEAD: ${REV}" $yellow
 cecho "BASE: ${BASE}" $yellow
 echo ""
 
-left_cmd "git log -1 ${REV}^1"
+left_cmd "Left Log" "git log -1 ${REV}^1"
 CMD="git diff-tree -r ${BASE} ${REV}^1"
-left_cmd "${CMD}"
+left_cmd "Left Changes" "${CMD}"
 LEFT_CHANGES=`${CMD}| wc -l`
-CMD="git diff-tree -r ${REV}^1 ${REV}"
-left_cmd "${CMD}"
-RIGHT_MERGES=`${CMD}| wc -l`
+CMD="git diff-tree -r ${REV}^2 ${REV}"
+left_cmd "Left Merges" "${CMD}"
+LEFT_MERGES=`${CMD}| wc -l`
 left_line
 
 echo ""
-right_cmd "git log -1 ${REV}^2"
+right_cmd "Right Log" "git log -1 ${REV}^2"
 CMD="git diff-tree -r ${BASE} ${REV}^2"
-right_cmd "${CMD}"
+right_cmd "Right Changes" "${CMD}"
 RIGHT_CHANGES=`${CMD}| wc -l`
-CMD="git diff-tree -r ${REV}^2 ${REV}"
-right_cmd "${CMD}"
-LEFT_MERGES=`${CMD}| wc -l`
+CMD="git diff-tree -r ${REV}^1 ${REV}"
+right_cmd "Right Merges" "${CMD}"
+RIGHT_MERGES=`${CMD}| wc -l`
 right_line
 
 echo ""
-merge_cmd "git log -1 ${REV}"
-merge_cmd "git show --cc ${REV}"
+merge_cmd "Merge Log" "git log -1 ${REV}"
+merge_cmd "Merge Diff" "git show --cc ${REV}"
 merge_line
 
 COLOR=$green
