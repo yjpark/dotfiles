@@ -1,0 +1,33 @@
+[user]
+    email = yjpark@gmail.com
+    name = YJ Park
+
+[color]
+    ui = true
+
+[core]
+    quotepath = false
+    excludesfile = ~/.gitignore_global
+    whitespace = trailing-space,space-before-tab
+
+[apply]
+  whitespace = fix
+
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+
+[pager]
+    log = less
+    show = less
+    diff = diff-highlight | less
+
+[rerere]
+    enabled = true
+
+[push]
+    default = current
