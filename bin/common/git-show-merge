@@ -38,23 +38,23 @@ left_cmd() {
 }
 
 right_line() {
-    cecho ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" $magenta
+    cecho ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" $yellow
 }
 
 right_cmd() {
     right_line
-    cecho "$1: \t\t $2" $magenta
+    cecho "$1: \t\t $2" $yellow
     right_line
     eval $2
 }
 
 merge_line() {
-    cecho "==========================================================================================================================" $yellow
+    cecho "==========================================================================================================================" $COLOR
 }
 
 merge_cmd() {
     merge_line
-    cecho "$1: \t\t $2" $yellow
+    cecho "$1: \t\t $2" $COLOR
     merge_line
     eval $2
 }
@@ -98,11 +98,6 @@ right_cmd "Right Merges" "${CMD}"
 RIGHT_MERGES=`${CMD}| wc -l`
 right_line
 
-echo ""
-merge_cmd "Merge Log" "git log -1 ${REV}"
-merge_cmd "Merge Diff" "git show --cc ${REV}"
-merge_line
-
 COLOR=$green
 if [ ${LEFT_CHANGES} != ${LEFT_MERGES} ] ; then
     COLOR=$red
@@ -110,6 +105,12 @@ fi
 if [ ${RIGHT_CHANGES} != ${RIGHT_MERGES} ] ; then
     COLOR=$red
 fi
+
+echo ""
+merge_cmd "Merge Log" "git log -1 ${REV}"
+merge_cmd "Merge Diff" "git show --cc ${REV}"
+merge_line
+
 cecho "Left: \t\tChanges: ${LEFT_CHANGES} \t\tMerges: ${LEFT_MERGES}" $COLOR
 cecho "Right: \t\tChanges: ${RIGHT_CHANGES} \t\tMerges: ${RIGHT_MERGES}" $COLOR
 merge_line
