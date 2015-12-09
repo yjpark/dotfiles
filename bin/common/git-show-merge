@@ -107,8 +107,7 @@ if [ ${RIGHT_CHANGES} != ${RIGHT_MERGES} ] ; then
 fi
 
 echo ""
-merge_cmd "Merge Log" "git log -1 ${REV}"
-merge_cmd "Merge Diff" "git show --cc ${REV}"
+merge_cmd "Merge Log & Diff" "git show --cc ${REV}"
 merge_line
 
 cecho "Left: \t\tChanges: ${LEFT_CHANGES} \t\tMerges: ${LEFT_MERGES}" $COLOR
