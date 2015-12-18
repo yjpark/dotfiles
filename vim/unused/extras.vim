@@ -1,0 +1,2 @@
+NeoBundle 'koron/minimap-vim'
+
