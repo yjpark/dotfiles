@@ -1,0 +1,6 @@
+--style=google
+--indent=spaces=4
+--pad-oper
+--pad-header
+--unpad-paren
+--convert-tabs
