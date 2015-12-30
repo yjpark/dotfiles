@@ -10,7 +10,7 @@ let g:thematic#defaults = {
 \ 'laststatus': 2,
 \ 'ruler': 0,
 \
-\ 'typeface': 'Sauce Code Powerline Regular',
+\ 'typeface': 'Sauce Code Powerline Light',
 \ 'font-size': 16,
 \ 'transparency': 0,
 \ 'linespace': 6,
