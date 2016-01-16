@@ -7,9 +7,14 @@ cd ~/.external/settings
 
 bootstrap-github-repositories ~/.dotfiles/external/settings.bootstrap
 
+if [[ "$(uname)" == "Darwin" ]]; then
+    echo "Bootstraping ~/.external/settings (OSX)"
+    bootstrap-github-repositories ~/.dotfiles/external/settings.osx.bootstrap
+fi
+
 if [[ "$(uname)" == "Linux" ]]; then
     echo "Bootstraping ~/.external/settings (Linux)"
-  bootstrap-github-repositories ~/.dotfiles/external/settings.linux.bootstrap
+    bootstrap-github-repositories ~/.dotfiles/external/settings.linux.bootstrap
 fi
 
 mu register --all
