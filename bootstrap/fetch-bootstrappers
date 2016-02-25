@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl -vsSL https://raw.githubusercontent.com/fisherman/install/master/install.fish > ~/.dotfiles/bootstrap/bootstrap-fisherman
+curl -vsSL https://raw.githubusercontent.com/fisherman/install/master/install.fish > ~/.dotfiles/bootstrap/_bootstrap-fisherman.fish
 curl -vsSL https://get.rvm.io > ~/.dotfiles/bootstrap/bootstrap-rvm
 curl -vsSL https://static.rust-lang.org/rustup.sh > ~/.dotfiles/bootstrap/bootstrap-rust-with-cargo
 curl -vsSL https://www.parse.com/downloads/cloud_code/installer.sh > ~/.dotfiles/bootstrap/bootstrap-parse

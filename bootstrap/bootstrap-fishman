@@ -1,0 +1,3 @@
+#!/bin/sh
+
+fish _bootstrap-fishman.fish
