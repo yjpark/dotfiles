@@ -1,1 +1,1 @@
-alias ph "pyenv rehash"
+alias pyenv-rehash "pyenv rehash"
