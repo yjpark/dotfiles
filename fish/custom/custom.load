@@ -1,3 +1,2 @@
 . ~/.config/fish/custom/fzf_cmd.fish
-. ~/.config/fish/custom/pyenv.fish
 
