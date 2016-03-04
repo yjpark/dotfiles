@@ -111,13 +111,13 @@
     </autogen>
     <autogen>
         __KeyToKey__
-        KeyCode::O, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
-        KeyCode::VK_OPEN_URL_SAFARI,
+        KeyCode::M, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_MONODEVELOP,
     </autogen>
     <autogen>
         __KeyToKey__
         KeyCode::SEMICOLON, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
-        KeyCode::VK_OPEN_URL_MONODEVELOP,
+        KeyCode::VK_OPEN_URL_SAFARI,
     </autogen>
   </item>
 </root>
