@@ -8,7 +8,7 @@ NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','
     let NERDTreeShowHidden=1
     let NERDTreeQuitOnOpen=0
     let NERDTreeShowLineNumbers=0
-    let NERDTreeChDirMode=0
+    let NERDTreeChDirMode=2
     let NERDTreeShowBookmarks=1
     let NERDTreeIgnore=['\.git','\.hg', '\.meta$', '\.pyc$', '\.silp_backup']
     let NERDTreeBookmarksSort=0
