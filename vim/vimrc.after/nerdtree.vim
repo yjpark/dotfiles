@@ -3,11 +3,6 @@ function! s:get_cache_dir(suffix) "{{{
     return resolve(expand(s:cache_dir . '/' . a:suffix))
 endfunction "}}}
 
-if !empty($NERDTREE_BOOKMARKS)
-    if filereadable($NERDTREE_BOOKMARKS)
-        let g:NERDTreeBookmarksFile = $NERDTREE_BOOKMARKS
-    endif
-endif
 
 NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
     let NERDTreeShowHidden=1
@@ -15,8 +10,14 @@ NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','
     let NERDTreeShowLineNumbers=0
     let NERDTreeChDirMode=0
     let NERDTreeShowBookmarks=1
-    let NERDTreeBookmarksFile=s:get_cache_dir('NERDTreeBookmarks')
     let NERDTreeIgnore=['\.git','\.hg', '\.meta$', '\.pyc$', '\.silp_backup']
+    let NERDTreeBookmarksSort=0
+    let NERDTreeBookmarksFile=s:get_cache_dir('nerdtree-bookmarks')
+    if !empty($NERDTREE_BOOKMARKS)
+        if filereadable($NERDTREE_BOOKMARKS)
+            let g:NERDTreeBookmarksFile = $NERDTREE_BOOKMARKS
+        endif
+    endif
     """nnoremap <F2> :NERDTreeToggle<CR>
     """nnoremap <F3> :NERDTreeFind<CR>
 "}}}
