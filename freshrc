@@ -15,6 +15,7 @@ if [ -z $USE_OWN_FRESH ] ; then
 else
     . ~/.dotfiles/fresh/fresh
     fresh --begin
+    cd ~/.dotfiles
 fi
 
 

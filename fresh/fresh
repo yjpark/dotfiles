@@ -112,7 +112,6 @@ fresh-bin() {
 fresh-begin() {
     rm -rf /tmp/_fresh
     mkdir -p /tmp/_fresh/_build/bin
-    cd ~/.dotfiles
 }
 
 fresh-end() {
