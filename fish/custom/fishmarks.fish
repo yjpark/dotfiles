@@ -115,3 +115,10 @@ end
 
 # c
 complete -x -c gg -d "Saved bookmarks" -xa "(cat ~/.sdirs | cut -f1 -d' ' | cut -c5-)"
+
+# c
+complete -x -c bookmark-delete -d "Saved bookmarks" -xa "(cat ~/.sdirs | cut -f1 -d' ' | cut -c5-)"
+
+# c
+complete -x -c bookmark-print -d "Saved bookmarks" -xa "(cat ~/.sdirs | cut -f1 -d' ' | cut -c5-)"
+
