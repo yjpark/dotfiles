@@ -38,3 +38,5 @@ NeoBundle 'skwp/greplace.vim'
 
 NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'severin-lemaignan/vim-minimap'
+
+NeoBundle 'dhruvasagar/vim-vinegar'

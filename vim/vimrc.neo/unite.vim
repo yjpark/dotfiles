@@ -67,8 +67,9 @@ endif
 
 nnoremap ,' :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
 nnoremap ,, :<C-u>Unite -no-split -buffer-name=buffer -start-insert buffer<cr>
-nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -quick-match -default-action=yank -auto-quit register<cr>
+nnoremap ,r :<C-u>Unite -no-split -buffer-name=register -default-action=yank -auto-quit register<cr>
 nnoremap ,t :<C-u>Unite -no-split -buffer-name=tag -start-insert tag<cr>
+nnoremap ,g :<C-u>Unite -no-split -buffer-name=bookmark -start-insert bookmark<cr>
 
 "Not really using
 nnoremap ,o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>

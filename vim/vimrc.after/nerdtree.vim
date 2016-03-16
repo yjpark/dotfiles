@@ -3,6 +3,12 @@ function! s:get_cache_dir(suffix) "{{{
     return resolve(expand(s:cache_dir . '/' . a:suffix))
 endfunction "}}}
 
+if !empty($NERDTREE_BOOKMARKS)
+    if filereadable($NERDTREE_BOOKMARKS)
+        let g:NERDTreeBookmarksFile = $NERDTREE_BOOKMARKS
+    endif
+endif
+
 NeoBundleLazy 'scrooloose/nerdtree', {'autoload':{'commands':['NERDTreeToggle','NERDTreeFind']}} "{{{
     let NERDTreeShowHidden=1
     let NERDTreeQuitOnOpen=0
@@ -27,7 +33,7 @@ function! YJParkIsNTFocused()
   return -1 != match(expand('%'), 'NERD_Tree')
 endfunction
 
-" calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
+" calls NERDTreeFind if NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
 function! YJParkSyncTree()
   if &modifiable && YJParkIsNTOpen() && !YJParkIsNTFocused() && strlen(expand('%')) > 0 && !&diff
     NERDTreeFind
