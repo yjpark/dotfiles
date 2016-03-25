@@ -1,0 +1,11 @@
+# Rime user dictionary
+#@/db_name	luna_pinyin.userdb
+#@/db_type	userdb
+#@/rime_version	1.2.9
+#@/tick	6
+#@/user_id	yjpark
+da xiao 	大小	c=1 d=0.99005 t=6
+jin tian 	今天	c=1 d=0.980199 t=6
+tan tiao 	彈跳	c=2 d=1.98511 t=6
+te 	特	c=1 d=0.97531 t=6
+tiao ti 	挑剔	c=1 d=0.995012 t=6
