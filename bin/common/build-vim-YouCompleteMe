@@ -6,7 +6,7 @@ git submodule update --init --recursive
 
 if [[ "$(uname)" == "Linux" ]]; then
     sudo apt-get install cmake build-essential python-dev mono-xbuild
-    sudo apt-get install monodevelop
+    # sudo apt-get install monodevelop
     # sudo install-current-mono
 fi
 
