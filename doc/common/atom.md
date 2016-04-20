@@ -1,3 +1,8 @@
+## Proxy
+```
+apm config proxy http://localhost:1102
+```
+
 ## Extensions
 
 Run bin/common/install-atom-packages to install these packages.
