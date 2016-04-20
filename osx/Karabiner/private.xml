@@ -44,6 +44,10 @@
     <name>KeyCode::VK_OPEN_URL_MONODEVELOP</name>
     <url type="file">/Applications/MonoDevelop.app</url>
   </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_TYPE2PHONE</name>
+    <url type="file">/Applications/Type2Phone.app</url>
+  </vkopenurldef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -118,6 +122,11 @@
         __KeyToKey__
         KeyCode::SEMICOLON, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_SAFARI,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::R, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_TYPE2PHONE,
     </autogen>
   </item>
 </root>
