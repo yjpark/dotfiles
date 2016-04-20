@@ -51,11 +51,18 @@ else
     WinActivate ahk_exe gvim.exe
 return
 
-^!s::
+^!x::
 IfWinActive, ahk_exe devenv.exe
     Send !{Tab}
 else
     WinActivate ahk_exe devenv.exe
+return
+
+^!s::
+IfWinActive, ahk_exe ApplicationFrameHost.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe ApplicationFrameHost.exe
 return
 
 ^!i::
