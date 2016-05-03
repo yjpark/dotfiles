@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# https://dnscrypt.org/#dnscrypt-osx
+
+brew install dnscrypt-proxy --with-plugins
