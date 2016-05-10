@@ -2,8 +2,7 @@
 
 DNS Crypt for secure DNS Lookup
 
-- https://www.opendns.com/about/innovations/dnscrypt/
-- https://github.com/alterstep/dnscrypt-osxclient
+- https://dnscrypt.org/
 
 ### Check where leaked
 
