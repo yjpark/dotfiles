@@ -1,2 +1,2 @@
 set -x PATH $PATH ~/.pyenv/bin
-. (pyenv init -|psub)
+status --is-interactive; and . (pyenv init - | psub)
