@@ -3,8 +3,3 @@ patch:
         - schema: double_pinyin_mspy   # 微軟雙拼
     "menu/page_size": 9
     style/color_scheme: ink
-    app_options/com.googlecode.iterm2:
-        ascii_mode: true
-    app_options/org.vim.MacVim:
-        ascii_mode: true
-

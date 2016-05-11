@@ -48,6 +48,10 @@
     <name>KeyCode::VK_OPEN_URL_TYPE2PHONE</name>
     <url type="file">/Applications/Type2Phone.app</url>
   </vkopenurldef>
+  <vkchangeinputsourcedef>
+    <name>KeyCode::VK_CHANGE_INPUTSOURCE_SQUIRREL</name>
+    <inputsourceid_equal>com.googlecode.rimeime.inputmethod.Squirrel.Rime</inputsourceid_equal>
+  </vkchangeinputsourcedef>
   <item>
       <name>Use PC Style Home/End</name>
       <identifier>private.fix_home_end.dvorak</identifier>
@@ -100,11 +104,6 @@
     </autogen>
     <autogen>
         __KeyToKey__
-        KeyCode::K, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
-        KeyCode::VK_OPEN_URL_TELEGRAM,
-    </autogen>
-    <autogen>
-        __KeyToKey__
         KeyCode::Y, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_FIREFOX,
     </autogen>
@@ -122,6 +121,25 @@
         __KeyToKey__
         KeyCode::R, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_TYPE2PHONE,
+    </autogen>
+  </item>
+  <item>
+    <name>Switch Input Source</name>
+    <identifier>private.switch_input_source</identifier>
+    <autogen>
+        __KeyToKey__
+        KeyCode::1, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_CHANGE_INPUTSOURCE_US
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::2, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_CHANGE_INPUTSOURCE_DVORAK
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::3, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_CHANGE_INPUTSOURCE_SQUIRREL
     </autogen>
   </item>
 </root>

@@ -14,7 +14,7 @@ Input Source
 Option-Space        Previous Input Source
 ```
 
-Keyboard Section
+Keyboard Section (Not Used)
 ```
 Ctrl-Cmd-0          Change the way Tab moves focus
 Ctrl-Cmd-1          Turn keyboard access on or off
