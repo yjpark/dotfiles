@@ -76,6 +76,9 @@ fi
 if [[ "$(uname)" == "Linux" ]]; then
   fresh 'git/config.linux/*' --file='~/.gitconfig' --marker='#'
 fi
+if [[ "$(uname)" == "MSYS_NT-10.0" ]]; then
+  fresh 'git/config.msys/*' --file='~/.gitconfig' --marker='#'
+fi
 
 # =====================================================
 # tmux

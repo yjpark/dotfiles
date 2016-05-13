@@ -21,3 +21,5 @@ bind \x5b\x42 down-or-search
 bind \x5b\x43 forward-char
 bind \x5b\x44 backward-char
 
+alias a "ag --smart-case --search-files"
+

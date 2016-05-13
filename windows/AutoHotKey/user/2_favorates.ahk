@@ -2,6 +2,13 @@
 Send #{Tab}
 return
 
+^`::
+IfWinActive, ahk_class TMobaXtermForm
+    Send !{Tab}
+else
+    WinActivate ahk_class TMobaXtermForm
+return
+
 ^!`::
 IfWinActive, ahk_exe mintty.exe
     Send !{Tab}
