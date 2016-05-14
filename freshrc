@@ -96,6 +96,9 @@ fi
 if [[ "$(uname)" == "Linux" ]]; then
   fresh 'tmux/linux/*' --file='~/.tmux.conf'
 fi
+if [[ "$(uname)" == "MSYS_NT-10.0" ]]; then
+  fresh 'tmux/msys/*' --file='~/.tmux.conf'
+fi
 
 
 # =====================================================
