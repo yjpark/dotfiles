@@ -24,20 +24,21 @@ fi
 # run bootstrap-oh-my-fish to install oh-my-fish
 fresh 'fish/config/*' --file='~/.config/fish/config.fish'
 fresh 'fish/aliases/*' --file='~/.config/fish/aliases.fish'
-fresh 'fish/functions' --file='~/.config/fish/functions/'
-fresh 'fish/custom' --file='~/.config/fish/custom/'
-# run fresh-fish-custom to install fish custom stuffs
 if [[ "$(uname)" == "Darwin" ]]; then
   fresh 'fish/config.osx/*' --file='~/.config/fish/config.fish'
   fresh 'fish/aliases.osx/*' --file='~/.config/fish/aliases.fish'
 fi
 if [[ "$(uname)" == "Linux" ]]; then
   fresh 'fish/config.linux/*' --file='~/.config/fish/config.fish'
+  fresh 'fish/aliases.linux/*' --file='~/.config/fish/aliases.fish'
 fi
 if [[ "$(uname)" == "MSYS_NT-10.0" ]]; then
   fresh 'fish/config.msys/*' --file='~/.config/fish/config.fish'
+  fresh 'fish/aliases.msys/*' --file='~/.config/fish/aliases.fish'
 fi
-
+fresh 'fish/functions' --file='~/.config/fish/functions/'
+fresh 'fish/custom' --file='~/.config/fish/custom/'
+# run fresh-fish-custom to install fish custom stuffs
 
 # =====================================================
 # Bash settings
