@@ -59,10 +59,10 @@ else
 return
 
 ^!s::
-IfWinActive, ahk_exe ApplicationFrameHost.exe
+IfWinActive, ^.*Microsoft Edge$ ahk_exe ApplicationFrameHost.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe ApplicationFrameHost.exe
+    WinActivate ^.*Microsoft Edge$ ahk_exe ApplicationFrameHost.exe
 return
 
 ^!i::
@@ -105,6 +105,13 @@ IfWinActive, ahk_exe xmind.exe
     Send !{Tab}
 else
     WinActivate ahk_exe xmind.exe
+return
+
+^!d::
+IfWinActive, ahk_exe code.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe code.exe
 return
 
 ^!Space::
