@@ -1,3 +1,5 @@
+SetTitleMatchMode 2
+
 ^Tab::
 Send #{Tab}
 return
@@ -59,10 +61,10 @@ else
 return
 
 ^!s::
-IfWinActive, ^.*Microsoft Edge$ ahk_exe ApplicationFrameHost.exe
+IfWinActive, "Microsoft Edge" ahk_exe ApplicationFrameHost.exe
     Send !{Tab}
 else
-    WinActivate ^.*Microsoft Edge$ ahk_exe ApplicationFrameHost.exe
+    WinActivate "Microsoft Edge" ahk_exe ApplicationFrameHost.exe
 return
 
 ^!i::
