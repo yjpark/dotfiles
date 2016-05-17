@@ -45,6 +45,10 @@
     <url type="file">/Applications/MonoDevelop.app</url>
   </vkopenurldef>
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_VSCODE</name>
+    <url type="file">/Applications/Visual Studio Code.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_TYPE2PHONE</name>
     <url type="file">/Applications/Type2Phone.app</url>
   </vkopenurldef>
@@ -116,6 +120,11 @@
         __KeyToKey__
         KeyCode::SEMICOLON, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_SAFARI,
+    </autogen>
+    <autogen>
+        __KeyToKey__
+        KeyCode::H, VK_CONTROL | VK_COMMAND | ModifierFlag::NONE,
+        KeyCode::VK_OPEN_URL_VSCODE,
     </autogen>
     <autogen>
         __KeyToKey__
