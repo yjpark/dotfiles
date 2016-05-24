@@ -3,4 +3,5 @@
      "http.proxy": "http://127.0.0.1:1102",
      "editor.referenceInfos": false,
      "editor.fontFamily": "Source Code Pro for Powerline",
+     "openvim.executablePath": "/Applications/MacVim.app/Contents/MacOS/MacVim",
 }
