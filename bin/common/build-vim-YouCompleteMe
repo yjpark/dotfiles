@@ -10,11 +10,11 @@ if [[ "$(uname)" == "Linux" ]]; then
     # sudo install-current-mono
 fi
 
-./install.sh --clang-completer --omnisharp-completer
+./install.py --clang-completer --omnisharp-completer
 
-if [[ "$(uname)" == "Linux" ]]; then
+#if [[ "$(uname)" == "Linux" ]]; then
     # echo "/opt/monodevelop/bin/monodevelop-launcher.sh ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/OmniSharpServer/OmniSharp.sln
     # ~/.dotfiles/vim/patches/YouCompleteMe_linux/patch_cs_completer_with_newer_mono
-fi
+#fi
 
 echo "Windows: using visual studio or express version to build OmniSharpServer"
