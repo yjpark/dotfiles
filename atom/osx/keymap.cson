@@ -26,3 +26,4 @@
 
 'atom-text-editor':
     'shift-cmd-t': 'date:time'
+    'shift-cmd-f': 'narrow:search'

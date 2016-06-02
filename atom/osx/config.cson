@@ -1,48 +1,62 @@
 "*":
-  "exception-reporting":
-    userId: "1c11f54d-7cce-3800-3256-345cb5618415"
-  welcome:
-    showOnStartup: false
+  Zen:
+    softWrap: true
+  "atom-ctags":
+    autoBuildTagsWhenActive: true
+  "atom-fuzzy-grep":
+    detectGitProjectAndUseGitGrep: false
+    grepCommandString: "/usr/local/bin/ag --nogroup --nocolor --column --smart-case --ignore=*.meta"
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: true
+    confirmCompletion: "tab"
   core:
-    themes: [
-      "atom-dark-ui"
-      "solarized-dark-syntax"
-    ]
     autoHideMenuBar: true
     disabledPackages: [
       "vim-mode"
       "symbols-view"
+      "minimap"
+      "japanese-wrap"
     ]
-  Zen:
-    softWrap: true
-  editor:
-    invisibles:
-      {}
-    tabLength: 4
-    fontSize: 18
-    lineHeight: 1.4
-    fontFamily: "Source Code Pro for Powerline"
-    scrollPastEnd: true
-    softWrap: true
-  "git-plus":
-    {}
+    packagesWithKeymapsDisabled: [
+      "markdown-writer"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "solarized-dark-syntax"
+    ]
   date:
     timeFormat: "### HH24:MI"
-  linter:
-    {}
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  editor:
+    fontFamily: "Source Code Pro for Powerline Light"
+    fontSize: 20
+    invisibles: {}
+    lineHeight: 1.8
+    scrollPastEnd: true
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "1c11f54d-7cce-3800-3256-345cb5618415"
+  "fuzzy-finder": {}
+  "git-plus": {}
+  "japanese-wrap":
+    characterWidth: {}
+  linter: {}
+  "markdown-writer": {}
   minimap:
     scrollAnimation: true
+  narrow: {}
+  "omnisharp-atom":
+    altGotoDefinition: true
+    autoAddExternalProjects: true
+    autoAdjustTreeView: true
+  "symbols-tree-view": {}
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode":
-    useSmartcaseForSearch: true
     useClipboardAsDefaultRegister: true
-  "atom-ctags":
-    autoBuildTagsWhenActive: true
-  "symbols-tree-view":
-    {}
-  "atom-fuzzy-grep":
-    grepCommandString: "ag --nogroup --nocolor --column --smart-case --ignore=*.meta"
-    detectGitProjectAndUseGitGrep: false
-  "fuzzy-finder":
-    {}
+    useSmartcaseForSearch: true
+  welcome:
+    showOnStartup: false
+".narrow.source":
+  editor:
+    tabLength: 4
