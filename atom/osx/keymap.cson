@@ -27,3 +27,4 @@
 'atom-text-editor':
     'shift-cmd-t': 'date:time'
     'shift-cmd-f': 'narrow:search'
+    'shift-cmd-w': 'tabs:close-other-tabs'

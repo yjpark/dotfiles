@@ -26,3 +26,5 @@
 
 'atom-text-editor':
     'shift-alt-t': 'date:time'
+    'shift-alt-f': 'narrow:search'
+    'shift-alt-w': 'tabs:close-other-tabs'
