@@ -47,13 +47,13 @@ autocmd BufEnter * call YJParkSyncTree()
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
+    \ "Modified"  : "✿",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
     \ "Renamed"   : "➜",
     \ "Unmerged"  : "═",
     \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
+    \ "Dirty"     : "❀",
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
