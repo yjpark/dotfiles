@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rm ~/Library/Caches/CloudKit/CloudKitMetadata*
+pkill -9 com.apple.ICPPhotoStreamLibraryService
+pkill -9 com.apple.CloudPhotosConfiguration
+pkill -9 cloudphotosd
