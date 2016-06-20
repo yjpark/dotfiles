@@ -14,7 +14,6 @@
     disabledPackages: [
       "vim-mode"
       "symbols-view"
-      "minimap"
       "japanese-wrap"
     ]
     packagesWithKeymapsDisabled: [
@@ -41,14 +40,23 @@
   "japanese-wrap":
     characterWidth: {}
   linter: {}
+  "markdown-mindmap":
+    theme: "colorful-dark"
   "markdown-writer": {}
   minimap:
+    adjustAbsoluteModeHeight: true
     scrollAnimation: true
   narrow: {}
   "omnisharp-atom":
     altGotoDefinition: true
     autoAddExternalProjects: true
     autoAdjustTreeView: true
+  "split-diff":
+    diffWords: true
+    ignoreWhitespace: true
+    leftEditorColor: "red"
+    rightEditorColor: "green"
+    syncHorizontalScroll: true
   "symbols-tree-view": {}
   "tree-view":
     hideVcsIgnoredFiles: true
