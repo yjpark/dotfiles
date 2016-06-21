@@ -1,0 +1,5 @@
+#!/bin/bash
+# http://blog.shvetsov.com/2013/02/access-android-app-data-without-root.html
+
+# adb backup -f ~/data.ab -noapk app.package.name
+db backup -f $1 -noapk $2

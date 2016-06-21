@@ -1,0 +1,6 @@
+#!/bin/bash
+# http://blog.shvetsov.com/2013/02/access-android-app-data-without-root.html
+# dd if=data.ab bs=1 skip=24 | openssl zlib -d | tar -xvf -
+# dd if=data.ab bs=1 skip=24 | python -c "import zlib,sys;sys.stdout.write(zlib.decompress(sys.stdin.read()))" | tar -xvf -
+
+dd if=$1 bs=1 skip=24 | python2.7 -c "import zlib,sys;sys.stdout.write(zlib.decompress(sys.stdin.read()))" | tar -xvf -
