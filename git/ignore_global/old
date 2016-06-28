@@ -10,11 +10,11 @@
 ###################
 *.pyc
 *.com
-*.class
+# *.class
 #*.dll
 *.exe
 *.o
-*.so
+# *.so
 build
 
 # Packages #
