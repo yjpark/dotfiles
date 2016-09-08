@@ -1,6 +1,9 @@
 "*":
   Zen:
     softWrap: true
+  "activate-power-mode":
+    screenShake:
+      enabled: false
   "atom-ctags":
     autoBuildTagsWhenActive: true
   "atom-fuzzy-grep":
