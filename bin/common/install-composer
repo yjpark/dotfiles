@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/bin
+php ~/.dotfiles/bin/common/install-composer.php
