@@ -1,6 +1,5 @@
-NeoBundle 'reedes/vim-thematic'
-
-NeoBundle 'yjpark/molokai'
+" call dein#add('reedes/vim-thematic'
+" call dein#add('yjpark/molokai'
 
 "nnoremap <silent> <D-9> <Plug>ThematicNarrow
 "nnoremap <silent> <D-0> <Plug>ThematicWiden
