@@ -4,7 +4,7 @@ cd ~/.vim/bundle/YouCompleteMe
 git pull
 git submodule update --init --recursive
 
-echo "install brew's python3: brew install python3"
+echo "install python3 from https://www.python.org/downloads/mac-osx/"
 
 /usr/local/bin/python3 install.py --clang-completer --omnisharp-completer
 
