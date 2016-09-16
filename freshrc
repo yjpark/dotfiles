@@ -59,6 +59,19 @@ if [[ "$(uname)" == "Linux" ]]; then
 fi
 
 # =====================================================
+# NeoVim settings
+# run bootstrap-dein to install dein.vim
+fresh 'nvim/init.vim' --file='~/.config/nvim/init.vim'
+fresh 'nvim/bundle/*' --file='~/.config/nvim/init.bundle.vim' --marker='"'
+fresh 'nvim/after/*' --file='~/.config/nvim/init.after.vim' --marker='"'
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'nvim/after.linux/*' --file='~/.config/nvim/init.after.vim' --marker='"'
+fi
+if [[ "$(uname)" == "Darwin" ]]; then
+  fresh 'nvim/after.osx/*' --file='~/.config/nvim/init.after.vim' --marker='"'
+fi
+
+# =====================================================
 # janus settings
 # https://github.com/carlhuda/.janus/
 # run bootstrap-janus to install janus

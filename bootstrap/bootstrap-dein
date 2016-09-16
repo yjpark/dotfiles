@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./_bootstrap-dein.sh ~/.config/nvim/bundle
