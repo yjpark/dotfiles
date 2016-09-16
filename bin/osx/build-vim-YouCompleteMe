@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd ~/.vim/bundle/YouCompleteMe
+git pull
+git submodule update --init --recursive
+
+echo "install brew's python3: brew install python3"
+
+/usr/local/bin/python3 install.py --clang-completer --omnisharp-completer
+
+#echo "Windows: using visual studio or express version to build OmniSharpServer"
