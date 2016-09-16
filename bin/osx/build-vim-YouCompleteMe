@@ -8,4 +8,11 @@ echo "install python3 from https://www.python.org/downloads/mac-osx/"
 
 /usr/local/bin/python3 install.py --clang-completer --omnisharp-completer
 
+cd ~/.config/nvim/bundle/YouCompleteMe
+git pull
+git submodule update --init --recursive
+
+/usr/local/bin/python3 install.py --clang-completer --omnisharp-completer
+cp -r thirdparty/ycmd ../.dein/thirdparty/
+
 #echo "Windows: using visual studio or express version to build OmniSharpServer"
