@@ -1,9 +1,9 @@
 " call dein#add('scrooloose/nerdtree')
 " call dein#add('Xuyuanp/nerdtree-git-plugin')
 
-let s:cache_dir = get(g:dotvim_settings, 'cache_dir', '~/.config/nvim/.cache')
+" let s:cache_dir = get(g:dotvim_settings, 'cache_dir', '~/.config/nvim/.cache')
 function! s:get_cache_dir(suffix) "{{{
-    return resolve(expand(s:cache_dir . '/' . a:suffix))
+    return resolve(expand('~/.config/nvim/.cache' . '/' . a:suffix))
 endfunction "}}}
 
 let NERDTreeShowHidden=1
