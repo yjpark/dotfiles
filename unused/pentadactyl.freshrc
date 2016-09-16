@@ -125,6 +125,10 @@ else
   fresh 'fresh/yjpark/mu-repo/mu_repo' --bin
 fi
 
+# =====================================================
+# Pentadactyl
+fresh 'pentadactylrc' --file='~/.pentadactylrc'
+fresh 'pentadactyl' --file='~/.pentadactyl/'
 
 # =====================================================
 # misc settings
