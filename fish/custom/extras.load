@@ -1,4 +1,4 @@
 . ~/.config/fish/extras/z-fish/z.fish
-. ~/.config/fish/extras/bass/bass.fish
+. ~/.config/fish/extras/bass/functions/bass.fish
 
 . ~/.config/fish/custom/bass_aliases.fish
