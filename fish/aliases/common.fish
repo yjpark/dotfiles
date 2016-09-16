@@ -30,8 +30,8 @@ alias scp "scp -C -p"
 alias mosh "mosh --ssh='ssh -A'"
 
 # some custom alias
-alias e "vim"
-alias vi "vim"
+alias e "nvim"
+alias v "vim"
 alias cp "cp -v"
 alias mv "mv -v"
 
