@@ -38,16 +38,14 @@ set noshowmode
 set cursorline
 autocmd WinLeave * setlocal nocursorline
 autocmd WinEnter * setlocal cursorline
-let &colorcolumn=s:settings.max_column
-if s:settings.enable_cursorcolumn
+
 set nocursorcolumn
 autocmd InsertLeave * setlocal nocursorcolumn
 autocmd InsertEnter * setlocal cursorcolumn
-endif
 
 if $SHELL =~ '/fish$'
 " VIM expects to be run from a POSIX shell.
-set shell=sh
+  set shell=sh
 endif
 
 set noshelltemp                                     "use pipes
@@ -57,14 +55,10 @@ set backspace=indent,eol,start                      "allow backspacing everythin
 set autoindent                                      "automatically indent to match adjacent lines
 set expandtab                                       "spaces instead of tabs
 set smarttab                                        "use shiftwidth to enter tabs
-let &tabstop=s:settings.default_indent              "number of spaces per tab for display
-let &softtabstop=s:settings.default_indent          "number of spaces per tab in insert mode
-let &shiftwidth=s:settings.default_indent           "number of spaces when indenting
 set list                                            "highlight whitespace
 set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
 set shiftround
 set linebreak
-let &showbreak='↪ '
 
 set scrolloff=1                                     "always show content after scroll
 set scrolljump=5                                    "minimum number of lines to scroll
