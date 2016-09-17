@@ -27,3 +27,20 @@ set clipboard=unnamed
 " http://blog.csdn.net/nyist327/article/details/38873739
 set fileencodings=ucs-bom,utf-8,cp936
 set fileencoding=utf-8
+
+set showmatch                                       "automatically highlight matching braces/brackets/etc.
+set matchtime=2                                     "tens of a second to show matching parentheses
+set number
+set lazyredraw
+set laststatus=2
+set noshowmode
+
+set cursorline
+autocmd WinLeave * setlocal nocursorline
+autocmd WinEnter * setlocal cursorline
+let &colorcolumn=s:settings.max_column
+if s:settings.enable_cursorcolumn
+set nocursorcolumn
+autocmd InsertLeave * setlocal nocursorcolumn
+autocmd InsertEnter * setlocal cursorcolumn
+endif
