@@ -44,3 +44,46 @@ set nocursorcolumn
 autocmd InsertLeave * setlocal nocursorcolumn
 autocmd InsertEnter * setlocal cursorcolumn
 endif
+
+if $SHELL =~ '/fish$'
+" VIM expects to be run from a POSIX shell.
+set shell=sh
+endif
+
+set noshelltemp                                     "use pipes
+
+" whitespace
+set backspace=indent,eol,start                      "allow backspacing everything in insert mode
+set autoindent                                      "automatically indent to match adjacent lines
+set expandtab                                       "spaces instead of tabs
+set smarttab                                        "use shiftwidth to enter tabs
+let &tabstop=s:settings.default_indent              "number of spaces per tab for display
+let &softtabstop=s:settings.default_indent          "number of spaces per tab in insert mode
+let &shiftwidth=s:settings.default_indent           "number of spaces when indenting
+set list                                            "highlight whitespace
+set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
+set shiftround
+set linebreak
+let &showbreak='↪ '
+
+set scrolloff=1                                     "always show content after scroll
+set scrolljump=5                                    "minimum number of lines to scroll
+set display+=lastline
+set wildmenu                                        "show list for autocomplete
+set wildmode=longest:full
+set wildignorecase
+
+set splitbelow
+set splitright
+
+" disable sounds
+set noerrorbells
+set novisualbell
+set t_vb=
+
+" searching
+set hlsearch                                        "highlight searches
+set incsearch                                       "incremental searching
+set ignorecase                                      "ignore case for searching
+set smartcase                                       "do case-sensitive if there's a capital letter
+
