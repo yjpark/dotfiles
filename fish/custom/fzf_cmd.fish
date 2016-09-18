@@ -1,5 +1,3 @@
-# https://github.com/junegunn/fzf/issues/60
-# need to use the ruby... version with pipe
 function ,o
     fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)

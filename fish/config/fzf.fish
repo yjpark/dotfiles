@@ -1,2 +1,3 @@
 set -x PATH $PATH ~/.external/tools/fzf/bin
-alias fzf fzf-tmux
+alias f "fzf --ansi"
+alias ft "fzf-tmux --ansi"
