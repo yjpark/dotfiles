@@ -1,19 +1,10 @@
+# Key bindings
+# ------------
 function fzf_key_bindings
   # Due to a bug of fish, we cannot use command substitution,
   # so we use temporary file instead
   if [ -z "$TMPDIR" ]
     set -g TMPDIR /tmp
-  end
-
-  function __fzf_list
-    command find * -path '*/\.*' -prune \
-      -o -type f -print \
-      -o -type d -print \
-      -o -type l -print 2> /dev/null
-  end
-
-  function __fzf_list_dir
-    command find * -path '*/\.*' -prune -o -type d -print 2> /dev/null
   end
 
   function __fzf_escape
@@ -22,54 +13,59 @@ function fzf_key_bindings
     end
   end
 
-  function __fzf_ctrl_t
-    if [ -n "$TMUX_PANE" -a "$FZF_TMUX" != "0" ]
-      tmux split-window (__fzf_tmux_height) "fish -c 'fzf_key_bindings; __fzf_ctrl_t_tmux \\$TMUX_PANE'"
-    else
-      __fzf_list | fzf -m > $TMPDIR/fzf.result
-      and commandline -i (cat $TMPDIR/fzf.result | __fzf_escape)
-      commandline -f repaint
-      rm -f $TMPDIR/fzf.result
-    end
-  end
-
-  function __fzf_ctrl_t_tmux
-    __fzf_list | fzf -m > $TMPDIR/fzf.result
-    and tmux send-keys -t $argv[1] (cat $TMPDIR/fzf.result | __fzf_escape)
+  function fzf-file-widget
+    set -q FZF_CTRL_T_COMMAND; or set -l FZF_CTRL_T_COMMAND "
+    command find -L . \\( -path '*/\\.*' -o -fstype 'dev' -o -fstype 'proc' \\) -prune \
+      -o -type f -print \
+      -o -type d -print \
+      -o -type l -print 2> /dev/null | sed 1d | cut -b3-"
+    eval "$FZF_CTRL_T_COMMAND | "(__fzfcmd)" -m $FZF_CTRL_T_OPTS > $TMPDIR/fzf.result"
+    and for i in (seq 20); commandline -i (cat $TMPDIR/fzf.result | __fzf_escape) 2> /dev/null; and break; sleep 0.1; end
+    commandline -f repaint
     rm -f $TMPDIR/fzf.result
   end
 
-  function __fzf_ctrl_r
-    history | fzf +s +m > $TMPDIR/fzf.result
+  function fzf-history-widget
+    history | eval (__fzfcmd) +s +m --tiebreak=index --toggle-sort=ctrl-r $FZF_CTRL_R_OPTS > $TMPDIR/fzf.result
     and commandline (cat $TMPDIR/fzf.result)
     commandline -f repaint
     rm -f $TMPDIR/fzf.result
   end
 
-  function __fzf_alt_c
+  function fzf-cd-widget
+    set -q FZF_ALT_C_COMMAND; or set -l FZF_ALT_C_COMMAND "
+    command find -L . \\( -path '*/\\.*' -o -fstype 'dev' -o -fstype 'proc' \\) -prune \
+      -o -type d -print 2> /dev/null | sed 1d | cut -b3-"
     # Fish hangs if the command before pipe redirects (2> /dev/null)
-    __fzf_list_dir | fzf +m > $TMPDIR/fzf.result
+    eval "$FZF_ALT_C_COMMAND | "(__fzfcmd)" +m $FZF_ALT_C_OPTS > $TMPDIR/fzf.result"
     [ (cat $TMPDIR/fzf.result | wc -l) -gt 0 ]
     and cd (cat $TMPDIR/fzf.result)
     commandline -f repaint
     rm -f $TMPDIR/fzf.result
   end
 
-  function __fzf_tmux_height
-    if set -q FZF_TMUX_HEIGHT
-      set height $FZF_TMUX_HEIGHT
+  function __fzfcmd
+    set -q FZF_TMUX; or set FZF_TMUX 1
+
+    if [ $FZF_TMUX -eq 1 ]
+      if set -q FZF_TMUX_HEIGHT
+        echo "fzf-tmux -d$FZF_TMUX_HEIGHT"
+      else
+        echo "fzf-tmux -d40%"
+      end
     else
-      set height 40%
+      echo "fzf"
     end
-    if echo $height | grep -q -E '%$'
-      echo "-p "(echo $height | sed 's/%$//')
-    else
-      echo "-l $height"
-    end
-    set -e height
   end
 
-  bind \ct '__fzf_ctrl_t'
-  bind \cr '__fzf_ctrl_r'
-  bind \ec '__fzf_alt_c'
+  bind \ct fzf-file-widget
+  bind \cr fzf-history-widget
+  bind \ec fzf-cd-widget
+
+  if bind -M insert > /dev/null 2>&1
+    bind -M insert \ct fzf-file-widget
+    bind -M insert \cr fzf-history-widget
+    bind -M insert \ec fzf-cd-widget
+  end
 end
+
