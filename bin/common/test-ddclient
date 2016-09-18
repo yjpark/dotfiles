@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ddclient -daemon=0 -debug -verbose -noquiet
