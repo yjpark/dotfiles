@@ -18,7 +18,7 @@ end
 
 function ,d
     find . -path '*/\.*' -prune -o -type d -print 2> /dev/null | \
-    /usr/bin/ruby --disable-gems ~/.external/tools/fzf/fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
+    fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
         cd (cat /tmp/fzf_fish.last)
@@ -27,7 +27,7 @@ end
 
 function ,da
     find . -type d 2> /dev/null | \
-    /usr/bin/ruby --disable-gems ~/.external/tools/fzf/fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
+    fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
         cd (cat /tmp/fzf_fish.last)
@@ -43,11 +43,11 @@ function ,df
 end
 
 function ,kill
-    ps -ef | sed 1d | /usr/bin/ruby --disable-gems ~/.external/tools/fzf/fzf --select-1 --exit-0 +m -x | awk '{print $2}' | xargs kill
+    ps -ef | sed 1d | fzf --select-1 --exit-0 +m -x | awk '{print $2}' | xargs kill
 end
 
 function j
-    cat $HOME/.z | sed "s/|.*//" | /usr/bin/ruby --disable-gems ~/.external/tools/fzf/fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
+    cat $HOME/.z | sed "s/|.*//" | fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
         cd (cat /tmp/fzf_fish.last)
