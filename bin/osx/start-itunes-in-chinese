@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /tmp/
-nohup /Applications/iTunes.app/Contents/MacOS/iTunes -AppleLanguages "(zh)" &
+nohup /Applications/iTunes.app/Contents/MacOS/iTunes -AppleLanguages "(zh-Hans)" &
