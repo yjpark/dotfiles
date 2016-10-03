@@ -5,4 +5,4 @@ set -U fish_color_normal    normal
 set -U fish_color_command   yellow
 set -U fish_color_param     green
 
-source $fisher_home/config.fish
+source $fisher_home/fisher.fish

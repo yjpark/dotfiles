@@ -6,6 +6,7 @@ curl -vsSf https://sh.rustup.rs > ~/.dotfiles/bootstrap/bootstrap-rust-up
 curl -vsSL https://www.parse.com/downloads/cloud_code/installer.sh > ~/.dotfiles/bootstrap/bootstrap-parse
 curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/bootstrap/bootstrap-nix
 curl -vsSL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > _bootstrap-dein.sh
+curl -vsSL https://git.io/fundle-install > _bootstarp-fish-fundle.fish
 
 chmod 755 ~/.dotfiles/bootstrap/bootstrap*
 chmod 755 ~/.dotfiles/bootstrap/_bootstrap*.sh
