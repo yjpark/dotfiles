@@ -40,3 +40,9 @@ NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'severin-lemaignan/vim-minimap'
 
 NeoBundle 'dhruvasagar/vim-vinegar'
+NeoBundle 'ElmCast/elm-vim'
+if !exists("g:ycm_semantic_triggers")
+   let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['elm'] = ['.']
+

@@ -1,0 +1,39 @@
+
+   *------------------------------------------------------*
+   | Sign your work.                                      |
+   |                                                      |
+   | Craftsmen of an earlier age were proud to sign their |
+   | work. You should be, too.                            |
+   *------------------------------------------------------*
+          o
+           o   ^__^
+            o  (oo)\_______
+               (__)\       )\/\
+                   ||----w |
+                   ||     ||
+
+   [e]  <empty buffer>
+
+   MRU
+
+   [0]  ~/.dotfiles/nvim/bundle/elm.vim
+   [1]  ~/.dotfiles/vim/vimrc.after/extras.vim
+   [2]  ~/.dotfiles/vim/vimrc.after.osx/extras.vim
+   [3]  ~/.dotfiles/vim/unused/extras.vim
+   [4]  ~/.dotfiles/fish/aliases/grep.fish
+   [5]  ~/.dotfiles/fish/config.osx/homebrew.fish
+   [6]  ~/.dotfiles/fish/aliases.osx/brew-coreutils.fish
+   [7]  ~/bin/start-itunes-in-chinese
+   [8]  ~/.dotfiles/bin/osx/start-itunes-in-chinese
+   [9]  ~/projects/angeldnd/unity-libs/Modules/TopDown/Scripts/TopDown/map_/TopDownMap.cs
+
+   MRU /Users/yjpark/.dotfiles/nvim
+
+   [10] bundle/elm.vim
+   [11] bundle/startify.vim
+   [12] bundle/supertab.vim
+   [13] after/fzf.vim
+   [14] after/you-complete-me.vim
+   [15] init.vim
+
+   [q]  <quit>
