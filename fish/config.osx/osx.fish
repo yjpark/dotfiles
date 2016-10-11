@@ -1,8 +1,6 @@
 alias airport /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport
 alias wifi "airport -s; airport -I"
 
-set -x PATH $PATH ~/Applications/adt-bundle-mac-x86_64-20140702/sdk/tools ~/Applications/adt-bundle-mac-x86_64-20140702/sdk/platform-tools ~/Applications/adt-bundle-mac-x86_64-20140702/sdk/build-tools/android-4.4W
-
 # Old Marmalade 
 # set -x PATH $PATH /Applications/Marmalade.app/Contents/tools/dzip
 
