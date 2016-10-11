@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ $1 ] ; then 
+    nohup /Applications/Xamarin\ Studio.app/Contents/MacOS/XamarinStudio --new-window $1 > /tmp/xamarin-$1.nohup &
+    exit 0
+fi

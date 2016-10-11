@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nuget config -Set http_proxy="http://localhost:1102"
