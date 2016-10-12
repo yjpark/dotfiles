@@ -10,6 +10,16 @@
       <SpaceAfterMethodCallName>False</SpaceAfterMethodCallName>
       <SpaceBeforeOpenSquareBracket>False</SpaceBeforeOpenSquareBracket>
     </CSharpFormattingPolicy>
+    <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="application/xaml+xml" />
+    <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xaml+xml">
+      <DefaultFormat>
+        <AttributesInNewLine>True</AttributesInNewLine>
+        <MaxAttributesPerLine>1</MaxAttributesPerLine>
+        <AlignAttributes>True</AlignAttributes>
+        <SpacesBeforeAssignment>1</SpacesBeforeAssignment>
+        <SpacesAfterAssignment>1</SpacesAfterAssignment>
+      </DefaultFormat>
+    </XmlFormattingPolicy>
     <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="application/xml" />
     <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xml">
       <DefaultFormat>
