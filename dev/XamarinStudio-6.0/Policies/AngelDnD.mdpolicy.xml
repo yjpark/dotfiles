@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Policies>
   <PolicySet name="AngelDnD">
-    <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="text/x-csharp" />
+    <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/plain" />
+    <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/x-csharp" />
     <CSharpFormattingPolicy inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp">
       <IndentSwitchSection>True</IndentSwitchSection>
       <NewLinesForBracesInTypes>False</NewLinesForBracesInTypes>
@@ -10,7 +11,7 @@
       <SpaceAfterMethodCallName>False</SpaceAfterMethodCallName>
       <SpaceBeforeOpenSquareBracket>False</SpaceBeforeOpenSquareBracket>
     </CSharpFormattingPolicy>
-    <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="application/xaml+xml" />
+    <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="application/xaml+xml" />
     <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xaml+xml">
       <DefaultFormat>
         <AttributesInNewLine>True</AttributesInNewLine>
@@ -20,7 +21,7 @@
         <SpacesAfterAssignment>1</SpacesAfterAssignment>
       </DefaultFormat>
     </XmlFormattingPolicy>
-    <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="application/xml" />
+    <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="application/xml" />
     <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xml">
       <DefaultFormat>
         <AttributesInNewLine>True</AttributesInNewLine>
