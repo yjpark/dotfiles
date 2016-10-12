@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Policies>
+  <PolicySet name="AngelDnD">
+    <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="text/x-csharp" />
+    <CSharpFormattingPolicy inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp">
+      <IndentSwitchSection>True</IndentSwitchSection>
+      <NewLinesForBracesInTypes>False</NewLinesForBracesInTypes>
+      <NewLinesForBracesInMethods>False</NewLinesForBracesInMethods>
+      <SpacingAfterMethodDeclarationName>False</SpacingAfterMethodDeclarationName>
+      <SpaceAfterMethodCallName>False</SpaceAfterMethodCallName>
+      <SpaceBeforeOpenSquareBracket>False</SpaceBeforeOpenSquareBracket>
+    </CSharpFormattingPolicy>
+    <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="application/xaml+xml" />
+    <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xaml+xml">
+      <DefaultFormat>
+        <AttributesInNewLine>True</AttributesInNewLine>
+        <MaxAttributesPerLine>1</MaxAttributesPerLine>
+        <AlignAttributes>True</AlignAttributes>
+        <AlignAttributeValues>True</AlignAttributeValues>
+      </DefaultFormat>
+    </XmlFormattingPolicy>
+    <TextStylePolicy inheritsSet="Mono" inheritsScope="text/plain" scope="application/xml" />
+    <XmlFormattingPolicy inheritsSet="Mono" inheritsScope="application/xml" scope="application/xml">
+      <DefaultFormat>
+        <AttributesInNewLine>True</AttributesInNewLine>
+        <MaxAttributesPerLine>1</MaxAttributesPerLine>
+        <AlignAttributes>True</AlignAttributes>
+        <AlignAttributeValues>True</AlignAttributeValues>
+      </DefaultFormat>
+    </XmlFormattingPolicy>
+  </PolicySet>
+</Policies>
