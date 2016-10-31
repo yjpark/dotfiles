@@ -1,8 +1,0 @@
-// Place your settings in this file to overwrite the default settings
-{
-     "http.proxy": "http://127.0.0.1:1102",
-     "editor.referenceInfos": false,
-     "editor.fontFamily": "Source Code Pro for Powerline",
-     "files.trimTrailingWhitespace": true,
-     "openvim.executablePath": "/Applications/MacVim.app/Contents/MacOS/MacVim",
-}

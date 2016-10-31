@@ -1,6 +1,0 @@
-// Place your key bindings in this file to overwrite the defaults
-[
-    { "key": "ctrl+g",                "command": "editor.action.goToDeclaration",
-                                      "when": "editorTextFocus" },
-    { "key": "ctrl+h",                "command": "workbench.action.gotoLine" },
-]
