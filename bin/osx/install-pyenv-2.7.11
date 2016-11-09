@@ -1,0 +1,4 @@
+#!/bin/bash
+# https://github.com/yyuu/pyenv/wiki/Common-build-problems
+
+CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install -v 2.7.11
