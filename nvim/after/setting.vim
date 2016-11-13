@@ -55,9 +55,6 @@ set backspace=indent,eol,start                      "allow backspacing everythin
 set autoindent                                      "automatically indent to match adjacent lines
 set expandtab                                       "spaces instead of tabs
 set smarttab                                        "use shiftwidth to enter tabs
-let &tabstop=4                                      "number of spaces per tab for display
-let &softtabstop=4                                  "number of spaces per tab in insert mode
-let &shiftwidth=4                                   "number of spaces when indenting
 set list                                            "highlight whitespace
 set listchars=tab:│\ ,trail:•,extends:❯,precedes:❮
 set shiftround
