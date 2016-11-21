@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://developer.apple.com/news/?id=09222015a
 
 spctl --assess --verbose /Applications/Xcode.app

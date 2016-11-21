@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Met a problem that visual studio can't load solution
 # http://stackoverflow.com/questions/17596543/error-message-no-exports-were-found-that-match-the-constraint-contract-name
 

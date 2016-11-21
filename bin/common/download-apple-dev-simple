@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #wget --limit-rate=1000k --tries=inf --server-response --continue --header "Cookie: ADCDownloadAuth=$2" $1
 axel -H "Cookie: ADCDownloadAuth=$2" $1

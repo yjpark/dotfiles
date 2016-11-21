@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 apm install japanese-wrap zen language-fish-shell git-plus
 apm install date minimap atom-ctags symbols-tree-view color-picker

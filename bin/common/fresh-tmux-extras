@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # https://github.com/mixu/tmux-cpu
 npm install -g tmux-cpu

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # http://www.ubuntuupdates.org/ppa/getdeb_apps?dist=trusty
 

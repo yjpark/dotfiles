@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # http://codeimpossible.com/2011/12/16/Stupid-Git-Trick-getting-contributor-stats/
 
 # git log --author="$1" --pretty=tformat: --numstat | \

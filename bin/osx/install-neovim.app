@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 brew tap rogual/neovim-dot-app
 brew install neovim-dot-app

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # http://apple.stackexchange.com/questions/14001/how-to-turn-off-all-animations-on-os-x/
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Used to use freshshell, later switched to a simple own version
 # I don't need most of its feature (e.g. from another git repo).

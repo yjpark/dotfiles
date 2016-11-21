@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # http://stackoverflow.com/questions/6017987/is-there-a-way-in-git-to-list-all-deleted-files-in-the-repository
 # Can add path as parameters to limit the deletes in folder

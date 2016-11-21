@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cd ~/Applications/fiddler
 /Library/Frameworks/Mono.framework/Versions/4.6.1/bin/mono Fiddler.exe

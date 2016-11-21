@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Need to install gist command line tool
 # https://github.com/defunkt/gist

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # https://github.com/nosami/OmniSharpServer/wiki
 
 sudo add-apt-repository ppa:ermshiperete/monodevelop

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 rm ~/Library/Caches/CloudKit/CloudKitMetadata*
 pkill -9 com.apple.ICPPhotoStreamLibraryService

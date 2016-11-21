@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 git rm --cached -r .
 # Remove everything from the index.
