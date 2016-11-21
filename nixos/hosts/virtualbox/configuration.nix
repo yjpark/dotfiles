@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../services/common.nix
+      ../../services/xserver.nix
       ../../pkgs/common.nix
       ../../settings/yjpark.nix
     ];
