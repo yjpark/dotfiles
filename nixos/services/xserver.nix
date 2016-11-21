@@ -14,7 +14,7 @@
       default = "gnome3";
     };
 
-    Enable XMonad Desktop Environment. (Optional)
+    # Enable XMonad Desktop Environment. (Optional)
     windowManager = {
       xmonad.enable = true; 
       xmonad.enableContribAndExtras = true;
