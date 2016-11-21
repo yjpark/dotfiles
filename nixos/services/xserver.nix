@@ -15,9 +15,9 @@
     };
 
     # Enable XMonad Desktop Environment. (Optional)
-    windowManager = {
-      xmonad.enable = true; 
-      xmonad.enableContribAndExtras = true;
+    windowManager.xmonad = {
+      enable = true;
+      enableContribAndExtras = true;
     };
   };
 }
