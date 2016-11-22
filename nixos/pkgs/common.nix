@@ -17,5 +17,6 @@
     conky
     terminator
     chromium
+    albert
   ];
 }
