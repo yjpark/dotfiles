@@ -1,0 +1,3 @@
+#!/bin/sh
+
+elixir -e ":inets_trace.enable(:max, 'trace.txt', :httpc)" -S mix deps.get
