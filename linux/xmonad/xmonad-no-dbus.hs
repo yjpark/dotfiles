@@ -26,25 +26,31 @@ import Codec.Binary.UTF8.String (decodeString)
 -- This retry is really awkward, but sometimes DBus won't let us get our
 -- name unless we retry a couple times.
 
+myXmonadBar = "dzen2 -x '1440' -y '0' -h '24' -w '640' -ta 'l' -fg '#FFFFFF' -bg '#1B1D1E'"
+myStatusBar = "conky -c ~/.xmonad/.conky_dzen | dzen2 -x '0' -w '1040' -h '24' -ta 'r' -bg '#1B1D1E' -fg '#FFFFFF' -y '0'"
+
 main :: IO ()
-main = xmonad $ gnomeConfig {
-	modMask = mod4Mask	-- User Super instead of Alt
-	, terminal = "terminator"
-	, manageHook = manageHook defaultConfig <+> manageDocks <+> myManageHook <+> fullscreenHook
+main = do
+    -- dzenLeftBar <- spawnPipe myXmonadBar
+    dzenRightBar <- spawnPipe myStatusBar
+    xmonad $ gnomeConfig {
+    modMask = mod4Mask    -- User Super instead of Alt
+    , terminal = "terminator"
+    , manageHook = manageHook defaultConfig <+> manageDocks <+> myManageHook <+> fullscreenHook
   , handleEventHook = fullscreenEventHook
-	, layoutHook = desktopLayoutModifiers $ smartBorders mouseResizableTile ||| smartBorders mouseResizableTileMirrored ||| smartBorders (tabbed shrinkText (theme kavonAutumnTheme))
+    , layoutHook = desktopLayoutModifiers $ smartBorders mouseResizableTile ||| smartBorders mouseResizableTileMirrored ||| smartBorders (tabbed shrinkText (theme kavonAutumnTheme))
 }
-	`additionalKeysP` myKeys
+    `additionalKeysP` myKeys
 
 myManageHook = composeAll [
-	resource =? "tilda" --> doFloat
-	, className =? "Guake.py" --> doFloat
-	, resource =? "qjackctl.bin" --> doFloat
-	, resource =? "stardict" --> doFloat
-	, resource =? "Do" --> doFloat
-	, className =? "Do" --> doFloat
-	-- , isInProperty "_NET_WM_WINDOW_TYPE" "_NET_WM_WINDOW_TYPE_SPLASH" --> doFloat
-	]
+    resource =? "tilda" --> doFloat
+    , className =? "Guake.py" --> doFloat
+    , resource =? "qjackctl.bin" --> doFloat
+    , resource =? "stardict" --> doFloat
+    , resource =? "Do" --> doFloat
+    , className =? "Do" --> doFloat
+    -- , isInProperty "_NET_WM_WINDOW_TYPE" "_NET_WM_WINDOW_TYPE_SPLASH" --> doFloat
+    ]
 
 fullscreenHook = composeAll
 -- Allows focusing other monitors without killing the fullscreen
@@ -56,57 +62,57 @@ fullscreenHook = composeAll
   ]
 
 myKeys = [
-	("<F1>", spawn "terminator")
-	, ("<F2>", spawn "firefox")
-	, ("<F3>", spawn "xbmc")
-	, ("M-f", sendMessage $ Toggle "Full")
-	, ("M1-<Tab>", windows W.swapDown)
-	, ("M1-S-<Tab>", windows W.swapUp)
-	
-	-- , ("M-<KP_1>", toggleOrView "1")
-	, ("M-<Up>", sendMessage Shrink)
-	, ("M-<Down>", sendMessage Expand)
-	, ("M-<Left>", windows W.focusUp)
-	, ("M-<Right>", windows W.focusDown)
-	, ("M-h", sendMessage Shrink)
-	, ("M-l", sendMessage Expand)
-	, ("M-j", windows W.focusUp)
-	, ("M-k", windows W.focusDown)
-	-- workspace control
-	-- , ("C-<Left>", prevWS)
-	-- , ("C-<Right>", nextWS)
-	-- , ("C-<Up>", toggleWS)
-	-- , ("C-<Down>", toggleWS)
-	-- screen control
-	, ("C-<Left>", prevScreen)
-	, ("C-<Right>", nextScreen)
-	, ("C-<Up>", shiftNextScreen)
-	, ("C-<Down>", swapPrevScreen)
-	-- GridSelect related
-	, ("C-<Tab>", goToSelected defaultGSConfig)
-	]
-	++ -- switch to workspace with Control-Num
-	[ (otherModMasks ++ "C-" ++ [key], action tag)
-	     | (tag, key)  <- zip myWorkspaces "123456789"
-	     , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
-	                                  , ("S-", windows . W.shift)]
-	]
-	++ -- switch to workspace with Control-Num (numpad)
-	[ (otherModMasks ++ "C-" ++ key, action tag)
-	     | (tag, key)  <- zip myWorkspaces numPadKeys
-	     , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
-	                                  , ("S-", windows . W.shift)]
-	]
-	++ -- switch to window with Control-Num
-	[ (otherModMasks ++ "M-" ++ [key], action)
-	     | (key)  <- "123456789"
-	     , (otherModMasks, action) <- [ ("", windows W.focusUp)]
-	]
-	++ -- switch to window with Win-Num (numpad)
-	[ (otherModMasks ++ "M-" ++ key, action)
-	     | (key)  <- numPadKeys
-	     , (otherModMasks, action) <- [ ("", windows W.focusUp)]
-	]
+    ("<F1>", spawn "terminator")
+    , ("<F2>", spawn "firefox")
+    , ("<F3>", spawn "xbmc")
+    , ("M-f", sendMessage $ Toggle "Full")
+    , ("M1-<Tab>", windows W.swapDown)
+    , ("M1-S-<Tab>", windows W.swapUp)
+    
+    -- , ("M-<KP_1>", toggleOrView "1")
+    , ("M-<Up>", sendMessage Shrink)
+    , ("M-<Down>", sendMessage Expand)
+    , ("M-<Left>", windows W.focusUp)
+    , ("M-<Right>", windows W.focusDown)
+    , ("M-h", sendMessage Shrink)
+    , ("M-l", sendMessage Expand)
+    , ("M-j", windows W.focusUp)
+    , ("M-k", windows W.focusDown)
+    -- workspace control
+    -- , ("C-<Left>", prevWS)
+    -- , ("C-<Right>", nextWS)
+    -- , ("C-<Up>", toggleWS)
+    -- , ("C-<Down>", toggleWS)
+    -- screen control
+    , ("C-<Left>", prevScreen)
+    , ("C-<Right>", nextScreen)
+    , ("C-<Up>", shiftNextScreen)
+    , ("C-<Down>", swapPrevScreen)
+    -- GridSelect related
+    , ("C-<Tab>", goToSelected defaultGSConfig)
+    ]
+    ++ -- switch to workspace with Control-Num
+    [ (otherModMasks ++ "C-" ++ [key], action tag)
+         | (tag, key)  <- zip myWorkspaces "123456789"
+         , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
+                                      , ("S-", windows . W.shift)]
+    ]
+    ++ -- switch to workspace with Control-Num (numpad)
+    [ (otherModMasks ++ "C-" ++ key, action tag)
+         | (tag, key)  <- zip myWorkspaces numPadKeys
+         , (otherModMasks, action) <- [ ("", windows . W.view) -- was W.greedyView
+                                      , ("S-", windows . W.shift)]
+    ]
+    ++ -- switch to window with Control-Num
+    [ (otherModMasks ++ "M-" ++ [key], action)
+         | (key)  <- "123456789"
+         , (otherModMasks, action) <- [ ("", windows W.focusUp)]
+    ]
+    ++ -- switch to window with Win-Num (numpad)
+    [ (otherModMasks ++ "M-" ++ key, action)
+         | (key)  <- numPadKeys
+         , (otherModMasks, action) <- [ ("", windows W.focusUp)]
+    ]
 
 tall = Tall 1 (3/100) (55/100)
  
