@@ -11,5 +11,6 @@
     ag
     fzf
     python3
+    direnv
   ];
 }

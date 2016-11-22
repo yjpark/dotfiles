@@ -43,6 +43,7 @@ fresh 'fish/custom' --file='~/.config/fish/custom/'
 # =====================================================
 # Bash settings
 # run bootstrap-bash_it to install bash_it
+fresh 'bash/bash_profile' --file='~/.bash_profile'
 if [[ "$(uname)" == "MSYS_NT-10.0" ]]; then
   fresh 'bash/bashrc.msys/*' --file='~/.bashrc'
 else

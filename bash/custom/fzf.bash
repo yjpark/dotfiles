@@ -8,7 +8,7 @@ export -f fzf > /dev/null
 
 # Auto-completion
 # ---------------
-[[ $- =~ i ]] && source ~/.external/tools/fzf/fzf-completion.bash
+[[ $- =~ i ]] && source ~/.external/tools/fzf/shell/completion.bash
 
 # Key bindings
 # ------------

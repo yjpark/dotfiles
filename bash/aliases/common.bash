@@ -32,7 +32,7 @@ alias a="ag --smart-case"
 alias g="git"
 
 # some custom alias
-alias e='vim'
+alias e='nvim'
 alias vi='vim'
 alias cp='cp -v'
 alias mv='mv -v'
