@@ -12,6 +12,8 @@
     fzf
     python3
     direnv
+    dzen2
+    conky
     terminator
     chromium
   ];
