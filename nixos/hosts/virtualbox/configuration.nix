@@ -11,6 +11,7 @@
       ../../services/common.nix
       ../../services/xserver.nix
       ../../pkgs/common.nix
+      ../../pkgs/dev.nix
       ../../settings/yjpark.nix
     ];
 

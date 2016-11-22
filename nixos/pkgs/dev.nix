@@ -2,11 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    neovim
-    git
-    fish
-    tmux
-    binutils
-    ag
+    python3
+    nodejs
   ];
 }

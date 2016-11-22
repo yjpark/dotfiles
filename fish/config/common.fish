@@ -11,6 +11,6 @@ set -x LANG "en_US.UTF-8"
 set -x LC_ALL "en_US.UTF-8"
 
 set -x HOST (hostname)
-set -x PATH $PATH /usr/local/sbin ~/bin
+set -x PATH $PATH ~/bin
 
 . ~/.config/fish/aliases.fish
