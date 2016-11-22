@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    xcape
     neovim
     git
     tig
