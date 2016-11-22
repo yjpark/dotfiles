@@ -31,7 +31,7 @@ myStatusBar = "conky -c ~/.xmonad/.conky_dzen | dzen2 -x '0' -w '1040' -h '24' -
 
 main :: IO ()
 main = do
-    -- dzenLeftBar <- spawnPipe myXmonadBar
+    dzenLeftBar <- spawnPipe myXmonadBar
     dzenRightBar <- spawnPipe myStatusBar
     xmonad $ gnomeConfig {
     modMask = mod4Mask    -- User Super instead of Alt

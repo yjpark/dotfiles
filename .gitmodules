@@ -4,3 +4,6 @@
 [submodule "fresh/yjpark/dayone2evernote"]
 	path = fresh/yjpark/dayone2evernote
 	url = git@github.com:yjpark/dayone2evernote.git
+[submodule "linux/xmonad.sample"]
+	path = linux/xmonad.sample
+	url = git@github.com:yjpark/xmonad-config.git
