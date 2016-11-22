@@ -9,6 +9,7 @@
     tmux
     binutils
     ag
+    fzf
     python3
   ];
 }
