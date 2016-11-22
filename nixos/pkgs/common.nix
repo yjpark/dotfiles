@@ -12,5 +12,7 @@
     fzf
     python3
     direnv
+    terminator
+    chromium
   ];
 }
