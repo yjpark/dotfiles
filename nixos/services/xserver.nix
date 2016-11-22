@@ -32,4 +32,10 @@
       enable = true;
     };
   };
+
+  #can NOT install pkgs.xmonad-with-packages! otherwise there
+  #might have multiple versions, and the one linked is not working
+  #environment.systemPackages = with pkgs; [
+  #  xmonad-with-packages
+  #];
 }
