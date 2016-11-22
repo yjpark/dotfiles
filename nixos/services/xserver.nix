@@ -1,23 +1,35 @@
 { config, pkgs, ... }:
 
 {
+  imports =
+    [
+      ../pkgs/i3.nix
+    ];
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
     layout = "us";
 
-    # Gnome desktop
-    # * Slightly more familiar than KDE for people who are used to working with Ubuntu
-    # * Gnome3 works out of the box with xmonad
-    desktopManager = {
-      gnome3.enable = true;
-      default = "gnome3";
+    desktopManager.default = "gnome3";
+
+    desktopManager.gnome3 = {
+      enable = true;
     };
+
+    # desktopManager.kde5 = {
+    #   enable = true;
+    # };
+
+    # windowManager.default = "i3";
 
     # Enable XMonad Desktop Environment. (Optional)
     windowManager.xmonad = {
       enable = true;
       enableContribAndExtras = true;
+    };
+
+    windowManager.i3 = {
+      enable = true;
     };
   };
 }

@@ -1,9 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = [
-    pkgs.neovim
-    pkgs.git
-    pkgs.fish
+  environment.systemPackages = with pkgs; [
+    neovim
+    git
+    fish
+    tmux
+    binutils
   ];
 }

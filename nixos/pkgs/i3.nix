@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    lxc
-    libvirt
+    i3status
+    dmenu
   ];
 }
