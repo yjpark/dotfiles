@@ -16,9 +16,9 @@
       enable = true;
     };
 
-    # desktopManager.kde5 = {
-    #   enable = true;
-    # };
+    desktopManager.kde5 = {
+      enable = false;
+    };
 
     # windowManager.default = "i3";
 
@@ -29,7 +29,7 @@
     };
 
     windowManager.i3 = {
-      enable = true;
+      enable = false;
     };
   };
 
