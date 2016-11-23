@@ -1,6 +1,0 @@
-"xdotool keydown ctrl keydown b ; xdotool keyup b keyup ctrl"
-  F12
-
-"xdotool keydown ctrl keydown b ; xdotool keyup b keyup ctrl"
-  F13
-

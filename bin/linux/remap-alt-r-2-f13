@@ -3,17 +3,17 @@
 # http://unix.stackexchange.com/questions/166121/using-xbindkeys-to-bind-the-meta-key-a-k-a-super-key-windows-key-to-left-cl
 
 echo "Before Remap"
-xmodmap -pm | grep Shift_R
-xmodmap -pk | grep Shift_R
+xmodmap -pm | grep mod1
+xmodmap -pk | grep Alt_R
 xmodmap -pk | grep F13
 
-xmodmap -e "remove shift = Shift_R"
-xmodmap -e "keycode 62 = F13"
-xset -r 62
+xmodmap -e "remove mod1 = Alt_R"
+xmodmap -e "keycode 108 = F13"
+xset -r 108
 
 echo "After Remap"
-xmodmap -pm | grep Shift_R
-xmodmap -pk | grep Shift_R
+xmodmap -pm | grep mod1
+xmodmap -pk | grep Alt_R
 xmodmap -pk | grep F13
 
 
