@@ -6,7 +6,7 @@
     neovim
     git
     tig
-    git-extras
+    gitAndTools.git-extras
     fish
     tmux
     binutils
