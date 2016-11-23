@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# http://unix.stackexchange.com/questions/260897/move-window-to-desktop-keyboard-shortcut/260898
+# param is the index of workspace (0 based)
+
+a=`xprop -root _NET_ACTIVE_WINDOW | rev | cut -d ' ' -f1 | rev`
+wmctrl -i -r $a -t $@
