@@ -13,6 +13,7 @@
     fzf
     python3
     direnv
+    tree
     dzen2
     conky
     terminator
