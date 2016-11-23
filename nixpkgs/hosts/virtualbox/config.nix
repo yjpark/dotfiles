@@ -1,7 +1,7 @@
 {
   imports =
     [
-      ../../pkgs/flash.nix
+      ../../pkgs/browsers.nix
       ../../settings/common.nix
       ../../settings/yjpark.nix
     ];
