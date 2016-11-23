@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# http://unix.stackexchange.com/questions/166121/using-xbindkeys-to-bind-the-meta-key-a-k-a-super-key-windows-key-to-left-cl
+
+echo "Before Remap"
+xmodmap -pm | grep -i shift_r
+xmodmap -pk | grep -i shift_r
+xmodmap -pk | grep -i f13
+
+xmodmap -e "remove shift = Shift_R"
+xmodmap -e "keycode 62 = F13"
+xset -r 62
+
+echo "After Remap"
+xmodmap -pm | grep -i shift_r
+xmodmap -pk | grep -i shift_r
+xmodmap -pk | grep -i f13
+
+

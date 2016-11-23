@@ -207,6 +207,13 @@ fresh 'ssh/config/*' --file='~/.ssh/config'
 mkdir -p ~/.ssh/control
 
 # =====================================================
+# xbindkeysrc
+if [[ "$(uname)" == "Linux" ]]; then
+  fresh 'linux/xbindkeysrc/*' --file='~/.xbindkeysrc'
+fi
+
+
+# =====================================================
 # Private stuffs
 if [ -d "~/.dotfiles/private" ] ; then
     ~/.dotfiles/private/bin/common/fresh-private
