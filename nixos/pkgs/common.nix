@@ -20,7 +20,6 @@
     tree
     dzen2
     conky
-    terminator
     wmctrl
     chromium
     albert
