@@ -5,6 +5,6 @@
     nodejs
     ruby
     python35Packages.ipython
-    kompare
+    kde5.kompare
   ];
 }
