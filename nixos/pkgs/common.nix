@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    xcape
     neovim
     git
     tig
@@ -12,5 +13,10 @@
     fzf
     python3
     direnv
+    dzen2
+    conky
+    terminator
+    chromium
+    albert
   ];
 }

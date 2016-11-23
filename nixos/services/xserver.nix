@@ -10,15 +10,19 @@
     enable = true;
     layout = "us";
 
-    desktopManager.default = "gnome3";
+    desktopManager.default = "kde5";
 
     desktopManager.gnome3 = {
+      enable = false;
+    };
+
+    desktopManager.kde5 = {
       enable = true;
     };
 
-    # desktopManager.kde5 = {
-    #   enable = true;
-    # };
+    displayManager.kdm = {
+      enable = true;
+    };
 
     # windowManager.default = "i3";
 
@@ -29,7 +33,7 @@
     };
 
     windowManager.i3 = {
-      enable = true;
+      enable = false;
     };
   };
 

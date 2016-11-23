@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-cd /tmp/
-wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-sudo mv PowerlineSymbols.otf /usr/share/fonts/
-sudo fc-cache -vf
-sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+mkdir -p ~/.local/share/fonts
+cp -r ~/.dotfiles/external/fonts/* ~/.local/share/fonts/
+fc-cache -vf
+
+#cd /tmp/
+#wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+#sudo mv PowerlineSymbols.otf /usr/share/fonts/
+#sudo fc-cache -vf
+#sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/

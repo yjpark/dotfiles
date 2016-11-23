@@ -30,7 +30,10 @@ myXmonadBar = "dzen2 -x '1440' -y '0' -h '24' -w '640' -ta 'l' -fg '#FFFFFF' -bg
 myStatusBar = "conky -c ~/.xmonad/.conky_dzen | dzen2 -x '0' -w '1040' -h '24' -ta 'r' -bg '#1B1D1E' -fg '#FFFFFF' -y '0'"
 
 main :: IO ()
-main = xmonad $ gnomeConfig {
+main = do
+    dzenLeftBar <- spawnPipe myXmonadBar
+    dzenRightBar <- spawnPipe myStatusBar
+    xmonad $ gnomeConfig {
     modMask = mod4Mask    -- User Super instead of Alt
     , terminal = "terminator"
     , manageHook = manageHook defaultConfig <+> manageDocks <+> myManageHook <+> fullscreenHook
