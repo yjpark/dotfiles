@@ -1,5 +1,11 @@
+[difftool "kompare"]
+    trustExitCode = false
+
 [diff]
     tool = kompare
+
+[mergetool "kompare"]
+    trustExitCode = false
 
 [merge]
     tool = kompare
