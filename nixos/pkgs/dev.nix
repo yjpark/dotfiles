@@ -5,5 +5,6 @@
     nodejs
     ruby
     python35Packages.ipython
+    kompare
   ];
 }

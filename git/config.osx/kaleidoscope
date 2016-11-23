@@ -1,7 +1,5 @@
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[difftool]
-	prompt = false
 [diff]
 	tool = Kaleidoscope
 
@@ -10,5 +8,3 @@
 	trustexitcode = true
 [merge]
 	tool = Kaleidoscope
-[mergetool]
-	prompt = false

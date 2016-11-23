@@ -1,0 +1,5 @@
+[diff]
+    tool = kompare
+
+[merge]
+    tool = kompare

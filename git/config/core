@@ -10,16 +10,14 @@
     excludesfile = ~/.gitignore_global
     whitespace = trailing-space,space-before-tab
 
+[difftool]
+    prompt = false
+
+[mergetool]
+    prompt = false
+
 [apply]
   whitespace = fix
-
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path = 
-
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true
 
 [pager]
     log = less
