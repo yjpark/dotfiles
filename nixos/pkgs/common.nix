@@ -11,6 +11,10 @@
     binutils
     ag
     fzf
+    htop
+    iftop
+    iotop
+    dstat
     python3
     direnv
     dzen2
