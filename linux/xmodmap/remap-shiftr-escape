@@ -5,15 +5,15 @@
 echo "Before Remap"
 xmodmap -pm | grep shift
 xmodmap -pk | grep Shift_R
-xmodmap -pk | grep F13
+xmodmap -pk | grep Escape
 
 xmodmap -e "remove shift = Shift_R"
-xmodmap -e "keycode 62 = F13"
+xmodmap -e "keycode 62 = Escape"
 xset -r 62
 
 echo "After Remap"
 xmodmap -pm | grep shift
 xmodmap -pk | grep Shift_R
-xmodmap -pk | grep F13
+xmodmap -pk | grep Escape
 
 
