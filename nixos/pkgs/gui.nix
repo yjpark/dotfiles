@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     xorg.xmodmap
     xbindkeys
+    xdotool
     wmctrl
     albert
   ];

@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../services/common.nix
-      ../../services/gdm.nix
+      ../../services/kde5.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
