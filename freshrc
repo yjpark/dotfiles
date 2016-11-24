@@ -177,9 +177,9 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh 'linux/clipit' --file='~/.config/clipit/'
 fi
 
-# if [[ "$(hostname)" != "ubuntu" ]]; then
-#   fresh 'linux/xmodmap/*.rc' --file='~/.Xmodmap'
-# fi
+if [[ "$(hostname)" != "ubuntu" ]]; then
+  fresh 'linux/xmodmap/*.rc' --file='~/.Xmodmap'
+fi
 # =====================================================
 # bin
 fresh 'bin/common/*' --bin
