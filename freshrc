@@ -178,7 +178,7 @@ if [[ "$(uname)" == "Linux" ]]; then
 fi
 
 if [[ "$(hostname)" != "ubuntu" ]]; then
-  fresh 'linux/Xmodmap' --file='~/.Xmodmap'
+  fresh 'linux/xmodmap/*.rc' --file='~/.Xmodmap'
 fi
 # =====================================================
 # bin

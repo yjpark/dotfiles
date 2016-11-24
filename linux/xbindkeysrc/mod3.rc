@@ -1,0 +1,29 @@
+# http://unix.stackexchange.com/questions/166121/using-xbindkeys-to-bind-the-meta-key-a-k-a-super-key-windows-key-to-left-cl
+
+# Must be a release to make xdotool work
+
+"on-key-up-mod3 1"
+  Mod3 + 1 + Release
+"on-key-up-mod3 2"
+  Mod3 + 2 + Release
+"on-key-up-mod3 3"
+  Mod3 + 3 + Release
+"on-key-up-mod3 4"
+  Mod3 + 4 + Release
+"on-key-up-mod3 5"
+  Mod3 + 5 + Release
+"on-key-up-mod3 6"
+  Mod3 + 6 + Release
+"on-key-up-mod3 7"
+  Mod3 + 7 + Release
+"on-key-up-mod3 8"
+  Mod3 + 8 + Release
+"on-key-up-mod3 9"
+  Mod3 + 9 + Release
+"on-key-up-mod3 c"
+  Mod3 + c + Release
+"on-key-up-mod3 n"
+  Mod3 + n + Release
+"on-key-up-mod3 p"
+  Mod3 + p + Release
+
