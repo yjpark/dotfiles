@@ -14,7 +14,9 @@
       ../../services/kde5.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
+      ../../pkgs/lxc.nix
       ../../pkgs/gui.nix
+      ../../pkgs/virtualbox.nix
       ../../settings/yjpark.nix
     ];
 
