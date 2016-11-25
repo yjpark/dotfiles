@@ -6,8 +6,11 @@
 
   virtualisation.libvirtd.enable = true;
   virtualisation.docker.enable = true;
+  virtualisation.lxd.enable = true;
 
   environment.systemPackages = with pkgs; [
     lxc
+    gnupg1
+    wget
   ];
 }
