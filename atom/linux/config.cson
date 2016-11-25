@@ -12,7 +12,7 @@
     timeFormat: "### HH24:MI"
   editor:
     fontFamily: "Source Code Pro for Powerline"
-    fontSize: 22
+    fontSize: 19
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
