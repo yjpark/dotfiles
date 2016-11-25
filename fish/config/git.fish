@@ -1,1 +1,1 @@
-set -x GIT_EDITOR vim
+set -x GIT_EDITOR nvim

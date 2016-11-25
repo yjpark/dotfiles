@@ -8,7 +8,7 @@
 ,e() {
     local file
     file=$(fzf --select-1 --exit-0 +m -x)
-    [ -n "$file"  ] && ${EDITOR:-vim} "$file"
+    [ -n "$file"  ] && ${EDITOR:-nvim} "$file"
 }
 
 # Equivalent to above, but opens it with `open` command
