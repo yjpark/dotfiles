@@ -15,7 +15,7 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/1dbfe915-dc80-4f8b-b658-4486b0b25655";
       fsType = "ext4";
-      options = "noatime,nodiratime,discard";
+      options = [ "noatime" "nodiratime" "discard"];
     };
 
   fileSystems."/boot" =
@@ -23,7 +23,10 @@
       fsType = "vfat";
     };
 
-  swapDevices = [ ];
+  swapDevices = [ {
+      device = "/dev/disk/by-uuid/9e6d4bfb-7492-4559-9daf-513dbbf0d314";
+    }
+  ];
 
   nix.maxJobs = lib.mkDefault 12;
 
