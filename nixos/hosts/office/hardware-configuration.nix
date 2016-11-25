@@ -27,4 +27,10 @@
   nix.maxJobs = lib.mkDefault 12;
 
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.pulseaudio = {
+   enable = true;
+   support32Bit = true; # This might be needed for Steam games
+   package = pkgs.pulseaudioFull;
+ };
 }
