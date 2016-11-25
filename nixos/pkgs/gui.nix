@@ -11,5 +11,6 @@
     kde5.plasma-nm
     kde5.plasma-workspace
     kde5.plasma-desktop
+    kde5.plasma-workspace-wallpapers
   ];
 }
