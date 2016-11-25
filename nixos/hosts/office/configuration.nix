@@ -12,7 +12,7 @@
       ./hardware-configuration.nix
       ../../services/common.nix
       ../../services/kde5.nix
-      ../../services/libvirtd.nix
+      ../../services/vm.nix
       ../../services/virtualbox.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
