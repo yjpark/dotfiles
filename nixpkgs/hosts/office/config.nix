@@ -19,6 +19,7 @@
         chromium
         go
         hugo
+        atom
       ];
     };
   };}
