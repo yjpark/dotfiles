@@ -7,7 +7,6 @@
     virtmanager
     virt-viewer
     kvm
-    virtualbox
   ];
 }
 

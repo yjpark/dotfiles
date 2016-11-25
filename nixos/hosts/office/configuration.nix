@@ -13,6 +13,7 @@
       ../../services/common.nix
       ../../services/kde5.nix
       ../../services/libvirtd.nix
+      ../../services/virtualbox.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
