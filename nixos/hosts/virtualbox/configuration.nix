@@ -26,6 +26,9 @@
   # Define on which hard drive you want to install Grub.
   boot.loader.grub.device = "/dev/sda"; # or "nodev" for efi only
 
+  time.timeZone = "Asia/Shanghai";
+  networking.hostName = "vbox"; # Define your hostname.
+
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
