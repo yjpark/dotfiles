@@ -17,6 +17,8 @@
       paths = [
         firefox
         chromium
+        go
+        hugo
       ];
     };
   };}
