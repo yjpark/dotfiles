@@ -2,7 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-    lxc
     libvirt
+    lxc
+    virtmanager
+    virt-viewer
+    kvm
+    virtualbox
   ];
 }
+
