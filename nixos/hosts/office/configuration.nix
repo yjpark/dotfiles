@@ -17,6 +17,7 @@
       ../../pkgs/lxc.nix
       ../../pkgs/gui.nix
       ../../pkgs/virtualbox.nix
+      ../../settings/common.nix
       ../../settings/yjpark.nix
     ];
 

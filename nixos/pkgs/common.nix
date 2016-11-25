@@ -1,12 +1,13 @@
 { config, pkgs, ... }:
 
 {
+  programs.fish.enable = true;
+
   environment.systemPackages = with pkgs; [
     neovim
     git
     tig
     gitAndTools.git-extras
-    fish
     tmux
     binutils
     ag

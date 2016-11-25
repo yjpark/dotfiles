@@ -13,6 +13,7 @@
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
+      ../../settings/common.nix
       ../../settings/yjpark.nix
     ];
 
