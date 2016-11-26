@@ -1,0 +1,5 @@
+#!/bin/bash
+
+lxc config unset core.proxy_http
+lxc config unset core.proxy_https
+lxc config unset core.proxy_ignore_hosts

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo ip link add name lxdbr0 type bridge

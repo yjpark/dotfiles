@@ -1,0 +1,5 @@
+#!/bin/bash
+
+lxc config set core.proxy_http http://localhost:1102
+lxc config set core.proxy_https http://localhost:1102
+lxc config set core.proxy_ignore_hosts image-server.local

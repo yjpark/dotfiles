@@ -5,6 +5,7 @@
 
   environment.systemPackages = with pkgs; [
     debootstrap
+    bridge-utils
     gnupg1
     wget
   ];
