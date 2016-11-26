@@ -12,12 +12,11 @@
       ./hardware-configuration.nix
       ../../services/common.nix
       ../../services/kde5.nix
-      ../../services/vm.nix
+      ../../services/lxd.nix
       ../../services/virtualbox.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
-      ../../pkgs/vm.nix
       ../../settings/common.nix
       ../../settings/yjpark.nix
     ];
