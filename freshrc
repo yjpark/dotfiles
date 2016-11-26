@@ -215,13 +215,13 @@ fi
 
 # =====================================================
 # Private stuffs
-if [ -d "~/.dotfiles/private" ] ; then
+if [ -d "$HOME/.dotfiles/private" ] ; then
     ~/.dotfiles/private/bin/common/fresh-private
-fi
 
-fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
-fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
-fresh 'ssh/config.private/*' --file='~/.ssh/config'
+    fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
+    fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
+    fresh 'ssh/config.private/*' --file='~/.ssh/config'
+fi
 
 if [ ! -z $USE_OWN_FRESH ] ; then
     fresh --end
