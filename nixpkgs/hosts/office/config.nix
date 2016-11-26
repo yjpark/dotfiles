@@ -20,6 +20,7 @@
         go
         hugo
         atom
+        patchelf
       ];
     };
   };}
