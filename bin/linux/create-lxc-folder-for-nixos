@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-sudo mkdir -p /var/cache/lxc
-sudo mkdir -p /var/lib/lxc/rootfs
