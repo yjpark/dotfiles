@@ -30,6 +30,7 @@ alias screen-help='echo Use \"^a:escape ^Zz\" to change escape key for exist scr
 
 alias a="ag --smart-case"
 alias g="git"
+alias d="docker"
 
 # some custom alias
 alias e='nvim'

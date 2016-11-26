@@ -1,4 +1,6 @@
 # abbreviations
+alias d "docker"
+make_completion d docker
 alias g "git"
 make_completion g git
 alias a "ag --smart-case"

@@ -13,6 +13,7 @@
       ../../services/common.nix
       ../../services/kde5.nix
       ../../services/lxd.nix
+      ../../services/docker.nix
       ../../services/virtualbox.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
