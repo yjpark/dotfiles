@@ -6,5 +6,6 @@
     ruby
     python35Packages.ipython
     kde5.kompare
+    zeal
   ];
 }

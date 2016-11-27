@@ -85,11 +85,11 @@ Switch Window Up=Meta+Alt+Up,Meta+Alt+Up,Switch to Window Above
 Switch to Desktop 1=Ctrl+1,Ctrl+F1,Switch to Desktop 1
 Switch to Desktop 10=Ctrl+0,none,Switch to Desktop 10
 Switch to Desktop 11=Ctrl+`,none,Switch to Desktop 11
-Switch to Desktop 12=Ctrl+Alt+C,none,Switch to Desktop 12
+Switch to Desktop 12=Ctrl+Alt+M,none,Switch to Desktop 12
 Switch to Desktop 13=Ctrl+Alt+A,none,Switch to Desktop 13
 Switch to Desktop 14=none,none,Switch to Desktop 14
 Switch to Desktop 15=Ctrl+Shift+5,none,Switch to Desktop 15
-Switch to Desktop 16=Ctrl+Shift+6,none,Switch to Desktop 16
+Switch to Desktop 16=Ctrl+Alt+W,none,Switch to Desktop 16
 Switch to Desktop 17=none,none,Switch to Desktop 17
 Switch to Desktop 18=none,none,Switch to Desktop 18
 Switch to Desktop 19=none,none,Switch to Desktop 19
@@ -198,7 +198,7 @@ Window to Screen 5=none,none,Window to Screen 5
 Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
 WindowGeometry=Ctrl+Shift+F11,Ctrl+Shift+F11,Toggle window geometry display (effect only)
-_k_friendly_name=KWin
+_k_friendly_name=System Settings
 view_actual_size=Meta+0,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
@@ -211,7 +211,7 @@ previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
 
 [plasmashell]
-_k_friendly_name=Plasma
+_k_friendly_name=Activity switching
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 activate widget 8=none,none,Activate Digital Clock Widget
 clear-history=none,none,Clear Clipboard History
