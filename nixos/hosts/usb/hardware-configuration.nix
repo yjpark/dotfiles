@@ -27,9 +27,12 @@
 
   nix.maxJobs = lib.mkDefault 4;
 
-  virtualisation.virtualbox.guest.enable = true;
+  # virtualisation.virtualbox.guest.enable = true;
 
-  services.xserver.videoDrivers = [ "nvidia" "ati_unfree" ];
+  services.xserver.videoDrivers = [
+    "nvidia"
+    # "ati_unfree"
+  ];
 
   hardware.pulseaudio = {
    enable = true;
