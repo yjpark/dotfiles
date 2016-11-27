@@ -12,6 +12,7 @@
     apparmor-parser
     apparmor-utils
     debootstrap
+    dnsmasq
     bridge-utils
     gnupg1
     wget
