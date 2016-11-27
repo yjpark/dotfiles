@@ -18,6 +18,6 @@
 
   swapDevices = [ ];
 
-  nix.maxJobs = lib.mkDefault 1;
+  nix.maxJobs = lib.mkDefault 2;
   virtualisation.virtualbox.guest.enable = true;
 }

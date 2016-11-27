@@ -20,5 +20,6 @@
     direnv
     tree
     lzma
+    perl
   ];
 }
