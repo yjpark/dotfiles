@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-sudo ip link add name lxdbr0 type bridge
+echo "1" > /proc/sys/net/ipv4/ip_forward
+# sudo ip link add name lxdbr0 type bridge
+brctl addbr lxdbr0
+ifconfig lxdbr0 192.168.1.1 netmask 255.255.255.0 up
+iptables -A INPUT -i lxdbr0 -j ACCEPT
+iptables -t nat -A POSTROUTING -s $innet -o $EXTIF -j MASQUERADE
+
