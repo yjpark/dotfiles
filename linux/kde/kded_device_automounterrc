@@ -1,0 +1,33 @@
+[Devices][/org/freedesktop/UDisks2/block_devices/dm_2d1]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=10.0 GiB Hard Drive
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/dm_2d2]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=10.0 GiB Hard Drive
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/loop0]
+Icon=drive-harddisk
+LastNameSeen=Loop Device
+LastSeenMounted=false
+
+[Devices][/org/freedesktop/UDisks2/block_devices/nvme0n1p2]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=nixos
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sda1]
+EverMounted=true
+Icon=drive-removable-media-usb
+LastNameSeen=USB-32G
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sdb1]
+Icon=drive-removable-media-usb
+LastNameSeen=USB-32G
+LastSeenMounted=false
