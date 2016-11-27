@@ -22,5 +22,6 @@
     lzma
     perl
     mosh
+    wirelesstools
   ];
 }
