@@ -33,6 +33,7 @@ alias g="git"
 alias d="docker"
 
 # some custom alias
+alias f='fish'
 alias e='nvim'
 alias vi='vim'
 alias cp='cp -v'
