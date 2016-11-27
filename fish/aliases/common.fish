@@ -49,3 +49,4 @@ alias axel "axel -a"
 alias htop "htop --sort-key PERCENT_CPU"
 
 alias vimx "vim -u ~/.vimrcx -x"
+alias update-completions "fish_update_completions"
