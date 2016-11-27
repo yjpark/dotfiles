@@ -21,5 +21,6 @@
     tree
     lzma
     perl
+    mosh
   ];
 }
