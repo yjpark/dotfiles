@@ -1,0 +1,17 @@
+[Desktop Entry]
+DefaultProfile=Dark.profile
+
+[Favorite Profiles]
+Favorites=Dark.profile
+
+[MainWindow]
+Height 1200=1135
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB4AAAARvAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=956
+Window-Maximized 1200x1920=true
+
+[TabBar]
+TabBarPosition=Top
+TabBarVisibility=ShowTabBarWhenNeeded

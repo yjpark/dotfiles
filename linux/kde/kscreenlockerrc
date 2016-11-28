@@ -1,0 +1,9 @@
+[$Version]
+update_info=kscreenlocker.upd:0.1-autolock
+
+[Daemon]
+LockGrace=6
+Timeout=60
+
+[Greeter]
+Theme=org.kde.breezedark.desktop

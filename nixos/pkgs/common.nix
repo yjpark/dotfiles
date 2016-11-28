@@ -20,5 +20,8 @@
     direnv
     tree
     lzma
+    perl
+    mosh
+    wirelesstools
   ];
 }
