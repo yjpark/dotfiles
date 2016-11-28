@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = with pkgs; [
+    xsel
+    xclip
     xorg.xmodmap
     xbindkeys
     xdotool
