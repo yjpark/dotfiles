@@ -23,5 +23,6 @@
     perl
     mosh
     wirelesstools
+    inotify-tools
   ];
 }

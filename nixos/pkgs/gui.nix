@@ -7,6 +7,7 @@
     xdotool
     wmctrl
     albert
+    slack
     kde5.plasma-pa
     kde5.plasma-nm
     kde5.plasma-workspace
