@@ -2,21 +2,21 @@
 Send #{Tab}
 return
 
-^!`::
-IfWinActive, ahk_class TMobaXtermForm
+^`::
+IfWinActive, ahk_exe iridium.exe
     Send !{Tab}
 else
-    WinActivate ahk_class TMobaXtermForm
+    WinActivate ahk_exe iridium.exe
 return
 
-^`::
+^!`::
 IfWinActive, ahk_exe mintty.exe
     Send !{Tab}
 else
     WinActivate ahk_exe mintty.exe
 return
 
-^!c::
+^!m::
 IfWinActive, ahk_exe chrome.exe
     Send !{Tab}
 else
@@ -86,13 +86,6 @@ else
     WinActivate ahk_exe zeal.exe
 return
 
-^!m::
-IfWinActive, ahk_exe cloudmusic.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe cloudmusic.exe
-return
-
 ^!e::
 IfWinActive, ahk_exe Evernote.exe
     Send !{Tab}
@@ -100,7 +93,7 @@ else
     WinActivate ahk_exe Evernote.exe
 return
 
-^!p::
+^!n::
 IfWinActive, ahk_exe xmind.exe
     Send !{Tab}
 else
