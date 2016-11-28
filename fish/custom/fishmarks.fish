@@ -1,3 +1,6 @@
+# based on https://github.com/gonsie/fishmarks
+# changed the command name, and put multiple files into one.
+
 function gg -d "fishmarks change to bookmark directory"
          fishmark_help $argv[1]
          fishmark_source
