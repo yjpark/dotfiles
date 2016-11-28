@@ -216,6 +216,7 @@ fi
 # =====================================================
 # Private stuffs
 if [ -d "$HOME/.dotfiles/private" ] ; then
+    source ~/.dotfiles/private/private.freshrc
     ~/.dotfiles/private/bin/common/fresh-private
 
     fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
