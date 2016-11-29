@@ -5,6 +5,9 @@ set sidescrolloff=8
 set whichwrap+=<,>,h,l,[,]
 " Don't know why need both of them to make it work
 
+set title
+set titlestring=%t%(\ %M%)\ :\ %l
+
 set wrap
 
 " set autoindent      "Keep indentation from previous line
