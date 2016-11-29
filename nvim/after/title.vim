@@ -1,7 +1,7 @@
 set title
-set titlestring=%{GuiTabLabel()}\ \|\ %t%(\ %M%)\ :\ %l
+set titlestring=%{GetCurrentFolder()}\ \|\ %t%(\ %M%)\ :\ %l
 
-function! GuiTabLabel()
+function! GetCurrentFolder()
      return substitute( expand( '%:p' ), '.\+\/\(.\+\)\/.\+', '\1', '' )
 endfunction
 
