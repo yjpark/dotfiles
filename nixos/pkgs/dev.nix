@@ -13,5 +13,7 @@
     elixir
     erlang
     rebar3
+    mono
+    monodevelop
   ];
 }
