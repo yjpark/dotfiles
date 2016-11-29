@@ -1,7 +1,7 @@
 [Borderless]
 Description=Borderless
 noborder=true
-noborderrule=2
+noborderrule=4
 types=1
 wmclass=
 wmclasscomplete=false
