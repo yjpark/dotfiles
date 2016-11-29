@@ -14,5 +14,6 @@
     rebar3
     mono
     monodevelop
+    nodejs-6_x
   ];
 }
