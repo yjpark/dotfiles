@@ -32,6 +32,16 @@ _k_friendly_name=KDE Daemon
 {a3d153be-0618-45ca-997b-aa0fa695653e}=Ctrl+F1,none,Konsole
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
 
+[klipper]
+_k_friendly_name=Klipper
+clear-history=none,none,Clear Clipboard History
+clipboard_action=,Ctrl+Alt+X,Enable Clipboard Actions
+cycleNextAction=none,none,Next History Item
+cyclePrevAction=none,none,Previous History Item
+edit_clipboard=none,none,Edit Contents...
+repeat_action=Ctrl+Alt+R,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
+show-on-mouse-pos=none,none,Open Klipper at Mouse Position
+
 [kmix]
 _k_friendly_name=Audio Volume
 decrease_microphone_volume=Microphone Volume Down,Microphone Volume Down,Decrease Microphone Volume
@@ -200,7 +210,7 @@ Window to Screen 5=none,none,Window to Screen 5
 Window to Screen 6=none,none,Window to Screen 6
 Window to Screen 7=none,none,Window to Screen 7
 WindowGeometry=Ctrl+Shift+F11,Ctrl+Shift+F11,Toggle window geometry display (effect only)
-_k_friendly_name=System Settings
+_k_friendly_name=KWin
 view_actual_size=Meta+0,Meta+0,Actual Size
 view_zoom_in=Meta+=,Meta+=,Zoom In
 view_zoom_out=Meta+-,Meta+-,Zoom Out
@@ -226,5 +236,5 @@ next activity=,none,Walk through activities
 previous activity=,none,Walk through activities (Reverse)
 repeat_action=,Ctrl+Alt+R,Manually Invoke Action on Current Clipboard
 show dashboard=Ctrl+F12,Ctrl+F12,Show Desktop
-show-on-mouse-pos=none,none,Open Klipper at Mouse Position
+show-on-mouse-pos=Ctrl+Shift+V,none,Open Klipper at Mouse Position
 stop current activity=Meta+S,Meta+S,Stop Current Activity
