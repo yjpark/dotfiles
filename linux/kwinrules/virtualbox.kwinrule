@@ -1,0 +1,9 @@
+[VirtualBox]
+Description=VirtualBox
+noborder=false
+noborderrule=2
+title=Yosemite [Running] - Oracle VM VirtualBox
+titlematch=0
+wmclass=VirtualBox
+wmclasscomplete=false
+wmclassmatch=1

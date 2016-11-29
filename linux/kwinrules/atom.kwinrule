@@ -1,0 +1,11 @@
+[Atom]
+Description=Atom
+desktop=13
+desktoprule=3
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+wmclass=atom
+wmclasscomplete=false
+wmclassmatch=1

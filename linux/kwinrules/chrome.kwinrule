@@ -1,0 +1,15 @@
+[Chromium]
+Description=Chromium
+clientmachine=yjpark
+clientmachinematch=0
+desktop=12
+desktoprule=3
+maximizehoriz=true
+maximizehorizrule=3
+maximizevert=true
+maximizevertrule=3
+title=www.google.com - Chromium
+titlematch=0
+wmclass=chromium-browser
+wmclasscomplete=false
+wmclassmatch=1
