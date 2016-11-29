@@ -5,10 +5,12 @@ DefaultProfile=Dark.profile
 Favorites=Dark.profile
 
 [MainWindow]
+Height 1080=480
 Height 1200=1200
-State=AAAA/wAAAAD9AAAAAAAAB4AAAASSAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAPsAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1920=1920
+Window-Maximized 1080x1920=true
 Window-Maximized 1200x1920=false
 
 [TabBar]

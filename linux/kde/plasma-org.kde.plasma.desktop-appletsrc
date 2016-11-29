@@ -30,8 +30,8 @@ sources=disk%2Fnvme0n1p2_(259%3A2)%2FRate%2Fwblk
 sources=network%2Finterfaces%2Fwlp6s0%2Ftransmitter%2Fdata,network%2Finterfaces%2Feno1%2Ftransmitter%2Fdata
 
 [Containments][1][Wallpaper][org.kde.image][General]
-height=1200
-width=1920
+height=2160
+width=3840
 
 [Containments][2]
 activityId=
@@ -126,8 +126,8 @@ DialogHeight=480
 DialogWidth=640
 
 [Containments][2][ConfigDialog]
-DialogHeight=84
-DialogWidth=1920
+DialogHeight=103
+DialogWidth=3840
 
 [Containments][2][General]
 AppletOrder=3;4;5;16;15;6;8
