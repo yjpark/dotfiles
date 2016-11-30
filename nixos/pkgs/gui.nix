@@ -15,6 +15,9 @@
     kde5.plasma-workspace
     kde5.plasma-desktop
     kde5.plasma-workspace-wallpapers
+    kde5.kdeplasma-addons
+    kde5.bluedevil
+    bluez5
     gnome3.dconf
     gnome3.dconf-editor
   ];

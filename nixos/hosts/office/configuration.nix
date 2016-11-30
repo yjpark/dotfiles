@@ -20,7 +20,6 @@
       ../../pkgs/gui.nix
       ../../settings/common.nix
       ../../settings/dvorak.nix
-      ../../settings/i18n.chinese.nix
       ../../settings/yjpark.nix
       ../../private/common.nix
     ];

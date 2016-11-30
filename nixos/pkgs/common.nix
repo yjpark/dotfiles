@@ -25,5 +25,6 @@
     wirelesstools
     inotify-tools
     zerotierone
+    usbutils
   ];
 }

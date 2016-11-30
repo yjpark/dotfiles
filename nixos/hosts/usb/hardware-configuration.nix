@@ -39,4 +39,6 @@
    support32Bit = true; # This might be needed for Steam games
    package = pkgs.pulseaudioFull;
  };
+
+  hardware.bluetooth.enable = true;
 }
