@@ -24,5 +24,6 @@
     mosh
     wirelesstools
     inotify-tools
+    zerotierone
   ];
 }
