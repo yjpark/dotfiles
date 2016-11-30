@@ -1,7 +1,8 @@
 { config, pkgs, ... }:
 {
   i18n = {
-    consoleKeyMap = "dovrak";
+    #Have build problem
+    #consoleKeyMap = "dovrak";
   };
 
   services.xserver.xkbVariant = "dv";

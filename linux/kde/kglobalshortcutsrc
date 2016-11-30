@@ -1,4 +1,5 @@
 [KDE Keyboard Layout Switcher]
+Switch keyboard layout to Chinese=none,none,Switch keyboard layout to Chinese
 Switch keyboard layout to English (Dvorak)=none,none,Switch keyboard layout to English (Dvorak)
 Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
 Switch to Next Keyboard Layout=Ctrl+Alt+K,none,Switch to Next Keyboard Layout
@@ -224,6 +225,7 @@ stopmedia=Media Stop,Media Stop,Stop media playback
 
 [plasmashell]
 _k_friendly_name=Plasma
+activate widget 20=,none,Activate Application Launcher Widget
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
 activate widget 8=none,none,Activate Digital Clock Widget
 clear-history=none,none,Clear Clipboard History
