@@ -20,6 +20,7 @@
       ../../pkgs/gui.nix
       ../../settings/common.nix
       ../../settings/yjpark.nix
+      ../../private/common.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
