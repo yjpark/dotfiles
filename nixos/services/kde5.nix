@@ -3,7 +3,6 @@
 {
   services.xserver = {
     enable = true;
-    layout = "us";
 
     desktopManager.default = "kde5";
 
