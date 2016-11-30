@@ -2,7 +2,7 @@
 Description=Chromium
 clientmachine=yjpark
 clientmachinematch=0
-desktop=12
+desktop=13
 desktoprule=3
 maximizehoriz=true
 maximizehorizrule=3
