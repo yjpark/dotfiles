@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     ruby
     python35Packages.ipython
+    python35Packages.bootstrapped-pip
     kde5.kompare
     zeal
     cmake

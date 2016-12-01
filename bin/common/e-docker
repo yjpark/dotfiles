@@ -1,0 +1,19 @@
+#!/bin/sh
+# http://stackoverflow.com/questions/24553790/how-to-edit-docker-container-files-from-the-host
+
+set -e
+
+CONTAINER=$1
+FILEPATH=$2
+BASE=$(basename $FILEPATH)
+TMPDIR=/tmp/e-docker_$(date +%s)/
+
+mkdir -p $TMPDIR
+cd $TMPDIR
+docker cp $CONTAINER:$FILEPATH $BASE
+nvim $BASE
+docker cp $BASE $CONTAINER:$FILEPATH
+rm -rf $TMPDIR
+
+echo 'END'
+exit 1;
