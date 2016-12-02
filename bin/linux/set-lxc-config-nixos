@@ -3,6 +3,6 @@
 # apparmor profiles can't be loaded under nixos, temp fix to let the container run
 # http://askubuntu.com/questions/342388/where-are-lxc-containers-security-borderlines
 
+# lxc config set ubuntu raw.lxc "lxc.aa_allow_incomplete = 1"
 lxc config set ubuntu raw.lxc "lxc.aa_profile = unconfined"
-lxc config set ubuntu raw.lxc "lxc.aa_allow_incomplete = 1"
 
