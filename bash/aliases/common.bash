@@ -34,8 +34,13 @@ alias d="docker"
 
 # some custom alias
 alias f='fish'
-alias e='nvim'
-alias vi='vim'
+
+if type nvim > /dev/null 2> /dev/null ; then
+    alias e='nvim'
+else
+    alias e='vim'
+fi
+
 alias cp='cp -v'
 alias mv='mv -v'
 alias cd..='cd ..'
