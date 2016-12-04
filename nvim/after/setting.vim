@@ -81,3 +81,5 @@ set incsearch                                       "incremental searching
 set ignorecase                                      "ignore case for searching
 set smartcase                                       "do case-sensitive if there's a capital letter
 
+set hidden                                          "allow buffer switching without saving
+
