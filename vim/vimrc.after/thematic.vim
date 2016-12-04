@@ -1,6 +1,7 @@
 NeoBundle 'reedes/vim-thematic'
 
 NeoBundle 'yjpark/molokai'
+NeoBundle 'marciomazza/vim-brogrammer-theme'
 
 "nnoremap <silent> <D-9> <Plug>ThematicNarrow
 "nnoremap <silent> <D-0> <Plug>ThematicWiden
@@ -30,6 +31,13 @@ let g:thematic#themes = {
 \   'linespace': 3,
 \ },
 \
+\ 'code_brogrammer' :{
+\   'colorscheme': 'brogrammer',
+\   'airline-theme': 'molokai',
+\   'font-size': 14,
+\   'linespace': 3,
+\ },
+\
 \ 'code_pencil_small' :{
 \   'colorscheme': 'pencil',
 \   'airline-theme': 'pencil',
@@ -46,4 +54,4 @@ let g:thematic#themes = {
 \ },
 \ }
 
-let g:thematic#theme_name = 'code_molokai'
+let g:thematic#theme_name = 'code_brogrammer'
