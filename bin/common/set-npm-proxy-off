@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+npm config delete proxy http://localhost:1102
+npm config delete https-proxy http://localhost:1102

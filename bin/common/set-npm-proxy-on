@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+npm config set proxy http://localhost:1102
+npm config set https-proxy http://localhost:1102
