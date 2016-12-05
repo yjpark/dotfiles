@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+vnc4server -kill :1
+vnc4server -kill :2
+vnc4server -geometry 3840x2100
+vnc4server -geometry 3840x2100
+
