@@ -49,3 +49,4 @@ let g:ycm_semantic_triggers['elm'] = ['.']
 NeoBundle 'chemzqm/wxapp.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'LnL7/vim-nix'
+NeoBundle 'slime-lang/vim-slime-syntax'

@@ -30,3 +30,5 @@ autocmd Filetype wxss setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
 autocmd Filetype nix setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
+autocmd Filetype slime setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
