@@ -5,6 +5,8 @@
 
   environment.systemPackages = with pkgs; [
     neovim
+    nox
+    vim
     git
     tig
     gitAndTools.git-extras
