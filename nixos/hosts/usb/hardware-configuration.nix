@@ -13,7 +13,11 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/de1a29a7-dc93-451b-8a9a-bb7b62af2729";
+    {
+      device = "/dev/disk/by-uuid/de1a29a7-dc93-451b-8a9a-bb7b62af2729";
+      # device = "/dev/disk/by-label/nixos";
+      # device = "/dev/sdb2";
+      # device = "/dev/sdc2";
       fsType = "ext4";
       options = [ "noatime" "nodiratime" "discard"];
     };
