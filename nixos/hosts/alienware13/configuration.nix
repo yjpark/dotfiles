@@ -11,18 +11,21 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../services/common.nix
-      #../../services/kde5.nix
-      #../../services/docker.nix
+      ../../services/kde5.nix
+      ../../services/docker.nix
       ../../pkgs/common.nix
-      #../../pkgs/dev.nix
-      #../../pkgs/gui.nix
+      ../../pkgs/dev.nix
+      ../../pkgs/gui.nix
       ../../settings/common.nix
       ../../settings/yjpark.nix
+      ../../private/common.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  services.xserver.synaptics.enable = true;
 
   time.timeZone = "Asia/Shanghai";
   networking.hostName = "alienware13"; # Define your hostname.
