@@ -28,5 +28,6 @@
     inotify-tools
     zerotierone
     usbutils
+    screen
   ];
 }
