@@ -3,6 +3,7 @@
 {
   services.xserver = {
     enable = true;
+    synaptics.enable = true;
 
     desktopManager.default = "kde5";
 
