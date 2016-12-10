@@ -16,5 +16,7 @@
     mono
     monodevelop
     nodejs-6_x
+    go
+    patchelf
   ];
 }
