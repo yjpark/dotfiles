@@ -26,7 +26,9 @@
 
   nix.maxJobs = lib.mkDefault 4;
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # services.xserver.videoDrivers = [ "intel" "nvidia" ];
+  hardware.bumblebee.enable = true;
+  hardware.bumblebee.connectDisplay = true;
 
   hardware.pulseaudio = {
    enable = true;
