@@ -8,6 +8,10 @@
       "vim-mode"
     ]
     followSymlinks: false
+    themes: [
+      "atom-dark-ui"
+      "one-dark-syntax"
+    ]
   date:
     timeFormat: "### HH24:MI"
   editor:
