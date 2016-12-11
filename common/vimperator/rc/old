@@ -19,5 +19,5 @@ set runtimepath=~/.vimperator
 set visualbell
 source! ~/.vimperatorrc.local
 
-set guioptions='Ns'
+set gui='tabs,nomenu,nonavigation,noaddons,nobookmarks'
 colorscheme desert

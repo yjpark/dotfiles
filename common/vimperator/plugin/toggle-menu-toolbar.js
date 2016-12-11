@@ -1,10 +1,11 @@
-commands.addUserCommand(["toggleshowingmenutoolbar"],
+commands.addUserCommand(
+    ["toggleshowingmenutoolbar"],
     "Toggle the apperance of menu and toolbar",
     function() {
-        if (options.get("guioptions").has("T")) {
-            liberator.execute(":set guioptions='Ns'");
+        if (options.get("gui").has("nonavigation")) {
+            liberator.execute(":set gui='tabs,menu,navigation,addons,bookmarks'");
         } else {
-            liberator.execute(":set guioptions='NmBTs'");
+            liberator.execute(":set gui='tabs,nomenu,nonavigation,noaddons,nobookmarks'");
         }
     }
 )

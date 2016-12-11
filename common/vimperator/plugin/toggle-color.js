@@ -1,9 +1,10 @@
-group.commands.add(["toggleusedocumentcolor"],
+commands.addUserCommand(
+    ["toggleusedocumentcolor"],
     "Toggle the value of use_document_color",
     function(args) {
-        var udc=prefs.get("browser.display.use_document_colors", true);
-        var dcu = prefs.get("browser.display.document_color_use", 1);
-        var yjpark_color_index = prefs.get("browser.display.yjpark_color_index", 0);
+        var udc=options.getPref("browser.display.use_document_colors", true);
+        var dcu = options.getPref("browser.display.document_color_use", 1);
+        var yjpark_color_index = options.getPref("browser.display.yjpark_color_index", 0);
         var log = "before: udc = " + udc + ", color_index = " + yjpark_color_index;
         var fg = "#000000";
         var bg = "#ffffff";
@@ -28,12 +29,12 @@ group.commands.add(["toggleusedocumentcolor"],
             yjpark_color_index = yjpark_color_index + 1;
         }
         //dactyl.clipboardWrite(log + ", after: udc = " + udc + ", color_index = " + yjpark_color_index, true);
-        prefs.set("browser.display.use_document_colors", udc);
+        options.setPref("browser.display.use_document_colors", udc);
         //Override the colors specified by the page with my selections above
-        prefs.set("browser.display.document_color_use", dcu);
-        prefs.set("browser.display.background_color", bg);
-        prefs.set("browser.display.foreground_color", fg);
-        prefs.set("browser.display.yjpark_color_index", yjpark_color_index);
+        options.setPref("browser.display.document_color_use", dcu);
+        options.setPref("browser.display.background_color", bg);
+        options.setPref("browser.display.foreground_color", fg);
+        options.setPref("browser.display.yjpark_color_index", yjpark_color_index);
     },
     {
     },
