@@ -215,8 +215,10 @@ fi
 # vimperator
 fresh 'common/vimperator/rc/*' --file='~/.vimperatorrc'
 mkdir -p ~/.vimperator
+rm ~/.vimperator/colors
 ln -sv ~/.dotfiles/common/vimperator/colors ~/.vimperator/
-ln -sv ~/.dotfiles/common/vimperator/plugins ~/.vimperator/
+rm ~/.vimperator/plugin
+ln -sv ~/.dotfiles/common/vimperator/plugin ~/.vimperator/
 
 # =====================================================
 # Private stuffs

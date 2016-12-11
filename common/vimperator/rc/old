@@ -15,9 +15,9 @@ map <A-w> :bdelete<CR>
 map <A-t> <C-t>
 map <A-n> :winopen<CR>
 
-set runtimepath=~/.pentadactyl
+set runtimepath=~/.vimperator
 set visualbell
-source! ~/.pentadactylrc.local
+source! ~/.vimperatorrc.local
 
 set guioptions='Ns'
 colorscheme desert
