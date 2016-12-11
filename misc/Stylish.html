@@ -1,0 +1,233 @@
+
+<!-- saved from url=(0063)chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/manage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Stylish</title>
+		<style>
+			body {
+				margin: 0;
+				font: 12px arial,sans-serif;
+			}
+			a, a:visited {
+				color: #555;
+				-webkit-transition: color 0.5s;
+			}
+			a:hover {
+				color: #999;
+			}
+			#header {
+				height: 100%;
+				width: 250px;
+				position: fixed;
+				top: 0;
+				padding: 15px;
+				border-right: 1px dashed #AAA;
+				-webkit-box-shadow: 0 0 50px -18px black;
+			}
+			#header h1 {
+				margin-top: 0;
+			}
+			#installed {
+				position: relative;
+				margin-left: 280px;
+			}
+			[style-id] {
+				margin: 10px;
+				padding: 0 15px;
+			}
+			[style-id] {
+				border-top: 2px solid gray;
+			}
+			#installed::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				width: 100%; height: 2px;
+				background-color: #fff;
+			}
+			img[src*="world"] {
+				width: 16px;
+				height: 16px;
+				vertical-align: middle;
+				image-rendering: -webkit-optimize-contrast;
+			}
+			.applies-to {
+				word-break: break-word;
+			}
+			.applies-to, .actions {
+				padding-left: 15px;
+			}
+			.applies-to-extra {
+				font-weight: bold;
+			}
+			.disabled h2::after {
+				content: " (Disabled)";
+			}
+			.disabled {
+				opacity: 0.5;
+			}
+			.disabled .disable {
+				display: none;
+			}
+			.enabled .enable {
+				display: none;
+			}
+
+			/* Default, no update buttons */
+			.update, .check-update {
+				display: none;
+			}
+			/* Check update button for things that can*/
+			*[style-update-url] .check-update {
+				display: inline;
+			}
+			/* Update check in progress */
+			.checking-update .check-update {
+				display: none;
+			}
+			/* Updates available */
+			.can-update .update {
+				display: inline;
+			}
+			.can-update .check-update {
+				display: none;
+			}
+			/* Updates not available */
+			.no-update .check-update {
+				display: none;
+			}
+			/* Updates done */
+			.update-done .check-update {
+				display: none;
+			}
+			.hidden {display: none}
+
+			@media(max-width:675px) {
+				#header {
+					height: auto;
+					position: inherit;
+					width: auto;
+					border-right: none;
+				}
+
+				#installed {
+					margin-left: 0;
+				}
+
+				[style-id] {
+					margin: 0;
+				}
+			}
+
+			fieldset {
+				border-width:  1px;
+				border-radius: 6px;
+				margin: 1em 0;
+			}
+			.enabled-only > .disabled, .edited-only > [style-update-url] {
+				display: none;
+			}
+
+			#search {
+				width: calc(100% - 4px);
+				margin: 0.25rem 4px 0;
+				border-radius: 0.25rem;
+				padding-left: 0.25rem;
+				border-width: 1px;
+			}
+
+		</style>
+
+		<template data-id="style"></template>
+
+		<template data-id="styleHomepage"></template>
+
+		<script src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/localization.js"></script>
+		<script src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/health.js"></script>
+		<script src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/storage.js"></script>
+		<script src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/messaging.js"></script>
+		<script src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/apply.js"></script>
+		<script src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/manage.js"></script>
+	</head>
+	<body id="stylish-manage">
+		<div id="header">
+			<h1 id="manage-heading">Installed Styles</h1>
+			<fieldset>
+				<legend id="filters">Filters</legend>
+				<div><input id="manage.onlyEnabled" type="checkbox"><label id="manage.onlyEnabled-label" for="manage.onlyEnabled">Only enabled styles</label></div>
+				<div><input id="manage.onlyEdited" type="checkbox"><label id="manage.onlyEdited-label" for="manage.onlyEdited">Only created locally</label></div>
+				<div><input id="search" type="search" placeholder="Search contents"></div>
+			</fieldset>
+			<p><button id="check-all-updates">Check all styles for updates</button></p>
+			<p>
+				<button id="apply-all-updates" class="hidden">Apply all updates</button>
+				<span id="update-all-no-updates" class="hidden">All styles are up to date.</span>
+			</p>
+			<p><a href="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/edit.html"><button id="add-style-label">Write new style</button></a></p>
+			<div id="options">
+				<h2 id="options-heading">Options</h2>
+				<div><input id="show-badge" type="checkbox"><label id="show-badge-label" for="show-badge">Show number of styles active for the current site on the toolbar button</label></div>
+				<div><input id="analyticsEnabled" type="checkbox"><label id="analyticsEnabled-label" for="analyticsEnabled">Send anonymous data to Stylish developers</label></div>
+			</div>
+			<p id="manage-text"><a href="https://userstyles.org/">Get styles on userstyles.org</a> | <a href="https://userstyles.org/help/stylish_chrome">Get help</a> | <a href="https://userstyles.org/login/policy">Read the privacy policy</a></p>
+		</div>
+		<div id="installed"><div class="enabled" style-id="1" style-update-url="https://userstyles.org/styles/chrome/112421.json?ik-invrt=ik-invnp&amp;ik-dgw=ik-notdarken&amp;ik-chromenewtab=ik-cntdark&amp;ik-googledoodle=ik-egd&amp;ik-clr=%231C1C1C&amp;ik-img=ik-nobg" style-md5-url="https://update.userstyles.org/112421.md5" style-original-md5="d44ebd60b163d2e45052350562eaf563">
+				<h2 class="style-name">Dark Fusion - Google <a target="_blank" href="http://userstyles.org/styles/112421">
+				<img src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/world_go.png" alt="*">
+			</a></h2>
+				<p class="applies-to">Applies to: /(https|http)://(www|translate|play|drive|books|plus|docs|accounts|myaccount|scholar|images|news|encrypted).google\.(com|([a-z]{2}))(\.[a-z]{2})?/(?!mobile|adsense|shopping|community|voice|android|calendar|maps|fonts|.*._/notifications).*/, /(https|http)://(www|encrypted|edutrainingcenter|books|analyticsacademy|scholar|translate|play|drive|plus|docs|accounts|myaccount|images|news|encrypted|(?!maps))\.(google|withgoogle)\.(com|([a-z]{2}))(\.[a-z]{2})?/(?!_/chrome/newtab|adsense|picker|voice|android|maps|.*._/notifications|.*._/streamwidgets).*/, /(https|http)://(www).(google).(com|([a-z]{2}))(.([a-z]{2})|/)(_/chrome/newtab).*/, /(https|http)://(www|encrypted|news|accounts|images|books|appengine|translate)\.google\.(com|([a-z]{2}))(\.[a-z]{2})?/(?!mobile|adsense|shopping|community|voice|android|calendar|advanced_search|maps|fonts|.*._/notifications).*/, /(https|http)://www\.google\.(com|([a-z]{2}))(\.[a-z]{2})?/(advanced_search|advanced_image_search|advanced_video_search).*/, /(https|http)://(myaccount|accounts)\.google\.(com|([a-z]{2}))(\.[a-z]{2})?/.*/, /(https|http)://www.google\.(com|([a-z]{2}))(\.[a-z]{2})?/maps.*/, /(https|http)://www.google\.(com|([a-z]{2}))(\.[a-z]{2})?/fonts.*/, /(https|http)://(scholar)\.google\.(com|([a-z]{2}))(\.[a-z]{2})?/.*/, /(https|http)://translate.google\.(com|([a-z]{2}))(\.[a-z]{2})?/community.*/<span class="applies-to-extra"> and more</span></p>
+				<p class="actions">
+					<a class="style-edit-link" href="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/edit.html?id=1"><button>Edit</button></a>
+					<button class="enable">Enable</button>
+					<button class="disable">Disable</button>
+					<button class="delete">Delete</button>
+					<button class="check-update">Check for update</button>
+					<button class="update">Install update</button>
+					<span class="update-note"></span>
+				</p>
+			</div><div class="enabled" style-id="4" style-update-url="https://userstyles.org/styles/chrome/22801.json" style-md5-url="https://update.userstyles.org/22801.md5" style-original-md5="a79c187af62b3dfe1762475a92fa5717">
+				<h2 class="style-name">Darklicious Reddit - Rewritten <a target="_blank" href="http://userstyles.org/styles/22801">
+				<img src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/world_go.png" alt="*">
+			</a></h2>
+				<p class="applies-to">Applies to: reddit.com</p>
+				<p class="actions">
+					<a class="style-edit-link" href="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/edit.html?id=4"><button>Edit</button></a>
+					<button class="enable">Enable</button>
+					<button class="disable">Disable</button>
+					<button class="delete">Delete</button>
+					<button class="check-update">Check for update</button>
+					<button class="update">Install update</button>
+					<span class="update-note"></span>
+				</p>
+			</div><div class="enabled" style-id="3" style-update-url="https://userstyles.org/styles/chrome/131249.json" style-md5-url="https://update.userstyles.org/131249.md5" style-original-md5="894331d862e5ea6d309d452a0983119b">
+				<h2 class="style-name">Dev's Dark StackOverflow <a target="_blank" href="http://userstyles.org/styles/131249">
+				<img src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/world_go.png" alt="*">
+			</a></h2>
+				<p class="applies-to">Applies to: /https?://.*stackoverflow\.com/.*/</p>
+				<p class="actions">
+					<a class="style-edit-link" href="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/edit.html?id=3"><button>Edit</button></a>
+					<button class="enable">Enable</button>
+					<button class="disable">Disable</button>
+					<button class="delete">Delete</button>
+					<button class="check-update">Check for update</button>
+					<button class="update">Install update</button>
+					<span class="update-note"></span>
+				</p>
+			</div><div class="enabled" style-id="2" style-update-url="https://userstyles.org/styles/chrome/37035.json?ik-syntax-theme=ik-Monokai&amp;ik-bg-choice=ik-yes&amp;ik-bg-options=ik-Tiled&amp;ik-bg-attachment=ik-Scroll&amp;ik-tab-size=ik-4&amp;ik-code-wrap=ik-nowrap&amp;ik-base-color=%234183C4&amp;ik-font-choice=Menlo&amp;ik-bg-url=ik-default" style-md5-url="https://update.userstyles.org/37035.md5" style-original-md5="c6c2ca4d4d90dc391c0c249868f2bb16">
+				<h2 class="style-name">GitHub Dark <a target="_blank" href="http://userstyles.org/styles/37035">
+				<img src="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/world_go.png" alt="*">
+			</a></h2>
+				<p class="applies-to">Applies to: githubusercontent.com, /^https?://((gist|guides|help|raw|status|developer).)?github.com((?!generated_pages/preview).)*$/</p>
+				<p class="actions">
+					<a class="style-edit-link" href="chrome-extension://fjnbnpbmkenffdnngjfgmeleoegfcffe/edit.html?id=2"><button>Edit</button></a>
+					<button class="enable">Enable</button>
+					<button class="disable">Disable</button>
+					<button class="delete">Delete</button>
+					<button class="check-update">Check for update</button>
+					<button class="update">Install update</button>
+					<span class="update-note"></span>
+				</p>
+			</div></div>
+	
+
+</body></html>
