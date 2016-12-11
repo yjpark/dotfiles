@@ -20,4 +20,4 @@ set visualbell
 source! ~/.vimperatorrc.local
 
 set gui='tabs,nomenu,nonavigation,noaddons,nobookmarks'
-colorscheme desert
+colorscheme zenburn
