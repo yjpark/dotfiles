@@ -212,6 +212,11 @@ if [[ "$(uname)" == "Linux" ]]; then
   fresh 'linux/xbindkeys/*.rc' --file='~/.xbindkeysrc'
 fi
 
+# vimperator
+fresh 'common/vimperator/rc/*' --file='~/.vimperatorrc'
+mkdir -p ~/.vimperator
+ln -sv ~/.dotfiles/common/vimperator/colors ~/.vimperator/
+ln -sv ~/.dotfiles/common/vimperator/plugins ~/.vimperator/
 
 # =====================================================
 # Private stuffs
