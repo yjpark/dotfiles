@@ -30,6 +30,9 @@ call unite#custom#source('file,file_rec,file_rec/async,grep',
       \ '\.silp_test/',
       \ '\.beam$',
       \ '\.pyc$',
+      \ '\.ttf$',
+      \ '\.png$',
+      \ '\.jpg$',
       \ ], '\|'))
 
 let g:unite_quick_match_table = {
