@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+HEX_MIRROR=https://hex.elixir-cn.org
+HEX_CDN=https://hex.elixir-cn.org
+
+mix deps.get $@
