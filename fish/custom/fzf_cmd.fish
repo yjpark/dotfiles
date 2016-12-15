@@ -31,8 +31,16 @@ function ,cd
     end
 end
 
+function ,ps
+    ps -ef | sed 1d | fzf --select-1 --exit-0 +m -x
+end
+
 function ,kill
-    ps -ef | sed 1d | fzf --select-1 --exit-0 +m -x | awk '{print $2}' | xargs kill
+    ps -ef | sed 1d | fzf --select-1 --exit-0 +m -x | awk '{print $2}' > /tmp/fzf_fish.last
+    set result (cat /tmp/fzf_fish.last)
+    if test $result
+        kill (cat /tmp/fzf_fish.last)
+    end
 end
 
 function j
