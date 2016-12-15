@@ -10,33 +10,24 @@ function ,e
     fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
-        vim (cat /tmp/fzf_fish.last)
+        nvim (cat /tmp/fzf_fish.last)
     end
 end
 
 function ,d
+    fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
+    set result (cat /tmp/fzf_fish.last)
+    if test $result
+        cd (dirname (cat /tmp/fzf_fish.last))
+    end
+end
+
+function ,cd
     find . -path '*/\.*' -prune -o -type d -print 2> /dev/null | \
     fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
     set result (cat /tmp/fzf_fish.last)
     if test $result
         cd (cat /tmp/fzf_fish.last)
-    end
-end
-
-function ,da
-    find . -type d 2> /dev/null | \
-    fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
-    set result (cat /tmp/fzf_fish.last)
-    if test $result
-        cd (cat /tmp/fzf_fish.last)
-    end
-end
-
-function ,df
-    fzf --select-1 --exit-0 +m -x > /tmp/fzf_fish.last
-    set result (cat /tmp/fzf_fish.last)
-    if test $result
-        cd (dirname (cat /tmp/fzf_fish.last))
     end
 end
 
