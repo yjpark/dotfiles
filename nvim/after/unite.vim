@@ -1,4 +1,4 @@
-let g:unite_data_directory='~/.cache/vim/unite'
+let g:unite_data_directory='~/.cache/vim-unite'
 let g:unite_source_history_yank_enable=1
 let g:unite_source_rec_max_cache_files=5000
 let g:unite_prompt='» '
