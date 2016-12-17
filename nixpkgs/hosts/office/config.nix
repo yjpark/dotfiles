@@ -22,6 +22,8 @@
         hugo
         atom
         patchelf
+        noto-fonts-cjk
+        noto-fonts
       ];
     };
   };}

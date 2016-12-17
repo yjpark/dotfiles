@@ -34,10 +34,15 @@
   #];
 
   hardware.pulseaudio = {
-   enable = true;
-   support32Bit = true; # This might be needed for Steam games
-   package = pkgs.pulseaudioFull;
+    enable = true;
+    support32Bit = true; # This might be needed for Steam games
+    package = pkgs.pulseaudioFull;
  };
 
   hardware.bluetooth.enable = true;
+
+  hardware.trackpoint = {
+    enable = true;
+    emulateWheel = true;
+  };
 }
