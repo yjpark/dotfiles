@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    xcape
     xsel
     xclip
     xorg.xmodmap
