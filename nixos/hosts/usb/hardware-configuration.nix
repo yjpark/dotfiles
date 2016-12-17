@@ -28,10 +28,10 @@
 
   # virtualisation.virtualbox.guest.enable = true;
 
-  services.xserver.videoDrivers = [
-    "nvidia"
+  # services.xserver.videoDrivers = [
+  #  "nvidia"
     # "ati_unfree"
-  ];
+  #];
 
   hardware.pulseaudio = {
    enable = true;
