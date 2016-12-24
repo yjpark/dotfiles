@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+nix-channel --add http://nixos.org/channels/nixos-16.09
