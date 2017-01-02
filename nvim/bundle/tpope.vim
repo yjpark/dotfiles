@@ -1,2 +1,5 @@
 call dein#add('tpope/vim-fugitive')
 call dein#add('tpope/vim-dispatch')
+call dein#add('tpope/vim-salve')
+call dein#add('tpope/vim-projectionist')
+call dein#add('tpope/vim-fireplace')
