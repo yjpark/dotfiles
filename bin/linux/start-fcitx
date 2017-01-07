@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+FCITXDIR=$HOME/.nix-profile fcitx -D
