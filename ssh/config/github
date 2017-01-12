@@ -1,4 +1,5 @@
-#Host github.com
-#  ControlMaster auto
-#  ControlPath ~/.ssh/control/%r@%h:%p
-#  ControlPersist 3600
+# Seems the https port is much more stable ATM
+# https://help.github.com/articles/using-ssh-over-the-https-port/
+Host github.com
+  Hostname ssh.github.com
+  Port 443
