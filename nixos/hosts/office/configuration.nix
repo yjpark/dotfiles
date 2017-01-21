@@ -15,6 +15,7 @@
       ../../services/lxd.nix
       ../../services/docker.nix
       ../../services/virtualbox.nix
+      ../../services/dnscrypt.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
