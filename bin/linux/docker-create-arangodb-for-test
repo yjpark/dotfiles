@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker run -e ARANGO_ROOT_PASSWORD=test -p 8529:8529 -d arangodb
