@@ -4,6 +4,5 @@ docker pull ubuntu
 docker run --name ubuntu \
            -e DISPLAY=$DISPLAY \
            -v /tmp/.X11-unix:/tmp/.X11-unix \
-           -v /home/yjpark:/home/yjpark \
            --detach -t ubuntu
 
