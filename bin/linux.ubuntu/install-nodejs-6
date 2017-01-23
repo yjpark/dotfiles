@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+curl -sL https://deb.nodesource.com/setup_6.x > /tmp/node_setup_6.x
+bash /tmp/node_setup_6
+apt-get install nodejs
+
