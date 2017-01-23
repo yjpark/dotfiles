@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd ~/bin
+curl -O https://raw.githubusercontent.com/kerl/kerl/master/kerl
+chmod 755 kerl
