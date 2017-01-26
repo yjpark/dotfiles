@@ -1,0 +1,4 @@
+# http://jsteemann.github.io/blog/2015/07/28/how-to-set-up-fish-completion-for-arangodb/
+
+. ~/.dotfiles/external/fish/arangodb-3.0-fish-completion
+
