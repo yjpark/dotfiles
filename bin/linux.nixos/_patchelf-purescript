@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd ~/.npm/lib/node_modules/purescript/vendor
+ls psc* | xargs -L1 patchelf-executable
+
+nix-env -i zlib
+nix-env -i ncurses
+

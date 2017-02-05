@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+nix-env -f "<nixpkgs>" -qaP -A haskellPackages | grep purescript

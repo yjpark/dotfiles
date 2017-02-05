@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+patchelf --set-interpreter `patchelf --print-interpreter /run/current-system/sw/bin/ls` $@
+patchelf --set-rpath /run/current-system/sw/lib:/home/yjpark/.nix-profile/lib $@
+

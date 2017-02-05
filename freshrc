@@ -200,6 +200,9 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 if [[ "$(uname)" == "Linux" ]]; then
   fresh 'bin/linux/*' --bin
+  if [[ $DIST == "nixos" ]]; then
+    fresh 'bin/linux.nixos/*' --bin
+  fi
   if [[ $DIST == "debian" ]]; then
     fresh 'bin/linux.debian/*' --bin
   fi
