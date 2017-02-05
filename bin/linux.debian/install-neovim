@@ -2,7 +2,7 @@
 
 # https://github.com/neovim/neovim/issues/2211
 
-cat << 'EOF' | sudo tee /etc/apt/sources.list.d/neovim
+cat << 'EOF' | sudo tee /etc/apt/sources.list.d/neovim.list
 # https://github.com/neovim/neovim/issues/2211
 
 deb http://debian.sur5r.net/neovim jessie main
