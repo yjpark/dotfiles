@@ -1,0 +1,14 @@
+#!/usr/bin/env bash`
+
+cat << 'EOF' | sudo tee /etc/apt/sources.list.d/stretch.list
+# http://unix.stackexchange.com/questions/107689/how-to-install-a-single-jessie-package-on-wheezy
+
+deb http://ftp.debian.org/debian stretch main
+EOF
+
+cat << 'EOF' | sudo tee /etc/apt/apt.conf.d/default-release
+APT::Default-Release "jessie";
+EOF
+
+sudo apt-get update
+sudo apt-get install aptitude
