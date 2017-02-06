@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+export http_proxy="http://127.0.0.1:1102"
+export NIX_CURL_FLAGS="-x $http_proxy"
+export NIX_REMOTE=""
+
+nix-build -A system "<nixpkgs/nixos>" --option use-binary-caches false
+nixos-rebuild switch --option use-binary-caches false
