@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+http_proxy="http://127.0.0.1:1102" \
+NIX_CURL_FLAGS="-x $http_proxy" \
+NIX_REMOTE="" \
+nix-env --option use-binary-caches false -i -A $@
+

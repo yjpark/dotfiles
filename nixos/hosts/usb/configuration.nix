@@ -18,7 +18,6 @@
       ../../pkgs/gui.nix
       ../../settings/common.nix
       ../../settings/i18n.chinese.nix
-      ../../settings/yjpark.nix
       ../../private/common.nix
     ];
 

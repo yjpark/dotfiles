@@ -14,7 +14,7 @@
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
       ../../settings/common.nix
-      ../../settings/yjpark.nix
+      ../../private/common.nix
     ];
 
   # Use the GRUB 2 boot loader.

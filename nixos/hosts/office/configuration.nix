@@ -21,7 +21,6 @@
       ../../pkgs/gui.nix
       ../../settings/common.nix
       ../../settings/dvorak.nix
-      ../../settings/yjpark.nix
       ../../private/common.nix
     ];
 
