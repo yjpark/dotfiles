@@ -10,5 +10,7 @@ au FileType purescript nmap <leader>c :PSCIDEcaseSplit<CR>
 au FileType purescript nmap <leader>qd :PSCIDEremoveImportQualifications<CR>
 au FileType purescript nmap <leader>qa :PSCIDEaddImportQualifications<CR>
 
+au FileType purescript nmap <leader>g :PSCIDEgoToDefinition<CR>
+
 " Not sure why the pscide file is not loaded properly
 source ~/.config/nvim/bundle/.cache/init.vim/.dein/ftplugin/purescript_pscide.vim

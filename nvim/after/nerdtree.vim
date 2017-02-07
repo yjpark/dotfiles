@@ -11,7 +11,7 @@ let NERDTreeQuitOnOpen=0
 let NERDTreeShowLineNumbers=0
 let NERDTreeChDirMode=2
 let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\.git','\.hg', '\.meta$', '\.pyc$', '\.silp_backup', 'node_modules', 'elm-stuff', 'deps', '_build']
+let NERDTreeIgnore=['\.git','\.hg', '\.meta$', '\.pyc$', '\.silp_backup', 'node_modules', 'elm-stuff', 'deps', '_build', 'output', 'bower_components', '\.pulp-cache']
 let NERDTreeBookmarksSort=0
 let NERDTreeBookmarksFile=s:get_cache_dir('nerdtree-bookmarks')
 if !empty($NERDTREE_BOOKMARKS)
