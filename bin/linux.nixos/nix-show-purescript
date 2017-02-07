@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-nix-env -f "<nixos>" -qaP -A haskellPackages | grep purescript
-
-#nix-env -f "<nixpkgs>" -qaP -A haskellPackages | grep purescript
