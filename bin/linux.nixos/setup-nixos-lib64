@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+sudo mkdir -p /lib64
+cd /lib64
+sudo rm -v ld-linux-x86-64.so.2
+sudo ln -sv `patchelf --print-interpreter /run/current-system/sw/bin/ls` .
+
