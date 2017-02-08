@@ -6,7 +6,7 @@
 # export NIX_CURL_FLAGS="-x $http_proxy"
 # export NIX_REMOTE=""
 
-nix-env -i -A nixpkgs.haskellPackages.purescript_0_10_5
+nix-env -i -A nixos.haskellPackages.purescript_0_10_5
 
 
 # nix-env -i -A nixpkg.haskellPackages.purescript_0_10_5 --option use-binary-caches false
