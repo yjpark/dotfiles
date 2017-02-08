@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# http://stackoverflow.com/questions/8938994/gradlew-behind-a-proxy
+
+gradle -Dhttp.proxyHost=localhost -Dhttp.proxyPort=1102 -Dhttps.proxyHost=localhost -Dhttps.proxyPort=1102 $@
