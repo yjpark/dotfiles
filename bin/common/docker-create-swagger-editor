@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker pull swaggerapi/swagger-editor
+docker run --name tools.swagger-editor -p 80:1201 swaggerapi/swagger-editor --detach
