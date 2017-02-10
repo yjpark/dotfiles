@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+touch MERGED
+git add MERGED
+git commit -m "MERGED"
+git push
