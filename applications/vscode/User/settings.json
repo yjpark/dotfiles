@@ -1,0 +1,13 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "window.zoomLevel": 2,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.meta": true,
+        "**/.*.meta": true
+    },
+    "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono'"
+}
