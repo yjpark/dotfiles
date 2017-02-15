@@ -16,6 +16,7 @@ behave xterm
 " The ttymouse is for vim in screen's mouse support
 " set ttymouse=xterm2
 set mousefocus
+set mouse=a
 
 " make backspace work normal (indent, eol, start)
 " set backspace=2
