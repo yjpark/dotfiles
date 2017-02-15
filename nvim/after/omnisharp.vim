@@ -67,3 +67,7 @@ nnoremap <leader>sp :OmniSharpStopServer<cr>
 " Add syntax highlighting for types and interfaces
 nnoremap <leader>th :OmniSharpHighlightTypes<cr>
 
+
+" Not sure why the file is not loaded properly
+source ~/.config/nvim/bundle/.cache/init.vim/.dein/ftplugin/cs/OmniSharp.vim
+
