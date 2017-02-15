@@ -2,4 +2,6 @@
 
 cd ~/Applications/dropbox-dist
 nohup ./dropboxd > /tmp/dropboxd.log &
-dropbox proxy manual http localhost 1102
+
+echo "need to set proxy once"
+echo "dropbox proxy manual http localhost 1102"
