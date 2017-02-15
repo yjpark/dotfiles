@@ -8,6 +8,7 @@
       "vim-mode"
     ]
     followSymlinks: false
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "one-dark-syntax"
