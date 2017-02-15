@@ -82,13 +82,13 @@
 "}}}
 
 " setup & neobundle {{{
-  set nocompatible
-  set all& "reset everything to their defaults
-  if s:is_windows
-    set rtp+=~/.vim
-  endif
-  set rtp+=~/.vim/bundle/neobundle.vim
-  NeoBundleFetch 'Shougo/neobundle.vim'
+"  set nocompatible
+"  set all& "reset everything to their defaults
+"  if s:is_windows
+"    set rtp+=~/.vim
+"  endif
+"  set rtp+=~/.vim/bundle/neobundle.vim
+"  NeoBundleFetch 'Shougo/neobundle.vim'
 "}}}
 
 " functions {{{
