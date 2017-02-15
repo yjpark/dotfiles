@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/CacheServer
+nohup ./RunLinux.sh > /tmp/CacheServer.log &
