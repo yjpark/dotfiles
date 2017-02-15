@@ -8,6 +8,7 @@ sudo apt-get install cmake build-essential python-dev mono-xbuild
     # sudo apt-get install monodevelop
     # sudo install-current-mono
 
+alias xbuild="xbuild /p:TargetFrameworkVersion=v4.5"
 ./install.py --clang-completer --omnisharp-completer
 
 #if [[ "$(uname)" == "Linux" ]]; then
