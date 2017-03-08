@@ -3,7 +3,7 @@ if &compatible
 endif
 
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
-call plug#begin('~/.config/.nvim/bundle/')
+call plug#begin('~/.config/nvim/bundle/')
 
 source ~/.config/nvim/init.bundle.vim
 

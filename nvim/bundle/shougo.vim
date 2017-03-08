@@ -1,4 +1,4 @@
-Plug 'Shougo/vimproc.vim', {'build' : 'make'})
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/unite.vim'
 
 Plug 'Shougo/denite.nvim'
