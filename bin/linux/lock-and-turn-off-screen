@@ -1,0 +1,6 @@
+#!/bin/sh
+# http://askubuntu.com/questions/189677/how-to-turn-off-screen-dpms-together-with-locking-session-in-kde
+
+sleep 0.5
+loginctl lock-session
+xset dpms force off
