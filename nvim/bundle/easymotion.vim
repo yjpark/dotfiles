@@ -1,1 +1,1 @@
-call dein#add('Lokaltog/vim-easymotion')
+Plug 'Lokaltog/vim-easymotion'

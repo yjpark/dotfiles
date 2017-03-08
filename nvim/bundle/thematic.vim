@@ -1,4 +1,4 @@
-call dein#add('reedes/vim-thematic')
-call dein#add('yjpark/molokai')
-call dein#add('marciomazza/vim-brogrammer-theme')
+Plug 'reedes/vim-thematic'
+Plug 'yjpark/molokai'
+Plug 'marciomazza/vim-brogrammer-theme'
 

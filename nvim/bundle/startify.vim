@@ -1,1 +1,1 @@
-call dein#add('mhinz/vim-startify')
+Plug 'mhinz/vim-startify'

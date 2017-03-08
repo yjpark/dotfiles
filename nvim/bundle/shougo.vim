@@ -1,5 +1,5 @@
-call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-call dein#add('Shougo/unite.vim')
+Plug 'Shougo/vimproc.vim', {'build' : 'make'})
+Plug 'Shougo/unite.vim'
 
-call dein#add('Shougo/denite.nvim')
-call dein#add('Shougo/deoplete.nvim')
+Plug 'Shougo/denite.nvim'
+Plug 'Shougo/deoplete.nvim'

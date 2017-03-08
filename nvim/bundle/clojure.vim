@@ -1,6 +1,6 @@
-call dein#add('kien/rainbow_parentheses.vim')
-call dein#add('clojure-vim/async-clj-omni')
-call dein#add('clojure-vim/vim-cider')
-call dein#add('snoe/clj-refactor.nvim')
-call dein#add('venantius/vim-eastwood')
-call dein#add('venantius/vim-cljfmt')
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'clojure-vim/async-clj-omni'
+Plug 'clojure-vim/vim-cider'
+Plug 'snoe/clj-refactor.nvim'
+Plug 'venantius/vim-eastwood'
+Plug 'venantius/vim-cljfmt'

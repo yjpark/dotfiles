@@ -1,1 +1,1 @@
-call dein#add('majutsushi/tagbar')
+Plug 'majutsushi/tagbar'

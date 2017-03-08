@@ -1,3 +1,3 @@
-call dein#add('powerman/vim-plugin-AnsiEsc')
-call dein#add('sjl/clam.vim')
+Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'sjl/clam.vim'
 

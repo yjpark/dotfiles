@@ -1,5 +1,5 @@
-call dein#add('elixir-lang/vim-elixir')
-call dein#add('slime-lang/vim-slime-syntax')
-call dein#add('thinca/vim-ref')
-call dein#add('awetzel/elixir.nvim')
+Plug 'elixir-lang/vim-elixir'
+Plug 'slime-lang/vim-slime-syntax'
+Plug 'thinca/vim-ref'
+Plug 'awetzel/elixir.nvim'
 

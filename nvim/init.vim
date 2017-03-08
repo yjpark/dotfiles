@@ -2,16 +2,15 @@ if &compatible
   set nocompatible
 endif
 
-set runtimepath+=~/.config/nvim/bundle/repos/github.com/Shougo/dein.vim/
-call dein#begin('~/.config/nvim/bundle/')
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.config/.nvim/bundle/')
 
-call dein#add('Shougo/dein.vim')
 source ~/.config/nvim/init.bundle.vim
 
-call dein#end()
-if dein#check_install()
-    call dein#install()
-endif
-" call dein#install()
+" Initialize plugin system
+call plug#end()
 
 source ~/.config/nvim/init.after.vim
+
+" Need to install plugs manually
+" :PlugInstall

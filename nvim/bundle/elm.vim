@@ -1,1 +1,1 @@
-call dein#add('ElmCast/elm-vim')
+Plug 'ElmCast/elm-vim'

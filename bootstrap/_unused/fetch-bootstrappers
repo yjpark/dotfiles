@@ -1,3 +1,6 @@
 #!/bin/bash
 
 curl -vsSL get.freshshell.com > ~/.dotfiles/bootstrap/bootstrap-fresh
+curl -vsSL https://www.parse.com/downloads/cloud_code/installer.sh > ~/.dotfiles/bootstrap/bootstrap-parse
+curl -vsSL https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > _bootstrap-dein.sh
+

@@ -1,1 +1,1 @@
-call dein#add('ervandew/supertab')
+Plug 'ervandew/supertab'

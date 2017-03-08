@@ -1,1 +1,1 @@
-call dein#add('scrooloose/syntastic')
+Plug 'scrooloose/syntastic'

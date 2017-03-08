@@ -1,2 +1,2 @@
-call dein#add('vim-scripts/BufOnly.vim')
+Plug 'vim-scripts/BufOnly.vim'
 

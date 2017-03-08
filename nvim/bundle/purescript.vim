@@ -1,3 +1,3 @@
-call dein#add('raichoo/purescript-vim')
-call dein#add('frigoeu/psc-ide-vim')
+Plug 'raichoo/purescript-vim'
+Plug 'frigoeu/psc-ide-vim'
 

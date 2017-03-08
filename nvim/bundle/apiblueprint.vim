@@ -1,1 +1,1 @@
-call dein#add('kylef/apiblueprint.vim')
+Plug 'kylef/apiblueprint.vim'
