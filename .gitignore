@@ -56,3 +56,4 @@ docs/_build/
 private/
 *.private/
 bootstrap/nix-binary-tarball-unpack/
+applications/vscode/User/workspaceStorage
