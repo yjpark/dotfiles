@@ -49,4 +49,4 @@ let g:thematic#themes = {
 \ },
 \ }
 
-let g:thematic#theme_name = 'code_brogrammer'
+let g:thematic#theme_name = 'code_molokai'
