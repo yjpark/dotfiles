@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.config/nvim/bundle/YouCompleteMe
 # git pull
 git submodule update --init --recursive
 
