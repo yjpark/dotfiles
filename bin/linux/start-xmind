@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/xmind/XMind_amd64/
+nohup ./XMind > /tmp/xmind.log &

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd ~/Applications/electronic-wechat-linux-x64
-nohup ./electronic-wechat > /tmp/wechat &
+nohup ./electronic-wechat > /tmp/wechat.log &
