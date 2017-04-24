@@ -23,8 +23,12 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 
 if [[ "$(uname)" == "Linux" ]]; then
-    source /etc/os-release
-    DIST=$ID
+    if [ -f /etc/os-release ] ; then
+        source /etc/os-release
+        DIST=$ID
+    else
+        DIST="termux"
+    fi
     echo "Linux OS Detected, DIST = $DIST"
 fi
 
@@ -260,5 +264,11 @@ fi
 
 if [ ! -z $USE_OWN_FRESH ] ; then
     fresh --end
+fi
+
+if [[ "$(uname)" == "Linux" ]]; then
+  if [[ $DIST == "termux" ]]; then
+      bash ~/.dotfiles/bin/linux.termux/fix-termux-bin
+  fi
 fi
 

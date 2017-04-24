@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd ~/bin/
+
+find -name * | xargs sed -i .bak 's/\/usr\/bin\/env/\/data\/data\/com.termux\/files\/usr\/bin\/env/'
+
+find -name *.bak -delete

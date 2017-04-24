@@ -1,5 +1,7 @@
 #!/bin/bash
 
+TMP="${__ROOT__}/tmp"
+
 _fatal_error() {
     echo $'\033[0;31m'"$1"
     exit 1
@@ -82,9 +84,9 @@ _parse_fresh_dsl_args() {
 fresh-file() {
     LAST_CHAR="${MODE_ARG: -1}"
     if [ $LAST_CHAR == "/" ]; then
-        FILE_FOLDER="/tmp/_fresh/_build/$MODE_ARG"
+        FILE_FOLDER="${TMP}/_fresh/_build/$MODE_ARG"
     else
-        FILE_FOLDER=`dirname /tmp/_fresh/_build/$MODE_ARG`
+        FILE_FOLDER=`dirname ${TMP}/_fresh/_build/$MODE_ARG`
     fi
     _info "$LAST_CHAR -> $FILE_FOLDER"
     if [ ! -d "$FILE_FOLDER" ] ; then
@@ -97,34 +99,34 @@ fresh-file() {
         _error ""
         cp -R $FILE_NAME/* $FILE_FOLDER
     else
-        _verbose "cat $FILE_NAME >> /tmp/_fresh/_build/$MODE_ARG"
+        _verbose "cat $FILE_NAME >> ${TMP}/_fresh/_build/$MODE_ARG"
         _error ""
-        cat $FILE_NAME >> /tmp/_fresh/_build/$MODE_ARG
+        cat $FILE_NAME >> ${TMP}/_fresh/_build/$MODE_ARG
     fi
 }
 
 fresh-bin() {
-    _verbose "cp -R $FILE_NAME /tmp/_fresh/_build/bin/"
+    _verbose "cp -R $FILE_NAME ${TMP}/_fresh/_build/bin/"
     _error ""
-    cp -R $FILE_NAME /tmp/_fresh/_build/bin/
+    cp -R $FILE_NAME ${TMP}/_fresh/_build/bin/
 }
 
 fresh-begin() {
-    rm -rf /tmp/_fresh
-    mkdir -p /tmp/_fresh/_build/bin
+    rm -rf ${TMP}/_fresh
+    mkdir -p ${TMP}/_fresh/_build/bin
 }
 
 fresh-end() {
-    _verbose "cp -R /tmp/_fresh/_build/.* ~/"
+    _verbose "cp -R ${TMP}/_fresh/_build/.* ~/"
     _error ""
-    cp -R /tmp/_fresh/_build/.* ~/
+    cp -R ${TMP}/_fresh/_build/.* ~/
 
     # For some reason, the last cp with get ../*
     rm -rf ~/_build
 
-    _verbose "cp -R /tmp/_fresh/_build/* ~/"
+    _verbose "cp -R ${TMP}/_fresh/_build/* ~/"
     _error ""
-    cp -R /tmp/_fresh/_build/* ~/
+    cp -R ${TMP}/_fresh/_build/* ~/
 
     echo $'Your dot files are now \033[1;32mfresh\033[0m.'
 }
