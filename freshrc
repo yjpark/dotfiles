@@ -8,16 +8,6 @@
 
 USE_OWN_FRESH=1
 
-if [ -z $USE_OWN_FRESH ] ; then
-    # freshshell
-    fresh freshshell/fresh 'bin/fresh' --bin
-    fresh freshshell/fresh-open 'bin/fresh-open' --bin
-else
-    . ~/.dotfiles/fresh/fresh
-    fresh --begin
-    cd ~/.dotfiles
-fi
-
 if [[ "$(uname)" == "Darwin" ]]; then
     echo "Darwin OS Detected"
 fi
@@ -27,9 +17,20 @@ if [[ "$(uname)" == "Linux" ]]; then
         source /etc/os-release
         DIST=$ID
     else
+        __ROOT__='/data/data/com.termux/files/'
         DIST="termux"
     fi
     echo "Linux OS Detected, DIST = $DIST"
+fi
+
+if [ -z $USE_OWN_FRESH ] ; then
+    # freshshell
+    fresh freshshell/fresh 'bin/fresh' --bin
+    fresh freshshell/fresh-open 'bin/fresh-open' --bin
+else
+    . ~/.dotfiles/fresh/fresh
+    fresh --begin
+    cd ~/.dotfiles
 fi
 
 # =====================================================
