@@ -50,6 +50,9 @@ if [[ "$(uname)" == "Linux" ]]; then
   if [[ $DIST == "ubuntu" ]]; then
     fresh 'fish/config.linux.ubuntu/*' --file='~/.config/fish/config.fish'
   fi
+  if [[ $DIST == "termux" ]]; then
+    fresh 'fish/config.linux.termux/*' --file='~/.config/fish/config.fish'
+  fi
 fi
 if [[ "$(uname)" == "MSYS_NT-10.0" ]]; then
   fresh 'fish/config.msys/*' --file='~/.config/fish/config.fish'
