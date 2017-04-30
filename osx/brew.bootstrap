@@ -1,5 +1,6 @@
 coreutils
 direnv
+pyenv
 bash-completion
 reattach-to-user-namespace
 tmux
