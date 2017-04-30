@@ -172,13 +172,14 @@ if [[ "$(uname)" == "Darwin" ]]; then
   fi
 
   if [ -z $USE_OWN_FRESH ] ; then
-    fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
+    # fresh 'osx/Karabiner/private.xml' --file='~/Library/Application Support/Karabiner/private.xml'
+    cd ~/.dotfiles
   else
-    cd ~/Library/Application\ Support/Karabiner/
-    rm private.xml
-    _info "ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml"
-    ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml
-    echo ""
+    # cd ~/Library/Application\ Support/Karabiner/
+    # rm private.xml
+    # _info "ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml"
+    # ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml
+    # echo ""
     cd ~/.dotfiles
   fi
 
