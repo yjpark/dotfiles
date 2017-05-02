@@ -22,15 +22,16 @@
     packagesWithKeymapsDisabled: [
       "markdown-writer"
     ]
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
-      "solarized-dark-syntax"
+      "one-dark-syntax"
     ]
   date:
     timeFormat: "### HH24:MI"
   editor:
-    fontFamily: "Source Code Pro for Powerline Light"
-    fontSize: 20
+    fontFamily: "Source Code Pro for Powerline"
+    fontSize: 18
     invisibles: {}
     lineHeight: 1.8
     scrollPastEnd: true
