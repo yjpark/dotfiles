@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # https://packagecloud.io/basho/riak/install
-curl https://packagecloud.io/install/repositories/basho/riak/script.deb | sudo bash
+wget https://packagecloud.io/install/repositories/basho/riak/script.deb | sudo bash
 
 #sudo apt-get update
 #sudo apt-get install riak
