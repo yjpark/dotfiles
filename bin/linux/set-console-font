@@ -1,0 +1,3 @@
+#!/bin/bash
+
+setfont /usr/share/consolefonts/Uni2-Terminus32x16.psf.gz
