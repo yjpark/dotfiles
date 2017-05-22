@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+killall syndaemon
+syndaemon -i 4 -K -d
