@@ -4,3 +4,23 @@
 
 sudo snap install conjure-up --classic
 conjure-up kubernetes
+
+# https://kubernetes.io/docs/getting-started-guides/ubuntu/local/
+
+echo "put these lines into /etc/sysctl.conf"
+
+cat << EOF
+
+    fs.inotify.max_user_instances = 1048576
+    fs.inotify.max_queued_events = 1048576
+    fs.inotify.max_user_watches = 1048576
+    vm.max_map_count = 262144
+
+EOF
+
+echo "then run this command to load them"
+cat << EOF
+
+    sudo sysctl -p
+
+EOF
