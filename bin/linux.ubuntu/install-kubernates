@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# https://kubernetes.io/docs/getting-started-guides/ubuntu/
+
+sudo snap install conjure-up --classic
+conjure-up kubernetes
