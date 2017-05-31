@@ -28,3 +28,5 @@
     'shift-alt-t': 'date:time'
     'shift-alt-f': 'narrow:search'
     'shift-alt-w': 'tabs:close-other-tabs'
+    'ctrl-a': 'editor:move-to-first-character-of-line'
+    'ctrl-e': 'editor:move-to-end-of-line'

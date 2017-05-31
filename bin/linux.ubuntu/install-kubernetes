@@ -24,3 +24,9 @@ cat << EOF
     sudo sysctl -p
 
 EOF
+
+echo "if the kubernetes master/worker failed to install, check reinstall-snapd for a fix"
+
+sudo snap install kubectl --classic
+juju scp kubernetes-master:config ~/.kube/config
+
