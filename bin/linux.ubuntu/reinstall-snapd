@@ -1,0 +1,11 @@
+#/usr/bin/env bash
+
+# When use conjure-up to install kubernetes to local lxd, the snapd inside lxc
+# failed to install kube-apiserver (master node) or kubeletes (worker node), complain
+# with "run hook "configure": cannot create lock directory /run/snapd/lock: Permission denied"
+# in that case, when try to install with "snap install kubeletes", same error occured
+# it's caused by snapd been corrupted with apparmor profile, reinstall in can fix the problem
+
+apt remove snapd
+apt install snapd ubuntu-core-launcher
+

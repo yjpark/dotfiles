@@ -19,6 +19,7 @@
     fontFamily: "Source Code Pro for Powerline"
     fontSize: 18
     invisibles: {}
+    lineHeight: 1.8
     scrollPastEnd: true
     softWrap: true
     tabLength: 4
