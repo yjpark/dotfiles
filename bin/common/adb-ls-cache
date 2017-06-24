@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if [ $1 ] ; then
+    adb shell run-as $1 ls -R /data/data/$1/cache/
+else
+    echo "Please specify bundle id of the app"
+fi
