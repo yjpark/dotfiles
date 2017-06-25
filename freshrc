@@ -17,7 +17,7 @@ if [[ "$(uname)" == "Linux" ]]; then
         source /etc/os-release
         DIST=$ID
     else
-        __ROOT__='/data/data/com.termux/files/'
+        __ROOT__='/data/data/com.termux/files'
         DIST="termux"
     fi
     echo "Linux OS Detected, DIST = $DIST"
