@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# http://www.wikigain.com/fix-macos-sierra-screen-resolution-virtualbox/
+
+VBoxManage setextradata "$1" VBoxInternal2/EfiGopMode $2
+
+# Where N can be one of 0,1,2,3,4,5 referring to the 640x480, 800x600, 1024x768, 1280x1024, 1440x900, 1900x1200
+# 						      0	       1	 2	   3	      4 	5
+# Tutorial by wikigain
