@@ -1,9 +1,5 @@
 function fish_prompt
-    if grep -q Microsoft /proc/version
-        echo (date "+%T") (~/bin/powerline-shell_fish.py $status --mode flat --shell bare ^/dev/null)
-    else
-        echo (date "+%T") (~/bin/powerline-shell_fish.py $status --shell bare ^/dev/null)
-    end
+    echo (date "+%T") (~/bin/powerline-shell_fish.py $status --shell bare ^/dev/null)
 end
 
 function fish_right_prompt -d "Write out the right prompt"
