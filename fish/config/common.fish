@@ -17,4 +17,8 @@ set -x LC_ALL "en_US.UTF-8"
 set -x HOST (hostname)
 set -x PATH /usr/bin $PATH ~/bin
 
+set -U fish_color_normal    normal
+set -U fish_color_command   yellow
+set -U fish_color_param     green
+
 . ~/.config/fish/aliases.fish
