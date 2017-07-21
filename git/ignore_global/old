@@ -40,6 +40,7 @@ build
 # OS generated files #
 ######################
 .DS_Store
+._.DS_Store
 ehthumbs.db
 Thumbs.db
 
