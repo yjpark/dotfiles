@@ -5,7 +5,7 @@
     ruby
     python35Packages.ipython
     python35Packages.bootstrapped-pip
-    kde5.kompare
+    #kompare
     zeal
     cmake
     gnumake

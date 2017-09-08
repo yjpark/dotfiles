@@ -10,13 +10,13 @@
     wmctrl
     albert
     slack
-    kde5.plasma-pa
-    kde5.plasma-nm
-    kde5.plasma-workspace
-    kde5.plasma-desktop
-    kde5.plasma-workspace-wallpapers
-    kde5.kdeplasma-addons
-    kde5.bluedevil
+    plasma-pa
+    plasma-nm
+    plasma-workspace
+    plasma-desktop
+    plasma-workspace-wallpapers
+    kdeplasma-addons
+    bluedevil
     bluez5
     gnome3.dconf
     gnome3.dconf-editor

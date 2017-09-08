@@ -5,13 +5,13 @@
     enable = true;
     synaptics.enable = true;
 
-    desktopManager.default = "kde5";
+    desktopManager.default = "plasma5";
 
-    desktopManager.kde5 = {
+    desktopManager.plasma5 = {
       enable = true;
     };
 
-    displayManager.kdm = {
+    displayManager.sddm = {
       enable = true;
     };
   };
