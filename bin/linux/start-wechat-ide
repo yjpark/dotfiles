@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/wechat_web_devtools
+nohup ./bin/wxdt > /tmp/wechat-ide.log &
