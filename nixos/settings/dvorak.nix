@@ -6,6 +6,6 @@
     consoleFont = "latarcyrheb-sun32";
   };
 
-  services.xserver.xkbVariant = "dv";
+  services.xserver.xkbVariant = "dvorak";
   services.xserver.exportConfiguration = true;
 }
