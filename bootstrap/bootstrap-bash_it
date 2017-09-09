@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 git clone git@github.com:revans/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh

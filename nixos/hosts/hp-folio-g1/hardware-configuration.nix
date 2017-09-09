@@ -37,4 +37,12 @@
   nix.maxJobs = lib.mkDefault 4;
   powerManagement.cpuFreqGovernor = "powersave";
   networking.hostId = "91278545";
+
+  hardware.pulseaudio = {
+   enable = true;
+   support32Bit = true; # This might be needed for Steam games
+   package = pkgs.pulseaudioFull;
+  };
+
+  hardware.bluetooth.enable = true;
 }

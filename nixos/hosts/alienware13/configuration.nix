@@ -25,8 +25,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  services.xserver.synaptics.enable = true;
-
   time.timeZone = "Asia/Shanghai";
   networking.hostName = "alienware13"; # Define your hostname.
 
