@@ -17,7 +17,8 @@
 
   boot.loader.grub = {
     devices = [ "/dev/nvme0n1" ];
-    gfxmodeEfi = "1280x720";
+    font = "/boot/grub.otf";
+    fontSize = 64;
   };
 
   services.xserver.displayManager.sddm.autoLogin.enable = true;
