@@ -3,11 +3,11 @@
 {
   services.xserver = {
     enable = true;
+
     synaptics = {
       enable = true;
       palmDetect = true;
       twoFingerScroll = true;
-
     };
 
     desktopManager.default = "plasma5";
