@@ -13,10 +13,14 @@
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025386cf100473f-part2";
-  boot.loader.grub.devices = [ "/dev/nvme0n1" ];  
   boot.supportedFilesystems = [ "zfs" ];
 
-  displayManager.sddm.autoLogin.enable = true;
+  boot.loader.grub = {
+    devices = [ "/dev/nvme0n1" ];
+    gfxmodeEfi = "1280x720";
+  };
+
+  services.xserver.displayManager.sddm.autoLogin.enable = true;
 
   fileSystems."/" =
     { device = "rpool/root/nixos";
