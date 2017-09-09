@@ -18,6 +18,11 @@
 
     displayManager.sddm = {
       enable = true;
+      autoLogin = {
+        #enable = true; #only enable on systems with LUKS
+        user = "yjpark";
+      };
+      setupScript = "xrandr --dpi 48";
     };
   };
 }

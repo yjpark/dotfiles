@@ -8,14 +8,15 @@
     [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "hid_multitouch" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
+  boot.kernelModules = [ "kvm-intel" "hid_multitouch" ];
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025386cf100473f-part2";
   boot.loader.grub.devices = [ "/dev/nvme0n1" ];  
   boot.supportedFilesystems = [ "zfs" ];
 
+  displayManager.sddm.autoLogin.enable = true;
 
   fileSystems."/" =
     { device = "rpool/root/nixos";
