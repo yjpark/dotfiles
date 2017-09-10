@@ -10,6 +10,7 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
   boot.kernelModules = [ "kvm-intel" "hid_multitouch" ];
+  boot.blacklistedKernelModules = [ "mei" "mei_me" "mei_wdt" ];
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025386cf100473f-part2";
@@ -23,6 +24,12 @@
   };
 
   services.xserver.displayManager.sddm.autoLogin.enable = true;
+  services.xserver.synaptics = {
+    buttonsMap = [ 1 3 2 ];
+    minSpeed = "1.0";
+    maxSpeed = "1.5";
+    accelFactor = "0.002";
+  };
 
   fileSystems."/" =
     { device = "rpool/root/nixos";
