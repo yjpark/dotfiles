@@ -29,5 +29,7 @@
     zerotierone
     usbutils
     screen
+    dropbox
+    dropbox-cli
   ];
 }
