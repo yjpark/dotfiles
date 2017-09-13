@@ -28,7 +28,7 @@
     buttonsMap = [ 1 3 2 ];
     minSpeed = "1.0";
     maxSpeed = "1.5";
-    accelFactor = "0.002";
+    accelFactor = "0.004";
   };
 
   fileSystems."/" =
