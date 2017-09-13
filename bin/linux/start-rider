@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cd ~/Applications/rider-171.4456.1432-RC
+cd ~/Applications/Rider-2017.1.1
 nohup bin/rider.sh > /tmp/rider.log &
