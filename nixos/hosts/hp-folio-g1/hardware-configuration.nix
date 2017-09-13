@@ -9,7 +9,7 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
-  boot.kernelModules = [ "kvm-intel" "hid_multitouch" ];
+  boot.kernelModules = [ "kvm-intel" "hid_multitouch" "gpio" "i2c_smbus" ];
   boot.blacklistedKernelModules = [ ];
   boot.extraModulePackages = [ ];
 

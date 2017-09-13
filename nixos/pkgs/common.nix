@@ -31,5 +31,7 @@
     screen
     dropbox
     dropbox-cli
+    pciutils
+    acpi
   ];
 }
