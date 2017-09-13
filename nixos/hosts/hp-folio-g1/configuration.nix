@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../../services/common.nix
       ../../services/kde5.nix
+      ../../services/docker.nix
       ../../services/dnscrypt.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
