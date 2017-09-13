@@ -5,9 +5,14 @@
     enable = true;
 
     synaptics = {
-      enable = true;
+      enable = false;
       palmDetect = true;
       twoFingerScroll = true;
+    };
+
+    libinput = {
+      enable = true;
+      naturalScrolling = true;
     };
 
     desktopManager.default = "plasma5";
