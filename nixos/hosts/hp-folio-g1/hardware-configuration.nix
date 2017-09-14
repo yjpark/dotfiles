@@ -16,7 +16,7 @@
   # boot.kernelParams = [ "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1"];
   # boot.kernelParams = [ "i2c-hid.dyndbg=+p" "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1" ];
   boot.kernelModules = [ "kvm-intel" "i2c-dev" "atmel-mxt-ts" ]; #"intel-lpss" 
-  boot.blacklistedKernelModules = [ ];
+  boot.blacklistedKernelModules = [ "intel-lpss" "intel-lpss-pci" "intel-lpss-acpi" ];
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025386cf100473f-part2";
