@@ -8,8 +8,14 @@
     [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_4_13;
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ];
-  boot.kernelModules = [ "kvm-intel" "hid_multitouch" "gpio" "i2c_smbus" ];
+  # https://bbs.archlinux.org/viewtopic.php?id=226212
+  # https://askubuntu.com/questions/525629/touchpad-is-not-recognized
+  # https://unix.stackexchange.com/questions/28736/what-does-the-i8042-nomux-1-kernel-option-do-during-booting-of-ubuntu
+  # boot.kernelParams = [ "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1"];
+  boot.kernelParams = [ "i2c-hid.dyndbg=+p" ];
+  boot.kernelModules = [ "kvm-intel" "intel-lpss" ];
   boot.blacklistedKernelModules = [ ];
   boot.extraModulePackages = [ ];
 
