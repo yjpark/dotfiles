@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo sh -c 'echo N > /sys/module/drm_kms_helper/parameters/poll'
+sudo cat /sys/module/drm_kms_helper/parameters/poll
