@@ -15,7 +15,7 @@
   # https://unix.stackexchange.com/questions/28736/what-does-the-i8042-nomux-1-kernel-option-do-during-booting-of-ubuntu
   # boot.kernelParams = [ "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1"];
   # boot.kernelParams = [ "i2c-hid.dyndbg=+p" "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1" ];
-  boot.kernelModules = [ "kvm-intel" "i2c-dev" "atmel" ]; #"intel-lpss" 
+  boot.kernelModules = [ "kvm-intel" "i2c-dev" "atmel-mxt-ts" ]; #"intel-lpss" 
   boot.blacklistedKernelModules = [ ];
   boot.extraModulePackages = [ ];
 
