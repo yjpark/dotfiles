@@ -10,6 +10,8 @@
     cmake
     gnumake
     gcc
+    autoconf
+    automake
     elixir
     erlang
     rebar3
