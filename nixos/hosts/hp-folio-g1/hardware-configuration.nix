@@ -18,7 +18,7 @@
   boot.kernelParams = [
     "i2c_hid.debug"
     "i2c-hid.dyndbg=+p"
-    "i2c_designware_core.dyndbg=+p"
+    # "i2c_designware_core.dyndbg=+p"
     "acpi_osi=Linux"
     "acpi_osi=!Windows 2013"
     "acpi_osi=!Windows 2012"
