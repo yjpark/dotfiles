@@ -12,6 +12,7 @@
     gcc
     autoconf
     automake
+    libtool
     elixir
     erlang
     rebar3
