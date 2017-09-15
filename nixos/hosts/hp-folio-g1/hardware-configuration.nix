@@ -15,10 +15,10 @@
   # https://unix.stackexchange.com/questions/28736/what-does-the-i8042-nomux-1-kernel-option-do-during-booting-of-ubuntu
   # boot.kernelParams = [ "i8042.reset" "i8042.nomux=0" ];
   # boot.kernelParams = [ "i2c-hid.dyndbg=+p" "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1" ];
-  boot.kernelParams = [ "acpi_osi=!Windows 2013" "acpi_osi=!Windows 2012" ];
+  boot.kernelParams = [ "i2c-hid.dyndbg=+p" "acpi_osi=!Windows 2013" "acpi_osi=!Windows 2012" ];
   boot.kernelModules = [ "kvm-intel" "i2c-dev" "atmel-mxt-ts" "i2c-designware" ]; #"intel-lpss" 
   #boot.blacklistedKernelModules = [ "intel-lpss" "intel-lpss-pci" "intel-lpss-acpi" ];
-  boot.blacklistedKernelModules = [ "psmouse" ];
+  boot.blacklistedKernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025386cf100473f-part2";
