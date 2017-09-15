@@ -17,7 +17,7 @@
   # boot.kernelParams = [ "i2c-hid.dyndbg=+p" "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1" ];
   boot.kernelParams = [
     # "i2c_hid.debug"
-    "i2c_hid.dyndbg=+p"
+    # "i2c_hid.dyndbg=+p"
     # "i2c_designware_core.dyndbg=+p"
     "acpi_osi=Linux"
     # "acpi_osi=!Windows 2013"
