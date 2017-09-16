@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+xcape -e 'Control_L=Escape'

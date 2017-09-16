@@ -33,5 +33,6 @@
     dropbox-cli
     pciutils
     acpi
+    xcape
   ];
 }
