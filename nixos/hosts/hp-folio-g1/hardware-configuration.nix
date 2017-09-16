@@ -17,6 +17,7 @@
   # boot.kernelParams = [ "i2c-hid.dyndbg=+p" "i8042.reset" "i8042.nomux=0" "i8042.nopnp=1" "i8042.noloop=1" ];
   boot.kernelParams = [
     "i915.enable_psr=0"
+    "i915.enable_rc6=0"
     # "i2c_hid.debug"
     # "i2c_hid.dyndbg=+p"
     # "i2c_designware_core.dyndbg=+p"
