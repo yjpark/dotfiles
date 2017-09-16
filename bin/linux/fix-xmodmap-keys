@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# http://unix.stackexchange.com/questions/166121/using-xbindkeys-to-bind-the-meta-key-a-k-a-super-key-windows-key-to-left-cl
+
+# Some combination not working in X, need to run this script to fix
+
+echo "Before Fix"
+xmodmap -pm | grep shift
+xmodmap -pk | grep Shift_R
+xmodmap -pk | grep Escape
+
+xmodmap -e "remove shift = Shift_R"
+xmodmap -e "keycode 62 = Escape"
+xset -r 62
+
+echo "During Fix"
+xmodmap -pm | grep shift
+xmodmap -pk | grep Shift_R
+xmodmap -pk | grep Escape
+
+xmodmap -e "keycode 62 = Shift_R"
+xset -r 62
+xmodmap -e "add shift = Shift_R"
+
+
+echo "After Fix"
+xmodmap -pm | grep shift
+xmodmap -pk | grep Shift_R
+xmodmap -pk | grep Escape
+
+
