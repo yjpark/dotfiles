@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+cd ~/.config/nvim/bundle/YouCompleteMe
+# git pull
+git submodule update --init --recursive
+
+alias xbuild="xbuild /p:TargetFrameworkVersion=v4.5"
+python3 install.py --clang-completer --omnisharp-completer
+
+cd third_party/ycmd/third_party/OmniSharpServer
+xbuild
+
+#if [[ "$(uname)" == "Linux" ]]; then
+    # echo "/opt/monodevelop/bin/monodevelop-launcher.sh ~/.vim/bundle/YouCompleteMe/third_party/ycmd/third_party/OmniSharpServer/OmniSharp.sln
+    # ~/.dotfiles/vim/patches/YouCompleteMe_linux/patch_cs_completer_with_newer_mono
+#fi
