@@ -16,7 +16,7 @@
     elixir
     erlang
     rebar3
-    mono50
+    mono52
     monodevelop
     nodejs
     go
