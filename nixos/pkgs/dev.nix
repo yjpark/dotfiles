@@ -16,9 +16,9 @@
     elixir
     erlang
     rebar3
-    mono
+    mono50
     monodevelop
-    nodejs-6_x
+    nodejs
     go
     patchelf
     vscode
