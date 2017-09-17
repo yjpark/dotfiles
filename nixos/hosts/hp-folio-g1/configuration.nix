@@ -20,6 +20,7 @@
       ../../private/common.nix
     ];
   nixpkgs.config.allowUnfree = true;
+  nix.nixPath = [ "/home/yjpark/projects/forks" "nixos-config=/etc/nixos/configuration.nix" ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
