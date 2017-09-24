@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+mkdir -p .paket
+cd .paket
+curl -vsSL https://github.com/fsprojects/Paket/releases/download/5.100.2/paket.bootstrapper.exe > paket.ext
