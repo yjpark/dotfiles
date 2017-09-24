@@ -21,5 +21,6 @@
     gnome3.dconf
     gnome3.dconf-editor
     libinput
+    kdeApplications.okular
   ];
 }

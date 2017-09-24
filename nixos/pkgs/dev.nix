@@ -24,5 +24,6 @@
     vscode
     jdk
     maven
+    nix-repl
   ];
 }
