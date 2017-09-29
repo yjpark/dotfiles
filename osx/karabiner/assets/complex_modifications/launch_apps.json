@@ -96,7 +96,7 @@
           },
           "to": [
             {
-              "shell_command": "open '/Applications/Unity.app'"
+              "shell_command": "open '/Applications/Unity/Unity.app'"
             }
           ]
         }
