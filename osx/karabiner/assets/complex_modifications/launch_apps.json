@@ -16,7 +16,7 @@
           },
           "to": [
             {
-              "shell_command": "osascript -e 'tell app \"iTerm2\"' -e 'create window with default profile' -e activate -e end"
+              "shell_command": "/Users/yjpark/.dotfiles/osx/applescripts/iterm-new-window.applescript"
             }
           ]
         },
