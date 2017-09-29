@@ -1,0 +1,88 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "window.zoomLevel": 2,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.meta": true,
+        "**/.*.meta": true
+    },
+    "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono'",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.easymotionKeys": "hklyuiopnm,qwertzxcvbasdgjf;",
+    "vim.otherModesKeyBindings": [
+        {
+            "before":[";"],
+            "after":[":"],
+        }, {
+            "before":["<Enter>"],
+            "after":["i"],
+        }, {
+            "before":["<Backspace>"],
+            "after":["i", "<Backspace>"],
+        }, {
+            "before":["<Comma>", "b"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-w>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-n>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":tabnext",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-p>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":tabprevious",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-s>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before":["<C-s>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim"
+}
