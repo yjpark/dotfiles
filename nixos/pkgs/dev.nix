@@ -25,5 +25,6 @@
     jdk
     maven
     nix-repl
+    zeal
   ];
 }

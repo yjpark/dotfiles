@@ -7,3 +7,6 @@
 [submodule "linux/xmonad.sample"]
 	path = linux/xmonad.sample
 	url = git@github.com:yjpark/xmonad-config.git
+[submodule "windows/AutoHotKey/virtual-desktop"]
+	path = windows/AutoHotKey/virtual-desktop
+	url = git@github.com:yjpark/win-10-virtual-desktop-enhancer.git

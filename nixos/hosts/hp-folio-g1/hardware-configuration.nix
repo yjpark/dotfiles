@@ -40,6 +40,10 @@
     fontSize = 32;
   };
 
+  environment.systemPackages = with pkgs; [
+    firmwareLinuxNonfree
+  ];
+
   services.xserver.displayManager.sddm.autoLogin.enable = true;
 
   services.xserver.synaptics = {
