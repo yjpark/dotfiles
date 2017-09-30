@@ -5,13 +5,13 @@ alias wifi "airport -s; airport -I"
 # set -x PATH $PATH /Applications/Marmalade.app/Contents/tools/dzip
 
 # Marmalade SDK addition: please do not edit these lines
-set -x PATH $PATH /Applications/Marmalade.app/Contents/s3e/bin
-set -x S3E_DIR /Applications/Marmalade.app/Contents/s3e
+# set -x PATH $PATH /Applications/Marmalade.app/Contents/s3e/bin
+# set -x S3E_DIR /Applications/Marmalade.app/Contents/s3e
 # Marmalade SDK addition: end
 
 # PfGame
-set -x PFGAME_LIBS_ROOT ~/projects/pettyfun/libs
-set -x PATH $PATH ~/projects/pettyfun/libs/scripts
+# set -x PFGAME_LIBS_ROOT ~/projects/pettyfun/libs
+# set -x PATH $PATH ~/projects/pettyfun/libs/scripts
 
 #camlistore
 # alias cam "cd /opt/camlistore"
