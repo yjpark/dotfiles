@@ -14,3 +14,4 @@ hub
 git-extras
 git-flow-avh
 svn --devel
+fzf
