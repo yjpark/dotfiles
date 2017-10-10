@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+docker run --name texttop -d \
+  -p 7777:7777 -p 60000-60020:60000-60020/udp \
+  tombh/texttop
+
+docker exec -t texttop mkdir -p /root/.ssh
+docker exec -t texttop chmod 700 /root/.ssh
+docker cp ~/.ssh/authorized_keys texttop:/root/.ssh
+
+  # -v ${HOME}/.ssh:/root/.ssh:ro \
