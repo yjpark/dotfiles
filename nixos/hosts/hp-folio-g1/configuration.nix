@@ -17,6 +17,8 @@
       ../../pkgs/gui.nix
       ../../settings/common.nix
       ../../settings/dvorak.nix
+      ../../settings/i18n.chinese.fcitx.nix
+      ../../private/common.nix
       ../../private/common.nix
     ];
   nixpkgs.config.allowUnfree = true;
