@@ -141,7 +141,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "open '/Applications/Visual Studio Code.app'"
+                                        "shell_command": "open '/Applications/Visual Studio.app'"
                                     }
                                 ],
                                 "type": "basic"
