@@ -1,0 +1,3 @@
+#!/bin/bash
+
+otool -L /Applications/MacVim.app/Contents/MacOS/Vim | grep -i python --color=always
