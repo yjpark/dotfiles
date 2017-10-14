@@ -34,5 +34,6 @@
     pciutils
     acpi
     xcape
+    unzip
   ];
 }

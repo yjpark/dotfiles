@@ -22,5 +22,6 @@
     gnome3.dconf-editor
     libinput
     kdeApplications.okular
+    gwenview
   ];
 }
