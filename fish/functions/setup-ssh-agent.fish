@@ -1,7 +1,7 @@
 setenv SSH_ENV $HOME/.ssh/environment
 
 
-function start-ssh-agent
+function setup-ssh-agent
     if [ -n "$SSH_AGENT_PID" ]
             ps -ef | grep $SSH_AGENT_PID | grep ssh-agent > /dev/null
             if [ $status -eq 0 ]
@@ -31,7 +31,7 @@ function check_ssh_identity
     if [ $status -eq 0 ]
         ssh-add
         if [ $status -eq 2 ]
-            start-ssh-agent
+            setup-ssh-agent
         end
     end
 end
