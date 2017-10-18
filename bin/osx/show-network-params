@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sysctl net.inet.tcp.sendspace
+sysctl net.inet.tcp.recvspace
+sysctl kern.ipc.maxsockbuf
+sysctl net.inet.tcp.delayed_ack
+sysctl net.inet.udp.recvspace
+sysctl net.inet.udp.maxdgram
+sysctl net.inet.tcp.mssdflt
+

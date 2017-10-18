@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# https://tecadmin.net/5-commands-to-get-public-ip-using-linux-terminal/
+
+if type nvim > /dev/null 2> /dev/null ; then
+    echo "ipecho.net"
+    curl ipecho.net/plain; echo
+
+    echo "icanhazip.com"
+    curl icanhazip.com
+
+    echo "ifconfig.me"
+    curl ifconfig.me
+else
+    echo "ipecho.net"
+    wget http://ipecho.net/plain -O - -q ; echo
+
+    echo "observebox.com"
+    wget http://observebox.com/ip -O - -q ; echo
+fi
+
