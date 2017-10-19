@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd /Applications/Visual\ Studio.app/Contents/MacOS
+nohup ./VisualStudio > /tmp/visual-studio.log &
