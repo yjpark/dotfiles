@@ -16,3 +16,4 @@ git-flow-avh
 svn --devel
 fzf
 fswatch
+mmv
