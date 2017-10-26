@@ -18,8 +18,8 @@ alias less='less -R'
 alias df='df -h'
 alias iftop='sudo iftop -B -P'
 
-alias set-proxy-on='export http_proxy=127.0.0.1:1102; export ALL_PROXY=http://127.0.0.1:1102'
-alias set-proxy-off='unset http_proxy; unset ALL_PROXY'
+alias set-proxy-on='export https_proxy=127.0.0.1:1102; export http_proxy=127.0.0.1:1102; export ALL_PROXY=http://127.0.0.1:1102'
+alias set-proxy-off='unset https_proxy; unset http_proxy; unset ALL_PROXY'
 
 alias wget='wget --no-check-certificate'
 alias scp='scp -C -p'
