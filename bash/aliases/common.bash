@@ -43,6 +43,7 @@ fi
 
 alias cp='cp -v'
 alias mv='mv -v'
+alias cd-='cd -'
 alias cd..='cd ..'
 alias cd...='cd ../..'
 alias cd....='cd ../../..'
