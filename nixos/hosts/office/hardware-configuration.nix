@@ -12,31 +12,47 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
+  boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025385961b04fb1-part2";
+  boot.supportedFilesystems = [ "zfs" ];
+
+  environment.systemPackages = with pkgs; [
+    firmwareLinuxNonfree
+  ];
+
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/1dbfe915-dc80-4f8b-b658-4486b0b25655";
-      fsType = "ext4";
-      options = [ "noatime" "nodiratime" "discard"];
+    { device = "rpool/root/nixos";
+      fsType = "zfs";
+    };
+
+  fileSystems."/home" =
+    { device = "rpool/home";
+      fsType = "zfs";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/A672-4EDA";
+    { device = "/dev/disk/by-uuid/5117-3FC2";
       fsType = "vfat";
     };
 
-  swapDevices = [ {
-      device = "/dev/disk/by-uuid/9e6d4bfb-7492-4559-9daf-513dbbf0d314";
-    }
-  ];
+  swapDevices = [ ];
 
   nix.maxJobs = lib.mkDefault 12;
+  networking.hostId = "95728502";
+  networking.networkmanager.enable = true;
+  networking.enableIPv6 = false;
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  i18n = {
+    consoleKeyMap = "dvorak";
+  };
 
   hardware.pulseaudio = {
-   enable = true;
-   support32Bit = true; # This might be needed for Steam games
-   package = pkgs.pulseaudioFull;
+    enable = true;
+    support32Bit = true;
+    package = pkgs.pulseaudioFull;
   };
 
   hardware.bluetooth.enable = true;
+
+  # services.xserver.resolutions = [ { x = 1920; y = 1200; } ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 }

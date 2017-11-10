@@ -12,15 +12,15 @@
       ./hardware-configuration.nix
       ../../services/common.nix
       ../../services/kde5.nix
-      ../../services/lxd.nix
-      ../../services/docker.nix
+      # ../../services/lxd.nix
+      # ../../services/docker.nix
       ../../services/virtualbox.nix
       ../../services/dnscrypt.nix
       ../../pkgs/common.nix
-      ../../pkgs/dev.nix
-      ../../pkgs/gui.nix
+      # ../../pkgs/dev.nix
+      # ../../pkgs/gui.nix
       ../../settings/common.nix
-      ../../settings/dvorak.nix
+      # ../../settings/dvorak.nix
       ../../private/common.nix
     ];
 
@@ -73,6 +73,6 @@
   # };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "16.09";
+  system.stateVersion = "17.09";
 
 }
