@@ -17,7 +17,7 @@
     erlang
     rebar3
     mono50
-    monodevelop
+    # monodevelop
     nodejs
     go
     patchelf
