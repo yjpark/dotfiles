@@ -9,7 +9,7 @@
     xdotool
     wmctrl
     albert
-    slack
+    # slack
     plasma-pa
     plasma-nm
     plasma-workspace
@@ -23,5 +23,7 @@
     libinput
     kdeApplications.okular
     gwenview
+    noto-fonts
+    noto-fonts-cjk
   ];
 }

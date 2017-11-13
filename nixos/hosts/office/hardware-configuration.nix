@@ -13,7 +13,7 @@
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025385961b04fb1-part2";
-  boot.supportedFilesystems = [ "zfs" ];
+  boot.supportedFilesystems = [ "zfs" "exfat" ];
 
   environment.systemPackages = with pkgs; [
     firmwareLinuxNonfree
