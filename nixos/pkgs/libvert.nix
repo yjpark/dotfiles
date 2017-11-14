@@ -6,6 +6,8 @@
     virtmanager
     virt-viewer
     kvm
+    qemu
+    OVMF
   ];
 }
 
