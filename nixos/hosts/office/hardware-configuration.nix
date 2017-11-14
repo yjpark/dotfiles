@@ -9,11 +9,24 @@
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.crypted.device = "/dev/disk/by-id/nvme-eui.0025385961b04fb1-part2";
   boot.supportedFilesystems = [ "zfs" "exfat" ];
+
+  # https://gist.github.com/techhazard/1be07805081a4d7a51c527e452b87b26
+  # CHANGE: intel_iommu enables iommu for intel CPUs with VT-d
+  # use amd_iommu if you have an AMD CPU with AMD-Vi
+  boot.kernelParams = [ "intel_iommu=on" ];
+
+  # These modules are required for PCI passthrough, and must come before early modesetting stuff
+  boot.kernelModules = [ "kvm-intel" "vfio" "vfio_iommu_type1" "vfio_pci" "vfio_virqfd" ];
+
+  # CHANGE: Don't forget to put your own PCI IDs here
+  # lspci -nn | grep -i amd
+  # 03:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Baffin [Radeon RX 460] [1002:67ef] (rev e5)
+  # 03:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:aae0]
+  boot.extraModprobeConfig ="options vfio-pci ids=1002:67ef,1002:aac8";
 
   environment.systemPackages = with pkgs; [
     firmwareLinuxNonfree

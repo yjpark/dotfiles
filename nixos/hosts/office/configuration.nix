@@ -6,7 +6,7 @@
 
 {
   nixpkgs.config.allowUnfree = true;
-  nix.nixPath = [ "/home/yjpark/projects/forks" "nixos-config=/etc/nixos/configuration.nix" ];
+  # nix.nixPath = [ "/home/yjpark/projects/forks" "nixos-config=/etc/nixos/configuration.nix" ];
 
   imports =
     [ # Include the results of the hardware scan.
@@ -19,7 +19,7 @@
       ../../services/dnscrypt.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
-      ../../pkgs/game_dev.nix
+      # ../../pkgs/game_dev.nix
       ../../pkgs/gui.nix
       ../../settings/common.nix
       # ../../settings/dvorak.nix
