@@ -16,11 +16,13 @@
       ../../services/lxd.nix
       ../../services/docker.nix
       ../../services/virtualbox.nix
+      ../../services/libvirtd.nix
       ../../services/dnscrypt.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       # ../../pkgs/game_dev.nix
       ../../pkgs/gui.nix
+      ../../pkgs/libvirt.nix
       ../../settings/common.nix
       # ../../settings/dvorak.nix
       ../../private/common.nix
