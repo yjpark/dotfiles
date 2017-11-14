@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# https://gist.github.com/agentsim/00cc38c693e7d0e1b36a2080870d955b
+
+hdiutil create -o /tmp/HighSierra.cdr -size 5130m -layout SPUD -fs HFS+J
+hdiutil attach /tmp/HighSierra.cdr.dmg -noverify -mountpoint /Volumes/install_build
+sudo /Users/yjpark/Disk/Install\ macOS\ High\ Sierra.app/Contents/Resources/createinstallmedia --volume /Volumes/install_build
+mv /tmp/HighSierra.cdr.dmg ~/temp/InstallSystem.dmg
+hdiutil detach /Volumes/Install\ macOS\ High\ Sierra
+hdiutil convert ~/temp/InstallSystem.dmg -format UDTO -o ~/temp/HighSierra.iso
