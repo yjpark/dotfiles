@@ -17,7 +17,7 @@
       paths = [
         firefox
         chromium
-        chromiumBeta
+        # chromiumBeta
         go
         hugo
         atom

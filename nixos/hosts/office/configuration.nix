@@ -6,7 +6,7 @@
 
 {
   nixpkgs.config.allowUnfree = true;
-  # nix.nixPath = [ "/home/yjpark/projects/forks" "nixos-config=/etc/nixos/configuration.nix" ];
+  nix.nixPath = [ "/home/yjpark/projects/forks" "nixos-config=/etc/nixos/configuration.nix" ];
 
   imports =
     [ # Include the results of the hardware scan.

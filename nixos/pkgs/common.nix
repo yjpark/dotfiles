@@ -35,5 +35,7 @@
     acpi
     xcape
     unzip
+    sshfs-fuse
+    shadowsocks-libev
   ];
 }
