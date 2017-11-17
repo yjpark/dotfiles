@@ -23,6 +23,7 @@
     tree
     lzma
     perl
+    hugo
     mosh
     wirelesstools
     inotify-tools
@@ -33,7 +34,7 @@
     dropbox-cli
     pciutils
     acpi
-    xcape
+    patchelf
     unzip
     sshfs-fuse
     shadowsocks-libev
