@@ -26,12 +26,8 @@
   # lspci -nn | grep -i amd
   # 03:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Baffin [Radeon RX 460] [1002:67ef] (rev e5)
   # 03:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:aae0]
-  boot.extraModprobeConfig ="options vfio-pci ids=1002:67ef,1002:aac8";
-
-  # lspci -nn | grep -i nvidia
-  # 05:00.0 VGA compatible controller [0300]: NVIDIA Corporation GP106 [GeForce GTX 1060 3GB] [10de:1c02] (rev a1)
-  # 05:00.1 Audio device [0403]: NVIDIA Corporation GP106 High Definition Audio Controller [10de:10f1] (rev a1)
-  # boot.extraModprobeConfig ="options vfio-pci ids=10de:1c02,10de:10f1";
+  # 07:00.0 USB controller [0c03]: ASMedia Technology Inc. ASM1142 USB 3.1 Host Controller [1b21:1242]
+  boot.extraModprobeConfig ="options vfio-pci ids=1002:67ef,1002:aae0,1b21:1242";
 
   environment.systemPackages = with pkgs; [
     firmwareLinuxNonfree
