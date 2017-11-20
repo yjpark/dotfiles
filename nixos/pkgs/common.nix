@@ -38,5 +38,6 @@
     unzip
     sshfs-fuse
     shadowsocks-libev
+    lm_sensors
   ];
 }
