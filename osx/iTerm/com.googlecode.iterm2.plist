@@ -406,13 +406,15 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>831 233 796 473 0 0 1920 1058 </string>
+	<string>831 277 796 473 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 502 825 554 0 0 1920 1058 </string>
+	<string>0 0 1920 1058 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 20 1900 1038 0 0 1920 1058 </string>
+	<string>1920 -120 1920 1178 1920 -120 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 18 1900 1040 0 0 1920 1058 </string>
+	<string>0 0 1920 1058 0 0 1920 1058 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>1920 -120 1920 1178 1920 -120 1920 1178 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -680,7 +682,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>80</integer>
+			<integer>200</integer>
 			<key>Command</key>
 			<string>/usr/local/bin/fish</string>
 			<key>Cursor Color</key>
@@ -1075,7 +1077,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>25</integer>
+			<integer>80</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -1144,6 +1146,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>755843C0-B490-4CA6-B7D3-3F5C3ABC51E4</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>1</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
