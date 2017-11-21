@@ -3,7 +3,7 @@
 {
   networking.nat = {
     enable = true;
-    internalIPs = [ "10.0.1.0/24" ];
+    internalIPs = [ "10.0.2.0/24" ];
     internalInterfaces = [ "eno1" ];
     externalInterface = "wlp8s0";
     forwardPorts = [
@@ -14,7 +14,7 @@
   };
 
   networking.interfaces.eno1 = {
-    ipAddress = "10.0.1.1";
+    ipAddress = "10.0.2.2";
     prefixLength = 24;
   };
 
@@ -25,10 +25,10 @@
     allowedTCPPorts = [ 22 53 1100 1101 1102 1103 1104 8126 ];
     allowedUDPPorts = [ 53 ];
     extraCommands = ''
-        iptables -t nat -A POSTROUTING -s 10.0.1.0/24 -o wlp8s0 -j MASQUERADE
+        iptables -t nat -A POSTROUTING -s 10.0.2.0/24 -o wlp8s0 -j MASQUERADE
     '';
     extraStopCommands = ''
-      iptables -t nat -D POSTROUTING -s 10.0.1.0/24 -o wlp8s0 -j MASQUERADE
+      iptables -t nat -D POSTROUTING -s 10.0.2.0/24 -o wlp8s0 -j MASQUERADE
     '';
   };
 
