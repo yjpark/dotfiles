@@ -11,6 +11,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./office-nat.nix
       ../../services/common.nix
       ../../services/kde5.nix
       ../../services/lxd.nix
