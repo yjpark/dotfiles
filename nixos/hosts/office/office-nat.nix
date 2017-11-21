@@ -22,7 +22,7 @@
     enable = true;
     allowPing = true;
     trustedInterfaces = [ "lo" "eno1" "docker0" "tap0" "vboxnet0" "virbr0" ];
-    allowedTCPPorts = [ 22 53 1100 1101 1102 1103 1104 ];
+    allowedTCPPorts = [ 22 53 1100 1101 1102 1103 1104 8126 ];
     allowedUDPPorts = [ 53 ];
     extraCommands = ''
         iptables -t nat -A POSTROUTING -s 10.0.1.0/24 -o wlp8s0 -j MASQUERADE
