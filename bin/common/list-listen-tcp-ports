@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+lsof -P -n -i | grep LISTEN
