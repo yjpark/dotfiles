@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+lsof -n -i | grep UDP
