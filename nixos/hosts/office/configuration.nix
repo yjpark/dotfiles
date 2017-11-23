@@ -13,7 +13,7 @@
       ./office-nat.nix
       ../../settings/nixpkgs_fork.nix
       ../../settings/common.nix
-      ../../settings/dvorak.nix
+      # ../../settings/dvorak.nix
       ../../settings/i18n.chinese.fcitx.nix
       ../../private/common.nix
       ../../services/common.nix

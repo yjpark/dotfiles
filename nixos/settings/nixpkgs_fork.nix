@@ -2,7 +2,7 @@
 {
   # https://github.com/Mic92/dotfiles/blob/master/nixos/configuration.nix
   nix.nixPath = [
-    "nixpkgs=/home/yjpark/projects/forks"
+    "nixpkgs=/home/yjpark/projects/forks/nixpkgs"
     "nixos-config=/etc/nixos/configuration.nix"
     # "nixpkgs-overlays=/home/joerg/git/nixos-configuration/overlays"
   ];
