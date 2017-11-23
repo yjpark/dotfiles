@@ -26,6 +26,6 @@
     maven
     nix-repl
     zeal
-    coreclr
+    dotnet-sdk
   ];
 }

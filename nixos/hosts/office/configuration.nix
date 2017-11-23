@@ -6,27 +6,28 @@
 
 {
   nixpkgs.config.allowUnfree = true;
-  nix.nixPath = [ "/home/yjpark/projects/forks" "nixos-config=/etc/nixos/configuration.nix" ];
 
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./office-nat.nix
+      ../../settings/nixpkgs_fork.nix
+      ../../settings/common.nix
+      ../../settings/dvorak.nix
+      ../../settings/i18n.chinese.fcitx.nix
+      ../../private/common.nix
       ../../services/common.nix
       ../../services/kde5.nix
-      ../../services/lxd.nix
       ../../services/docker.nix
+      ../../services/dnscrypt.nix
+      ../../services/lxd.nix
       ../../services/virtualbox.nix
       ../../services/libvirtd.nix
-      ../../services/dnscrypt.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
-      # ../../pkgs/game_dev.nix
       ../../pkgs/gui.nix
       ../../pkgs/libvirt.nix
-      ../../settings/common.nix
-      # ../../settings/dvorak.nix
-      ../../private/common.nix
+      # ../../pkgs/game_dev.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

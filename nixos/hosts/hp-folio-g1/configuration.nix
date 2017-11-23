@@ -8,6 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../settings/nixpkgs_fork.nix
+      ../../settings/common.nix
+      ../../settings/dvorak.nix
+      ../../settings/i18n.chinese.fcitx.nix
+      ../../private/common.nix
       ../../services/common.nix
       ../../services/kde5.nix
       ../../services/docker.nix
@@ -15,13 +20,8 @@
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
-      ../../settings/common.nix
-      ../../settings/dvorak.nix
-      ../../settings/i18n.chinese.fcitx.nix
-      ../../private/common.nix
     ];
   nixpkgs.config.allowUnfree = true;
-  nix.nixPath = [ "/home/yjpark/projects/forks" "nixos-config=/etc/nixos/configuration.nix" ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
