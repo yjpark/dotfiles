@@ -18,6 +18,7 @@
       ../../settings/common.nix
       ../../settings/dvorak.nix
       ../../settings/i18n.chinese.fcitx.nix
+      ../../settings/nixpkgs.nix
       ../../private/common.nix
       ../../private/common.nix
     ];

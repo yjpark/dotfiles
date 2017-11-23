@@ -26,5 +26,6 @@
     maven
     nix-repl
     zeal
+    coreclr
   ];
 }
