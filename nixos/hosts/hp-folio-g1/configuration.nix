@@ -18,8 +18,6 @@
       ../../settings/common.nix
       ../../settings/dvorak.nix
       ../../settings/i18n.chinese.fcitx.nix
-      ../../settings/nixpkgs.nix
-      ../../private/common.nix
       ../../private/common.nix
     ];
   nixpkgs.config.allowUnfree = true;
@@ -81,6 +79,6 @@
   # };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.03";
+  system.stateVersion = "17.09";
 
 }
