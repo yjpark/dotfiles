@@ -29,6 +29,8 @@
   # 07:00.0 USB controller [0c03]: ASMedia Technology Inc. ASM1142 USB 3.1 Host Controller [1b21:1242]
   boot.extraModprobeConfig ="options vfio-pci ids=1002:67ef,1002:aae0,1b21:1242";
 
+  services.xserver.displayManager.sddm.autoLogin.enable = true;
+
   environment.systemPackages = with pkgs; [
     firmwareLinuxNonfree
   ];
