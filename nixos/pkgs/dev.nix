@@ -17,7 +17,7 @@
     erlang
     rebar3
     mono50
-    # monodevelop
+    monodevelop
     nodejs
     go
     patchelf
@@ -27,5 +27,6 @@
     nix-repl
     zeal
     dotnet-sdk
+    dotnetbuildhelpers
   ];
 }
