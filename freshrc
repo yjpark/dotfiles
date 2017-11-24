@@ -80,6 +80,9 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 if [[ "$(uname)" == "Linux" ]]; then
   fresh 'bash/custom.linux/*' --file='~/.bash_it/custom/linux.bash'
+  if [[ $DIST == "nixos" ]]; then
+    fresh 'bash/custom.linux.nixos/*' --file='~/.bash_it/custom/linux.bash'
+  fi
   if [[ $DIST == "ubuntu" || $DIST == "neon" ]]; then
     fresh 'bash/custom.linux.ubuntu/*' --file='~/.bash_it/custom/linux.bash'
   fi

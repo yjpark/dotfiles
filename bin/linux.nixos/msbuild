@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+dotnet /nix/store/xhsbifbvsgcy7kbjhb5hjpzhlslg095z-dotnet-sdk-2.0.3/sdk/2.0.3-servicing-007037/MSBuild.dll $@
