@@ -20,13 +20,13 @@
       ../../services/kde5.nix
       ../../services/docker.nix
       ../../services/dnscrypt.nix
-      ../../services/lxd.nix
-      ../../services/virtualbox.nix
-      ../../services/libvirtd.nix
+      # ../../services/lxd.nix
+      # ../../services/virtualbox.nix
+      # ../../services/libvirtd.nix
       ../../pkgs/common.nix
       ../../pkgs/dev.nix
       ../../pkgs/gui.nix
-      ../../pkgs/libvirt.nix
+      # ../../pkgs/libvirt.nix
       # ../../pkgs/game_dev.nix
     ];
 
