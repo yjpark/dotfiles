@@ -412,15 +412,15 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>530 477 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>403 140 606 469 0 0 1920 1058 </string>
+	<string>329 133 606 469 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>555 277 796 473 0 0 1680 1028 </string>
+	<string>555 303 770 429 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1210 842 0 0 1680 1050 </string>
+	<string>0 0 1680 1028 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1680 1028 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 0 1680 1028 0 0 1680 1028 </string>
+	<string>0 10 1680 1018 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>0 0 1680 1028 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -1970,8 +1970,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-20T11:00:35Z</date>
+	<date>2017-12-10T10:08:55Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>ShowPaneTitles</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
