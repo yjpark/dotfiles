@@ -1,3 +1,4 @@
 #!/bin/bash
 
+dotnet restore
 msbuild /m /p:Configuration=Release
