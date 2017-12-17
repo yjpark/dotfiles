@@ -6,6 +6,8 @@ make_completion g git
 alias a "ag --smart-case"
 make_completion a ag
 
+alias gwp git-commit-wip-push
+
 # just aliases
 alias l "ls -l"
 alias cb clear_buffer
