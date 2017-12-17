@@ -6,8 +6,6 @@ make_completion g git
 alias a "ag --smart-case"
 make_completion a ag
 
-alias gwp git-commit-wip-push
-
 # just aliases
 alias l "ls -l"
 alias cb clear_buffer
@@ -60,3 +58,8 @@ alias htop "htop --sort-key PERCENT_CPU"
 
 alias vimx "vim -u ~/.vimrcx -x"
 alias update-completions "fish_update_completions"
+
+alias fresh-fish ". ~/.config/fish/config.fish"
+
+alias gwp git-commit-wip-push
+
