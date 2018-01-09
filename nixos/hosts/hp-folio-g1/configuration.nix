@@ -30,6 +30,10 @@
   time.timeZone = "Asia/Shanghai";
   networking.hostName = "yjpark-g1"; # Define your hostname.
 
+  nixpkgs.config.permittedInsecurePackages = [
+      "linux-4.13.16"
+    ];
+
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
