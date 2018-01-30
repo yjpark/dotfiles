@@ -3,7 +3,7 @@ alias d "docker"
 make_completion d docker
 alias g "git"
 make_completion g git
-alias a "ag --smart-case"
+alias a "ag --smart-case --ignore-dir bin --ignore-dir obj"
 make_completion a ag
 
 # just aliases
