@@ -14,6 +14,7 @@
       ../../settings/i18n.chinese.fcitx.nix
       ../../private/common.nix
       ../../services/common.nix
+      ../../services/wayland.nix
       ../../services/kde5.nix
       ../../services/docker.nix
       ../../services/dnscrypt.nix
