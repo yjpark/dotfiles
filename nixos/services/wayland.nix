@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     wayland
-    weston
+    way-cooler
     kwayland-integration
     sway
   ];
