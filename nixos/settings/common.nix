@@ -6,5 +6,6 @@
     defaultLocale = "en_US.UTF-8";
   };
 
-  services.xserver.layout = "us";
+  services.xserver.layout = "dvorak";
+  services.xserver.xkbOptions = "ctrl:swapcaps";
 }
