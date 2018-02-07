@@ -27,7 +27,11 @@
   # 03:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Baffin [Radeon RX 460] [1002:67ef] (rev e5)
   # 03:00.1 Audio device [0403]: Advanced Micro Devices, Inc. [AMD/ATI] Device [1002:aae0]
   # 07:00.0 USB controller [0c03]: ASMedia Technology Inc. ASM1142 USB 3.1 Host Controller [1b21:1242]
-  boot.extraModprobeConfig ="options vfio-pci ids=1002:67ef,1002:aae0,1b21:1242";
+  boot.extraModprobeConfig = 
+  ''
+    options vfio-pci ids=1002:67ef,1002:aae0,1b21:1242
+    options vfio_iommu_type1  disable_hugepages=1 allow_unsafe_interrupts=0
+  '';
 
   services.xserver.displayManager.sddm.autoLogin.enable = true;
 
