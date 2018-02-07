@@ -5,6 +5,7 @@
     libvirt
     virtmanager
     virt-viewer
+    bridge-utils
     kvm
     qemu
     OVMF
