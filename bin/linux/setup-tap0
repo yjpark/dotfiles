@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
+echo "Try Cleanup"
+
 sudo ip tuntap del tap0 mode tap
 sudo ip link del tap0
+sudo ip link del br0
+
+echo "Setup tap0"
+
 sudo ip tuntap add dev tap0 mode tap
 sudo ip link set tap0 up promisc on
-sudo brctl addif docker0 tap0
+
+sudo brctl addbr br0
+sudo brctl addif br0 tap0
