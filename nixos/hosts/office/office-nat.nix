@@ -4,7 +4,7 @@
   networking.nat = {
     enable = true;
     internalIPs = [ "10.0.2.0/24" ];
-    internalInterfaces = [ "eno1" ];
+    internalInterfaces = [ "eth0" ];
     externalInterface = "wlp8s0";
     forwardPorts = [
       # { sourcePort = 53; destination = "127.0.0.1:53"; proto = "tcp"; }
@@ -13,7 +13,7 @@
     ];
   };
 
-  networking.interfaces.eno1 = {
+  networking.interfaces.eth0 = {
     ipAddress = "10.0.2.2";
     prefixLength = 24;
   };
@@ -21,7 +21,7 @@
   networking.firewall = {
     enable = true;
     allowPing = true;
-    trustedInterfaces = [ "lo" "eno1" "docker0" "tap0" "vboxnet0" "virbr0" ];
+    trustedInterfaces = [ "lo" "eth0" "docker0" "tap0" "vboxnet0" "virbr0" "br0" ];
     allowedTCPPorts = [ 22 53 1100 1101 1102 1103 1104 8126 ];
     allowedUDPPorts = [ 53 ];
     extraCommands = ''
