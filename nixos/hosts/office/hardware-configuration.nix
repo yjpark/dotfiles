@@ -20,7 +20,7 @@
   boot.kernelParams = [ "intel_iommu=on" ];
 
   # These modules are required for PCI passthrough, and must come before early modesetting stuff
-  boot.kernelModules = [ "kvm-intel" "vfio" "vfio_iommu_type1" "vfio_pci" "vfio_virqfd" ];
+  boot.kernelModules = [ "kvm-intel" "vfio" "vfio_iommu_type1" "vfio_pci" "vfio_virqfd" "coretemp" "nct6775" ];
 
   # CHANGE: Don't forget to put your own PCI IDs here
   # lspci -nn | grep -i amd
