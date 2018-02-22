@@ -62,7 +62,7 @@
   networking.enableIPv6 = false;
 
   i18n = {
-    consoleKeyMap = "dvorak";
+    # consoleKeyMap = "dvorak";
   };
 
   hardware.pulseaudio = {
