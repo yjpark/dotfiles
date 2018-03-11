@@ -378,6 +378,8 @@
 	<string>~/.dotfiles/osx/iTerm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -410,25 +412,25 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>234 61 715 245 0 0 1024 746 </string>
+	<string>407 213 862 278 0 0 1680 1028 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>530 477 620 392 0 0 1680 1028 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>2189 32 606 469 1920 -120 1920 1178 </string>
+	<string>329 133 606 469 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>502 571 796 473 0 0 1920 1058 </string>
+	<string>555 347 796 473 0 0 1680 1028 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>127 444 592 584 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>201 72 1210 820 0 0 1920 1058 </string>
+	<string>0 10 1680 1018 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 0 1920 1058 0 0 1920 1058 </string>
+	<string>0 10 1680 1018 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 0 1920 1058 0 0 1920 1058 </string>
+	<string>0 0 1671 1028 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>0 0 1920 1058 0 0 1920 1058 </string>
+	<string>0 10 1680 1018 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>1920 238 1210 820 1920 -120 1920 1178 </string>
-	<key>NSWindow Frame iTerm Window 5</key>
-	<string>0 0 1920 1058 0 0 1920 1058 </string>
-	<key>NSWindow Frame iTerm Window 6</key>
-	<string>331 15 1210 820 0 0 1920 1058 </string>
+	<string>0 0 1680 1028 0 0 1680 1028 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1915,21 +1917,23 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>755843C0-B490-4CA6-B7D3-3F5C3ABC51E4</string>
+	<string>5CF1A585-C743-4AC7-AC30-50A5BBCE3ADA</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>532511876.679106</real>
+	<real>528443225.37287402</real>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
 	<key>OpenBookmark</key>
 	<false/>
 	<key>OpenNoWindowsAtStartup</key>
 	<true/>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1965,22 +1969,26 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/yjpark/.dotfiles/osx/iTerm</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=82</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=54</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-30T03:37:19Z</date>
+	<date>2018-03-03T06:55:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>TabStyle</key>
 	<integer>1</integer>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1518349952</real>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
