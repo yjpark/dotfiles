@@ -13,6 +13,7 @@ mono
 hub
 git-extras
 git-flow-avh
+git-subrepo
 svn --devel
 fzf
 fswatch
