@@ -17,6 +17,9 @@ concfg import solarized
 
 - https://github.com/lukesampson/concfg
 
+## scoop ssh setting
+- https://github.com/lukesampson/scoop/wiki/SSH-on-Windows 
+
 # Chocolatey
 A pretty nice package manager for windows
 
