@@ -3,10 +3,10 @@ Send #{Tab}
 return
 
 ^`::
-IfWinActive, ahk_exe iridium.exe
+IfWinActive, ahk_exe ubuntu.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe iridium.exe
+    WinActivate ahk_exe ubuntu.exe
 return
 
 ^!`::
@@ -45,10 +45,10 @@ else
 return
 
 ^!v::
-IfWinActive, ahk_exe gvim.exe
+IfWinActive, ahk_exe devenv.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe gvim.exe
+    WinActivate ahk_exe devenv.exe
 return
 
 ^!x::
