@@ -3,17 +3,17 @@ Send #{Tab}
 return
 
 ^`::
-IfWinActive, ahk_exe ubuntu.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe ubuntu.exe
-return
-
-^!`::
 IfWinActive, ahk_exe mintty.exe
     Send !{Tab}
 else
     WinActivate ahk_exe mintty.exe
+return
+
+^!`::
+IfWinActive, ahk_exe ubuntu.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe ubuntu.exe
 return
 
 ^!m::
