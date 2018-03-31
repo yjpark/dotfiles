@@ -3,17 +3,17 @@ Send #{Tab}
 return
 
 ^`::
-IfWinActive, ahk_exe mintty.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe mintty.exe
-return
-
-^!`::
 IfWinActive, ahk_exe ubuntu.exe
     Send !{Tab}
 else
     WinActivate ahk_exe ubuntu.exe
+return
+
+^!`::
+IfWinActive, ahk_exe mintty.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe mintty.exe
 return
 
 ^!m::
@@ -23,11 +23,11 @@ else
     WinActivate ahk_exe chrome.exe
 return
 
-^!f::
-IfWinActive, ahk_exe firefox.exe
+^!w::
+IfWinActive, ahk_exe chrome_canery.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe firefox.exe
+    WinActivate ahk_exe chrome_canery.exe
 return
 
 ^!u::
