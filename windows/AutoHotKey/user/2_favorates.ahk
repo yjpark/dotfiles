@@ -24,10 +24,10 @@ else
 return
 
 ^!w::
-IfWinActive, ahk_exe chrome_canery.exe
+IfWinActive, ahk_exe chrome_canary.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe chrome_canery.exe
+    WinActivate ahk_exe chrome_canary.exe
 return
 
 ^!u::
