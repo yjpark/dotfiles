@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/temp
+nohup /Applications/Visual\ Studio.app/Contents/MacOS/VisualStudio &
