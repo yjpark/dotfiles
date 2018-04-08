@@ -24,10 +24,10 @@ else
 return
 
 ^!w::
-IfWinActive, ahk_exe chrome_canary.exe
+IfWinActive, ahk_exe iridium.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe chrome_canary.exe
+    WinActivate ahk_exe iridium.exe
 return
 
 ^!u::
