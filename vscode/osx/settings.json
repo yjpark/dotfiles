@@ -1,5 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
+    "python.pythonPath": "/anaconda3",
     "window.zoomLevel": 2,
     "files.exclude": {
         "**/.git": true,
