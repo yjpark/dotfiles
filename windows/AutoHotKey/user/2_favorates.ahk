@@ -3,13 +3,20 @@ Send #{Tab}
 return
 
 ^`::
+IfWinActive, ahk_exe vcxsrv.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe vcxsrv.exe
+return
+
+^!`::
 IfWinActive, ahk_exe ubuntu.exe
     Send !{Tab}
 else
     WinActivate ahk_exe ubuntu.exe
 return
 
-^!`::
+^!t::
 IfWinActive, ahk_exe mintty.exe
     Send !{Tab}
 else
@@ -70,13 +77,6 @@ IfWinActive, ahk_exe idea.exe
     Send !{Tab}
 else
     WinActivate ahk_exe idea.exe
-return
-
-^!t::
-IfWinActive, ahk_exe Telegram.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe Telegram.exe
 return
 
 ^!h::
