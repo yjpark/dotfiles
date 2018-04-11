@@ -1,6 +1,7 @@
+
 import requests
 import terminatorlib.plugin as plugin
-from gi.repository import Gtk
+import gtk as Gtk
 from terminatorlib.config import ConfigBase
 from terminatorlib.translation import _
 from terminatorlib.util import get_config_dir, err, dbg, gerr
@@ -27,16 +28,16 @@ class TerminatorThemes(plugin.Plugin):
         dbox = Gtk.Dialog(
                         _("Terminator themes"),
                         None,
-                        Gtk.DialogFlags.MODAL,
+                        Gtk.DIALOG_MODAL,
                         (
-                            
-                            _("_Close"), Gtk.ResponseType.ACCEPT
+                            Gtk.STOCK_CANCEL, Gtk.RESPONSE_REJECT,
+                            Gtk.STOCK_OK, Gtk.RESPONSE_ACCEPT
                         )
                         )
 
         self.liststore = Gtk.ListStore(str, bool)
 
-        profiles_from_repo = []
+        self.profiles_from_repo = []
         response = requests.get(self.base_url)
         
         if response.status_code != 200:
@@ -44,15 +45,15 @@ class TerminatorThemes(plugin.Plugin):
             return
 
         for repo in response.json():
-            profiles_from_repo.append(repo['name'])
+            self.profiles_from_repo.append(repo['name'])
         
        
-        profiles = self.terminal.config.list_profiles()
+        self.profiles = self.terminal.config.list_profiles()
 
         # Set add/remove buttons availability
-        for profile in profiles_from_repo:
+        for profile in self.profiles_from_repo:
             profile = profile.split(".")
-            if profile[0] in profiles:
+            if profile[0] in self.profiles:
                 self.liststore.append([profile[0], False])
             else:
                 self.liststore.append([profile[0], True])
@@ -62,7 +63,7 @@ class TerminatorThemes(plugin.Plugin):
 
         selection = treeview.get_selection()
        
-        selection.set_mode(Gtk.SelectionMode.SINGLE)
+        selection.set_mode(Gtk.SELECTION_SINGLE)
         selection.connect("changed", self.on_selection_changed, ui)
         ui['treeview'] = treeview
 
@@ -73,17 +74,17 @@ class TerminatorThemes(plugin.Plugin):
 
         scroll_window = Gtk.ScrolledWindow()
         scroll_window.set_size_request(500, 250)
-        scroll_window.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC)
+        scroll_window.set_policy(Gtk.POLICY_AUTOMATIC, Gtk.POLICY_AUTOMATIC)
         scroll_window.add_with_viewport(treeview)
 
         hbox = Gtk.HBox()
-        hbox.pack_start(scroll_window, True, True, 0)
-        dbox.vbox.pack_start(hbox, True, True, 0)
+        hbox.pack_start(scroll_window, True, True)
+        dbox.vbox.pack_start(hbox, True, True)
 
         button_box = Gtk.VBox()
         
         button = Gtk.Button(_("Install"))
-        button_box.pack_start(button, False, True, 0)
+        button_box.pack_start(button, False, True)
         button.connect("clicked", self.on_install, ui) 
         button.set_sensitive(False)
         ui['button_install'] = button
@@ -94,18 +95,18 @@ class TerminatorThemes(plugin.Plugin):
         button.set_sensitive(False)
         ui['button_uninstall'] = button
 
-        hbox.pack_start(button_box, False, True, 0)
+        hbox.pack_start(button_box, False, True)
         self.dbox = dbox
         dbox.show_all()
         res = dbox.run()
-        if res == Gtk.ResponseType.ACCEPT:
+        if res == Gtk.RESPONSE_ACCEPT:
             self.terminal.config.save()
         del(self.dbox)
         dbox.destroy()
         return
 
    
-    def on_selection_changed(self, selection, data=None):
+    def on_selection_changed(self,selection, data=None):
         (model, iter) = selection.get_selected()
         data['button_install'].set_sensitive(model[iter][1])
         data['button_uninstall'].set_sensitive(model[iter][1] is not True)
@@ -140,7 +141,7 @@ class TerminatorThemes(plugin.Plugin):
         if not iter:
             return
 
-    
+       
         headers = { "Accept": "application/vnd.github.v3.raw" }
         response = requests.get(self.base_url+ '/' + target + '.config', headers=headers)
        
