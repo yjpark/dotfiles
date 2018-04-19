@@ -93,5 +93,5 @@
             ]
         }
     ],
-    "editor.wordWrap": "bounded"
+    "editor.wordWrap": "on"
 }
