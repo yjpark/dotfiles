@@ -10,6 +10,7 @@
         "**/*.meta": true,
         "**/.*.meta": true
     },
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "editor.fontFamily": "'Source Code Pro for Powerline', 'Droid Sans Mono'",
     "editor.scrollbar.vertical": "hidden",
     "editor.overviewRulerBorder": false,
