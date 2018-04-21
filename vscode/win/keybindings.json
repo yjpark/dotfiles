@@ -83,14 +83,6 @@
         "command": "-workbench.action.files.newUntitledFile"
     },
     {
-        "key": "alt+s",
-        "command": "workbench.action.files.save"
-    },
-    {
-        "key": "ctrl+s",
-        "command": "-workbench.action.files.save"
-    },
-    {
         "key": "alt+oem_period",
         "command": "workbench.action.showCommands"
     },

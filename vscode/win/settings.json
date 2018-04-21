@@ -72,27 +72,6 @@
                     "args": []
                 }
             ]
-        }, {
-            "before":["<C-s>"],
-            "after":[],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
-        }
-    ],
-    "vim.insertModeKeyBindings": [
-        {
-            "before":["<C-s>"],
-            "after":[],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                }
-            ]
         }
     ],
     "editor.wordWrap": "on"
