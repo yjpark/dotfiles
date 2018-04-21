@@ -1,22 +1,17 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {"key":"cmd+1", "command":"workbench.action.openEditorAtIndex1"}, 
-    {"key":"cmd+2", "command":"workbench.action.openEditorAtIndex2"}, 
-    {"key":"cmd+3", "command":"workbench.action.openEditorAtIndex3"},
-    {"key":"cmd+4", "command":"workbench.action.openEditorAtIndex4"}, 
-    {"key":"cmd+5", "command":"workbench.action.openEditorAtIndex5"}, 
-    {"key":"cmd+6", "command":"workbench.action.openEditorAtIndex6"},
-    {"key":"cmd+7", "command":"workbench.action.openEditorAtIndex7"},
-    {"key":"cmd+8", "command":"workbench.action.openEditorAtIndex8"}, 
-    {"key":"cmd+9", "command":"workbench.action.openEditorAtIndex9"},
+    {"key":"alt+1", "command":"workbench.action.openEditorAtIndex1"}, 
+    {"key":"alt+2", "command":"workbench.action.openEditorAtIndex2"}, 
+    {"key":"alt+3", "command":"workbench.action.openEditorAtIndex3"},
+    {"key":"alt+4", "command":"workbench.action.openEditorAtIndex4"}, 
+    {"key":"alt+5", "command":"workbench.action.openEditorAtIndex5"}, 
+    {"key":"alt+6", "command":"workbench.action.openEditorAtIndex6"},
+    {"key":"alt+7", "command":"workbench.action.openEditorAtIndex7"},
+    {"key":"alt+8", "command":"workbench.action.openEditorAtIndex8"}, 
+    {"key":"alt+9", "command":"workbench.action.openEditorAtIndex9"},
     {
         "key": "ctrl+a",
         "command": "cursorHome",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "cmd+left",
-        "command": "-cursorHome",
         "when": "editorTextFocus"
     },
     {
@@ -55,12 +50,8 @@
         "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
     },
     {
-        "key": "shift+cmd+w",
+        "key": "shift+alt+w",
         "command": "workbench.action.closeOtherEditors"
-    },
-    {
-        "key": "alt+cmd+t",
-        "command": "-workbench.action.closeOtherEditors"
     },
     {
         "key": "alt+w",
@@ -105,7 +96,7 @@
     },
     {
         "key": "ctrl+shift+p",
-        "command": "-workbench.action.showCommands"
+        "command": "workbench.action.showCommands"
     },
     {
         "key": "f1",
