@@ -46,6 +46,7 @@
     font = Source Code Pro for Powerline 10
     foreground_color = "#d6dbe5"
     palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
+    scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
   [[Brogrammer]]
@@ -55,6 +56,7 @@
     font = Source Code Pro for Powerline 10
     foreground_color = "#d6dbe5"
     palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
+    scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
   [[Chalkboard]]
