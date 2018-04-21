@@ -3,18 +3,21 @@
   focus = mouse
   geometry_hinting = False
   homogeneous_tabbar = False
-  scroll_tabbar = True
+  scroll_tabbar = False
   title_transmit_bg_color = "#002b36"
   title_transmit_fg_color = "#839496"
   window_state = fullscreen
+  borderless = True
+  close_button_on_tab = False
 [keybindings]
   copy = <Alt>c
   go_down = <Shift>Down
   go_left = <Shift>Left
   go_right = <Shift>Right
   go_up = <Shift>Up
-  new_tab = <Alt>t
+  new_tab = <Ctrl><Shift>t
   new_terminator = <Alt>n
+  close_term = <Alt>w
   paste = <Alt>v
   switch_to_tab_1 = <Alt>1
   switch_to_tab_10 = <Alt>0
