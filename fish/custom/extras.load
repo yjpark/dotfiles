@@ -4,6 +4,6 @@
 . ~/.config/fish/custom/bass_aliases.fish
 
 . ~/.config/fish/extras/docker-fish-completion/docker.fish
-. ~/.config/fish/extras/fish-kubectl-completions/kubectl.fish
+# . ~/.config/fish/extras/fish-kubectl-completions/kubectl.fish
 
 
