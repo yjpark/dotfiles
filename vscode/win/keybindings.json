@@ -1,0 +1,56 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {"key":"alt+1", "command":"workbench.action.openEditorAtIndex1"}, 
+    {"key":"alt+2", "command":"workbench.action.openEditorAtIndex2"}, 
+    {"key":"alt+3", "command":"workbench.action.openEditorAtIndex3"},
+    {"key":"alt+4", "command":"workbench.action.openEditorAtIndex4"}, 
+    {"key":"alt+5", "command":"workbench.action.openEditorAtIndex5"}, 
+    {"key":"alt+6", "command":"workbench.action.openEditorAtIndex6"},
+    {"key":"alt+7", "command":"workbench.action.openEditorAtIndex7"},
+    {"key":"alt+8", "command":"workbench.action.openEditorAtIndex8"}, 
+    {"key":"alt+9", "command":"workbench.action.openEditorAtIndex9"},
+    {
+        "key": "ctrl+a",
+        "command": "cursorHome",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "cursorEnd",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-list.focusUp",
+        "when": "listFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-showPrevParameterHint",
+        "when": "editorTextFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+    },
+    {
+        "key": "shift+alt+w",
+        "command": "workbench.action.closeOtherEditors"
+    }
+]
