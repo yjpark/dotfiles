@@ -95,5 +95,8 @@
             ]
         }
     ],
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "[fsharp]": {
+        "editor.useTabStops": true
+    }
 }
