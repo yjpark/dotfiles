@@ -61,5 +61,9 @@
     {
         "key": "alt+cmd+t",
         "command": "-workbench.action.closeOtherEditors"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.files.save"
     }
 ]
