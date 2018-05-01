@@ -16,6 +16,13 @@ else
     WinActivate ahk_exe ubuntu.exe
 return
 
+^!1::
+IfWinActive, ahk_exe powershell.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe powershell.exe
+return
+
 ^!t::
 IfWinActive, ahk_exe mintty.exe
     Send !{Tab}

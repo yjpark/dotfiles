@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if type unbuffer > /dev/null 2> /dev/null ; then
+    DATE=$(date -u +%Y%m%d)_$(date -u +%H%M)
+    echo "======================================== Log File: $PWD/run-$DATE.ansi.log"
+    unbuffer dotnet $@ | tee run-$DATE.ansi.log | grep --color=never -E "FTL|ERR|WRN|INF|DBG|VRB"
+else
+    echo "unbuffer is for keeping the color through pipe"
+    echo "https://superuser.com/questions/352697/preserve-colors-while-piping-to-tee"
+    echo "install:"
+    echo "OSX ->"
+    echo "    brew install expect"
+    echo "Debian / Ubuntu ->"
+    echo "    apt install expect-dev"
+fi

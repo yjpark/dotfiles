@@ -12,7 +12,7 @@ For portable apps, use scoop to install is easier
 
 ```
 scoop install concfg
-concfg import solarized
+concfg import mountain
 ```
 
 - https://github.com/lukesampson/concfg

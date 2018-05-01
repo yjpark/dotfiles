@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+grep --color=never -E "FTL|ERR|WRN|INF|DBG|VRB"
