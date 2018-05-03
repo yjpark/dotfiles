@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# TODO: Get it work on windows as well
+# https://stackoverflow.com/questions/11516258/what-is-the-equivalent-of-unbuffer-program-on-windows
+# https://github.com/rprichard/winpty/releases
+
 if type unbuffer > /dev/null 2> /dev/null ; then
     DATE=$(date -u +%Y%m%d)_$(date -u +%H%M)
     echo "======================================== Log File: $PWD/run-$DATE.ansi.log"
