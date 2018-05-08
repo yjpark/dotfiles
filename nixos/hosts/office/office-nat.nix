@@ -14,8 +14,10 @@
   };
 
   networking.interfaces.eth0 = {
-    ipAddress = "10.0.2.2";
-    prefixLength = 24;
+    ipv4.addresses = [{
+      address = "10.0.2.2";
+      prefixLength = 24;
+    }];
   };
 
   networking.firewall = {
