@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp -v ~/.dotfiles/vscode/linux/*.json ~/.config/Code/User/
