@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo debootstrap xenial /chroot/ubuntu http://mirrors.163.com/ubuntu/
