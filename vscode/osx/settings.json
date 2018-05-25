@@ -98,5 +98,6 @@
     "editor.wordWrap": "on",
     "[fsharp]": {
         "editor.useTabStops": true
-    }
+    },
+    "red.redPath": "/Users/yjpark/bin/red-063"
 }
