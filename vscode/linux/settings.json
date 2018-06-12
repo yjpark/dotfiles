@@ -20,7 +20,7 @@
     "editor.minimap.showSlider": "always",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 80,
-    "vim.neovimPath": "/bin/nvim",
+    "vim.neovimPath": "/usr/bin/nvim",
     "vim.enableNeovim": true,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.useSystemClipboard": true,
