@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# run `xprop WM_CLASS` then click the window to get WM_CLASS
+
+# $1 - case insensitive word in WM_CLASS
+# $2 - command to start application
+
+# wmctrl
+# -a <WIN> Activate the window <WIN> by switching to its desktop and raising it.
+# -x Include WM_CLASS in the window list or interpret <WIN> as the WM_CLASS name
+
+wmctrl -x -a "$1" || "$2"

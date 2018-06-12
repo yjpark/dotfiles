@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "Click a window to get WM_CLASS"
+
+xprop WM_CLASS

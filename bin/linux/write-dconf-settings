@@ -12,8 +12,10 @@ dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-9 "['<Primary>
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-10 "['<Primary>0']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-11 "['<Primary>grave']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-12 "['<Primary><Alt>a']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-13 "['<Primary><Alt>m']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-14 "['<Primary><Alt>w']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-15 "['<Primary><Alt>v']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-16 "['<Primary><Alt>z']"
+
+# workspace 13 ~ not working this way, use raise-or-run.x for a simulation
+# dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-13 "['<Primary><Alt>m']"
+# dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-14 "['<Primary><Alt>w']"
+# dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-15 "['<Primary><Alt>v']"
+# dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-16 "['<Primary><Alt>z']"
 
