@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# param is the index of workspace (0 based)
+
+wmctrl -s $@
