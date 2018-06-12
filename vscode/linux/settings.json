@@ -29,13 +29,13 @@
     "vim.otherModesKeyBindings": [
         {
             "before":[";"],
-            "after":[":"],
+            "after":[":"]
         }, {
             "before":["<Enter>"],
-            "after":["i"],
+            "after":["i"]
         }, {
             "before":["<Backspace>"],
-            "after":["i", "<Backspace>"],
+            "after":["i", "<Backspace>"]
         }, {
             "before":["<Comma>", "b"],
             "after":[],
