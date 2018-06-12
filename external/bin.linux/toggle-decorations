@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# https://unix.stackexchange.com/questions/103356/remove-title-bar-of-another-program
+
+a=`xprop -root _NET_ACTIVE_WINDOW | rev | cut -d ' ' -f1 | rev`
+_toggle-decorations $a
