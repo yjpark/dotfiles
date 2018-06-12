@@ -6,6 +6,7 @@
     disabledPackages: [
       "symbols-view"
       "vim-mode"
+      "markdown-preview"
     ]
     followSymlinks: false
     telemetryConsent: "no"
@@ -31,7 +32,8 @@
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":
-    enableLatexRenderingByDefault: true
+    mathConfig:
+      enableLatexRenderingByDefault: true
   minimap:
     scrollAnimation: true
   "tree-view":
