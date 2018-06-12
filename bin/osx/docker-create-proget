@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+docker network create proget
+
+docker run -d \
+              -v /private/var/proget/db:/var/lib/postgresql/data \
+              --net=proget --name=proget-postgres --restart=unless-stopped postgres:9.5
+
+docker run -d \
+              -v /private/var/proget/packages:/var/proget/packages \
+              -v /private/var/proget/extensions:/var/proget/extensions \
+              -p 1280:80 --net=proget --name=proget --restart=unless-stopped inedo/proget:latest
