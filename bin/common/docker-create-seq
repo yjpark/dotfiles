@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# docker pull datalust
+docker run --name datalust.seq \
+    -p 5341:80 \
+    -e ACCEPT_EULA=Y datalust/seq \

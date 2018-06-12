@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+dar -v -m 4096 -y -s 4G -D -Z "*.rar" -Z "*.gz" -Z "*.bz2" -Z "*.zip" -Z "*.png" -Z ".tif" -Z "*.lrz*" -Z "*.pigz" -Z "*.7z" $@
+# -R folder -c filename -z1
+# -z1 for faster, -z9 for smaller size

@@ -77,5 +77,7 @@
     "editor.wordWrap": "on",
     "[fsharp]": {
         "editor.useTabStops": true
-    }
+    },
+    "bracketPairColorizer.forceUniqueOpeningColor": true,
+    "bracketPairColorizer.showBracketsInGutter": true
 }
