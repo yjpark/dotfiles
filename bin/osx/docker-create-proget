@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+sudo mkdir -p /private/var/proget
+sudo chown yjpark:staff /private/var/proget
+mkdir -p /private/var/proget/db
+mkdir -p /private/var/proget/packages
+mkdir -p /private/var/proget/extensions
+
 docker network create proget
 
 docker run -d \
@@ -9,4 +15,13 @@ docker run -d \
 docker run -d \
               -v /private/var/proget/packages:/var/proget/packages \
               -v /private/var/proget/extensions:/var/proget/extensions \
-              -p 1280:80 --net=proget --name=proget --restart=unless-stopped inedo/proget:latest
+              --net=proget --name=proget --restart=unless-stopped inedo/proget:latest
+
+# Need a proxy around liget, otherwise later nuget can't push, failed with error
+# There must be exactly one package.
+# https://inedo.com/support/questions/6691
+
+docker run -d \
+              -v /private/var/proget/nginx.conf:/etc/nginx/conf.d/default.conf \
+              -p 1280:80 --net=proget --name=proget-proxy --restart=unless-stopped nginx:1.11
+

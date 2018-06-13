@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sudo mkdir -p /private/var/liget
+sudo chown yjpark:staff /private/var/liget
+
+docker run -d \
+              -v /private/var/liget:/data \
+              -p 1281:9011 --name=liget --restart=unless-stopped tomzo/liget:latest

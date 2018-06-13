@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+sudo mkdir -p /var/proget
+sudo chown yjpark:staff /var/proget
+mkdir -p /var/proget/db
+mkdir -p /var/proget/packages
+mkdir -p /var/proget/extensions
+
 docker network create proget
 
 docker run -d -v /etc/localtime:/etc/localtime:ro \
