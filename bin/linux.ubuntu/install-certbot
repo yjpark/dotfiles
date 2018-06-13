@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# https://certbot.eff.org/lets-encrypt/ubuntuartful-nginx
+
 sudo apt-get update
 sudo apt-get install software-properties-common
 sudo add-apt-repository ppa:certbot/certbot
