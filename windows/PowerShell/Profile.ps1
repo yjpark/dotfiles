@@ -17,5 +17,14 @@ Set-Alias -Name d.restore -Value ~\Documents\WindowsPowerShell\aliases\d.restore
 Set-Alias -Name d.build -Value ~\Documents\WindowsPowerShell\aliases\d.build.ps1
 Set-Alias -Name d.run -Value ~\Documents\WindowsPowerShell\aliases\d.run.ps1
 
-# Import-Module "Oh-My-Powershell" -DisableNameChecking -NoClobber
+if ($host.Name -eq 'ConsoleHost')
+{
+    # https://github.com/lzybkr/PSReadLine
+    Import-Module PSReadLine
+    Set-PSReadLineOption -EditMode Emacs
+    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+    Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
+    # Import-Module "Oh-My-Powershell" -DisableNameChecking -NoClobber
+}

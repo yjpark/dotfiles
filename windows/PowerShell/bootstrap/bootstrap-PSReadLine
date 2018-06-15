@@ -1,0 +1,1 @@
+Install-Module PSReadLine -Scope CurrentUser
