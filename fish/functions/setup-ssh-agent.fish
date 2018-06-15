@@ -31,6 +31,7 @@ function check_ssh_identity
     if [ $status -eq 0 ]
         ssh-add
         if [ $status -eq 2 ]
+            set -ex SSH_AGENT_PID
             setup-ssh-agent
         end
     end
