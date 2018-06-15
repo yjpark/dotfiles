@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo nvim /mnt/c/Windows/System32/drivers/etc/hosts

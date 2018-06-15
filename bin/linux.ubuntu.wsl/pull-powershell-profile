@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp -vr /mnt/c/Users/yjpark/Documents/WindowsPowerShell/* ~/.dotfiles/windows/PowerShell/
