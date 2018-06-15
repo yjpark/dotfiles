@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 sudo apt update
-sudo apt install git tig fish silversearcher-ag axel htop iotop iftop apt-file tree git-extras build-essential cmake neovim
+sudo apt install git tig fish silversearcher-ag axel htop iotop iftop apt-file tree git-extras build-essential cmake neovim direnv
