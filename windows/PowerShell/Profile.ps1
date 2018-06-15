@@ -12,6 +12,11 @@ Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
 
 Set-Alias -Name gg.bit -Value ~\Documents\WindowsPowerShell\aliases\gg.bit.ps1
+Set-Alias -Name gg.core -Value ~\Documents\WindowsPowerShell\aliases\gg.core.ps1
+Set-Alias -Name gg.lib -Value ~\Documents\WindowsPowerShell\aliases\gg.lib.ps1
+Set-Alias -Name gg.gui -Value ~\Documents\WindowsPowerShell\aliases\gg.gui.ps1
+
+Set-Alias -Name paket -Value .paket\paket.exe
 
 Set-Alias -Name d.restore -Value ~\Documents\WindowsPowerShell\aliases\d.restore.ps1
 Set-Alias -Name d.build -Value ~\Documents\WindowsPowerShell\aliases\d.build.ps1
