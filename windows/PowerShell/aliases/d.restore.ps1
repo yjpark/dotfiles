@@ -1,1 +1,2 @@
+clear
 dotnet restore

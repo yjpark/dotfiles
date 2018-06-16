@@ -23,6 +23,8 @@ Set-Alias -Name paket -Value .paket\paket.exe
 Set-Alias -Name d.restore -Value ~\Documents\WindowsPowerShell\aliases\d.restore.ps1
 Set-Alias -Name d.build -Value ~\Documents\WindowsPowerShell\aliases\d.build.ps1
 Set-Alias -Name d.run -Value ~\Documents\WindowsPowerShell\aliases\d.run.ps1
+Set-Alias -Name d.watch -Value ~\Documents\WindowsPowerShell\aliases\d.watch.ps1
+Set-Alias -Name d.fable -Value ~\Documents\WindowsPowerShell\aliases\d.fable.ps1
 
 if ($host.Name -eq 'ConsoleHost')
 {
