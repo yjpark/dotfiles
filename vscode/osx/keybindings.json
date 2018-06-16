@@ -83,5 +83,13 @@
         "key": "shift+cmd+f",
         "command": "-workbench.action.findInFiles",
         "when": "!searchInputBoxFocus"
+    },
+    {
+        "key": ", p",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "cmd+p",
+        "command": "-workbench.action.quickOpen"
     }
 ]
