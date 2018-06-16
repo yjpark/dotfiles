@@ -10,13 +10,12 @@ Set-Alias -Name ... -Value ~\Documents\WindowsPowerShell\aliases\cd.uuu.ps1
 Set-Alias -Name .... -Value ~\Documents\WindowsPowerShell\aliases\cd.uuuu.ps1
 Set-Alias -Name ..... -Value ~\Documents\WindowsPowerShell\aliases\cd.uuuuu.ps1
 
+Set-Alias -Name a -Value ~\Documents\WindowsPowerShell\aliases\a.ps1
+
 Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
 
-Set-Alias -Name gg.bit -Value ~\Documents\WindowsPowerShell\aliases\gg.bit.ps1
-Set-Alias -Name gg.core -Value ~\Documents\WindowsPowerShell\aliases\gg.core.ps1
-Set-Alias -Name gg.lib -Value ~\Documents\WindowsPowerShell\aliases\gg.lib.ps1
-Set-Alias -Name gg.gui -Value ~\Documents\WindowsPowerShell\aliases\gg.gui.ps1
+Set-Alias -Name gg -Value ~\Documents\WindowsPowerShell\aliases\gg.ps1
 
 Set-Alias -Name paket -Value .paket\paket.exe
 

@@ -1,2 +1,2 @@
 clear
-dotnet watch run --no-restore
+dotnet watch run --no-restore $args
