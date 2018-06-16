@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "/anaconda3",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 2,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,

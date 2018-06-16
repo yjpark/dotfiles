@@ -93,5 +93,29 @@
     {
         "key": "f1",
         "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
+    },
+    {
+        "key": "oem_comma p",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "oem_comma oem_comma",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
     }
 ]
