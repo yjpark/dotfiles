@@ -1,3 +1,6 @@
+Fira Code
+- https://github.com/tonsky/FiraCode/wiki
+
 Google's Noto fonts
 
 - http://www.google.com/get/noto/#/
