@@ -117,5 +117,15 @@
     {
         "key": "ctrl+r",
         "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "oem_comma oem_period",
+        "command": "workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
     }
 ]
