@@ -1,2 +1,2 @@
 clear
-dotnet watch run --no-restore
+dotnet run --no-build --no-restore
