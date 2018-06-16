@@ -1,5 +1,7 @@
 $env:Path += "$env:Path;C:\Users\yjpark\Documents\WindowsPowerShell\bin"
 
+Set-Alias -Name cb -Value clear
+
 Set-Alias -Name l -Value ls
 Set-Alias -Name ll -Value ls
 
