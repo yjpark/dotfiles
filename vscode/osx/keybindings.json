@@ -65,5 +65,23 @@
     {
         "key": "ctrl+s",
         "command": "workbench.action.files.save"
+    },
+    {
+        "key": ", ,",
+        "command": "workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": ", .",
+        "command": "workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
+    },
+    {
+        "key": "shift+cmd+f",
+        "command": "-workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
     }
 ]
