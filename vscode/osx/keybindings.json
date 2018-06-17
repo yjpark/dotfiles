@@ -67,7 +67,7 @@
         "command": "workbench.action.files.save"
     },
     {
-        "key": ", ,",
+        "key": "cmd+,",
         "command": "workbench.action.openRecent"
     },
     {
@@ -75,7 +75,7 @@
         "command": "-workbench.action.openRecent"
     },
     {
-        "key": ", .",
+        "key": "cmd+.",
         "command": "workbench.action.findInFiles",
         "when": "!searchInputBoxFocus"
     },
@@ -85,7 +85,7 @@
         "when": "!searchInputBoxFocus"
     },
     {
-        "key": ", p",
+        "key": "cmd+p",
         "command": "workbench.action.quickOpen"
     },
     {
