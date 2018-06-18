@@ -25,6 +25,7 @@ Set-Alias -Name d.build.self -Value ~\Documents\WindowsPowerShell\aliases\d.buil
 Set-Alias -Name d.run -Value ~\Documents\WindowsPowerShell\aliases\d.run.ps1
 Set-Alias -Name d.watch -Value ~\Documents\WindowsPowerShell\aliases\d.watch.ps1
 Set-Alias -Name d.fable -Value ~\Documents\WindowsPowerShell\aliases\d.fable.ps1
+Set-Alias -Name d.pack.release -Value ~\Documents\WindowsPowerShell\aliases\d.pack.release.ps1
 
 if ($host.Name -eq 'ConsoleHost')
 {
