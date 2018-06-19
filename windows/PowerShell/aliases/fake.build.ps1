@@ -1,2 +1,2 @@
 clear
-fake build -t $args
+fake build $args
