@@ -27,6 +27,8 @@ Set-Alias -Name d.watch -Value ~\Documents\WindowsPowerShell\aliases\d.watch.ps1
 Set-Alias -Name d.fable -Value ~\Documents\WindowsPowerShell\aliases\d.fable.ps1
 Set-Alias -Name d.pack.release -Value ~\Documents\WindowsPowerShell\aliases\d.pack.release.ps1
 
+Set-Alias -Name fake.build.single -Value ~\Documents\WindowsPowerShell\aliases\fake.build.single.ps1
+
 if ($host.Name -eq 'ConsoleHost')
 {
     # https://github.com/lzybkr/PSReadLine
