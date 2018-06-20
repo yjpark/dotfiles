@@ -27,15 +27,6 @@
     "vim.sneak": true,
     "vim.easymotion": true,
     "vim.easymotionKeys": "aoeuidhtnspyfgcrlqjkxbmwvz,",
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors": {
-        "normal": ["#8FBCBB", "#434C5E"],
-        "insert": "#BF616A",
-        "visual": "#B48EAD",
-        "visualline": "#B48EAD",
-        "visualblock": "#A3BE8C",
-        "replace": "#D08770"
-    },
     "vim.normalModeKeyBindings": [
         {
             "before":[" "],
@@ -135,5 +126,7 @@
         "editor.useTabStops": true
     },
     "red.redPath": "/Users/yjpark/bin/red-063",
-    "dart.flutterSdkPath": "/Users/yjpark/Applications/flutter"
+    "dart.flutterSdkPath": "/Users/yjpark/Applications/flutter",
+    "bracketPairColorizer.forceUniqueOpeningColor": true,
+    "bracketPairColorizer.showBracketsInGutter": true
 }
