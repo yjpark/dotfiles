@@ -41,7 +41,7 @@ function check_ssh_identity
     if [ $status -eq 0 ]
         ssh-add
     else
-        ssh-add -l | grep "Connection refused" > /dev/null
+        ssh-add -l 2>&1 | grep "Connection refused" > /dev/null
         if [ $status -eq 0 ]
             reset_ssh_agent
         end
