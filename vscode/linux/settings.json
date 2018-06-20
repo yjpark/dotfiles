@@ -80,6 +80,9 @@
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
+            "before":[";"],
+            "after":[":"]
+        }, {
             "before": [
                 ">"
             ],
@@ -88,8 +91,7 @@
                     "command": "editor.action.indentLines"
                 }
             ]
-        },
-        {
+        }, {
             "before": [
                 "<"
             ],
