@@ -23,6 +23,7 @@
     "vim.enableNeovim": true,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.useSystemClipboard": true,
+    "vim.sneak": true,
     "vim.easymotion": true,
     "vim.easymotionKeys": "aoeuidhtnspyfgcrlqjkxbmwvz,",
     "vim.statusBarColorControl": true,
