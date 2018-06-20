@@ -26,7 +26,7 @@
     "vim.useSystemClipboard": true,
     "vim.easymotion": true,
     "vim.easymotionKeys": "hklyuiopnm,qwertzxcvbasdgjf;",
-    "vim.otherModesKeyBindings": [
+    "vim.normalModeKeyBindings": [
         {
             "before":[";"],
             "after":[":"]
@@ -91,6 +91,28 @@
                 {
                     "command": "workbench.action.files.save",
                     "args": []
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.indentLines"
+                }
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.outdentLines"
                 }
             ]
         }
