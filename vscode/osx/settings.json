@@ -25,9 +25,21 @@
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.useSystemClipboard": true,
     "vim.easymotion": true,
-    "vim.easymotionKeys": "hklyuiopnm,qwertzxcvbasdgjf;",
+    "vim.easymotionKeys": "aoeuidhtnspyfgcrlqjkxbmwvz,",
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "normal": ["#8FBCBB", "#434C5E"],
+        "insert": "#BF616A",
+        "visual": "#B48EAD",
+        "visualline": "#B48EAD",
+        "visualblock": "#A3BE8C",
+        "replace": "#D08770"
+    },
     "vim.normalModeKeyBindings": [
         {
+            "before":[" "],
+            "after":["<Leader>", "<Leader>"]
+        }, {
             "before":[";"],
             "after":[":"]
         }, {
