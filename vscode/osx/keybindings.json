@@ -1,4 +1,3 @@
-// Place your key bindings in this file to overwrite the defaults
 [
     {"key":"cmd+1", "command":"workbench.action.openEditorAtIndex1"}, 
     {"key":"cmd+2", "command":"workbench.action.openEditorAtIndex2"}, 
@@ -65,10 +64,6 @@
     {
         "key": "ctrl+s",
         "command": "workbench.action.files.save"
-    },
-    {
-        "key": "cmd+,",
-        "command": "workbench.action.openRecent"
     },
     {
         "key": "ctrl+r",
