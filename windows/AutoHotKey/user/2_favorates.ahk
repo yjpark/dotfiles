@@ -31,17 +31,17 @@ else
 return
 
 ^!m::
-IfWinActive, ahk_exe chrome.exe
+IfWinActive, ahk_exe C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe chrome.exe
+    WinActivate ahk_exe C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
 return
 
 ^!w::
-IfWinActive, ahk_exe iridium.exe
+IfWinActive, ahk_exe C:\Users\yjpark\AppData\Local\Google\Chrome SxS\Application\chrome.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe iridium.exe
+    WinActivate ahk_exe C:\Users\yjpark\AppData\Local\Google\Chrome SxS\Application\chrome.exe
 return
 
 ^!u::
