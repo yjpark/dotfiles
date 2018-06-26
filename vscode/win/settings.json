@@ -114,5 +114,37 @@
     "snakeTrail.fadeMS": 50,
     "snakeTrail.fadeStart": 0.5,
     "snakeTrail.fadeEnd": 0.1,
-    "snakeTrail.fadeStep": 0.05
+    "snakeTrail.fadeStep": 0.05,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "pub",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml",
+        "fsharp"
+    ],
+    "cSpell.userWords": [
+        "elif"
+    ]
 }

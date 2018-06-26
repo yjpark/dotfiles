@@ -3,3 +3,4 @@ Misc Plugins
 - Rainbox Brackets
 - Trailing Spaces
 - Snake Trail
+- Code Spell Checker
