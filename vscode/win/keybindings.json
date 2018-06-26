@@ -118,5 +118,22 @@
         "key": "ctrl+shift+f",
         "command": "-workbench.action.findInFiles",
         "when": "!searchInputBoxFocus"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "shift+alt+e",
+        "command": "-PowerShell.ExpandAlias",
+        "when": "editorTextFocus && editorLangId == 'powershell'"
+    },
+    {
+        "key": "shift+alt+f",
+        "command": "workbench.view.extension.ionide-fsharp"
     }
 ]
