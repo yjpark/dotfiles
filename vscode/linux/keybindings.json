@@ -1,4 +1,3 @@
-// Place your key bindings in this file to overwrite the defaults
 [
     {"key":"alt+1", "command":"workbench.action.openEditorAtIndex1"}, 
     {"key":"alt+2", "command":"workbench.action.openEditorAtIndex2"}, 
@@ -93,5 +92,35 @@
     {
         "key": "f1",
         "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
+    },
+    {
+        "key": "alt+p",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "alt+oem_period",
+        "command": "workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.action.findInFiles",
+        "when": "!searchInputBoxFocus"
     }
 ]

@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
-sudo add-apt-repository ppa:nilarimogard/webupd8
+cd /tmp
+
+# https://software.opensuse.org/download.html?project=home:manuelschneid3r&package=albert
+wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_18.04/Release.key -O Release.key
+sudo apt-key add - < Release.key
+
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_18.04/ /' > /etc/apt/sources.list.d/home:manuelschneid3r.list"
 sudo apt-get update
 sudo apt-get install albert

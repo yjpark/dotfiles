@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# https://github.com/rgov/Thunderbolt3Unblocker
+# Need to copy the kext folder manually
+
+sudo chown -R root:wheel /Library/Extensions/Thunderbolt3Unblocker.kext
+# sudo kextcache -i /
+
+sudo kextload -b es.govost.ryan.Thunderbolt3Unblocker
+
