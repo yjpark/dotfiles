@@ -82,11 +82,7 @@
         "command": "-workbench.action.files.newUntitledFile"
     },
     {
-        "key": "alt+oem_period",
-        "command": "workbench.action.showCommands"
-    },
-    {
-        "key": "ctrl+shift+p",
+        "key": "alt+oem_comma",
         "command": "workbench.action.showCommands"
     },
     {
