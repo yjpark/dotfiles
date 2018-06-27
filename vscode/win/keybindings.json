@@ -1,4 +1,3 @@
-// Place your key bindings in this file to overwrite the defaults
 [
     {"key":"alt+1", "command":"workbench.action.openEditorAtIndex1"}, 
     {"key":"alt+2", "command":"workbench.action.openEditorAtIndex2"}, 
@@ -83,11 +82,7 @@
         "command": "-workbench.action.files.newUntitledFile"
     },
     {
-        "key": "alt+oem_period",
-        "command": "workbench.action.showCommands"
-    },
-    {
-        "key": "ctrl+shift+p",
+        "key": "alt+oem_comma",
         "command": "workbench.action.showCommands"
     },
     {
@@ -111,10 +106,6 @@
         "command": "-workbench.action.quickOpen"
     },
     {
-        "key": "alt+oem_comma",
-        "command": "workbench.action.openRecent"
-    },
-    {
         "key": "ctrl+r",
         "command": "-workbench.action.openRecent"
     },
@@ -124,8 +115,11 @@
         "when": "!searchInputBoxFocus"
     },
     {
-        "key": "ctrl+shift+f",
-        "command": "-workbench.action.findInFiles",
-        "when": "!searchInputBoxFocus"
+        "key": "alt+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.view.extension.ionide-fsharp"
     }
 ]
