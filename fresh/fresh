@@ -117,16 +117,9 @@ fresh-begin() {
 }
 
 fresh-end() {
-    _verbose "cp -R ${TMP}/_fresh/_build/.* ~/"
+    _verbose "find ${TMP}/_fresh/_build -mindepth 1 -maxdepth 1 | xargs -L 1 -I NAME cp -R NAME ~/"
     _error ""
-    cp -R ${TMP}/_fresh/_build/.* ~/
-
-    # For some reason, the last cp with get ../*
-    rm -rf ~/_build
-
-    _verbose "cp -R ${TMP}/_fresh/_build/* ~/"
-    _error ""
-    cp -R ${TMP}/_fresh/_build/* ~/
+    find ${TMP}/_fresh/_build -mindepth 1 -maxdepth 1 | xargs -L 1 -I NAME cp -R NAME ~/
 
     echo $'Your dot files are now \033[1;32mfresh\033[0m.'
 }
