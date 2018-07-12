@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc 
+
+echo "Current value of max_user_watches: "
+cat /proc/sys/fs/inotify/max_user_watches
+
+echo ""
+echo ""
+echo "If it's too small, add this line to /etc/sysctrl.conf"
+echo ""
+echo "    fs.inotify.max_user_watches=524288"
+echo ""
+echo "then run the next command to reload it"
+echo "    sudo sysctl -p"
+

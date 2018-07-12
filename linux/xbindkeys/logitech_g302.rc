@@ -1,0 +1,5 @@
+"xte 'keydown Control_L' 'keydown Tab' 'keyup Tab' 'keyup Control_L'"
+    release + b:9
+
+"xte 'keydown Alt_L' 'keydown Tab' 'keyup Tab' 'keyup Alt_L'"
+    release + b:8
