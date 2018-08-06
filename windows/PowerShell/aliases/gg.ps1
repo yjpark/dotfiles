@@ -10,6 +10,8 @@ If ($name -eq "core") {
     cd ~/projects/yjpark/dap.gui.fsharp
 } ElseIf ($name -eq "bit") {
     cd ~/projects/pettyfun/Bit.Arbitrage
+} ElseIf ($name -eq "clip") {
+    cd ~/projects/pettyfun/SuperClip
 } Else {
     cd ~/
 }
