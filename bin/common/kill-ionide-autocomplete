@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/bin/ps -A | grep --color=no -G "fsautocomplete.exe" | cut -b1-6 | xargs kill -9
