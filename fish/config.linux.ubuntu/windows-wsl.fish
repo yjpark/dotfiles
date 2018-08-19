@@ -7,7 +7,7 @@ if grep -q Microsoft /proc/version
 
     alias yarn 'yarn --cache-folder ~/.cache/yarn/v1'
     alias dotnet '/mnt/c/Program\ Files/dotnet/dotnet.exe'
-    alias fake '~/win/.dotnet/tools/fake'
+    alias fake '~/win/.dotnet/tools/fake.exe'
 
     setup-ssh-agent
 end
