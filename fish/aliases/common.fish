@@ -21,11 +21,11 @@ alias air "sudo hostname air; . ~/bin/air/yjpark.fish"
 alias win ". ~/bin/win/fish.yjpark"
 alias iftop "sudo iftop -B -P"
 
-alias set-proxy-on "set -gx https_proxy 127.0.0.1:1102; set -gx http_proxy 127.0.0.1:1102; set -gx ALL_PROXY http://127.0.0.1:1102"
 alias set-proxy-off "set -ge https_proxy; set -ge http_proxy; set -ge ALL_PROXY"
-
+alias set-proxy-ss "set -gx https_proxy 127.0.0.1:1102; set -gx http_proxy 127.0.0.1:1102; set -gx ALL_PROXY http://127.0.0.1:1102"
 alias set-proxy-v2ray "set -gx https_proxy 127.0.0.1:1104; set -gx http_proxy 127.0.0.1:1104; set -gx ALL_PROXY http://127.0.0.1:1104"
 alias set-proxy-cow "set -gx https_proxy 127.0.0.1:1100; set -gx http_proxy 127.0.0.1:1100; set -gx ALL_PROXY http://127.0.0.1:1100"
+alias set-proxy-fiddler "set -gx https_proxy 127.0.0.1:8888; set -gx http_proxy 127.0.0.1:8888; set -gx ALL_PROXY http://127.0.0.1:8888"
 
 alias wget "wget --no-check-certificate"
 

@@ -52,10 +52,10 @@ else
 return
 
 ^!a::
-IfWinActive, ahk_exe atom.exe
+IfWinActive, ahk_exe Typora.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe atom.exe
+    WinActivate ahk_exe Typora.exe
 return
 
 ^!v::

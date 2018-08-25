@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+rm -rf paket-files
+rm .paket/*.targets
+rm paket.lock
+
+if [[ $(grep -q Microsoft /proc/version) ]] ; then
+    mono .paket/paket.exe install
+else
+    echo "Running Under WSL ------------------------------------------"
+    .paket/paket.exe install
+fi
