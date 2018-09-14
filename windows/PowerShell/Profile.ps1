@@ -29,6 +29,8 @@ Set-Alias -Name d.pack.release -Value ~\Documents\WindowsPowerShell\aliases\d.pa
 
 Set-Alias -Name f.build -Value ~\Documents\WindowsPowerShell\aliases\f.build.ps1
 
+Set-Alias -Name fsi -Value ~\Documents\WindowsPowerShell\aliases\fsi.ps1
+
 if ($host.Name -eq 'ConsoleHost')
 {
     # https://github.com/lzybkr/PSReadLine
