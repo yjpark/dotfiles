@@ -28,6 +28,8 @@ Set-Alias -Name d.fable -Value ~\Documents\WindowsPowerShell\aliases\d.fable.ps1
 Set-Alias -Name d.pack.release -Value ~\Documents\WindowsPowerShell\aliases\d.pack.release.ps1
 
 Set-Alias -Name f.build -Value ~\Documents\WindowsPowerShell\aliases\f.build.ps1
+Set-Alias -Name f.task -Value ~\Documents\WindowsPowerShell\aliases\f.task.ps1
+Set-Alias -Name f.list -Value ~\Documents\WindowsPowerShell\aliases\f.list.ps1
 
 Set-Alias -Name fsi -Value ~\Documents\WindowsPowerShell\aliases\fsi.ps1
 

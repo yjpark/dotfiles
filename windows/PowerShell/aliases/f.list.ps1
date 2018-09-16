@@ -1,0 +1,2 @@
+clear
+fake build --list
