@@ -9,6 +9,10 @@ alias d.fable='cb ; dotnet fable yarn-start'
 alias d.pack.release='cb ; dotnet pack --configuration Release'
 
 alias f.build='cb ; fake build'
-alias f.list='cb ; fake build --list'
 alias f.target='cb ; fake build -t'
+alias f.list='cb ; fake build --list'
+alias f.prepare='cb ; fake build -t prepare'
+alias f.fetch='cb ; fake build -t fetch'
+alias f.inject='cb ; fake build -t inject'
+alias f.push-s='cb ; fake build -t push -s'
 
