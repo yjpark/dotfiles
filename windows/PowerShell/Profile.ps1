@@ -30,6 +30,7 @@ Set-Alias -Name d.pack.release -Value ~\Documents\WindowsPowerShell\aliases\d.pa
 Set-Alias -Name f.build -Value ~\Documents\WindowsPowerShell\aliases\f.build.ps1
 Set-Alias -Name f.target -Value ~\Documents\WindowsPowerShell\aliases\f.target.ps1
 Set-Alias -Name f.list -Value ~\Documents\WindowsPowerShell\aliases\f.list.ps1
+Set-Alias -Name f.fetch -Value ~\Documents\WindowsPowerShell\aliases\f.fetch.ps1
 Set-Alias -Name f.prepare -Value ~\Documents\WindowsPowerShell\aliases\f.prepare.ps1
 Set-Alias -Name f.inject -Value ~\Documents\WindowsPowerShell\aliases\f.inject.ps1
 Set-Alias -Name f.push-s -Value ~\Documents\WindowsPowerShell\aliases\f.push-s.ps1
