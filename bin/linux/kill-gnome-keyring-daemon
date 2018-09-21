@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Some time gnome-keyring-daemon will take 100% CPU, then whole gnome is not responding to keyboard shortcuts properly
+# create this script to kill the process
+
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "gnome-keyring-daemon"
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=no -G "gnome-keyring-daemon" | awk '{print $2}' | xargs kill -9
+echo "--------------------------------------------------------------------------------"
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "gnome-keyring-daemon"
+
