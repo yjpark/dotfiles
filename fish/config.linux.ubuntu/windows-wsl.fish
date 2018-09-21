@@ -11,8 +11,6 @@ if grep -q Microsoft /proc/version
     alias fake '~/win/.dotnet/tools/fake.exe'
 
     alias term 'cd ~/temp ; nohup terminator &'
-
-    setup-ssh-agent
 end
 
 
