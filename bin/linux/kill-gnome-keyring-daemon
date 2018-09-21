@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Some time gnome-keyring-daemon will take 100% CPU, then whole gnome is not responding to keyboard shortcuts properly
+# and make any operation need SSH key auth failed such as git
 # create this script to kill the process
 
 /bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "gnome-keyring-daemon"
