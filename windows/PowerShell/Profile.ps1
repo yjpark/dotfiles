@@ -27,12 +27,21 @@ Set-Alias -Name d.watch -Value ~\Documents\WindowsPowerShell\aliases\d.watch.ps1
 Set-Alias -Name d.fable -Value ~\Documents\WindowsPowerShell\aliases\d.fable.ps1
 Set-Alias -Name d.pack.release -Value ~\Documents\WindowsPowerShell\aliases\d.pack.release.ps1
 
-Set-Alias -Name f.build -Value ~\Documents\WindowsPowerShell\aliases\f.build.ps1
-Set-Alias -Name f.target -Value ~\Documents\WindowsPowerShell\aliases\f.target.ps1
+Set-Alias -Name f -Value ~\Documents\WindowsPowerShell\aliases\f.ps1
+
+Set-Alias -Name f.t -Value ~\Documents\WindowsPowerShell\aliases\f.t.ps1
 Set-Alias -Name f.list -Value ~\Documents\WindowsPowerShell\aliases\f.list.ps1
-Set-Alias -Name f.fetch -Value ~\Documents\WindowsPowerShell\aliases\f.fetch.ps1
 Set-Alias -Name f.prepare -Value ~\Documents\WindowsPowerShell\aliases\f.prepare.ps1
+Set-Alias -Name f.restore -Value ~\Documents\WindowsPowerShell\aliases\f.restore.ps1
+Set-Alias -Name f.build -Value ~\Documents\WindowsPowerShell\aliases\f.build.ps1
+
+Set-Alias -Name f.fetch -Value ~\Documents\WindowsPowerShell\aliases\f.fetch.ps1
 Set-Alias -Name f.inject -Value ~\Documents\WindowsPowerShell\aliases\f.inject.ps1
+Set-Alias -Name f.dist -Value ~\Documents\WindowsPowerShell\aliases\f.dist.ps1
+
+Set-Alias -Name f.build-s -Value ~\Documents\WindowsPowerShell\aliases\f.build-s.ps1
+Set-Alias -Name f.pack-s -Value ~\Documents\WindowsPowerShell\aliases\f.pack-s.ps1
+Set-Alias -Name f.inject-s -Value ~\Documents\WindowsPowerShell\aliases\f.inject-s.ps1
 Set-Alias -Name f.push-s -Value ~\Documents\WindowsPowerShell\aliases\f.push-s.ps1
 
 Set-Alias -Name fsi -Value ~\Documents\WindowsPowerShell\aliases\fsi.ps1
