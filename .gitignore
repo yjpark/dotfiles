@@ -55,5 +55,6 @@ docs/_build/
 # .dotfiles ignore
 private/
 *.private/
+*.private.*/
 bootstrap/nix-binary-tarball-unpack/
 applications/vscode/User/workspaceStorage

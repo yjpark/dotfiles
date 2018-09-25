@@ -241,6 +241,12 @@ fi
 
 # =====================================================
 # SSH
+# =====================================================
+# Private stuffs, for termux, to put default username at the top of config
+if [[ $DIST == "termux" ]]; then
+    fresh 'ssh/config.private.termux/*' --file='~/.ssh/config'
+fi
+
 fresh 'ssh/config/*' --file='~/.ssh/config'
 
 mkdir -p ~/.ssh/control
