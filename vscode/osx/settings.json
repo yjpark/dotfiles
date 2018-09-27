@@ -169,5 +169,6 @@
     ],
     "cSpell.userWords": [
         "elif"
-    ]
+    ],
+    "editor.dragAndDrop": false
 }
