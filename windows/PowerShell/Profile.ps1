@@ -17,6 +17,8 @@ Set-Alias -Name d -Value docker
 
 Set-Alias -Name gg -Value ~\Documents\WindowsPowerShell\aliases\gg.ps1
 
+Set-Alias -Name which -Value Get-Command
+
 Set-Alias -Name paket -Value .paket\paket.exe
 
 Set-Alias -Name d.restore -Value ~\Documents\WindowsPowerShell\aliases\d.restore.ps1
