@@ -1,4 +1,4 @@
-alias paket-5.172.4='mono ~/.local/share/NuGet/Cache/Paket/5.172.4/paket.exe'
+alias paket='mono .paket/paket.exe'
 
 alias d.restore='cb ; dotnet restore'
 alias d.build='cb ; dotnet build --no-restore'
