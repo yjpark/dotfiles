@@ -1,4 +1,4 @@
-$env:Path += "$env:Path;C:\Users\yjpark\Documents\WindowsPowerShell\bin"
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\WindowsPowerShell\bin")
 
 Set-Alias -Name cb -Value clear
 
@@ -59,3 +59,5 @@ if ($host.Name -eq 'ConsoleHost')
 
     # Import-Module "Oh-My-Powershell" -DisableNameChecking -NoClobber
 }
+
+Import-Module '~\Documents\WindowsPowerShell\Profile.private.psm1'
