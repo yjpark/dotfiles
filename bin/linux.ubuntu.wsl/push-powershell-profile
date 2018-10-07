@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
 cp -vr ~/.dotfiles/windows/PowerShell/* /mnt/c/Users/yjpark/Documents/WindowsPowerShell/
+cp -vr ~/.dotfiles/private/windows/PowerShell/* /mnt/c/Users/yjpark/Documents/WindowsPowerShell/
+
