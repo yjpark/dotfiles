@@ -1,4 +1,5 @@
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\WindowsPowerShell\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files (x86)\Microsoft SDKs\F#\10.1\Framework\v4.0")
 
 Set-Alias -Name cb -Value clear
 
@@ -46,7 +47,7 @@ Set-Alias -Name f.pack-s -Value ~\Documents\WindowsPowerShell\aliases\f.pack-s.p
 Set-Alias -Name f.inject-s -Value ~\Documents\WindowsPowerShell\aliases\f.inject-s.ps1
 Set-Alias -Name f.push-s -Value ~\Documents\WindowsPowerShell\aliases\f.push-s.ps1
 
-Set-Alias -Name fsi -Value ~\Documents\WindowsPowerShell\aliases\fsi.ps1
+# Set-Alias -Name fsi -Value ~\Documents\WindowsPowerShell\aliases\fsi.ps1
 
 if ($host.Name -eq 'ConsoleHost')
 {

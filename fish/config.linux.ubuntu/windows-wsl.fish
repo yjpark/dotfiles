@@ -8,6 +8,7 @@ if grep -q Microsoft /proc/version
 
     alias yarn 'yarn --cache-folder ~/.cache/yarn/v1'
     alias dotnet '/mnt/c/Program\ Files/dotnet/dotnet.exe'
+    alias paket='.paket/paket.exe'
     alias fake '~/win/.dotnet/tools/fake.exe'
 
     alias term 'cd ~/temp ; nohup terminator &'

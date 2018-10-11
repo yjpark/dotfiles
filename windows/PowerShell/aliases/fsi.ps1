@@ -1,2 +1,2 @@
 clear
-C:\Program' Files\dotnet\sdk\2.1.401\FSharp\fsi.exe $args
+"C:\Program Files (x86)\Microsoft SDKs\F#\10.1\Framework\v4.0\fsi.exe" $args
