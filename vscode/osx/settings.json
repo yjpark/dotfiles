@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "/anaconda3",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -168,7 +168,11 @@
         "fsharp"
     ],
     "cSpell.userWords": [
-        "elif"
+        "elif",
+        "guid",
+        "luid",
+        "sprintf"
     ],
+    "FSharp.fsacRuntime": "netcore",
     "editor.dragAndDrop": false
 }
