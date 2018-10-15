@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# https://github.com/Neo-Oli/termux-ubuntu
+
+cd /tmp/
+wget https://raw.githubusercontent.com/Neo-Oli/termux-ubuntu/master/ubuntu.sh
+mv -v ubuntu.sh ~/.dotfiles/bin/linux.termux/bootstrap-ubuntu-in-termux.bash
