@@ -145,7 +145,11 @@
         "fsharp"
     ],
     "cSpell.userWords": [
-        "elif"
+        "elif",
+        "guid",
+        "luid",
+        "sprintf"
     ],
+    "FSharp.fsacRuntime": "netcore",
     "editor.dragAndDrop": false
 }
