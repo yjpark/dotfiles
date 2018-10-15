@@ -2,8 +2,8 @@
 
 # vscode might cause high CPU usage with certain F# projects, kill these processes to amend the situation
 
-/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "fsautocomplete.exe"
-/bin/ps -ef | grep --color=no -v "grep" | grep --color=no -G "fsautocomplete.exe" | awk '{print $2}' | xargs kill -9
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "fsautocomplete.dll"
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=no -G "fsautocomplete.dll" | awk '{print $2}' | xargs kill -9
 echo "--------------------------------------------------------------------------------"
-/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "fsautocomplete.exe"
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "fsautocomplete.dll"
 
