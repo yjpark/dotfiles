@@ -47,6 +47,7 @@ Set-Alias -Name f.inject-s -Value ~\Documents\WindowsPowerShell\aliases\f.inject
 Set-Alias -Name f.push-s -Value ~\Documents\WindowsPowerShell\aliases\f.push-s.ps1
 
 Set-Alias -Name fsharpi -Value ~\Documents\WindowsPowerShell\aliases\fsharpi.ps1
+Set-Alias -Name msbuild -Value ~\Documents\WindowsPowerShell\aliases\msbuild.ps1
 
 if ($host.Name -eq 'ConsoleHost')
 {

@@ -1,2 +1,2 @@
 clear
-& "C:\Program Files (x86)\Microsoft SDKs\F#\10.1\Framework\v4.0\fsi.exe" $args
+& "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\CommonExtensions\Microsoft\FSharp\fsi.exe" $args
