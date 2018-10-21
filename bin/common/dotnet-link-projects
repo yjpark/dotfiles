@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+rm -v src/*.sln
+ls src | xargs -L1 _dotnet-link-bin-obj
+git checkout src

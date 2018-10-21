@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+echo ""
+echo "Link bin obj for DotNet project: $1"
+mkdir -vp bin/$1
+mkdir -vp obj/$1
+touch bin/$1/.gitkeep
+touch obj/$1/.gitkeep
+cd src/$1
+rm -rf bin obj
+ln -vs ../../bin/$1 bin
+ln -vs ../../obj/$1 obj
