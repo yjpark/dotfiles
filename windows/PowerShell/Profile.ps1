@@ -48,6 +48,7 @@ Set-Alias -Name f.push-s -Value ~\Documents\WindowsPowerShell\aliases\f.push-s.p
 
 Set-Alias -Name fsharpi -Value ~\Documents\WindowsPowerShell\aliases\fsharpi.ps1
 Set-Alias -Name msbuild -Value ~\Documents\WindowsPowerShell\aliases\msbuild.ps1
+Set-Alias -Name msbuild.restore -Value ~\Documents\WindowsPowerShell\aliases\msbuild.restore.ps1
 
 if ($host.Name -eq 'ConsoleHost')
 {
