@@ -26,3 +26,5 @@ alias f.pack-s='cb ; fake build -t pack -s'
 alias f.inject-s='cb ; fake build -t inject -s'
 alias f.push-s='cb ; fake build -t push -s'
 
+alias msbuild='cb ; /usr/bin/msbuild'
+alias msbuild.restore='msbuild /t:restore'
