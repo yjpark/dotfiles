@@ -174,5 +174,8 @@
         "sprintf"
     ],
     "FSharp.fsacRuntime": "netcore",
-    "editor.dragAndDrop": false
+    "editor.dragAndDrop": false,
+    "indentRainbow.indentSetter": {
+        "F#": { "tabSize": 4, "insertSpaces": true}
+    }
 }
