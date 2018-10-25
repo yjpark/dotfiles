@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+if [ $1 ] ; then
+    echo ""
+    echo "Link log for DotNet project: $1"
+    mkdir -vp log/$1
+    touch log/$1/.gitkeep
+    cd src/$1
+    rm -rf log
+    ln -vs ../../log/$1 log
+    exit 0
+fi
+
+echo "Need to provide project name"
