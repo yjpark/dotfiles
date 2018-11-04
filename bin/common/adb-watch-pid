@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [ $1 ] ; then
-    adb logcat -e SELinux | grep i $1
+    adb logcat -e "SELinux|pid:" | grep --color=always -i $1
 else
-    adb logcat -e SELinux
+    adb logcat -e "SELinux|pid:"
 fi
 
