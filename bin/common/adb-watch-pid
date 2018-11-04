@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ $1 ] ; then
+    adb logcat -e SELinux | grep i $1
+else
+    adb logcat -e SELinux
+fi
+
