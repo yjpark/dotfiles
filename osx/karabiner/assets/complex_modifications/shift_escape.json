@@ -2,7 +2,7 @@
   "title": "[YJ Park] Launch apps",
   "rules": [
     {
-      "description": "Left Shift + Escape -> Home",
+      "description": "Left Shift + Escape -> Tilde (~)",
       "manipulators": [
         {
           "type": "basic",
