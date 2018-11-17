@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cat ~/.dotfiles/linux/sysctl.conf | xargs -L1 sudo sysctl -w

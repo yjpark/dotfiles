@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [ $1 ] ; then
+    adb logcat -d --pid=$1 | tee $1-adb.log
+    nvim $1-adb.log
+else
+    echo "Need to provide pid"
+fi
+
