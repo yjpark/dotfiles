@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd /tmp
+nohup ~/Applications/Unity-2018.2.7f1/Editor/Unity &
