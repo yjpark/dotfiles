@@ -176,6 +176,12 @@
     "FSharp.fsacRuntime": "netcore",
     "editor.dragAndDrop": false,
     "indentRainbow.indentSetter": {
-        "F#": { "tabSize": 4, "insertSpaces": true}
-    }
+        "F#": { "tabSize": 4, "insertSpaces": true },
+        "XML": { "tabSize": 2, "insertSpaces": true }
+    },
+    "files.associations": {
+        "*.fsproj": "xml"
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart"
 }
