@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-dotnet tool update fake-cli -g
+dotnet tool update --global fake-cli
+dotnet tool update --global dotnet-search
+

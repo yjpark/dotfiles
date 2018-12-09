@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-dotnet tool install fake-cli -g
+dotnet tool install --global fake-cli
+dotnet tool install --global dotnet-search
