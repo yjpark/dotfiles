@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# https://github.com/jesseduffield/lazygit
+
+sudo add-apt-repository ppa:lazygit-team/release
+sudo apt-get update
+sudo apt-get install lazygit
