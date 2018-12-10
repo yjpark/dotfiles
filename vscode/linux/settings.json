@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "/anaconda3",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -1,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -160,5 +160,7 @@
         "*.fsproj": "xml"
     },
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.acceptSuggestionOnEnter": "smart"
+    "editor.acceptSuggestionOnEnter": "smart",
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.fontFamily": "Fira Code"
 }

@@ -183,5 +183,7 @@
         "*.fsproj": "xml"
     },
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.acceptSuggestionOnEnter": "smart"
+    "editor.acceptSuggestionOnEnter": "smart",
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.fontFamily": "Fira Code"
 }
