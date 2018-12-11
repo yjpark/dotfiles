@@ -1,0 +1,1 @@
+aliases['zc'] = 'rm ~/.z'

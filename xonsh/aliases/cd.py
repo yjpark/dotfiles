@@ -1,5 +1,3 @@
-aliases['cd-janus'] = 'cd ~/.janus'
-aliases['cd-fish-custom'] = 'cd ~/.config/fish/custom'
 aliases['cd-dotfiles'] = 'cd ~/.dotfiles'
 aliases['cd-powerline-shell'] = 'cd ~/projects/forks/powerline-shell'
 
