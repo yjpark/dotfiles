@@ -66,6 +66,7 @@ fresh 'fish/custom' --file='~/.config/fish/custom/'
 # =====================================================
 # Xonsh settings
 fresh 'xonsh/config/*' --file='~/.xonshrc'
+fresh 'xonsh/aliases/*' --file='~/.xonshrc'
 
 # =====================================================
 # Bash settings
