@@ -64,6 +64,10 @@ fresh 'fish/custom' --file='~/.config/fish/custom/'
 # run fresh-fish-custom to install fish custom stuffs
 
 # =====================================================
+# Xonsh settings
+fresh 'xonsh/config/*' --file='~/.xonshrc'
+
+# =====================================================
 # Bash settings
 # run bootstrap-bash_it to install bash_it
 fresh 'bash/bash_profile' --file='~/.bash_profile'
