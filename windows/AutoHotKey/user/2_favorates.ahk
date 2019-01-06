@@ -10,10 +10,10 @@ else
 return
 
 ^!`::
-IfWinActive, ahk_exe ubuntu.exe
+IfWinActive, ahk_exe ubuntu1804.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe ubuntu.exe
+    WinActivate ahk_exe ubuntu1804.exe
 return
 
 ^!1::
