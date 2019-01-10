@@ -1,3 +1,4 @@
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\WindowsPowerShell\bin")
 
 Set-Alias -Name cb -Value clear
