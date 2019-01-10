@@ -10,10 +10,10 @@ else
 return
 
 ^!`::
-IfWinActive, ahk_exe ubuntu.exe
+IfWinActive, ahk_exe ubuntu1804.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe ubuntu.exe
+    WinActivate ahk_exe ubuntu1804.exe
 return
 
 ^!1::
@@ -44,6 +44,13 @@ else
     WinActivate ahk_exe C:\Users\yjpark\AppData\Local\Google\Chrome SxS\Application\chrome.exe
 return
 
+^!r::
+IfWinActive, ahk_exe firefox.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe firefox.exe
+return
+
 ^!u::
 IfWinActive, ahk_exe Unity.exe
     Send !{Tab}
@@ -52,10 +59,10 @@ else
 return
 
 ^!a::
-IfWinActive, ahk_exe Typora.exe
+IfWinActive, ahk_exe caret-beta.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe Typora.exe
+    WinActivate ahk_exe caret-beta.exe
 return
 
 ^!v::
