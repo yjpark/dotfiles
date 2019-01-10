@@ -106,5 +106,9 @@
     {
         "key": "f1",
         "command": "-workbench.action.showCommands"
+    },
+    {
+        "key": "shift+cmd+t",
+        "command": "insertDateString.insertTime"
     }
 ]
