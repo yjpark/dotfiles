@@ -59,10 +59,10 @@ else
 return
 
 ^!a::
-IfWinActive, ahk_exe caret-beta.exe
+IfWinActive, ahk_exe Code - Insiders.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe caret-beta.exe
+    WinActivate ahk_exe Code - Insiders.exe
 return
 
 ^!v::

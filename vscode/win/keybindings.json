@@ -161,5 +161,9 @@
         "key": "shift+delete",
         "command": "-editor.action.clipboardCutAction",
         "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+t",
+        "command": "insertDateString.insertTime"
     }
 ]
