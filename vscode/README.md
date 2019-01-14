@@ -9,4 +9,8 @@ Misc Plugins
 
 Markdown Writing
 - Insert Date String
-- Tyyewriter Scroll Mode
+- Typewriter Scroll Mode
+
+Themes
+- Coding: Egoist-One
+- Writing: Ayu Mirage Bordered
