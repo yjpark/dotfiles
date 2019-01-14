@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
 cp -v ~/.dotfiles/vscode/linux/*.json ~/.config/Code/User/
+cp -v ~/.dotfiles/vscode/linux/*.json ~/.config/Code\ -\ Insiders/User/
+

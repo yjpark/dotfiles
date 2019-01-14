@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/Marp-0.0.14
+nohup ./Marp > /tmp/marp.log &
