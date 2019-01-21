@@ -19,7 +19,6 @@ alias dir "$brew_prefix/bin/gdir"
 alias dircolors "$brew_prefix/bin/gdircolors"
 alias dirname "$brew_prefix/bin/gdirname"
 alias du "$brew_prefix/bin/gdu"
-alias echo "$brew_prefix/bin/gecho"
 alias env "$brew_prefix/bin/genv"
 alias expand "$brew_prefix/bin/gexpand"
 alias expr "$brew_prefix/bin/gexpr"
@@ -78,7 +77,6 @@ alias sync "$brew_prefix/bin/gsync"
 alias tac "$brew_prefix/bin/gtac"
 alias tail "$brew_prefix/bin/gtail"
 alias tee "$brew_prefix/bin/gtee"
-alias test "$brew_prefix/bin/gtest"
 alias touch "$brew_prefix/bin/gtouch"
 alias tr "$brew_prefix/bin/gtr"
 alias true "$brew_prefix/bin/gtrue"
@@ -99,4 +97,6 @@ alias '[' "$brew_prefix/bin/g\["
 
 alias ls 'gls -F --color=auto'
 
+# alias echo "$brew_prefix/bin/gecho"
+# alias test "$brew_prefix/bin/gtest"
 
