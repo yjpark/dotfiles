@@ -1,0 +1,1 @@
+set -x SPACEFISH_TIME_SHOW true
