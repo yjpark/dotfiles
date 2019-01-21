@@ -1,10 +1,10 @@
-function fish_prompt
-    echo (date "+%T") (~/bin/powerline-shell_fish.py $status --shell bare ^/dev/null)
-end
+# function fish_prompt
+#     echo (date "+%T") (~/bin/powerline-shell_fish.py $status --shell bare ^/dev/null)
+# end
 
-function fish_right_prompt -d "Write out the right prompt"
-    echo $vi_mode
-end
+# function fish_right_prompt -d "Write out the right prompt"
+#     echo $vi_mode
+# end
 
 # my stuffs
 set -x LANG "en_US.UTF-8"
