@@ -15,4 +15,4 @@ Markdown Writing
 - Insert Date String
 - Typewriter Scroll Mode
 - Spell Right
-  - On Linux, need to `apt install hunspell-en-us`, then link dictionaries, read the extension readme for details
+  - On Linux, need to `apt install hunspell-en-us`, then `ln -s /usr/share/hunspell ~/.config/Code\ -\ Insiders/Dictionaries`, read the extension readme for details
