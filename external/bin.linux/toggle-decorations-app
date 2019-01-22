@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# https://unix.stackexchange.com/questions/103356/remove-title-bar-of-another-program
+
+a=`wmctrl -lx | grep -E "$1" | grep -oE "[0-9a-z]{10}"`
+_toggle-decorations $a
