@@ -1,4 +1,4 @@
-set -x SPACEFISH_CHAR_SYMBOL ">>="
+# set -x SPACEFISH_CHAR_SYMBOL ">>="
 
 set -x SPACEFISH_TIME_SHOW true
 
