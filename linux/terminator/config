@@ -42,16 +42,22 @@
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#131313"
-    cursor_color = "#b9b9b9"
+    palette = "#2a2a2a:#ff0000:#79ff0f:#e7bf00:#396bd7:#b449be:#66ccff:#bbbbbb:#666666:#ff0080:#66ff66:#f3d64e:#709aed:#db67e6:#7adff2:#ffffff"
+    background_color = "#000000"
+    cursor_color = "#4d4d4d"
     font = Fira Code 10
-    foreground_color = "#d6dbe5"
-    palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
+    foreground_color = "#f2f2f2"
     scrollback_infinite = True
     scrollback_lines = 5000
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
+  [[PaulMillr]]
+    palette = "#2a2a2a:#ff0000:#79ff0f:#e7bf00:#396bd7:#b449be:#66ccff:#bbbbbb:#666666:#ff0080:#66ff66:#f3d64e:#709aed:#db67e6:#7adff2:#ffffff"
+    background_color = "#000000"
+    cursor_color = "#4d4d4d"
+    foreground_color = "#f2f2f2"
+    background_image = None
   [[Brogrammer]]
     background_color = "#131313"
     cursor_color = "#b9b9b9"
