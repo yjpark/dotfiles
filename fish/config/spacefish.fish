@@ -3,9 +3,9 @@
 set -x SPACEFISH_PROMPT_ADD_NEWLINE false
 set -x SPACEFISH_PROMPT_SEPERATOR_SHOW true
 
-if test (uname) = "Darwin"
-    set -x SPACEFISH_PROMPT_SEPERATOR_COLOR brblack
-end
+#if test (uname) = "Darwin"
+#    set -x SPACEFISH_PROMPT_SEPERATOR_COLOR brblack
+#end
 
 set -x SPACEFISH_TIME_SHOW true
 
