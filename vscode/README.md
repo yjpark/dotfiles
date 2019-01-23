@@ -6,6 +6,7 @@ Misc Plugins
 - Snake Trail
 - Code Spell Checker
 - BreadCrumb in StatusBar
+- Bookmarks
 
 Themes
 - Coding: Egoist-One
