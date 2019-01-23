@@ -161,8 +161,8 @@
     },
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "smart",
-    "files.autoSave": "afterDelay",
-    "terminal.integrated.fontFamily": "Fira Code"
+    "files.autoSave": "onWindowChange",
+    "terminal.integrated.fontFamily": "Fira Code",
     "insertDateString.format": "YYYY-MM-DD hh:mm:ss",
     "insertDateString.formatDate": "YYYY-MM-DD",
     "insertDateString.formatTime": "### hh:mm"
