@@ -17,3 +17,6 @@ Markdown Writing
 - Typewriter Scroll Mode
 - Spell Right
   - On Linux, need to `apt install hunspell-en-us`, then `ln -s /usr/share/hunspell ~/.config/Code\ -\ Insiders/Dictionaries`, read the extension readme for details
+
+OSX
+- Titlebar-Less VSCode for macOS (showing corrupted installation, need to ignore)
