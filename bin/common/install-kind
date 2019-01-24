@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# https://github.com/kubernetes-sigs/kind
+
+go get sigs.k8s.io/kind
