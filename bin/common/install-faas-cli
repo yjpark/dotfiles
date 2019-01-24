@@ -2,4 +2,4 @@
 
 # https://github.com/openfaas/faas-clis://github.com/openfaas/faas-cli
 
-curl -sSL https://cli.openfaas.com | sudo sh
+curl -sSL --progress-bar https://cli.openfaas.com | sudo sh
