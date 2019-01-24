@@ -118,5 +118,9 @@
     {
         "key": "ctrl+`",
         "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+v",
+        "command": "workbench.action.terminal.paste"
     }
 ]
