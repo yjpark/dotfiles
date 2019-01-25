@@ -167,6 +167,14 @@
         "command": "insertDateString.insertTime"
     },
     {
+        "key": "alt+u",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal"
+    },
+    {
         "key": "alt+f",
         "command": "actions.find"
     },
