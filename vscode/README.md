@@ -20,3 +20,6 @@ Markdown Writing
 
 OSX
 - Titlebar-Less VSCode for macOS (showing corrupted installation, need to ignore)
+
+Trying
+- mindmap, a light-weight mind map editor, seems good enough for my use cases.
