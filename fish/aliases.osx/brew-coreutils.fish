@@ -93,10 +93,10 @@ alias wc "$brew_prefix/bin/gwc"
 alias who "$brew_prefix/bin/gwho"
 alias whoami "$brew_prefix/bin/gwhoami"
 alias yes "$brew_prefix/bin/gyes"
-alias '[' "$brew_prefix/bin/g\["
 
 alias ls 'gls -F --color=auto'
 
 # alias echo "$brew_prefix/bin/gecho"
 # alias test "$brew_prefix/bin/gtest"
+# alias '[' "$brew_prefix/bin/g\["
 
