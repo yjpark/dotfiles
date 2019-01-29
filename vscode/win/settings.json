@@ -172,5 +172,7 @@
     "workbench.colorTheme": "Egoist One",
     "FSharp.disableFailedProjectNotifications": true,
     "FSharp.smartIndent": true,
-    "FSharp.lineLens.enabled": "never"
+    "FSharp.lineLens.enabled": "never",
+    "FSharp.linter": false,
+    "FSharp.showExplorerOnStartup": false
 }
