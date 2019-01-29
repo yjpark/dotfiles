@@ -167,5 +167,8 @@
     "insertDateString.formatDate": "YYYY-MM-DD",
     "insertDateString.formatTime": "### hh:mm",
     "workbench.iconTheme": "ayu",
-    "workbench.colorTheme": "Egoist One"
+    "workbench.colorTheme": "Egoist One",
+    "FSharp.disableFailedProjectNotifications": true,
+    "FSharp.smartIndent": true,
+    "FSharp.lineLens.enabled": "never"
 }
