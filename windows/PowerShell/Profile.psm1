@@ -1,6 +1,8 @@
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\WindowsPowerShell\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutter\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\platform-tools")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
 
 Set-Alias -Name cb -Value clear
 
