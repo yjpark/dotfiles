@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+for x in *.JPG; do
+  d=$(date -r "$x" +%Y-%m-%d)
+  mkdir -p "$d"
+  mv -v -- "$x" "$d/"
+done
