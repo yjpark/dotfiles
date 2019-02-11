@@ -195,5 +195,6 @@
     "FSharp.smartIndent": true,
     "FSharp.lineLens.enabled": "never",
     "FSharp.linter": false,
-    "FSharp.showExplorerOnStartup": false
+    "FSharp.showExplorerOnStartup": false,
+    "window.nativeFullScreen": false
 }
