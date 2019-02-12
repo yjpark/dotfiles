@@ -9,7 +9,7 @@ Misc Plugins
 - Bookmarks
 
 Themes
-- Coding: Egoist-One
+- Coding: Panda
 - Writing: Ayu Mirage Bordered
 
 Markdown Writing
