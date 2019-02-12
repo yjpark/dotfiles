@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# https://buckbuild.com/setup/getting_started.html
+
+# Install jdk 8
+
+brew install watchman
+
+brew tap facebook/fb
+brew install buck
