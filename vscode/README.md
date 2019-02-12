@@ -9,6 +9,7 @@ Misc Plugins
 - Bookmarks
 
 Themes
+- Coding: Kary Pro Colors － Dark
 - Coding: Andromeda Italic Bordered
 - Writing: Ayu Mirage Bordered
 
