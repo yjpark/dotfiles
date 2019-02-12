@@ -9,7 +9,7 @@ Misc Plugins
 - Bookmarks
 
 Themes
-- Coding: Panda
+- Coding: Brogrammer
 - Writing: Ayu Mirage Bordered
 
 Markdown Writing
