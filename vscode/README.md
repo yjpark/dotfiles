@@ -9,7 +9,7 @@ Misc Plugins
 - Bookmarks
 
 Themes
-- Coding: Brogrammer
+- Coding: Andromeda Italic Bordered
 - Writing: Ayu Mirage Bordered
 
 Markdown Writing
