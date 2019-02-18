@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/.nuget/packages/$1
+echo "scp -r yjpark.org:.nuget/packages/$1/* ~/.nuget/packages/$1/"
+scp -r yjpark.org:.nuget/packages/$1/* ~/.nuget/packages/$1/.
