@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/.nuget/packages/$1
+
+echo "rsync -rvz --stats yjpark.org:.nuget/packages/$1/$2 ~/.nuget/packages/$1"
+rsync -rvz --stats yjpark.org:.nuget/packages/$1/$2 ~/.nuget/packages/$1
+
