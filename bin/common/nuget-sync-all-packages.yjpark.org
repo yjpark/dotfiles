@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/.nuget
+
+echo "rsync -rvz --progress --stats yjpark.org:.nuget/packages ~/.nuget"
+rsync -rvz --progress --stats yjpark.org:.nuget/packages ~/.nuget
+
