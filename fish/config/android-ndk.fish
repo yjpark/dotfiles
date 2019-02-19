@@ -1,5 +1,5 @@
 if test -d ~/Applications/android-ndk
-    set -x ANDROID_NDK_HOME ~/Applications/android-ndk/
+    set -x ANDROID_NDK ~/Applications/android-ndk/
     set -x PATH $PATH ~/Applications/android-ndk
 end
 
