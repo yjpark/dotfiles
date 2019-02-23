@@ -108,10 +108,10 @@ else
 return
 
 ^!n::
-IfWinActive, ahk_exe xmind.exe
+IfWinActive, ahk_exe MindMaster.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe xmind.exe
+    WinActivate ahk_exe MindMaster.exe
 return
 
 ^!d::
