@@ -1,3 +1,5 @@
-#!/usr/bin/env bash
+dotnet tool install --global fake-cli
+dotnet tool install --global dotnet-search
+dotnet tool install --global fabulous-cli
+dotnet tool install --global dotMorten.OmdGenerator
 
-dotnet tool install fake-cli -g
