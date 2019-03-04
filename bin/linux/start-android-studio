@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/android-studio/bin
+nohup ./studio.sh > /tmp/android-studio.log &
