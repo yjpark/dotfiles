@@ -4,5 +4,6 @@ dotnet tool update --global fake-cli
 dotnet tool update --global dotnet-search
 dotnet tool update --global dotnet-proj
 dotnet tool update --global fabulous-cli
+dotnet tool update --global Falanx.Tool
 dotnet tool update --global dotMorten.OmdGenerator
 
