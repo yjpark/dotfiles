@@ -21,7 +21,7 @@
     "editor.minimap.showSlider": "always",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 80,
-    "vim.neovimPath": "C:/Users/yjpark/Applications/Neovim/bin/nvim",
+    "vim.neovimPath": "C:/Users/yjpark/Applications/Neovim/bin/nvim.exe",
     "vim.enableNeovim": true,
     "vim.disableAnnoyingNeovimMessage": true,
     "vim.useSystemClipboard": true,
