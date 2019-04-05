@@ -1,0 +1,27 @@
+line_wrapping: true
+
+tab_width: 4
+soft_tabs: true
+
+search_select:
+  max_results: 24
+
+types:
+  fsproj:
+    tab_width: 2
+    soft_tabs: true
+  yml:
+    tab_width: 2
+    soft_tabs: true
+
+keymap:
+  normal:
+    ctrl-s: "buffer::save"
+    ctrl-a: "cursor::move_to_start_of_line"
+    ctrl-e: "cursor::move_to_end_of_line"
+    gg: "cursor::move_to_first_line"
+    G: "cursor::move_to_last_line"
+  insert:
+    ctrl-s: "buffer::save"
+    ctrl-a: "cursor::move_to_start_of_line"
+    ctrl-e: "cursor::move_to_end_of_line"

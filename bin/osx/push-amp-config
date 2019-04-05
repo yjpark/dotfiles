@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp -v -r ~/.dotfiles/misc/amp/* ~/Library/Application\ Support/amp/
