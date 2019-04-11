@@ -221,6 +221,9 @@
     "FSharp.lineLens.enabled": "never",
     "FSharp.linter": false,
     "FSharp.showExplorerOnStartup": false,
+    "FSharp.workspaceMode": "directory",
+    "FSharp.resolveNamespaces": false,
+    "FSharp.externalAutocomplete": false,
     "window.nativeFullScreen": false,
     "workbench.colorTheme": "Kary Pro Colors － Dark",
     "workbench.iconTheme": "ayu"
