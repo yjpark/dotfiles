@@ -166,6 +166,8 @@
         "orientation",
         "platform",
         "remove",
+        "repo",
+        "req",
         "should",
         "sizes",
         "sprintf",
@@ -199,5 +201,20 @@
     "FSharp.smartIndent": true,
     "FSharp.lineLens.enabled": "never",
     "FSharp.linter": false,
-    "FSharp.showExplorerOnStartup": false
+    "FSharp.showExplorerOnStartup": false,
+    "FSharp.workspaceMode": "directory",
+    "FSharp.resolveNamespaces": false,
+    "FSharp.externalAutocomplete": false,
+    "mssql.connections": [
+        {
+            "server": "localhost,11433",
+            "database": "Hangfire",
+            "authenticationType": "SqlLogin",
+            "user": "sa",
+            "password": "",
+            "emptyPasswordInput": false,
+            "savePassword": true,
+            "profileName": "feeds_dev"
+        }
+    ]
 }
