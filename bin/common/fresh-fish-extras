@@ -8,3 +8,4 @@ cd ~/.config/fish/extras/
 bootstrap-github-repositories ~/.dotfiles/fish/extras.bootstrap
 mu register --all
 
+fisher
