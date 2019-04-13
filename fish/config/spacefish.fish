@@ -1,3 +1,5 @@
+# NOTE: Need to run `fisher` to fetch the repo on fresh machcine
+
 # set -x SPACEFISH_CHAR_SYMBOL ">>="
 
 set -x SPACEFISH_PROMPT_ADD_NEWLINE false
