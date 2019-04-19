@@ -11,6 +11,7 @@ Misc Plugins
 Themes
 - Coding: Kary Pro Colors － Dark
 - Coding: Andromeda Italic Bordered
+- Coding: Egoist One (Good under bright light)
 - Writing: Ayu Mirage Bordered
 
 Markdown Writing
