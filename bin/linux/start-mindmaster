@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/mindmaster-6-amd64
+nohup ./MindMaster-6-x86_64 > /tmp/mindmaster.log &

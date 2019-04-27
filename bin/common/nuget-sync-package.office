@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# convert to lower case
+# https://stackoverflow.com/questions/2264428/how-to-convert-a-string-to-lower-case-in-bash
+package=${1,,}
+version=${2,,}
+
+mkdir -p ~/.nuget/packages/$package
+
+echo "rsync -rvz --progress --stats office.yjpark.zerotier:.nuget/packages/$package/$version ~/.nuget/packages/$package"
+rsync -rvz --progress --stats office.yjpark.zerotier:.nuget/packages/$package/$version ~/.nuget/packages/$package
+

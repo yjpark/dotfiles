@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+
+# https://rider-support.jetbrains.com/hc/en-us/articles/360000557259-How-to-develop-Xamarin-Android-applications-on-Linux-with-Rider
+# https://beyondvelocity.blog/2018/11/29/xamarin-android-on-linu/
+
+echo 'Download from https://xamjenkinsartifact.blob.core.windows.net/xamarin-android/xamarin-android/'
+echo '    Just xamarin.android-oss_v*_Linux-x86_64_master_*-Debug.tar.bz2'
+
+echo ''
+echo 'Then follow instruction'
+echo '    https://rider-support.jetbrains.com/hc/en-us/articles/360000557259-How-to-develop-Xamarin-Android-applications-on-Linux-with-Rider'
+
+# echo '\nAnother simplified version'
+# echo 'https://beyondvelocity.blog/2018/11/29/xamarin-android-on-linu/'
+
+echo ''
+echo 'Need to install libzip, otherwize got error with libzip.so.4 not found'
+echo '    apt-get install libzip4 libzip-dev'
+

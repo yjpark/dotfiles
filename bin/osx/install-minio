@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+brew install minio/stable/minio
+brew install minio/stable/mc
+
+brew services start minio
