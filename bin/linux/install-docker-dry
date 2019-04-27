@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# https://github.com/moncho/dry
+
+cd ~/temp
+curl -vsSf https://github.com/moncho/dry/releases/download/v0.9-beta.9/dry-linux-amd64 > dry && cp dry ~/bin/
