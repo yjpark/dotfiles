@@ -60,7 +60,7 @@ if [[ "$(uname)" == "MSYS_NT-10.0" ]]; then
   fresh 'fish/aliases.msys/*' --file='~/.config/fish/aliases.fish'
 fi
 fresh 'fish/functions' --file='~/.config/fish/functions/'
-fresh 'fish/completion' --file='~/.config/fish/completion/'
+fresh 'fish/completions' --file='~/.config/fish/completions/'
 fresh 'fish/custom' --file='~/.config/fish/custom/'
 fresh 'fish/fishfile/*' --file='~/.config/fish/fishfile'
 # run fresh-fish-custom to install fish custom stuffs
