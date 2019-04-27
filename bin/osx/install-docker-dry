@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# https://github.com/moncho/dry
+
+brew tap moncho/dry
+brew install dry
