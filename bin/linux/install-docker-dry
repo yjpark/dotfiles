@@ -4,4 +4,6 @@
 
 cd ~/temp
 rm dry-linux-amd64
-wget https://github.com/moncho/dry/releases/download/v0.9-beta.9/dry-linux-amd64 && cp dry-linux-amd64 ~/bin/dry
+wget https://github.com/moncho/dry/releases/download/v0.9-beta.9/dry-linux-amd64 \
+    && cp dry-linux-amd64 ~/bin/dry \
+    && chmod 755 ~/bin/dry
