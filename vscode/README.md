@@ -1,3 +1,6 @@
+Coding Plugins
+- GitLens
+
 Misc Plugins
 - indent-rainbow
 - Rainbow Brackets
