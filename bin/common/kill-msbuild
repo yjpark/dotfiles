@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# vscode might cause high CPU usage with certain F# projects, kill these processes to amend the situation
+
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "MSBuild.dll"
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=no -G "MSBuild.dll" | awk '{print $2}' | xargs kill -9
+echo "--------------------------------------------------------------------------------"
+/bin/ps -ef | grep --color=no -v "grep" | grep --color=always -G "MSBuild.dll"
+
