@@ -1,5 +1,6 @@
 Coding Plugins
 - GitLens
+- Git Graph (mhutchie.git-graph)
 
 Misc Plugins
 - indent-rainbow
