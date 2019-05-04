@@ -5,7 +5,8 @@ if grep -q Microsoft /proc/version
     set -x LS_COLORS ""
     set -x DISPLAY "127.0.0.1:0.0"
 
-    # set -x DOCKER_HOST tcp://127.0.0.1:2375
+    set -x DOCKER_HOST tcp://127.0.0.1:2375
+
     #alias yarn 'yarn --cache-folder ~/.cache/yarn/v1'
     #alias dotnet '/mnt/c/Program\ Files/dotnet/dotnet.exe'
     #alias paket='.paket/paket.exe'
@@ -13,7 +14,7 @@ if grep -q Microsoft /proc/version
 
     alias term 'cd ~/temp ; nohup terminator &'
 
-    #set -x SPACEFISH_CHAR_SYMBOL ">"
+    set -x SPACEFISH_CHAR_SYMBOL ">"
 end
 
 
