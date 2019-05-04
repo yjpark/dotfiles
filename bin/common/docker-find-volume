@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# https://stackoverflow.com/questions/34803466/how-to-list-the-content-of-a-named-volume-in-docker-1-9
+
+if [ $1 ] ; then
+    docker run \
+        --name busybox.$1 \
+        --rm \
+        -v $1:/volume:ro \
+        busybox find /volume
+    exit 0
+fi
+
+docker volume ls
+echo ""
+echo "Need to provide volume name"
+
