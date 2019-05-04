@@ -6,10 +6,10 @@ if grep -q Microsoft /proc/version
     set -x LS_COLORS ""
     set -x DISPLAY "127.0.0.1:0.0"
 
-    alias yarn 'yarn --cache-folder ~/.cache/yarn/v1'
-    alias dotnet '/mnt/c/Program\ Files/dotnet/dotnet.exe'
-    alias paket='.paket/paket.exe'
-    alias fake '~/win/.dotnet/tools/fake.exe'
+    #alias yarn 'yarn --cache-folder ~/.cache/yarn/v1'
+    #alias dotnet '/mnt/c/Program\ Files/dotnet/dotnet.exe'
+    #alias paket='.paket/paket.exe'
+    #alias fake '~/win/.dotnet/tools/fake.exe'
 
     alias term 'cd ~/temp ; nohup terminator &'
 
