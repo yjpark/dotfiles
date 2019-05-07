@@ -8,7 +8,7 @@ if command -s rg > /dev/null
     alias a "rg --smart-case --line-number"
     make_completion a rg
 else
-    alias a "ag --smart-case --line-number --ignore-dir bin --ignore-dir obj"
+    alias a "ag --smart-case --line-number --ignore-dir bin --ignore-dir obj --ignore-dir wwwroot"
     make_completion a ag
 end
 
