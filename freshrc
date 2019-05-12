@@ -165,6 +165,7 @@ fi
 
 # =====================================================
 # misc settings
+fresh 'misc/agignore' --file='~/.agignore'
 fresh 'misc/ctags' --file='~/.ctags'
 fresh 'misc/screenrc' --file='~/.screenrc'
 fresh 'misc/ideavimrc/*' --file='~/.ideavimrc'
