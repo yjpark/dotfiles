@@ -4,14 +4,8 @@ make_completion d docker
 alias g "git"
 make_completion g git
 
-if command -s rg > /dev/null
-    alias a "rg --smart-case --line-number"
-    make_completion a rg
-else
-    alias a "ag --smart-case --line-number --ignore-dir bin --ignore-dir obj --ignore-dir wwwroot"
-    make_completion a ag
-end
-
+alias a "ag --smart-case --line-number --ignore-dir bin --ignore-dir obj --ignore-dir wwwroot"
+make_completion a ag
 
 # just aliases
 alias l "ls -l"
