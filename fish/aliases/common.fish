@@ -4,7 +4,7 @@ make_completion d docker
 alias g "git"
 make_completion g git
 
-alias a "ag --smart-case --line-number --ignore-dir bin --ignore-dir obj --ignore-dir wwwroot"
+alias a "ag --smart-case --line-number"
 make_completion a ag
 
 # just aliases
