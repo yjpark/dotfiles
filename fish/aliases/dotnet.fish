@@ -1,5 +1,3 @@
-alias paket='mono .paket/paket.exe'
-
 alias d.restore='cb ; dotnet restore'
 alias d.build='cb ; dotnet build --no-restore'
 alias d.build.self='cb ; dotnet build --no-restore --no-dependencies'
