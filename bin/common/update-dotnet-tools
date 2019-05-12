@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+dotnet tool update --global paket
 dotnet tool update --global fake-cli
 dotnet tool update --global dotnet-search
 dotnet tool update --global dotnet-proj
