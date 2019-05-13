@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# https://github.com/moncho/dry
+
+cd ~/temp
+rm mitmproxy*.gz
+axel https://snapshots.mitmproxy.org/4.0.4/mitmproxy-4.0.4-linux.tar.gz
+tar xf mitmproxy-4.0.4-linux.tar.gz
+mv mitmproxy ~/bin
+mv mitmweb ~/bin
+mv mitmdump ~/bin
+
