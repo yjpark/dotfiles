@@ -14,7 +14,6 @@ mitmproxy
 
 cd ~/.mitmproxy
 openssl x509 -in mitmproxy-ca-cert.pem -inform PEM -out mitmproxy-ca-cert.crt
-openssl x509 -in mitmproxy-ca.pem -inform PEM -out mitmproxy-ca.crt
 sudo mkdir -p /usr/share/ca-certificates/extra/
-sudo cp *.crt /usr/share/ca-certificates/extra/
+sudo cp mitmproxy-ca-cert.crt /usr/share/ca-certificates/extra/
 sudo dpkg-reconfigure ca-certificates
