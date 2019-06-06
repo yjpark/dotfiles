@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# https://geti2p.net/zh-cn/download
+
+sudo apt-add-repository ppa:i2p-maintainers/i2p
+sudo apt update
+sudo apt install i2p
