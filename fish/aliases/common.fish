@@ -63,3 +63,4 @@ alias update-completions "fish_update_completions"
 
 alias gwp git-commit-wip-push
 
+alias now "date -u \"+%Y-%m-%d %H:%M:%S\""
