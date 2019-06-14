@@ -18,3 +18,5 @@ function use-openjdk-1.8
         set -x PATH "/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin" $PATH
     end
 end
+
+use-oracle-jdk-1.8
