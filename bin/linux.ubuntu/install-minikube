@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# https://github.com/kubernetes/minikube/releases
+
+cd /tmp
+
+axel https://github.com/kubernetes/minikube/releases/download/v1.1.1/minikube_1.1.1.deb
+
+sudo dpkg -i minikube_1.1.1.deb
+
