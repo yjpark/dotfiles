@@ -12,16 +12,25 @@ function setup-ssh-agent
             reset_ssh_agent
         end
     else
-        ps -ef | grep "ssh-agent -c" | grep -v grep | grep "ssh-agent -c" > /dev/null
-        if [ $status -eq 0 ]
-            check_ssh_identity
-        else
+        if [ -f ~/.termux ]
             echo "Initializing new ssh-agent ..."
             ssh-agent -c | sed 's/^echo/#echo/' > $SSH_ENV
             echo "succeeded"
             chmod 600 $SSH_ENV 
             source $SSH_ENV > /dev/null
                 ssh-add
+        else
+            ps -ef | grep "ssh-agent -c" | grep -v grep | grep "ssh-agent -c" > /dev/null
+            if [ $status -eq 0 ]
+                check_ssh_identity
+            else
+                echo "Initializing new ssh-agent ..."
+                ssh-agent -c | sed 's/^echo/#echo/' > $SSH_ENV
+                echo "succeeded"
+                chmod 600 $SSH_ENV 
+                source $SSH_ENV > /dev/null
+                    ssh-add
+            end
         end
     end
 end

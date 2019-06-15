@@ -1,0 +1,8 @@
+#!/data/data/com.termux/files/usr/bin/env bash
+
+touch ~/.termux
+
+cd ~/.dotfiles/fish/config.linux.termux/
+cp -v fisher.fish ~/.config/fish/functions/
+mkdir -p ~/.congfig/fish/extras/z-fish/
+cp -v z.fish ~/.config/fish/extras/z-fish/z.fish
