@@ -56,7 +56,7 @@ function z -d "Jump to a recent directory."
             }
         ' $datafile ^/dev/null > $tempfile
 
-        mv -f $tempfile $datafile
+        /data/data/com.termux/files/usr/bin/applets/mv -f $tempfile $datafile
 
     # tab completion
     else
@@ -182,7 +182,7 @@ function z -d "Jump to a recent directory."
             if [ $status -gt 0 ]
                 rm -f "$tempfile"
             else
-                mv -f "$tempfile" "$datafile"
+                /data/data/com.termux/files/usr/bin/applets/mv -f "$tempfile" "$datafile"
                 [ "$target" ]; and cd "$target"
             end
         end
