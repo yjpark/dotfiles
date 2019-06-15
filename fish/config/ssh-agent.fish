@@ -1,4 +1,4 @@
-if [ -f ~/.termux ]
+if test -d ~/.termux
     setenv SSH_ENV $HOME/.ssh/environment
     if [ -f $SSH_ENV ]
         source $SSH_ENV > /dev/null

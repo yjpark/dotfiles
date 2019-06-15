@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/env bash
 
-touch ~/.termux
+mkdir -p ~/.termux
 
 cd ~/.dotfiles/fish/config.linux.termux/
 cp -v fisher.fish ~/.config/fish/functions/
