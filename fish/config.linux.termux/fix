@@ -1,2 +1,3 @@
 set -x __ROOT__ /data/data/com.termux/files/
+set -x XDG_CONFIG_HOME /data/data/com.termux/files/home/.config
 
