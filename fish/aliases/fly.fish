@@ -1,1 +1,1 @@
-alias fly.localhost='fly -t localhost'
+alias fly.localhost='alias fly "fly -t localhost"'
