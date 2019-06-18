@@ -2,12 +2,6 @@
 alias g "git"
 make_completion g git
 
-alias d "docker"
-make_completion d docker
-
-alias k "kubectl"
-make_completion k kubectl
-
 alias a "ag --smart-case --line-number"
 make_completion a ag
 

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker ps | grep -i $1 | cut -b 1-12 | xargs -n 1 -I CONTAINER bash -c "echo \"======================================== CONTAINER ========================================\" ; docker exec CONTAINER ${@:2}"
