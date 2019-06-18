@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+fly --target ${CONCOURSE_TARGET} login --concourse-url ${CONCOURSE_URL} -u ${CONCOURSE_USERNAME} -p ${CONCOURSE_PASSWORD}
+
+fly --target ${CONCOURSE_TARGET} sync
+
