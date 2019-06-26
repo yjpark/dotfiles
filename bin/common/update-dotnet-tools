@@ -7,4 +7,5 @@ dotnet tool update --global dotnet-proj
 dotnet tool update --global fabulous-cli
 dotnet tool update --global Falanx.Tool
 dotnet tool update --global dotMorten.OmdGenerator
+dotnet tool update --global Amazon.Lambda.Tools
 
