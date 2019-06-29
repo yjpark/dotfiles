@@ -11,3 +11,5 @@ function use-oracle-jdk-11
         set -x PATH "/Library/Java/JavaVirtualMachines/jdk11.0.3.jdk/Contents/Home/bin" $PATH
     end
 end
+
+use-oracle-jdk-8
