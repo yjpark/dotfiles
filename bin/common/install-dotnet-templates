@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+dotnet new -i 'Amazon.Lambda.Templates::*'
+
