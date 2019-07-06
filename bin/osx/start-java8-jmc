@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# https://docs.oracle.com/javacomponents/jmc-5-4/jfr-runtime-guide/about.htm#JFRUH170
+# https://stackoverflow.com/questions/48400346/java-mission-control-from-jdk-1-8-0-161-frozen-upon-startup-on-mac-os-x
+
+cd /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/lib/missioncontrol
+open 'Java Mission Control.app'
