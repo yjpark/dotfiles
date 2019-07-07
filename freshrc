@@ -191,6 +191,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     # _info "ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml"
     # ln -s -v ~/.dotfiles/osx/Karabiner/private.xml private.xml
     # echo ""
+    ln -s -v ~/.dotfiles/osx/mavenrc ~/.mavenrc
     cd ~/.dotfiles
   fi
 
