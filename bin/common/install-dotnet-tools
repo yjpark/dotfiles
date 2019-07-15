@@ -8,3 +8,4 @@ dotnet tool install --global fabulous-cli
 dotnet tool install --global Falanx.Tool
 dotnet tool install --global dotMorten.OmdGenerator
 dotnet tool install --global Amazon.Lambda.Tools
+dotnet tool install --global femto
