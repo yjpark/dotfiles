@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo "================================================================================"
+du -sh ../.git
+
+remove_git_history() {
+    BR=$1
+    echo "================================================================================"
+    echo "Remove History of $BR"
+    git checkout $BR
+    git pull
+    git checkout --orphan ${BR}_temp
+    git commit -m "Initial commit"
+    git branch -D $BR
+    git branch -m $BR
+}
+
+# remove_git_history master
+# remove_git_history stable
+
+echo "================================================================================"
+echo "Running git gc --prune=all"
+git gc --prune=all
+
+echo "================================================================================"
+du -sh ../.git
