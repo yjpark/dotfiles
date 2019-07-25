@@ -2,14 +2,14 @@
 Send #{Tab}
 return
 
-^!`::
-IfWinActive, ahk_exe ubuntu1804.exe
+^`::
+IfWinActive, ahk_exe WindowsTerminal.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe ubuntu1804.exe
+    WinActivate ahk_exe WindowsTerminal.exe
 return
 
-^`::
+^!`::
 IfWinActive, ahk_exe vcxsrv.exe
     Send !{Tab}
 else

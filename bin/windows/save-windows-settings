@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
+cp ~/win/AppData/Local/Packages/Microsoft.WindowsTerminal_*/RoamingState/profiles.json ~/.dotfiles/windows/WindowsTerminal/
 
-cp ~/Applications/cmder/config/ConEmu.xml ~/.dotfiles/windows/
+# cp ~/Applications/cmder/config/ConEmu.xml ~/.dotfiles/windows/
 
-cp ~/.config/vs2013/* ~/.dotfiles/windows/vs2013/
+# cp ~/.config/vs2013/* ~/.dotfiles/windows/vs2013/
