@@ -10,3 +10,6 @@
 [submodule "windows/AutoHotKey/virtual-desktop"]
 	path = windows/AutoHotKey/virtual-desktop
 	url = git@github.com:yjpark/win-10-virtual-desktop-enhancer.git
+[submodule "external/guacamole"]
+	path = external/guacamole
+	url = https://github.com/reisbel/guacamole-docker-compose.git
