@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-sudo snap install canonical-livepatch
-sudo canonical-livepatch enable 2e2242330ea44ce0a23b130ea0f99cc4
