@@ -13,3 +13,6 @@
 [submodule "external/guacamole"]
 	path = external/guacamole
 	url = https://github.com/reisbel/guacamole-docker-compose.git
+[submodule "external/ufw-docker"]
+	path = external/ufw-docker
+	url = git@github.com:chaifeng/ufw-docker.git
