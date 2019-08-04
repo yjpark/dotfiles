@@ -1,0 +1,5 @@
+"xte 'keydown Control_L' 'keydown Tab' 'keyup Tab' 'keyup Control_L'"
+    release + b:8
+
+"xte 'mouseclick 2'"
+    release + b:9
