@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# https://www.percona.com/doc/percona-xtrabackup/8.0/installation/apt_repo.html
+
+cd /tmp/
+wget https://repo.percona.com/apt/percona-release_latest.$(lsb_release -sc)_all.deb
+sudo dpkg -i percona-release_latest.$(lsb_release -sc)_all.deb
+
+sudo percona-release enable-only tools release
+sudo apt-get update
+sudo apt-get install percona-xtrabackup-80
