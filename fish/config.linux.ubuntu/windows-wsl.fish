@@ -15,6 +15,8 @@ if grep -q Microsoft /proc/version
     alias term 'cd ~/temp ; nohup terminator &'
 
     set -x SPACEFISH_CHAR_SYMBOL ">"
-end
 
+    # https://www.turek.dev/post/fix-wsl-file-permissions/
+    umask 0002
+fi
 
