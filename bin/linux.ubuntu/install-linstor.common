@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# https://vitobotta.com/2019/08/07/linstor-storage-with-kubernetes/
+
+sudo add-apt-repository ppa:linbit/linbit-drbd9-stack
+sudo apt-get update
+
+sudo apt install drbd-utils drbd-dkms lvm2
+sudo modprobe drbd
+sudo lsmod | grep -i drbd
+sudo echo drbd > /etc/modules-load.d/drbd.conf
