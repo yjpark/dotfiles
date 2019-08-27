@@ -8,6 +8,7 @@
 
 # my stuffs
 set -x LANG "en_US.UTF-8"
+set -x LANGUAGE "en_US:en"
 set -x LC_ALL "en_US.UTF-8"
 
 set -x HOST (hostname)
