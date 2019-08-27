@@ -18,5 +18,5 @@ if grep -q Microsoft /proc/version
 
     # https://www.turek.dev/post/fix-wsl-file-permissions/
     umask 0002
-fi
+end
 
