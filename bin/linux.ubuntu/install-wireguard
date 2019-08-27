@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# https://www.linode.com/docs/networking/vpn/set-up-wireguard-vpn-on-ubuntu/
+
+sudo add-apt-repository ppa:wireguard/wireguard
+sudo apt install wireguard
