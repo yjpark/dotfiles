@@ -6,7 +6,7 @@ cd `dirname $0`
 
 ./install-linstor.common
 
-sudo apt install linstor-satellite linstor-client
+sudo apt install -y linstor-satellite linstor-client
 
 sudo systemctl enable --now linstor-satellite
 sudo systemctl start linstor-satellite

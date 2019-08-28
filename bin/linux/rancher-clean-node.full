@@ -11,3 +11,5 @@ sudo rm -rf /etc/kubernetes
 sudo rm -rf /opt/rke
 docker volume rm -f $(docker volume ls)
 #sudo reboot -h now
+sudo docker system prune -f
+sudo docker network prune
