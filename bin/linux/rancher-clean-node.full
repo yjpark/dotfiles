@@ -5,21 +5,24 @@
 docker rm -fv  $(docker ps -a -q) 
 docker volume rm -f $(docker volume ls)
 #sudo reboot -h now
-sudo rm -vrf /etc/ceph
-sudo rm -vrf /etc/cni
-sudo rm -vrf /etc/kubernetes
-sudo rm -vrf /opt/cni
-sudo rm -vrf /opt/rke
-sudo rm -vrf /run/secrets/kubernetes.io
-sudo rm -vrf /run/calico
-sudo rm -vrf /run/flannel
-sudo rm -vrf /var/lib/etcd
-sudo rm -vrf /var/lib/cni
-sudo rm -vrf /var/lib/kubelet
-sudo rm -vrf /var/lib/rancher/rke/log
-sudo rm -vrf /var/log/containers
-sudo rm -vrf /var/log/pods
-sudo rm -vrf /var/run/calico
+
+rm -rf /etc/ceph \
+       /etc/cni \
+       /etc/kubernetes \
+       /opt/cni \
+       /opt/rke \
+       /run/secrets/kubernetes.io \
+       /run/calico \
+       /run/flannel \
+       /var/lib/calico \
+       /var/lib/etcd \
+       /var/lib/cni \
+       /var/lib/kubelet \
+       /var/lib/rancher/rke/log \
+       /var/log/containers \
+       /var/log/pods \
+       /var/run/calico
+
 docker volume rm -f $(docker volume ls)
 #sudo reboot -h now
 sudo docker system prune -f
