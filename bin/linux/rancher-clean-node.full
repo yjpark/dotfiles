@@ -1,15 +1,25 @@
 #!/usr/bin/env bash
 
+# https://rancher.com/docs/rancher/v2.x/en/cluster-admin/cleaning-cluster-nodes/
+
 docker rm -fv  $(docker ps -a -q) 
 docker volume rm -f $(docker volume ls)
 #sudo reboot -h now
-sudo rm -rf /run/secrets/kubernetes.io
-sudo rm -rf /var/lib/etcd
-sudo rm -rf /var/lib/kubelet
-sudo rm -rf /var/lib/rancher
-sudo rm -rf /etc/kubernetes
-sudo rm -rf /opt/rke
+sudo rm -vrf /etc/ceph
+sudo rm -vrf /etc/cni
 sudo rm -vrf /etc/kubernetes
+sudo rm -vrf /opt/cni
+sudo rm -vrf /opt/rke
+sudo rm -vrf /run/secrets/kubernetes.io
+sudo rm -vrf /run/calico
+sudo rm -vrf /run/flannel
+sudo rm -vrf /var/lib/etcd
+sudo rm -vrf /var/lib/cni
+sudo rm -vrf /var/lib/kubelet
+sudo rm -vrf /var/lib/rancher/rke/log
+sudo rm -vrf /var/log/containers
+sudo rm -vrf /var/log/pods
+sudo rm -vrf /var/run/calico
 docker volume rm -f $(docker volume ls)
 #sudo reboot -h now
 sudo docker system prune -f
