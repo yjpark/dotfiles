@@ -11,5 +11,6 @@ sudo rm -vrf /var/lib/kubelet
 sudo rm -vrf /var/lib/rancher
 sudo rm -vrf /etc/kubernetes
 sudo rm -vrf /opt/rke
+sudo rm -vrf /etc/kubernetes
 # docker volume rm -f $(docker volume ls)
 # sudo reboot -h now

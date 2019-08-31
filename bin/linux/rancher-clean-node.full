@@ -9,6 +9,7 @@ sudo rm -rf /var/lib/kubelet
 sudo rm -rf /var/lib/rancher
 sudo rm -rf /etc/kubernetes
 sudo rm -rf /opt/rke
+sudo rm -vrf /etc/kubernetes
 docker volume rm -f $(docker volume ls)
 #sudo reboot -h now
 sudo docker system prune -f
