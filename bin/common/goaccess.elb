@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+goaccess --log-format='%^ %dT%t.%^ %v %h:%^ %^ %T %^ %^ %s %^ %b %^ "%r" "%u" %^' --date-format='%Y-%m-%d' --time-format=%T $@
+
