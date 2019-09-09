@@ -6,7 +6,7 @@ docker rm -fv  $(docker ps -a -q)
 docker volume rm -f $(docker volume ls)
 #sudo reboot -h now
 
-rm -rf /etc/ceph \
+sudo rm -rf /etc/ceph \
        /etc/cni \
        /etc/kubernetes \
        /opt/cni \
