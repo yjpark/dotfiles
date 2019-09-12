@@ -8,5 +8,5 @@ version=${2,,}
 mkdir -p ~/.nuget/packages/$package
 
 echo "rsync -rvz --progress --stats office.yjpark.zerotier:.nuget/packages/$package/$version ~/.nuget/packages/$package"
-rsync -rvz --progress --stats office.yjpark.zerotier:.nuget/packages/$package/$version ~/.nuget/packages/$package
+rsync -rvz --progress --stats office.lan.yjpark.org:.nuget/packages/$package/$version ~/.nuget/packages/$package
 
