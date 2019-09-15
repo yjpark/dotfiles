@@ -16,3 +16,6 @@
 [submodule "external/ufw-docker"]
 	path = external/ufw-docker
 	url = git@github.com:chaifeng/ufw-docker.git
+[submodule "external/kubectx"]
+	path = external/kubectx
+	url = https://github.com/ahmetb/kubectx

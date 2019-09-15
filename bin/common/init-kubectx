@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# https://github.com/ahmetb/kubectx
+
+ln -s ~/.dotfiles/external/kubectx/kubectx ~/bin/
+ln -s ~/.dotfiles/external/kubectx/kubens ~/bin/
+
+ln -s ~/.dotfiles/external/kubectx/completion/kubectx.fish ~/.config/fish/completions/
+ln -s ~/.dotfiles/external/kubectx/completion/kubens.fish ~/.config/fish/completions/
