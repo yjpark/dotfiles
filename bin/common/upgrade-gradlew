@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# https://gradle.org/install/
+
+./gradlew wrapper --gradle-version=5.6.2 --distribution-type=bin
