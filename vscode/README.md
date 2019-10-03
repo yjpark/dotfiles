@@ -9,7 +9,6 @@ Misc Plugins
 - Trailing Spaces
 - Snake Trail
 - Code Spell Checker
-- BreadCrumb in StatusBar
 - Bookmarks
 
 Themes
