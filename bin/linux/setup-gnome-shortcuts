@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-left "['<Primary>Left']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-right "['<Primary>Right']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-up "['<Primary>Up']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-down "['<Primary>Down']"
+
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1 "['<Primary>1']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2 "['<Primary>2']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-3 "['<Primary>3']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-4 "['<Primary>4']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-5 "['<Primary>5']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-6 "['<Primary>6']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-7 "['<Primary>7']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-8 "['<Primary>8']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-9 "['<Primary>9']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-10 "['<Primary>0']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-11 "['<Primary>Grave']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-12 "['<Primary><Alt>a']"
