@@ -1,6 +1,8 @@
 Coding Plugins
+- Vim
 - GitLens
 - Git Graph (mhutchie.git-graph)
+- Rest Client
 
 Misc Plugins
 - indent-rainbow
