@@ -1,5 +1,6 @@
 #!/bin/bash
 
+curl -vsSL https://get.sdkman.io > ~/.dotfiles/bootstrap/bootstrap-sdkman
 curl -vsSL https://get.rvm.io > ~/.dotfiles/bootstrap/bootstrap-rvm
 curl -vsSf https://sh.rustup.rs > ~/.dotfiles/bootstrap/bootstrap-rust-up
 curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/bootstrap/bootstrap-nix
