@@ -1,6 +1,8 @@
 Coding Plugins
+- Vim
 - GitLens
 - Git Graph (mhutchie.git-graph)
+- Rest Client
 
 Misc Plugins
 - indent-rainbow
@@ -9,7 +11,6 @@ Misc Plugins
 - Trailing Spaces
 - Snake Trail
 - Code Spell Checker
-- BreadCrumb in StatusBar
 - Bookmarks
 
 Themes
