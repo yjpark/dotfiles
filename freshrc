@@ -214,6 +214,7 @@ if [[ "$(uname)" == "Linux" ]]; then
   fi
   fresh 'linux/tilda' --file='~/.config/tilda/'
   fresh 'linux/clipit' --file='~/.config/clipit/'
+  fresh 'linux/sway' --file='~/.config/sway/'
 fi
 
 if [[ "$(hostname)" != "ubuntu" ]]; then
