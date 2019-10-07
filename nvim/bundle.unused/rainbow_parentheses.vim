@@ -1,3 +1,5 @@
+Plug 'kien/rainbow_parentheses.vim'
+
 " https://github.com/kien/rainbow_parentheses.vim
 
 let g:rbpt_colorpairs = [
@@ -25,3 +27,4 @@ autocmd VimEnter * RainbowParenthesesToggle
 autocmd Syntax * RainbowParenthesesLoadRound
 autocmd Syntax * RainbowParenthesesLoadSquare
 autocmd Syntax * RainbowParenthesesLoadBraces
+
