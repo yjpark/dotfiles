@@ -2,6 +2,7 @@
 
 - IdeaVim
 - Material Theme UI
+- Code Glance (minimap)
 - Rainbow Brackets
 
 ## Theme
