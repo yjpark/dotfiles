@@ -6,7 +6,7 @@
 
 ## Theme
 
-- RecognEye
+- Monokai Pro from Material Theme (change keyword color)
 
 ## Config
 
