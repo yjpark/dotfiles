@@ -8,6 +8,7 @@
   scroll_tabbar = True
   title_transmit_bg_color = "#002b36"
   title_transmit_fg_color = "#839496"
+  window_state = maximise
 [keybindings]
   close_term = <Alt>w
   copy = <Alt>c
