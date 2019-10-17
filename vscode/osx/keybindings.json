@@ -121,6 +121,7 @@
     },
     {
         "key": "cmd+v",
-        "command": "workbench.action.terminal.paste"
+        "command": "editor.action.clipboardPasteAction",
+        "when": "textInputFocus && !editorReadonly"
     }
 ]
