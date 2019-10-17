@@ -1,0 +1,230 @@
+{
+    "python.pythonPath": "/anaconda3",
+    "window.zoomLevel": 1,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.meta": true,
+        "**/.*.meta": true
+    },
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.overviewRulerBorder": false,
+    "editor.minimap.enabled": true,
+    "editor.minimap.side": "right",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 80,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.enableNeovim": true,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "vim.useSystemClipboard": true,
+    "vim.sneak": true,
+    "vim.easymotion": true,
+    "vim.easymotionKeys": "aoeuidhtnspyfgcrlqjkxbmwvz,",
+    "vim.normalModeKeyBindings": [
+        {
+            "before":[" "],
+            "after":["<Leader>", "<Leader>"]
+        }, {
+            "before":[";"],
+            "after":[":"]
+        }, {
+            "before":["<Enter>"],
+            "after":["i"]
+        }, {
+            "before":["<Backspace>"],
+            "after":["i", "<Backspace>"]
+        }, {
+            "before":["<Comma>", "b"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-w>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-n>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":tabnext",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-p>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": ":tabprevious",
+                    "args": []
+                }
+            ]
+        }, {
+            "before":["<C-s>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before":["<C-s>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before":[";"],
+            "after":[":"]
+        }, {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.indentLines"
+                }
+            ]
+        }, {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                {
+                    "command": "editor.action.outdentLines"
+                }
+            ]
+        }
+    ],
+    "editor.wordWrap": "on",
+    "[fsharp]": {
+        "editor.useTabStops": true
+    },
+    "red.redPath": "/Users/yjpark/bin/red-063",
+    "dart.flutterSdkPath": "/Users/yjpark/Applications/flutter",
+    "bracketPairColorizer.forceUniqueOpeningColor": true,
+    "bracketPairColorizer.showBracketsInGutter": true,
+    "snakeTrail.color": "0,128,128",
+    "snakeTrail.colorLight": "0,128,128",
+    "snakeTrail.colorDark": "0,128,128",
+    "snakeTrail.fadeMS": 50,
+    "snakeTrail.fadeStart": 0.5,
+    "snakeTrail.fadeEnd": 0.1,
+    "snakeTrail.fadeStep": 0.05,
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "pub",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml",
+        "fsharp"
+    ],
+    "cSpell.userWords": [
+        "activity",
+        "add",
+        "app",
+        "auto",
+        "autoresizing",
+        "autorotate",
+        "autosizes",
+        "compat",
+        "elif",
+        "forms",
+        "from",
+        "guid",
+        "iios",
+        "iled",
+        "interface",
+        "luid",
+        "ooui",
+        "orientation",
+        "platform",
+        "remove",
+        "should",
+        "sizes",
+        "sprintf",
+        "subview",
+        "subviews",
+        "superview",
+        "to",
+        "ui",
+        "view",
+        "xamarin"
+    ],
+    "FSharp.fsacRuntime": "netcore",
+    "editor.dragAndDrop": false,
+    "indentRainbow.indentSetter": {
+        "F#": { "tabSize": 4, "insertSpaces": true },
+        "XML": { "tabSize": 2, "insertSpaces": true }
+    },
+    "files.associations": {
+        "*.fsproj": "xml"
+    },
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "files.autoSave": "onWindowChange",
+    "terminal.integrated.fontFamily": "Fira Code",
+    "insertDateString.format": "YYYY-MM-DD hh:mm:ss",
+    "insertDateString.formatDate": "YYYY-MM-DD",
+    "insertDateString.formatTime": "### hh:mm",
+    "FSharp.disableFailedProjectNotifications": true,
+    "FSharp.smartIndent": true,
+    "FSharp.lineLens.enabled": "never",
+    "FSharp.linter": false,
+    "FSharp.showExplorerOnStartup": false,
+    "FSharp.workspaceMode": "directory",
+    "FSharp.resolveNamespaces": false,
+    "FSharp.externalAutocomplete": false,
+    "window.nativeFullScreen": true,
+    "workbench.colorTheme": "Ayu Mirage Bordered",
+    "workbench.iconTheme": "ayu"
+}
