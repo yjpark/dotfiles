@@ -1,4 +1,3 @@
-Up::Down
 #MaxThreadsPerHotkey 10
 $RShift::
   Send {Up}
@@ -9,3 +8,6 @@ $RShift::
     Sleep, 25
   }
 Return
+
+;Up::Down
+
