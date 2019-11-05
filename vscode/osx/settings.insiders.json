@@ -224,7 +224,7 @@
     "FSharp.workspaceMode": "directory",
     "FSharp.resolveNamespaces": false,
     "FSharp.externalAutocomplete": false,
-    "window.nativeFullScreen": true,
-    "workbench.colorTheme": "Ayu Mirage Bordered",
-    "workbench.iconTheme": "ayu"
+    "workbench.colorTheme": "Kary Pro Colors － Dark",
+    "workbench.iconTheme": "ayu",
+    "window.restoreFullscreen": true
 }
