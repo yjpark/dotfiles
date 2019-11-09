@@ -10,4 +10,5 @@ dotnet tool update --global dotMorten.OmdGenerator
 dotnet tool update --global Amazon.Lambda.Tools
 dotnet tool update --global femto
 dotnet tool update --global ilspycmd
+dotnet tool update --global fantomas-tool
 
