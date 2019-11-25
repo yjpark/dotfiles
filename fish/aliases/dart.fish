@@ -1,1 +1,1 @@
-alias dart '~/Applications/flutter/cache/dart-sdk/bin/dart'
+alias dart '~/Applications/flutter/bin/cache/dart-sdk/bin/dart'
