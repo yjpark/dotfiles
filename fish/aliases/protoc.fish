@@ -1,2 +1,2 @@
-alias protoc.dart.init 'cd $HOME/.dotfiles/external/protobuf/protobuf-dart_19.0.0-1/protoc_plugin/ ; pub get'
-alias protoc.dart 'protoc --plugin=$HOME/.dotfiles/external/protobuf/protobuf-dart_19.0.0-1/protoc_plugin/bin/protoc-gen-dart'
+alias protoc.dart.init 'pub global activate protoc_plugin'
+alias protoc.dart 'protoc --plugin=$HOME/.pub-cache/bin/protoc-gen-dart'

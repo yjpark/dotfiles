@@ -1,3 +1,0 @@
-analyzer:
-  exclude:
-    - benchmarks/query_benchmark/**
