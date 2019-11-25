@@ -11,4 +11,5 @@ dotnet tool update --global Amazon.Lambda.Tools
 dotnet tool update --global femto
 dotnet tool update --global ilspycmd
 dotnet tool update --global fantomas-tool
+dotnet tool update --global dotnet-certes
 
