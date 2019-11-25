@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-curl -X GET $1:$2/v2/$3/tags/list
+echo $1/v2/$2/tags/list
+curl -X GET $1/v2/$2/tags/list
