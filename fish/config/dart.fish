@@ -6,4 +6,6 @@ if test -d ~/.pub-cache/bin
     set -x PATH $PATH ~/.pub-cache/bin
 end
 
-
+# may need to update /etc/hosts if can't connect to pub.dartlang.org
+#
+# 216.58.200.51   pub.dartlang.org
