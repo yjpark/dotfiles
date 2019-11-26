@@ -3,6 +3,7 @@
 dotnet tool update --global paket
 dotnet tool update --global fake-cli
 dotnet tool update --global dotnet-try
+dotnet tool update --global dotnet-grpc
 dotnet tool update --global dotnet-search
 dotnet tool update --global dotnet-proj
 dotnet tool update --global fabulous-cli
