@@ -1,1 +1,1 @@
-/anaconda3/etc/fish/conf.d/conda.fish
+/usr/local/anaconda3/etc/fish/conf.d/conda.fish
