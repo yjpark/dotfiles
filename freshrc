@@ -281,6 +281,7 @@ if [ -d "$HOME/.dotfiles/private" ] ; then
     source ~/.dotfiles/private/private.freshrc
     ~/.dotfiles/private/bin/common/fresh-private
 
+    fresh 'fish/aliases.private/*' --file='~/.config/fish/aliases.fish'
     fresh 'fish/config.private/*' --file='~/.config/fish/config.fish'
     fresh 'bash/custom.private/*' --file='~/.bash_it/custom/common.bash'
     fresh 'ssh/config.private/*' --file='~/.ssh/config'
