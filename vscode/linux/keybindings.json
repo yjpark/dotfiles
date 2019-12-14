@@ -229,5 +229,10 @@
     {
         "key": "ctrl+shift+`",
         "command": "-workbench.action.terminal.new"
+    },
+    {
+        "key": "Escape",
+        "command": "vscode-neovim.escape",
+        "when": "editorTextFocus && neovim.mode != normal"
     }
 ]

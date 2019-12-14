@@ -1,13 +1,17 @@
 {
     "python.pythonPath": "/anaconda3",
-    "window.zoomLevel": -1,
+    "window.zoomLevel": 0,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/*.meta": true,
-        "**/.*.meta": true
+        "**/.*.meta": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "workbench.editor.showTabs": true,
     "workbench.editor.enablePreview": false,
@@ -190,7 +194,7 @@
     },
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "smart",
-    "files.autoSave": "onWindowChange",
+    "files.autoSave": "off",
     "terminal.integrated.fontFamily": "Fira Code",
     "insertDateString.format": "YYYY-MM-DD hh:mm:ss",
     "insertDateString.formatDate": "YYYY-MM-DD",
@@ -216,5 +220,9 @@
             "savePassword": true,
             "profileName": "feeds_dev"
         }
-    ]
+    ],
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "vscode-neovim.neovimPath": "/usr/bin/nvim"
 }

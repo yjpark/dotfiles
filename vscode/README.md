@@ -4,6 +4,10 @@ Coding Plugins
 - Git Graph (mhutchie.git-graph)
 - Rest Client
 
+Trying Neo Vim
+- https://github.com/asvetliakov/vscode-neovim
+- Need neovim >= 0.4.2, need to instal from unstable PPA on ubuntu
+
 Misc Plugins
 - indent-rainbow
 - Rainbow Brackets
