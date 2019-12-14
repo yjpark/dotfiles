@@ -36,6 +36,8 @@ set lazyredraw
 set laststatus=2
 set noshowmode
 
+set guicursor=n-v-c-sm:block,i-ci-ve:blinkon1-blinkwait100-ver25-Cursor,r-cr-o:hor20
+
 set cursorline
 autocmd WinLeave * setlocal nocursorline
 autocmd WinEnter * setlocal cursorline
