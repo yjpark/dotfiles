@@ -1,4 +1,7 @@
-Plug 'easymotion/vim-easymotion'
-" This is for vscode usage, but will break normal nvim usage
-" maybe can fork it to support both way, but may not easy
-" Plug 'asvetliakov/vim-easymotion'
+if exists('g:vscode')
+    " Can not have both of them with same same, otherwise vim-plug will have
+    " issues
+    Plug 'yjpark/vscode-neovim-easymotion'
+else
+    Plug 'easymotion/vim-easymotion'
+endif
