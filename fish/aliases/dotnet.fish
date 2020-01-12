@@ -6,6 +6,8 @@ alias d.watch='cb ; dotnet watch run --no-restore'
 alias d.fable='cb ; dotnet fable yarn-start'
 alias d.pack.release='cb ; dotnet pack --configuration Release'
 
+alias fsi='dotnet fsi'
+
 alias f='cb ; fake build'
 
 alias f.t='cb ; fake build -t'
