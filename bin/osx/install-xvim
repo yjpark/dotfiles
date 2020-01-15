@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# https://github.com/XVimProject/XVim2
+
+xcode-select -p
+
+mkdir -p ~/projects/learn/osx/
+cd ~/projects/learn/osx/
+
+git clone https://github.com/XVimProject/XVim2.git
+
+
+cd XVim2
+make
+
