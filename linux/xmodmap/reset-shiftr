@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+xmodmap -e "remove shift = Shift_R"
+xmodmap -e "keycode 62 = Escape"
+xmodmap -e "keycode 62 = Shift_R"
+xmodmap -e "add shift = Shift_R"

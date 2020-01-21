@@ -1,4 +1,0 @@
-remove shift = Shift_R
-keycode 62 = Escape
-keycode 62 = Shift_R
-add shift = Shift_R
