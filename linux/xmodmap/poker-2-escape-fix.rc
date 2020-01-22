@@ -1,4 +1,0 @@
-keycode 9 = grave
-keycode 207 = Escape
-
-# need to use `xcape -e "Control_L=Hyper_L"`
