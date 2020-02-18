@@ -1,1 +1,1 @@
-alias rsync 'rsync -rvz --stats'
+alias rsync 'rsync -rvz --stats --progress'
