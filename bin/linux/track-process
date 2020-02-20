@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [ -z $1 ] ; then 
+    echo "Need to provide process id"
+    echo "For Example: $0 12345"
+    exit 1
+fi
+
+echo "" >> /tmp/$1.track.log
+echo "$(cat /proc/$1/cmdline)" >> /tmp/$1.track.log
+echo "" >> /tmp/$1.track.log
+echo "| Time                | State | CPU Usage | MEM Usage | Threads | Open Files |" >> /tmp/$1.track.log
+echo "| ------------------- | ----- | --------- | --------- | ------- | ---------- |" >> /tmp/$1.track.log
+while true
+do
+    # xargs is to remove leading spaces
+    STATE=$(ps -h -o stat $1 | xargs)
+    CPU=$(ps -h -o %cpu $1 | xargs)
+    MEM=$(ps -h -o %mem $1 | xargs)
+    THREADS=$(ps -h -o thcount $1 | xargs)
+    FILES=$(lsof -p $1 | wc -l)
+    echo "$(date '+%Y-%m-%d %H:%M:%S')    State: $STATE    %CPU: $CPU    %MEM: $MEM    Threads: $THREADS    Files: $FILES"
+    printf "| $(date '+%Y-%m-%d %H:%M:%S') | %-5s | %8s%% | %8s%% | %7s | %10s |\n" $STATE $CPU $MEM $THREADS $FILES >> /tmp/$1.track.log
+    sleep 3
+done
+
