@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# https://stackoverflow.com/questions/268680/how-can-i-monitor-the-thread-count-of-a-process-on-linux
+
+if [ -z $1 ] ; then 
+    echo "Need to provide process id"
+    echo "For Example: $0 12345"
+    exit 1
+fi
+
+ps huH p $1 | wc -l
