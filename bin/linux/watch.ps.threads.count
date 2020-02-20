@@ -8,4 +8,4 @@ if [ -z $1 ] ; then
     exit 1
 fi
 
-ps -o thcount $1
+watch ps -o thcount $1
