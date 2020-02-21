@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-dotnet tool install --global paket
+dotnet tool install --global paket --version 5.241.2
 dotnet tool install --global fake-cli
 dotnet tool install --global dotnet-try
 dotnet tool install --global dotnet-grpc

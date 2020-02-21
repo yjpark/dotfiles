@@ -2,27 +2,40 @@
 
 INTERVAL=${2:-60}
 
-if [ -z $1 ] ; then 
+if [ -z $1 ] ; then
     echo "Need to provide process id"
     echo "For Example: $0 12345"
     exit 1
 fi
 
-echo "" >> /tmp/$1.track.log
-echo "$(cat /proc/$1/cmdline)" >> /tmp/$1.track.log
-echo "" >> /tmp/$1.track.log
-echo "| Time                | State | CPU Usage | MEM Usage | Threads | Open Files |" >> /tmp/$1.track.log
-echo "| ------------------- | ----- | --------- | --------- | ------- | ---------- |" >> /tmp/$1.track.log
-while true
+PID=$1
+
+if [ ! -d /proc/$PID ] ; then
+    echo "$PID    $(date '+%Y-%m-%d %H:%M:%S')    Process Not Running"
+    exit 2
+fi
+
+echo "$(cat /proc/$PID/cmdline)"
+echo ""
+
+echo "" >> /tmp/track.$PID.log
+echo "$(cat /proc/$PID/cmdline)" >> /tmp/track.$PID.log
+echo "" >> /tmp/track.$PID.log
+echo "| Process ID | Time                | State | CPU Usage | MEM Usage | Threads | Open Files |" >> /tmp/track.$PID.log
+echo "| ---------- | ------------------- | ----- | --------- | --------- | ------- | ---------- |" >> /tmp/track.$PID.log
+while [ -d /proc/$PID ]
 do
     # xargs is to remove leading spaces
-    STATE=$(ps -h -o stat $1 | xargs)
-    CPU=$(ps -h -o %cpu $1 | xargs)
-    MEM=$(ps -h -o %mem $1 | xargs)
-    THREADS=$(ps -h -o thcount $1 | xargs)
-    FILES=$(lsof -p $1 | wc -l)
-    echo "$(date '+%Y-%m-%d %H:%M:%S')    State: $STATE    %CPU: $CPU    %MEM: $MEM    Threads: $THREADS    Files: $FILES"
-    printf "| $(date '+%Y-%m-%d %H:%M:%S') | %-5s | %8s%% | %8s%% | %7s | %10s |\n" $STATE $CPU $MEM $THREADS $FILES >> /tmp/$1.track.log
+    STATE=$(ps -h -o stat $PID | xargs)
+    CPU=$(ps -h -o %cpu $PID | xargs)
+    MEM=$(ps -h -o %mem $PID | xargs)
+    THREADS=$(ps -h -o thcount $PID | xargs)
+    FILES=$(lsof -p $PID | wc -l)
+    echo "$PID    $(date '+%Y-%m-%d %H:%M:%S')    State: $STATE    %CPU: $CPU    %MEM: $MEM    Threads: $THREADS    Files: $FILES"
+    printf "| %10s | $(date '+%Y-%m-%d %H:%M:%S') | %-5s | %8s%% | %8s%% | %7s | %10s |\n" $PID $STATE $CPU $MEM $THREADS $FILES >> /tmp/track.$PID.log
     sleep $INTERVAL
 done
+
+echo "$PID    $(date '+%Y-%m-%d %H:%M:%S')    Process Finished"
+printf "| %10s | $(date '+%Y-%m-%d %H:%M:%S') |     - |         - |         - |       - |          - |\n" $PID >> /tmp/track.$PID.log
 
