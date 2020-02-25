@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 dotnet tool update --global paket --version 5.241.2
-dotnet tool update --global fake-cli
+dotnet tool update --global fake-cli --version 5.19.1
 dotnet tool update --global dotnet-try
 dotnet tool update --global dotnet-grpc
 dotnet tool update --global dotnet-search
