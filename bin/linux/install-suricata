@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Ubuntu_Installation_-_Personal_Package_Archives_(PPA)
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:oisf/suricata-stable
+sudo apt-get update
