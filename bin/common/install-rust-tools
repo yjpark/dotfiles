@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
+cargo install pier
+cargo install ytop
 cargo install fblog
