@@ -1,0 +1,15 @@
+matches:
+  - trigger: ";date"
+    replace: "{{current_date}}"
+    vars:
+      - name: current_date
+        type: date
+        params:
+          format: "%Y-%m-%d"
+  - trigger: ";time"
+    replace: "{{current_time}}"
+    vars:
+      - name: current_time
+        type: date
+        params:
+          format: "%H:%M"

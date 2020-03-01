@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+xmodmap -e "keycode 9 = grave"
+xmodmap -e "keycode 207 = Hyper_L"
+
+pkill -9 xcape
+xcape -e "Control_L=Hyper_L"
+
+xmodmap -e "keycode 207 = Escape"
+
