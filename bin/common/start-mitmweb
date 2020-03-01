@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-mitmweb -p 1111
+mitmweb -p 1111 --web-port 1112
