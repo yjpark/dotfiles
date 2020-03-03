@@ -1,0 +1,55 @@
+{
+  "title": "[YJ Park] Trackpoint Scroll",
+  "rules": [
+    {
+      "description": "Press center button to scroll",
+      "available_since": "12.3.0",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button3",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "enable_mouse_motion_to_scroll",
+                "value": 1
+              }
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "enable_mouse_motion_to_scroll",
+                "value": 0
+              }
+            }
+          ]
+        },
+        {
+          "type": "mouse_motion_to_scroll",
+          "from": {
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "enable_mouse_motion_to_scroll",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
