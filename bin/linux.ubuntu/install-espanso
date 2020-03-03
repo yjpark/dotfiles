@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd /tmp
+
+# https://espanso.org/install/linux/
+
+wget https://github.com/federico-terzi/espanso/releases/latest/download/espanso-debian-amd64.deb
+sudo dpkg -i espanso-debian-amd64.deb
