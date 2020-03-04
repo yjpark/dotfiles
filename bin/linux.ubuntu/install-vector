@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+cd /tmp
+
+# https://vector.dev/docs/setup/installation/package-managers/dpkg/?arch=x86_64
+curl --proto '=https' --tlsv1.2 -O https://packages.timber.io/vector/0.8.X/vector-amd64.deb
+sudo dpkg -i vector-amd64.deb
