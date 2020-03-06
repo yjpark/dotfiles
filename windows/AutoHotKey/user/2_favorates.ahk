@@ -9,25 +9,11 @@ else
     WinActivate ahk_exe WindowsTerminal.exe
 return
 
-^!`::
-IfWinActive, ahk_exe vcxsrv.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe vcxsrv.exe
-return
-
-^!1::
-IfWinActive, ahk_exe powershell.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe powershell.exe
-return
-
 ^!t::
-IfWinActive, ahk_exe mintty.exe
+IfWinActive, ahk_exe alacritty.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe mintty.exe
+    WinActivate ahk_exe alacritty.exe
 return
 
 ^!m::
