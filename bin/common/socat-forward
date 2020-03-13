@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+if [ ! -z $2 ] ; then
+    echo ""
+    echo "Neet to provide host and port to forward, local port as optional parameter"
+    echo "e.g. $0 host port"
+    exit 1
+fi
+
+HOST=$1
+PORT=$2
+LOCAL_PORT=$2
+
+if [ -z $3 ] ; then
+    LOCAL_PORT=$3
+fi
+
+echo "socat tcp-listen:${LOCAL_PORT},fork,reuseaddr tcp-connect:${HOST}:${PORT}"
