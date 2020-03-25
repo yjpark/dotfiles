@@ -2,3 +2,4 @@
 
 cargo install watch
 cargo install diesel_cli
+cargo install tokei
