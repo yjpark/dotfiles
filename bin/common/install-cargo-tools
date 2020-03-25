@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cargo install watch
+cargo install diesel_cli
