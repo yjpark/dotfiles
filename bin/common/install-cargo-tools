@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
+install-cargo-tools.libs
+
 cargo install watch
 cargo install diesel_cli
