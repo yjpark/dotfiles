@@ -2,6 +2,14 @@
 
 install-cargo-tools.libs
 
-cargo install watch
+cargo install cargo-watch
+cargo install fmt
+cargo install fix
+
 cargo install diesel_cli
 cargo install tokei
+
+cargo install pier
+cargo install ytop
+cargo install fblog
+
