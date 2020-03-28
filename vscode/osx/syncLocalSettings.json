@@ -1,1 +1,38 @@
-{"ignoreUploadFiles":["projects.json","projects_cache_vscode.json","projects_cache_git.json","projects_cache_svn.json","gpm_projects.json","gpm-recentItems.json"],"ignoreUploadFolders":["workspaceStorage"],"ignoreExtensions":[],"replaceCodeSettings":{},"gistDescription":"Visual Studio Code Settings Sync Gist","version":325,"token":"","downloadPublicGist":false,"supportedFileExtensions":["json","code-snippets"],"openTokenLink":true,"disableUpdateMessage":false,"lastUpload":null,"lastDownload":null,"githubEnterpriseUrl":null,"askGistName":false,"customFiles":{},"hostName":null}
+{
+    "ignoreUploadFiles": [
+        "projects.json",
+        "projects_cache_vscode.json",
+        "projects_cache_git.json",
+        "projects_cache_svn.json",
+        "gpm_projects.json",
+        "gpm-recentItems.json",
+        "state.*",
+        "syncLocalSettings.json",
+        ".DS_Store",
+        "sync.lock"
+    ],
+    "ignoreUploadFolders": [
+        "workspaceStorage"
+    ],
+    "ignoreExtensions": [],
+    "gistDescription": "Visual Studio Code Settings Sync Gist",
+    "version": 343,
+    "token": "",
+    "downloadPublicGist": false,
+    "supportedFileExtensions": [
+        "json",
+        "code-snippets"
+    ],
+    "openTokenLink": true,
+    "disableUpdateMessage": false,
+    "lastUpload": null,
+    "lastDownload": null,
+    "githubEnterpriseUrl": null,
+    "askGistDescription": false,
+    "customFiles": {},
+    "hostName": null,
+    "universalKeybindings": false,
+    "autoUploadDelay": 20,
+    "replaceCodeSettings": {},
+    "askGistName": false
+}

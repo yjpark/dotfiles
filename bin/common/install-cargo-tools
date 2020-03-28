@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+install-cargo-tools.libs
+
+cargo install cargo-watch
+cargo install fmt
+cargo install fix
+
+cargo install cargo-node
+
+cargo install diesel_cli
+cargo install tokei
+
+cargo install pier
+cargo install ytop
+cargo install fblog
+

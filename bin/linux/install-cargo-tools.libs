@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# diesel_cli
+sudo apt install libsqlite3-dev libmysqlclient-dev libpq-dev
