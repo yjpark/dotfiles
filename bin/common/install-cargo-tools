@@ -6,6 +6,8 @@ cargo install cargo-watch
 cargo install fmt
 cargo install fix
 
+cargo install cargo-node
+
 cargo install diesel_cli
 cargo install tokei
 
