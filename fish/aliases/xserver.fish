@@ -1,1 +1,1 @@
-alias set-display-local 'set -x DISPLAY :0'
+alias set-display-local 'set -gx DISPLAY :0'
