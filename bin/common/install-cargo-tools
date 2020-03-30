@@ -8,6 +8,8 @@ cargo install fix
 
 cargo install cargo-node
 
+cargo install broot
+
 cargo install diesel_cli
 cargo install tokei
 

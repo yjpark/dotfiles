@@ -1,1 +1,2 @@
-alias rsync 'rsync -rvz --stats --progress'
+alias rsync 'rsync -av --stats --progress'
+alias rsync.compress 'rsync -avz --stats --progress'
