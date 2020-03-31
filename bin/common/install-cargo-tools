@@ -6,11 +6,18 @@ cargo install cargo-watch
 cargo install fmt
 cargo install fix
 
+# seed
+cargo install cargo-make
+rustup target add wasm32-unknown-unknown
+
+# orbtk
 cargo install cargo-node
 
-cargo install broot
-
+# Diesel
 cargo install diesel_cli
+
+# Tools
+cargo install broot
 cargo install tokei
 
 cargo install pier
