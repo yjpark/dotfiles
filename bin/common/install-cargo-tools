@@ -6,6 +6,10 @@ cargo install cargo-watch
 cargo install fmt
 cargo install fix
 
+# yew
+cargo install wasm-pack
+cargo install cargo-web
+
 # seed
 cargo install cargo-make
 rustup target add wasm32-unknown-unknown
