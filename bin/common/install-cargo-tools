@@ -21,8 +21,9 @@ cargo install cargo-node
 cargo install diesel_cli
 
 # Tools
-cargo install broot
 cargo install tokei
+cargo install dua-cli
+cargo install broot
 
 cargo install pier
 cargo install ytop
