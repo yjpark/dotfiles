@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# https://git-annex.branchable.com/install/Ubuntu/
+# http://neuro.debian.net/install_pkg.html?p=git-annex-standalone
+
+
+wget -O- http://neuro.debian.net/lists/bionic.us-ca.libre | sudo tee /etc/apt/sources.list.d/neurodebian.sources.list
+sudo apt-key adv --recv-keys --keyserver hkp://pool.sks-keyservers.net:80 0xA5D32F012649A5A9
+
+sudo apt-get update
+sudo apt-get install git-annex-standalone
