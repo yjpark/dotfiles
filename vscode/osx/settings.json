@@ -229,5 +229,6 @@
     "workbench.iconTheme": "ayu",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "FSharp.useSdkScripts": true
+    "FSharp.useSdkScripts": true,
+    "remote.SSH.useLocalServer": false
 }
