@@ -205,5 +205,8 @@
     "FSharp.workspaceMode": "directory",
     "FSharp.resolveNamespaces": false,
     "FSharp.externalAutocomplete": false,
-    "vscode-neovim.neovimPath": "C:/Users/yjpark/scoop/shims/nvim.exe"
+    "vscode-neovim.neovimPath": "C:/Users/yjpark/scoop/shims/nvim.exe",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "FSharp.useSdkScripts": true
 }

@@ -227,5 +227,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "java.errors.incompleteClasspath.severity": "ignore",
     "vscode-neovim.neovimPath": "/usr/bin/nvim",
-    "keyboard.dispatch": "keyCode"
+    "keyboard.dispatch": "keyCode",
+    "FSharp.useSdkScripts": true
 }
