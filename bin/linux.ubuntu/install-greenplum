@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# https://greenplum.org/install-greenplum-oss-on-ubuntu/
+
+sudo add-apt-repository ppa:greenplum/db
+
+sudo apt update
+sudo apt install greenplum-db
