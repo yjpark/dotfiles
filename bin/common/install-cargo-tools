@@ -5,6 +5,7 @@ install-cargo-tools.libs
 cargo install cargo-watch
 cargo install fmt
 cargo install fix
+cargo install cargo-edit
 
 # yew
 cargo install wasm-pack
