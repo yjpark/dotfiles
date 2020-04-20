@@ -2,6 +2,7 @@
 
 # http://manpages.ubuntu.com/manpages/bionic/man4/libinput.4.html
 # https://unix.stackexchange.com/questions/419862/how-to-use-mouse-wheel-emulation
+# http://who-t.blogspot.com/2019/10/libinput-and-button-scrolling-locks.html
 
 xinput --set-prop 'Kensington Expert Wireless TB Mouse' 'libinput Scroll Method Enabled' 0 0 1
 xinput --set-prop 'Kensington Expert Wireless TB Mouse' 'libinput Button Scrolling Button' 8
