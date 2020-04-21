@@ -1,10 +1,11 @@
 #!/bin/bash
 
 curl -vsSL https://get.sdkman.io > ~/.dotfiles/bootstrap/bootstrap-sdkman
-curl -vsSL https://get.rvm.io > ~/.dotfiles/bootstrap/bootstrap-rvm
 curl -vsSf https://sh.rustup.rs > ~/.dotfiles/bootstrap/bootstrap-rust-up
 curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/bootstrap/bootstrap-nix
 curl -vsSL https://get.haskellstack.org/ > ~/.dotfiles/bootstrap/bootstrap-haskell-stack
+curl -vsSL https://github.com/liquidata-inc/dolt/releases/latest/download/install.sh > ~/.dotfiles/bootstrap/bootstrap-dolt
+
+#curl -vsSL https://get.rvm.io > ~/.dotfiles/bootstrap/bootstrap-rvm
 
 chmod 755 ~/.dotfiles/bootstrap/bootstrap*
-chmod 755 ~/.dotfiles/bootstrap/_bootstrap*.sh
