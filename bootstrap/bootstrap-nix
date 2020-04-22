@@ -23,21 +23,21 @@ require_util() {
 }
 
 case "$(uname -s).$(uname -m)" in
-    Linux.x86_64) system=x86_64-linux; hash=e43f6947d1f302b6193302889e7800f3e3dd4a650b6f929c668c894884a02701;;
-    Linux.i?86) system=i686-linux; hash=e1c6fa89a0d55a56cddb5f26598a15e0f238115423ad884a3673a3e4815fd33b;;
-    Linux.aarch64) system=aarch64-linux; hash=b31d50b34f2aeacdecbe97e56d5661b59b49ec84fa5ea3f8ddb022ab1bb5de56;;
-    Darwin.x86_64) system=x86_64-darwin; hash=972ff28bf5786a079856cba6941a6001046e4bdbc99cb2f114e6fce31b9265ba;;
+    Linux.x86_64) system=x86_64-linux; hash=b271ecf293f66ad9688fc5fb5ae558b6d94c2460f21a8f0144ea7d3bab6ab072;;
+    Linux.i?86) system=i686-linux; hash=f448753a2c836a49c03fc5586b84128c23013226442222aaaf947c4a63d466eb;;
+    Linux.aarch64) system=aarch64-linux; hash=5b51e25f6d46537931f44bf3c21ac8bd06ece7c06a8fcd80e6387ab29f3ab63e;;
+    Darwin.x86_64) system=x86_64-darwin; hash=dd37a7547cd2dc034694200e8001b7cfb2ef52423d416ab4ec4a2dd6828809bb;;
     *) oops "sorry, there is no binary distribution of Nix for your platform";;
 esac
 
-url="https://nixos.org/releases/nix/nix-2.3/nix-2.3-$system.tar.xz"
+url="https://nixos.org/releases/nix/nix-2.3.4/nix-2.3.4-$system.tar.xz"
 
-tarball="$tmpDir/$(basename "$tmpDir/nix-2.3-$system.tar.xz")"
+tarball="$tmpDir/$(basename "$tmpDir/nix-2.3.4-$system.tar.xz")"
 
 require_util curl "download the binary tarball"
 require_util tar "unpack the binary tarball"
 
-echo "downloading Nix 2.3 binary tarball for $system from '$url' to '$tmpDir'..."
+echo "downloading Nix 2.3.4 binary tarball for $system from '$url' to '$tmpDir'..."
 curl -L "$url" -o "$tarball" || oops "failed to download '$url'"
 
 if command -v sha256sum > /dev/null 2>&1; then

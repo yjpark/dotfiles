@@ -19,7 +19,7 @@
 
 # Global variables
 SDKMAN_SERVICE="https://api.sdkman.io/2"
-SDKMAN_VERSION="5.7.3+337"
+SDKMAN_VERSION="5.7.4+362"
 SDKMAN_PLATFORM=$(uname)
 
 if [ -z "$SDKMAN_DIR" ]; then
@@ -287,6 +287,7 @@ if [[ -z $(grep 'sdkman-init.sh' "$sdkman_zshrc") ]]; then
     echo -e "\n$sdkman_init_snippet" >> "$sdkman_zshrc"
     echo "Updated existing ${sdkman_zshrc}"
 fi
+
 
 echo -e "\n\n\nAll done!\n\n"
 
