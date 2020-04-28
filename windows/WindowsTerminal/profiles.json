@@ -87,7 +87,8 @@
     "defaults": {
         "closeOnExit": true,
         "cursorShape": "bar",
-        "fontFace": "Fira Code",
+        //"fontFace": "Fira Code",
+        "fontFace": "Cascadia Code PL",
         "fontSize": 10,
         "padding": "0, 0, 0, 0",
         "historySize": 10240,
