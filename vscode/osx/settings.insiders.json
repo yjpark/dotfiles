@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "/anaconda3",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 2,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -12,7 +12,7 @@
     "workbench.editor.showTabs": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.fontFamily": "Cascadia Code",
+    "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.scrollbar.vertical": "hidden",
     "editor.overviewRulerBorder": false,
