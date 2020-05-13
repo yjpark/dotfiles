@@ -229,5 +229,15 @@
     {
         "key": "ctrl+shift+`",
         "command": "-workbench.action.terminal.new"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.terminal.focusFindWidget",
+        "when": "terminalFindWidgetFocused || terminalFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFindWidgetFocused || terminalFocus"
     }
 ]
