@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ps -ef | grep -i $1 | grep -v grep | cut -b8-16 | xargs -n 1 -I PID xdotool search --onlyvisible --pid PID | xargs -n 1 -I WIN xdotool windowraise WIN

@@ -8,5 +8,7 @@
 # wmctrl
 # -a <WIN> Activate the window <WIN> by switching to its desktop and raising it.
 # -x Include WM_CLASS in the window list or interpret <WIN> as the WM_CLASS name
+# -R raise window only
 
-wmctrl -x -a "$1" || "$2"
+# wmctrl -x -a "$1" || "$2"
+wmctrl -x -R "$1" || "$2"
