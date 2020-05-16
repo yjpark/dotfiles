@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# wmctrl
-# -a <WIN> Activate the window <WIN> by switching to its desktop and raising it.
-# -x Include WM_CLASS in the window list or interpret <WIN> as the WM_CLASS name
-
-wmctrl -x -a "code" || "code"
