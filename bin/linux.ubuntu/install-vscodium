@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo
+
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
+sudo apt-add-repository 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main'
+sudo apt update
+sudo apt install codium
+

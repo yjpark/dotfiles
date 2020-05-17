@@ -228,5 +228,6 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     "vscode-neovim.neovimPath": "/usr/bin/nvim",
     "keyboard.dispatch": "keyCode",
-    "FSharp.useSdkScripts": true
+    "FSharp.useSdkScripts": true,
+    "remote.SSH.useLocalServer": false
 }
