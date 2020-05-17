@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-sudo aptitude -t stretch install neovim python3-neovim python-neovim
-

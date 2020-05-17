@@ -1,12 +1,12 @@
 #!/bin/bash
 
-curl -vsSL https://get.sdkman.io > ~/.dotfiles/bootstrap/bootstrap-sdkman
-curl -vsSf https://sh.rustup.rs > ~/.dotfiles/bootstrap/bootstrap-rust-up
-curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/bootstrap/bootstrap-nix
-curl -vsSL https://get.haskellstack.org/ > ~/.dotfiles/bootstrap/bootstrap-haskell-stack
-curl -vsSL https://github.com/liquidata-inc/dolt/releases/latest/download/install.sh > ~/.dotfiles/bootstrap/bootstrap-dolt
-curl -vsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh > ~/.dotfiles/bootstrap/bootstrap-nvm
+curl -vsSL https://get.sdkman.io > ~/.dotfiles/install/common/install-sdkman
+curl -vsSf https://sh.rustup.rs > ~/.dotfiles/install/common/install-rust-up
+curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/install/common/install-nix
+curl -vsSL https://get.haskellstack.org/ > ~/.dotfiles/install/common/install-haskell-stack
+curl -vsSL https://github.com/liquidata-inc/dolt/releases/latest/download/install.sh > ~/.dotfiles/install/common/install-dolt
+curl -vsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh > ~/.dotfiles/install/common/install-nvm
 
-#curl -vsSL https://get.rvm.io > ~/.dotfiles/bootstrap/bootstrap-rvm
+#curl -vsSL https://get.rvm.io > ~/.dotfiles/install/common/install-rvm
 
-chmod 755 ~/.dotfiles/bootstrap/bootstrap*
+chmod 755 ~/.dotfiles/install/common/install*
