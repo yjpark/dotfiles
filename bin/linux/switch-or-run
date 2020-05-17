@@ -6,7 +6,7 @@
 # $2 - command to start application
 
 # wmctrl
-# -R raise window only (will bring to current workspace)
+# -a <WIN> Activate the window <WIN> by switching to its desktop and raising it.
 # -x Include WM_CLASS in the window list or interpret <WIN> as the WM_CLASS name
 
-wmctrl -x -R "$1" || "$2"
+wmctrl -x -a "$1" || "$2"

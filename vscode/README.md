@@ -9,6 +9,7 @@ Trying Neo Vim
 - Need neovim >= 0.4.2, need to instal from unstable PPA on ubuntu
 
 Misc Plugins
+- Activitus Bar
 - indent-rainbow
 - Rainbow Brackets
 - Rainbow String
