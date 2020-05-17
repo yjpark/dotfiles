@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# http://manpages.ubuntu.com/manpages/bionic/man4/libinput.4.html
+# https://unix.stackexchange.com/questions/419862/how-to-use-mouse-wheel-emulation
+# http://who-t.blogspot.com/2019/10/libinput-and-button-scrolling-locks.html
+
+xinput --set-prop 'Kensington Expert Wireless TB Mouse' 'libinput Scroll Method Enabled' 0 0 1
+xinput --set-prop 'Kensington Expert Wireless TB Mouse' 'libinput Button Scrolling Button' 8
+
+# The following is for old version (before libinput I guess)
+
+# xinput set-int-prop "Kensington Expert Wireless TB Mouse" "Evdev Wheel Emulation" 8 1
+# xinput set-int-prop "Kensington Expert Wireless TB Mouse" "Evdev Wheel Emulation Button Toggle" 8 1
+# xinput set-int-prop "Kensington Expert Wireless TB Mouse" "Evdev Wheel Emulation Button" 8 8
+
+# with horizontal scroll
+# xinput set-int-prop "Kensington Expert Wireless TB Mouse" "Evdev Wheel Emulation Axes" 8 6, 7, 4, 5
+
+# without horizontal scroll
+# xinput set-int-prop "Kensington Expert Wireless TB Mouse" "Evdev Wheel Emulation Axes" 8 4, 5, 4, 5
+
+# xinput set-int-prop "Kensington Expert Wireless TB Mouse" "Evdev Wheel Emulation Inertia" 16 6

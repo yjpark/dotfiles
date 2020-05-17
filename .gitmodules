@@ -19,3 +19,6 @@
 [submodule "external/kubectx"]
 	path = external/kubectx
 	url = https://github.com/ahmetb/kubectx
+[submodule "external/mac-cleanup"]
+	path = external/mac-cleanup
+	url = https://github.com/fwartner/mac-cleanup.git

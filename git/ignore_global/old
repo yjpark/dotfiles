@@ -9,7 +9,7 @@
 # Compiled source #
 ###################
 *.pyc
-*.com
+# *.com
 # *.class
 #*.dll
 *.exe

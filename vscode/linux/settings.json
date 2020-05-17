@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "/anaconda3",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -16,7 +16,7 @@
     "workbench.editor.showTabs": true,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "editor.fontFamily": "Fira Code",
+    "editor.fontFamily": "Cascadia Code PL",
     "editor.fontLigatures": true,
     "editor.scrollbar.vertical": "hidden",
     "editor.overviewRulerBorder": false,
@@ -197,7 +197,7 @@
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "smart",
     "files.autoSave": "off",
-    "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "Cascadia Code PL",
     "insertDateString.format": "YYYY-MM-DD hh:mm:ss",
     "insertDateString.formatDate": "YYYY-MM-DD",
     "insertDateString.formatTime": "### hh:mm",
@@ -227,5 +227,7 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "java.errors.incompleteClasspath.severity": "ignore",
     "vscode-neovim.neovimPath": "/usr/bin/nvim",
-    "keyboard.dispatch": "keyCode"
+    "keyboard.dispatch": "keyCode",
+    "FSharp.useSdkScripts": true,
+    "remote.SSH.useLocalServer": false
 }

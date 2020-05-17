@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd `dirname $0`
+
+./raise-or-run "firefox" "firefox"

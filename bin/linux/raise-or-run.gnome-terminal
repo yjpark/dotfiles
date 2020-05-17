@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# wmctrl
-# -a <WIN> Activate the window <WIN> by switching to its desktop and raising it.
-# -x Include WM_CLASS in the window list or interpret <WIN> as the WM_CLASS name
+cd `dirname $0`
 
-wmctrl -x -a "gnome-terminal" || "gnome-terminal"
+./raise-or-run "gnome-terminal" "gnome-terminal"

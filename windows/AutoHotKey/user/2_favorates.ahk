@@ -16,18 +16,18 @@ else
     WinActivate ahk_exe alacritty.exe
 return
 
-^!m::
-IfWinActive, ahk_exe C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+^!g::
+IfWinActive, ahk_exe msedge.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+    WinActivate ahk_exe msedge.exe
 return
 
-^!w::
-IfWinActive, ahk_exe C:\Users\yjpark\AppData\Local\Google\Chrome SxS\Application\chrome.exe
+^!m::
+IfWinActive, ahk_exe chrome.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe C:\Users\yjpark\AppData\Local\Google\Chrome SxS\Application\chrome.exe
+    WinActivate ahk_exe chrome.exe
 return
 
 ^!r::
@@ -35,6 +35,13 @@ IfWinActive, ahk_exe firefox.exe
     Send !{Tab}
 else
     WinActivate ahk_exe firefox.exe
+return
+
+^!w::
+IfWinActive, ahk_exe iridium.exe
+    Send !{Tab}
+else
+    WinActivate ahk_exe iridium.exe
 return
 
 ^!u::
