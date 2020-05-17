@@ -1,7 +1,0 @@
-#!/bin/bash
-
-curl -vsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh > ~/.dotfiles/bootstrap/linux/bootstrap-linuxbrew
-
-curl -vsSL https://install.direct/go.sh > ~/.dotfiles/bootstrap/linux/bootstrap-v2ray.sh
-
-chmod 755 ~/.dotfiles/bootstrap/linux/*

@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
-# https://github.com/moncho/dry
+# https://mitmproxy.org
 
 cd ~/temp
 rm mitmproxy*.gz
-axel https://snapshots.mitmproxy.org/4.0.4/mitmproxy-4.0.4-linux.tar.gz
-tar xf mitmproxy-4.0.4-linux.tar.gz
-mv mitmproxy ~/bin
-mv mitmweb ~/bin
-mv mitmdump ~/bin
+axel https://snapshots.mitmproxy.org/5.1.1/mitmproxy-5.1.1-linux.tar.gz
+tar xf mitmproxy-5.1.1-linux.tar.gz
+mv mitmproxy /usr/local/bin
+mv mitmweb /usr/local/bin
+mv mitmdump /usr/local/bin
 
 mitmproxy
 
-cd ~/.mitmproxy
-openssl x509 -in mitmproxy-ca-cert.pem -inform PEM -out mitmproxy-ca-cert.crt
-sudo mkdir -p /usr/share/ca-certificates/extra/
-sudo cp mitmproxy-ca-cert.crt /usr/share/ca-certificates/extra/
-sudo dpkg-reconfigure ca-certificates
+# cd ~/.mitmproxy
+# openssl x509 -in mitmproxy-ca-cert.pem -inform PEM -out mitmproxy-ca-cert.crt
+# sudo mkdir -p /usr/share/ca-certificates/extra/
+# sudo cp mitmproxy-ca-cert.crt /usr/share/ca-certificates/extra/
+# sudo dpkg-reconfigure ca-certificates
