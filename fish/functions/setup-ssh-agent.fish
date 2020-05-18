@@ -30,7 +30,7 @@ function reset_ssh_agent
     echo "Reset ssh-agent"
     pkill -9 ssh-agent
     rm $SSH_ENV
-    set -ex SSH_AGENT_PID
+    set -x SSH_AGENT_PID
     setup-ssh-agent
 end
 
