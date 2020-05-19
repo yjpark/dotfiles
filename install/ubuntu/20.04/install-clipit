@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# The version in ubuntu is having issue, can't open the window, before it's fixed, need to build manually
+# https://github.com/CristianHenzel/ClipIt/issues/137
+
+if [ -z $1 ] ; then
+    FOLDER=/tmp/
+fi
+    FOLDER=$1
+cd
+
+if [ -d ${FOLDER}/ClipIt ] ; then
+    cd ${FOLDER}/ClipIt
+    git pull
+else
+    cd $FOLDER
+    git clone https://github.com/jemyzhang/ClipIt.git
+fi
+
+echo "Installing dependencies with `apt build-dep clipit` (need to provide sudo password)"
+sudo apt build-dep clipit
+
+echo "Installing build tools"
+sudo apt install build-essentials automake autopoint intltool
+
+echo "Running autogen.sh"
+./autogen.sh
+
+echo "Running configure, using gtk3, and add appindicator support"
+./configure --enable-appindicator=yes --with-gtk3
+
+echo "Running make"
+make
+
+echo "Installing to /usr/local"
+sudo make install
+
+echo "Uninstalling clipit from apt (if installed before)"
+sudo apt remove clipit
+
