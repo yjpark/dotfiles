@@ -4,7 +4,7 @@
 # https://github.com/CristianHenzel/ClipIt/issues/137
 
 if [ -z $1 ] ; then
-    FOLDER=/tmp/
+    FOLDER=/tmp
 fi
     FOLDER=$1
 cd
@@ -15,14 +15,15 @@ if [ -d ${FOLDER}/ClipIt ] ; then
 else
     cd $FOLDER
     git clone https://github.com/jemyzhang/ClipIt.git
+    cd ClipIt
 fi
 
 echo "Installing dependencies with `apt build-dep clipit` (need to provide sudo password)"
 sudo apt build-dep clipit
 
-echo ""
-echo "Installing build tools"
-sudo apt install build-essentials automake autopoint intltool
+# echo ""
+# echo "Installing build tools"
+# sudo apt install build-essential automake autopoint intltool
 
 echo ""
 echo "Running autogen.sh"
@@ -44,3 +45,5 @@ echo ""
 echo "Uninstalling clipit from apt (if installed before)"
 sudo apt remove clipit
 
+echo ""
+echo "If you still having issue with the history windows not showing, try increase the delay in source (check last commit for detail)"
