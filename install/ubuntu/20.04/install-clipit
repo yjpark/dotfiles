@@ -20,21 +20,27 @@ fi
 echo "Installing dependencies with `apt build-dep clipit` (need to provide sudo password)"
 sudo apt build-dep clipit
 
+echo ""
 echo "Installing build tools"
 sudo apt install build-essentials automake autopoint intltool
 
+echo ""
 echo "Running autogen.sh"
 ./autogen.sh
 
+echo ""
 echo "Running configure, using gtk3, and add appindicator support"
 ./configure --enable-appindicator=yes --with-gtk3
 
+echo ""
 echo "Running make"
 make
 
+echo ""
 echo "Installing to /usr/local"
 sudo make install
 
+echo ""
 echo "Uninstalling clipit from apt (if installed before)"
 sudo apt remove clipit
 
