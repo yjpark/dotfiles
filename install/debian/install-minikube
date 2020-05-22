@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# https://github.com/kubernetes/minikube/releases
+# https://minikube.sigs.k8s.io/docs/start/
+
+cd /tmp
+
+axel https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+sudo dpkg -i minikube_latest_amd64.deb
+

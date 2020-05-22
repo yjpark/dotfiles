@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-# https://github.com/kubernetes/minikube/releases
-
-cd /tmp
-
-axel https://github.com/kubernetes/minikube/releases/download/v1.6.2/minikube_1.6.2.deb
-
-sudo dpkg -i minikube_1.6.2.deb
-
