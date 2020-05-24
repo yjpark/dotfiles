@@ -6,6 +6,7 @@ curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/install/common/install-ni
 curl -vsSL https://get.haskellstack.org/ > ~/.dotfiles/install/common/install-haskell-stack
 curl -vsSL https://github.com/liquidata-inc/dolt/releases/latest/download/install.sh > ~/.dotfiles/install/common/install-dolt
 curl -vsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh > ~/.dotfiles/install/common/install-nvm
+curl -vsSL https://raw.githubusercontent.com/dapr/cli/master/install/install.sh > ~/.dotfiles/install/common/install-dapr-cli
 curl -vsSL https://get.k3s.io > ~/.dotfiles/install/common/install-k3s
 
 #curl -vsSL https://get.rvm.io > ~/.dotfiles/install/common/install-rvm
