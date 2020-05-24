@@ -175,8 +175,7 @@ checkExistingDapr
 checkHttpRequestCLI
 
 getLatestRelease
-#downloadFile $ret_val
-downloadFile v0.6.0
+downloadFile $ret_val
 installFile
 cleanup
 
