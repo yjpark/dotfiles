@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# The version in ubuntu is having issue, can't open the window, before it's fixed, need to build manually
+# https://github.com/CristianHenzel/capnproto/issues/137
+
+if [ -z $1 ] ; then
+    FOLDER=/tmp
+fi
+    FOLDER=$1
+cd
+
+if [ -d ${FOLDER}/capnproto ] ; then
+    cd ${FOLDER}/capnproto
+    git pull
+else
+    cd $FOLDER
+    git clone https://github.com/capnproto/capnproto.git
+    cd capnproto
+fi
+
+echo "Installing dependencies with `apt build-dep capnproto` (need to provide sudo password)"
+sudo apt build-dep capnproto
+
+echo ""
+echo "Running autoreconf -i"
+autoreconf -i
+
+echo ""
+echo "Running configure"
+./configure
+
+echo ""
+echo "Running make"
+make -j8 check
+
+echo ""
+echo "Installing to /usr/local"
+sudo make install
+

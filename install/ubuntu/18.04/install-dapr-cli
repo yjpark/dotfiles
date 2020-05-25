@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-#https://github.com/dapr/cli
-
-cd `dirname $0`
-
-# Did change it a bit, since got problem with the github api call ATM
-./install-dapr-cli.sh
