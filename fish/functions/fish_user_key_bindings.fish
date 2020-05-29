@@ -1,3 +1,6 @@
 function fish_user_key_bindings
-    bind --erase \ee
+    #this seems stoped working somehow
+    #bind --erase \ee
+
+    bind \ee ''
 end
