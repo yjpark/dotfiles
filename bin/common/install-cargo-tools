@@ -9,6 +9,8 @@ cargo install cargo-edit
 
 cargo install simple-http-server
 
+cargo install --features=ssl websocat
+
 # yew
 # cargo install wasm-pack
 # cargo install cargo-web
