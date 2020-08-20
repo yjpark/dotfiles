@@ -1,3 +1,12 @@
+Easiest way is to use scoop to install openssh
+
+https://github.com/PowerShell/Win32-OpenSSH/issues/1263#issuecomment-634415928
+
+```
+sudo scoop install -g win32-openssh
+sudo C:\ProgramData\scoop\apps\win32-openssh\current\install-sshd.ps1
+```
+
 Get the files from
 
 - https://github.com/PowerShell/Win32-OpenSSH/releases
