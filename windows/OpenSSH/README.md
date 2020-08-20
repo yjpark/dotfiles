@@ -1,4 +1,5 @@
 Get the files from
+
 - https://github.com/PowerShell/Win32-OpenSSH/releases
 
 To run this, need to change policy before
@@ -19,3 +20,9 @@ Get-ChildItem ~\.ssh\* -Include "id_rsa","id_dsa" -ErrorAction SilentlyContinue 
     Repair-UserKeyPermission -FilePath $_.FullName @psBoundParameters
 }
 ```
+
+### Note
+
+Seems can't have the PC's name same as the user's name
+
+- https://github.com/PowerShell/openssh-portable/pull/418
