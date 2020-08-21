@@ -1,4 +1,4 @@
-if grep -q Microsoft /proc/version
+if grep -q microsoft /proc/version
     # functions --erase fish_prompt
     set -x PATH ~/.dotfiles/bin/linux.ubuntu.wsl $PATH
 
