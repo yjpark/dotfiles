@@ -1,8 +1,13 @@
+# Note: can use ~ in alias, but not in path
+
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\WindowsPowerShell\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutter\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\platform-tools")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\cmdline-tools/tools/bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
+
+Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
 
 # https://flutter.dev/community/china
 Set-Item -Path Env:FLUTTER_STORAGE_BASE_URL -Value https://storage.flutter-io.cn
