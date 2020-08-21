@@ -1,3 +1,4 @@
+dotnet tool install --global paket
 dotnet tool install --global fake-cli
 dotnet tool install --global dotnet-search
 dotnet tool install --global fabulous-cli

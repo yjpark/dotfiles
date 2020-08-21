@@ -4,6 +4,10 @@ Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutt
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\platform-tools")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
 
+# https://flutter.dev/community/china
+Set-Item -Path Env:FLUTTER_STORAGE_BASE_URL -Value https://storage.flutter-io.cn
+Set-Item -Path Env:PUB_HOSTED_URL -Value https://pub.flutter-io.cn
+
 Set-Alias -Name cb -Value clear
 
 Set-Alias -Name l -Value ls
@@ -22,8 +26,6 @@ Set-Alias -Name d -Value docker
 Set-Alias -Name gg -Value ~\Documents\WindowsPowerShell\aliases\gg.ps1
 
 Set-Alias -Name which -Value Get-Command
-
-Set-Alias -Name paket -Value .paket\paket.exe
 
 Set-Alias -Name d.restore -Value ~\Documents\WindowsPowerShell\aliases\d.restore.ps1
 Set-Alias -Name d.build -Value ~\Documents\WindowsPowerShell\aliases\d.build.ps1
