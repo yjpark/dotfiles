@@ -73,4 +73,9 @@ if ($host.Name -eq 'ConsoleHost')
     # Import-Module "Oh-My-Powershell" -DisableNameChecking -NoClobber
 }
 
+# Modules
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme PowerlinePlus
+
 Import-Module '~\Documents\WindowsPowerShell\Profile.private.psm1'

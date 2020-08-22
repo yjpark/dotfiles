@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-cp -vr ~/win/Documents/WindowsPowerShell/* ~/.dotfiles/windows/PowerShell/
+cp -vr ~/win/Documents/PowerShell/* ~/.dotfiles/windows/PowerShell/
 rm -v ~/.dotfiles/windows/PowerShell/*.private.*
 rm -rfv ~/.dotfiles/windows/PowerShell/Modules
 rm -rfv ~/.dotfiles/windows/PowerShell/Scripts
 
-cp -vr ~/win/Documents/WindowsPowerShell/*.private.* ~/.dotfiles/private/windows/PowerShell/
+cp -vr ~/win/Documents/PowerShell/*.private.* ~/.dotfiles/private/windows/PowerShell/
 
