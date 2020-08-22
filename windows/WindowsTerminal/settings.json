@@ -106,13 +106,14 @@
         },
         {
           "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+          "colorScheme": "Tango Dark",
           "hidden": false,
           "name": "PowerShell",
           "source": "Windows.Terminal.PowershellCore"
         },
         {
           "background": "#012456",
-          "colorScheme": "Campbell",
+          "colorScheme": "Campbell Powershell",
           "commandline": "powershell.exe",
           "hidden": true,
           "cursorColor": "#FFFFFF",
@@ -122,7 +123,7 @@
           "startingDirectory": "%USERPROFILE%"
         },
         {
-          "colorScheme": "Campbell",
+          "colorScheme": "Campbell Powershell",
           "commandline": "cmd.exe",
           "cursorColor": "#FFFFFF",
           "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",

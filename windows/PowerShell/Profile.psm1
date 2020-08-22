@@ -73,13 +73,16 @@ if ($host.Name -eq 'ConsoleHost')
     Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
     Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
     Set-PSReadLineKeyHandler -Key Tab -Function Complete
+    Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 
-    # Import-Module "Oh-My-Powershell" -DisableNameChecking -NoClobber
+    # Modules
+    Import-Module posh-git
+    Import-Module oh-my-posh
+    Set-Theme PowerlinePlus
 }
 
-# Modules
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme PowerlinePlus
-
 Import-Module '~\Documents\WindowsPowerShell\Profile.private.psm1'
+
+# https://starship.rs/guide/
+# install with `scoop install starship`
+Invoke-Expression (&starship init powershell)
