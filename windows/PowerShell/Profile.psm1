@@ -65,6 +65,8 @@ Set-Alias -Name fsharpi -Value ~\Documents\WindowsPowerShell\aliases\fsharpi.ps1
 Set-Alias -Name msbuild -Value ~\Documents\WindowsPowerShell\aliases\msbuild.ps1
 Set-Alias -Name msbuild.restore -Value ~\Documents\WindowsPowerShell\aliases\msbuild.restore.ps1
 
+Import-Module '~\Documents\WindowsPowerShell\Profile.private.psm1'
+
 if ($host.Name -eq 'ConsoleHost')
 {
     # https://github.com/lzybkr/PSReadLine
@@ -75,14 +77,8 @@ if ($host.Name -eq 'ConsoleHost')
     Set-PSReadLineKeyHandler -Key Tab -Function Complete
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 
-    # Modules
-    Import-Module posh-git
-    Import-Module oh-my-posh
-    Set-Theme PowerlinePlus
+    # https://starship.rs/guide/
+    # install with `scoop install starship`
+    Invoke-Expression (&starship init powershell)
 }
 
-Import-Module '~\Documents\WindowsPowerShell\Profile.private.psm1'
-
-# https://starship.rs/guide/
-# install with `scoop install starship`
-Invoke-Expression (&starship init powershell)

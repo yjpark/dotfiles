@@ -1,5 +1,4 @@
-Install-Module oh-my-posh -Scope CurrentUser
-Install-Module posh-git -Scope CurrentUser
+scoop install starship
 
 Install-Module PSReadLine -Scope CurrentUser
 
