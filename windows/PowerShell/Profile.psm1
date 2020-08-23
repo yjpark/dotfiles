@@ -28,6 +28,8 @@ Set-Alias -Name a -Value ~\Documents\WindowsPowerShell\aliases\a.ps1
 Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
 
+Set-Alias -Name tig -Value "C:\Program Files\Git\usr\bin\tig"
+
 # PSBookmark https://www.powershellmagazine.com/2016/05/06/powershell-location-bookmark-for-easy-and-faster-navigation/
 Set-Alias -Name gg -Value Set-LocationBookmarkAsPWD
 Set-Alias -Name bookmark-list -Value Get-LocationBookmark
