@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Older version built-in
-cp -vr ~/.dotfiles/windows/PowerShell/* ~/win/Documents/WindowsPowerShell/
-cp -vr ~/.dotfiles/private/windows/PowerShell/* ~/win/Documents/WindowsPowerShell/
+# cp -vr ~/.dotfiles/windows/PowerShell/* ~/win/Documents/WindowsPowerShell/
+# cp -vr ~/.dotfiles/private/windows/PowerShell/* ~/win/Documents/WindowsPowerShell/
 
 
 # Newer version (cross platform)

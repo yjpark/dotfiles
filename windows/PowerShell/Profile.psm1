@@ -1,11 +1,13 @@
 # Note: can use ~ in alias, but not in path
 
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\WindowsPowerShell\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\PowerShell\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutter\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\platform-tools")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\cmdline-tools/tools/bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\cmdline-tools\tools\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
+
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Git\usr\bin")
 
 Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
 
@@ -15,20 +17,18 @@ Set-Item -Path Env:PUB_HOSTED_URL -Value https://pub.flutter-io.cn
 
 Set-Alias -Name cb -Value clear
 
-Set-Alias -Name l -Value ls
-Set-Alias -Name ll -Value ls
+Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
+Set-Alias -Name ll -Value ~\Documents\PowerShell\aliases\ll.ps1
 
-Set-Alias -Name .. -Value ~\Documents\WindowsPowerShell\aliases\cd.uu.ps1
-Set-Alias -Name ... -Value ~\Documents\WindowsPowerShell\aliases\cd.uuu.ps1
-Set-Alias -Name .... -Value ~\Documents\WindowsPowerShell\aliases\cd.uuuu.ps1
-Set-Alias -Name ..... -Value ~\Documents\WindowsPowerShell\aliases\cd.uuuuu.ps1
+Set-Alias -Name .. -Value ~\Documents\PowerShell\aliases\cd.uu.ps1
+Set-Alias -Name ... -Value ~\Documents\PowerShell\aliases\cd.uuu.ps1
+Set-Alias -Name .... -Value ~\Documents\PowerShell\aliases\cd.uuuu.ps1
+Set-Alias -Name ..... -Value ~\Documents\PowerShell\aliases\cd.uuuuu.ps1
 
-Set-Alias -Name a -Value ~\Documents\WindowsPowerShell\aliases\a.ps1
+Set-Alias -Name a -Value ~\Documents\PowerShell\aliases\a.ps1
 
 Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
-
-Set-Alias -Name tig -Value "C:\Program Files\Git\usr\bin\tig"
 
 # PSBookmark https://www.powershellmagazine.com/2016/05/06/powershell-location-bookmark-for-easy-and-faster-navigation/
 Set-Alias -Name gg -Value Set-LocationBookmarkAsPWD
@@ -38,36 +38,36 @@ Set-Alias -Name bookmark-delete -Value Remove-LocationBookmark
 
 Set-Alias -Name which -Value Get-Command
 
-Set-Alias -Name d.restore -Value ~\Documents\WindowsPowerShell\aliases\d.restore.ps1
-Set-Alias -Name d.build -Value ~\Documents\WindowsPowerShell\aliases\d.build.ps1
-Set-Alias -Name d.build.self -Value ~\Documents\WindowsPowerShell\aliases\d.build.self.ps1
-Set-Alias -Name d.run -Value ~\Documents\WindowsPowerShell\aliases\d.run.ps1
-Set-Alias -Name d.watch -Value ~\Documents\WindowsPowerShell\aliases\d.watch.ps1
-Set-Alias -Name d.fable -Value ~\Documents\WindowsPowerShell\aliases\d.fable.ps1
-Set-Alias -Name d.pack.release -Value ~\Documents\WindowsPowerShell\aliases\d.pack.release.ps1
+Set-Alias -Name d.restore -Value ~\Documents\PowerShell\aliases\d.restore.ps1
+Set-Alias -Name d.build -Value ~\Documents\PowerShell\aliases\d.build.ps1
+Set-Alias -Name d.build.self -Value ~\Documents\PowerShell\aliases\d.build.self.ps1
+Set-Alias -Name d.run -Value ~\Documents\PowerShell\aliases\d.run.ps1
+Set-Alias -Name d.watch -Value ~\Documents\PowerShell\aliases\d.watch.ps1
+Set-Alias -Name d.fable -Value ~\Documents\PowerShell\aliases\d.fable.ps1
+Set-Alias -Name d.pack.release -Value ~\Documents\PowerShell\aliases\d.pack.release.ps1
 
-Set-Alias -Name f -Value ~\Documents\WindowsPowerShell\aliases\f.ps1
+Set-Alias -Name f -Value ~\Documents\PowerShell\aliases\f.ps1
 
-Set-Alias -Name f.t -Value ~\Documents\WindowsPowerShell\aliases\f.t.ps1
-Set-Alias -Name f.list -Value ~\Documents\WindowsPowerShell\aliases\f.list.ps1
-Set-Alias -Name f.prepare -Value ~\Documents\WindowsPowerShell\aliases\f.prepare.ps1
-Set-Alias -Name f.restore -Value ~\Documents\WindowsPowerShell\aliases\f.restore.ps1
-Set-Alias -Name f.build -Value ~\Documents\WindowsPowerShell\aliases\f.build.ps1
+Set-Alias -Name f.t -Value ~\Documents\PowerShell\aliases\f.t.ps1
+Set-Alias -Name f.list -Value ~\Documents\PowerShell\aliases\f.list.ps1
+Set-Alias -Name f.prepare -Value ~\Documents\PowerShell\aliases\f.prepare.ps1
+Set-Alias -Name f.restore -Value ~\Documents\PowerShell\aliases\f.restore.ps1
+Set-Alias -Name f.build -Value ~\Documents\PowerShell\aliases\f.build.ps1
 
-Set-Alias -Name f.fetch -Value ~\Documents\WindowsPowerShell\aliases\f.fetch.ps1
-Set-Alias -Name f.inject -Value ~\Documents\WindowsPowerShell\aliases\f.inject.ps1
-Set-Alias -Name f.dist -Value ~\Documents\WindowsPowerShell\aliases\f.dist.ps1
+Set-Alias -Name f.fetch -Value ~\Documents\PowerShell\aliases\f.fetch.ps1
+Set-Alias -Name f.inject -Value ~\Documents\PowerShell\aliases\f.inject.ps1
+Set-Alias -Name f.dist -Value ~\Documents\PowerShell\aliases\f.dist.ps1
 
-Set-Alias -Name f.build-s -Value ~\Documents\WindowsPowerShell\aliases\f.build-s.ps1
-Set-Alias -Name f.pack-s -Value ~\Documents\WindowsPowerShell\aliases\f.pack-s.ps1
-Set-Alias -Name f.inject-s -Value ~\Documents\WindowsPowerShell\aliases\f.inject-s.ps1
-Set-Alias -Name f.push-s -Value ~\Documents\WindowsPowerShell\aliases\f.push-s.ps1
+Set-Alias -Name f.build-s -Value ~\Documents\PowerShell\aliases\f.build-s.ps1
+Set-Alias -Name f.pack-s -Value ~\Documents\PowerShell\aliases\f.pack-s.ps1
+Set-Alias -Name f.inject-s -Value ~\Documents\PowerShell\aliases\f.inject-s.ps1
+Set-Alias -Name f.push-s -Value ~\Documents\PowerShell\aliases\f.push-s.ps1
 
-Set-Alias -Name fsharpi -Value ~\Documents\WindowsPowerShell\aliases\fsharpi.ps1
-Set-Alias -Name msbuild -Value ~\Documents\WindowsPowerShell\aliases\msbuild.ps1
-Set-Alias -Name msbuild.restore -Value ~\Documents\WindowsPowerShell\aliases\msbuild.restore.ps1
+Set-Alias -Name fsharpi -Value ~\Documents\PowerShell\aliases\fsharpi.ps1
+Set-Alias -Name msbuild -Value ~\Documents\PowerShell\aliases\msbuild.ps1
+Set-Alias -Name msbuild.restore -Value ~\Documents\PowerShell\aliases\msbuild.restore.ps1
 
-Import-Module '~\Documents\WindowsPowerShell\Profile.private.psm1'
+Import-Module '~\Documents\PowerShell\Profile.private.psm1'
 
 if ($host.Name -eq 'ConsoleHost')
 {
