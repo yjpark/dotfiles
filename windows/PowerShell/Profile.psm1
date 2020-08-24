@@ -27,6 +27,7 @@ Set-Alias -Name .... -Value ~\Documents\PowerShell\aliases\cd.uuuu.ps1
 Set-Alias -Name ..... -Value ~\Documents\PowerShell\aliases\cd.uuuuu.ps1
 
 Set-Alias -Name a -Value ~\Documents\PowerShell\aliases\a.ps1
+Set-Alias -Name e -Value nvim
 
 Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
@@ -67,6 +68,8 @@ Set-Alias -Name f.push-s -Value ~\Documents\PowerShell\aliases\f.push-s.ps1
 Set-Alias -Name fsharpi -Value ~\Documents\PowerShell\aliases\fsharpi.ps1
 Set-Alias -Name msbuild -Value ~\Documents\PowerShell\aliases\msbuild.ps1
 Set-Alias -Name msbuild.restore -Value ~\Documents\PowerShell\aliases\msbuild.restore.ps1
+
+Set-Alias -Name gwp -Value ~\Documents\PowerShell\aliases\gwp.ps1
 
 Import-Module '~\Documents\PowerShell\Profile.private.psm1'
 

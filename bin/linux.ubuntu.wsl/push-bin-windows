@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mkdir -p ~/win/Applications/bin/windows/
+
+cp -vrL ~/.dotfiles/bin/windows/* ~/win/Applications/bin/windows/
+

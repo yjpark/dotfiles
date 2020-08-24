@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-cp ~/.dotfiles/bin/windows/powerline-shell_bash.py /tmp/_fresh/_build/bin/
-cp ~/.dotfiles/bin/windows/powerline-shell_bash.py ~/bin/
-
-cd ~
-
-~/.dotfiles/bin/windows/fresh-windows-autohotkey
-
