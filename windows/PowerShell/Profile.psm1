@@ -1,5 +1,6 @@
 # Note: can use ~ in alias, but not in path
 
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\PowerShell\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutter\bin")
@@ -81,6 +82,7 @@ if ($host.Name -eq 'ConsoleHost')
 
     # https://starship.rs/guide/
     # install with `scoop install starship`
+    # -> used forked version in ~/Applications/bin
     Invoke-Expression (&starship init powershell)
 }
 
