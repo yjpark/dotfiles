@@ -151,6 +151,9 @@ if [[ "$(uname)" == "MSYS_NT-10.0" ]]; then
   fresh 'tmux/msys/*' --file='~/.tmux.conf'
 fi
 
+# =====================================================
+# starship
+fresh 'common/starship/*' --file='~/.config/starship.toml'
 
 # =====================================================
 # mu-repo https://github.com/yjpark/mu-repo

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cp -v ~/.config/starship.toml ~/win/.config/starship.toml
+
