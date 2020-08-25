@@ -12,6 +12,8 @@ Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Git\usr\bin")
 
 Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
 
+Set-Item -Path Env:ENABLE_FLUTTER_DESKTOP -Value "true"
+
 # https://flutter.dev/community/china
 Set-Item -Path Env:FLUTTER_STORAGE_BASE_URL -Value https://storage.flutter-io.cn
 Set-Item -Path Env:PUB_HOSTED_URL -Value https://pub.flutter-io.cn
