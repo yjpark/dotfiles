@@ -20,7 +20,7 @@ Set-Item -Path Env:PUB_HOSTED_URL -Value https://pub.flutter-io.cn
 
 Set-Alias -Name cb -Value clear
 
-Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
+# Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
 Set-Alias -Name ll -Value ~\Documents\PowerShell\aliases\ll.ps1
 
 Set-Alias -Name .. -Value ~\Documents\PowerShell\aliases\cd.uu.ps1
@@ -84,6 +84,8 @@ if ($host.Name -eq 'ConsoleHost')
     Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
     Set-PSReadLineKeyHandler -Key Tab -Function Complete
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+
+    Import-Module DirColors
 
     # https://starship.rs/guide/
     # install with `scoop install starship`

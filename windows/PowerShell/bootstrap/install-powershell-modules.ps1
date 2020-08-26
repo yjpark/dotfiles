@@ -6,3 +6,4 @@ Install-Module PSBookmark -Scope CurrentUser
 Install-Module ZLocation -Scope CurrentUser
 Install-Module PSFzf -Scope CurrentUser
 
+Install-Module DirColors
