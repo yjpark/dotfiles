@@ -4,7 +4,8 @@
 # https://github.com/CristianHenzel/capnproto/issues/137
 
 if [ -z $1 ] ; then
-    FOLDER=/tmp
+    FOLDER=~/projects/tools
+    mkdir -p $FOLDER
 fi
     FOLDER=$1
 cd
