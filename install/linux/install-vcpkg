@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# https://github.com/microsoft/vcpkg
+
+if [ -z $1 ] ; then
+    FOLDER=~/projects/tools
+    mkdir -p $FOLDER
+fi
+    FOLDER=$1
+cd
+
+if [ -d ${FOLDER}/vcpkg ] ; then
+    cd ${FOLDER}/vcpkg
+    git pull
+else
+    cd $FOLDER
+    git clone https://github.com/microsoft/vcpkg.git
+    cd vcpkg
+fi
+
+echo "Bootstrap vcpkg"
+./bootstrap-vcpkg.sh
+
