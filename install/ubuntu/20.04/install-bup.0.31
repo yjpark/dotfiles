@@ -15,7 +15,7 @@ else
     cd bup
 fi
 
-git checkout 0.29.3
+git checkout 0.31
 
 echo ""
 echo "Running configure"
