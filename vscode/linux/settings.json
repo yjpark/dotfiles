@@ -20,7 +20,7 @@
     "editor.fontLigatures": true,
     "editor.scrollbar.vertical": "hidden",
     "editor.overviewRulerBorder": false,
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "editor.minimap.side": "right",
     "editor.minimap.showSlider": "always",
     "editor.minimap.renderCharacters": false,
@@ -202,7 +202,7 @@
     "insertDateString.formatDate": "YYYY-MM-DD",
     "insertDateString.formatTime": "### hh:mm",
     "workbench.iconTheme": "ayu",
-    "workbench.colorTheme": "Kary Pro Colors － Dark",
+    "workbench.colorTheme": "Brogrammer",
     "FSharp.disableFailedProjectNotifications": true,
     "FSharp.smartIndent": true,
     "FSharp.lineLens.enabled": "never",
@@ -228,6 +228,9 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     "vscode-neovim.neovimPath": "/usr/bin/nvim",
     "keyboard.dispatch": "keyCode",
+    "editor.selectionClipboard": false,
     "FSharp.useSdkScripts": true,
-    "remote.SSH.useLocalServer": false
+    "remote.SSH.useLocalServer": false,
+    "workbench.activityBar.visible": false,
+    "java.semanticHighlighting.enabled": true
 }

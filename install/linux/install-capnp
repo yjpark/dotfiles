@@ -4,10 +4,18 @@
 # https://github.com/CristianHenzel/capnproto/issues/137
 
 if [ -z $1 ] ; then
-    FOLDER=/tmp
-fi
+    FOLDER=~/projects/tools
+else
     FOLDER=$1
-cd
+fi
+
+if [ -z $FOLDER ] ; then
+    echo "Invalid Install Folder"
+    exit 1
+fi
+
+echo "Install Folder: $FOLDER"
+mkdir -p $FOLDER
 
 if [ -d ${FOLDER}/capnproto ] ; then
     cd ${FOLDER}/capnproto

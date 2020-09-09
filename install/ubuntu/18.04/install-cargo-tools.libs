@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# diesel_cli
-sudo apt install libsqlite3-dev libmysqlclient-dev libpq-dev
-
-# hunter
-sudo apt install gcc libgstreamer-plugins-base1.0-dev gstreamer1.0-plugins-good libgstreamer-plugins-bad1.0-dev libsixel-bin

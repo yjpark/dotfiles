@@ -7,27 +7,29 @@ cargo install fmt
 cargo install fix
 cargo install cargo-edit
 
+cargo install simple-http-server
+
+cargo install --features=ssl websocat
+
 # yew
-cargo install wasm-pack
-cargo install cargo-web
+# cargo install wasm-pack
+# cargo install cargo-web
 
 # seed
-cargo install cargo-make
-rustup target add wasm32-unknown-unknown
+# cargo install cargo-make
+# rustup target add wasm32-unknown-unknown
 
 # orbtk
 cargo install cargo-node
 
 # Diesel
-cargo install diesel_cli
+# cargo install diesel_cli
 
 # Tools
-cargo install hunter
 cargo install tokei
 cargo install dua-cli
 cargo install broot
 
 cargo install pier
-cargo install ytop
 cargo install fblog
 

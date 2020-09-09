@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+# https://github.com/microsoft/vcpkg
+
+if [ -z $1 ] ; then
+    FOLDER=~/projects/tools
+else
+    FOLDER=$1
+fi
+
+if [ -z $FOLDER ] ; then
+    echo "Invalid Install Folder"
+    exit 1
+fi
+
+echo "Install Folder: $FOLDER"
+mkdir -p $FOLDER
+
+if [ -d ${FOLDER}/vcpkg ] ; then
+    cd ${FOLDER}/vcpkg
+    git pull
+else
+    cd $FOLDER
+    git clone https://github.com/microsoft/vcpkg.git
+    cd vcpkg
+fi
+
+echo "Bootstrap vcpkg"
+./bootstrap-vcpkg.sh
+

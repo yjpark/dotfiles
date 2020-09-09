@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+if [ -z $1 ] ; then
+    FOLDER=/tmp
+fi
+    FOLDER=$1
+cd
+
+if [ -d ${FOLDER}/bup ] ; then
+    cd ${FOLDER}/bup
+    git pull
+else
+    cd $FOLDER
+    git clone https://github.com/bup/bup.git
+    cd bup
+fi
+
+git checkout 0.31
+
+echo ""
+echo "Running configure"
+./configure
+
+echo ""
+echo "Running make"
+make
+
+echo ""
+echo "Installing to /usr/local"
+sudo make install
+

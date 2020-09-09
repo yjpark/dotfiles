@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+# https://google.github.io/flatbuffers/flatbuffers_guide_building.html
+
+if [ -z $1 ] ; then
+    FOLDER=~/projects/tools
+else
+    FOLDER=$1
+fi
+
+if [ -z $FOLDER ] ; then
+    echo "Invalid Install Folder"
+    exit 1
+fi
+
+echo "Install Folder: $FOLDER"
+mkdir -p $FOLDER
+
+if [ -d ${FOLDER}/flatbuffers ] ; then
+    cd ${FOLDER}/flatbuffers
+    git pull
+else
+    cd $FOLDER
+    git clone https://github.com/google/flatbuffers.git
+    cd flatbuffers
+fi
+
+echo "Generate Makefile"
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+echo ""
+echo "Running make"
+make -j8 check
+
+echo ""
+echo "Installing to /usr/local"
+sudo make install
+

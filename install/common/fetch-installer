@@ -1,5 +1,6 @@
 #!/bin/bash
 
+curl -fsSL https://starship.rs/install.sh > ~/.dotfiles/install/common/install-starship
 curl -vsSL https://get.sdkman.io > ~/.dotfiles/install/common/install-sdkman
 curl -vsSf https://sh.rustup.rs > ~/.dotfiles/install/common/install-rust-up
 curl -vsSL https://nixos.org/nix/install > ~/.dotfiles/install/common/install-nix

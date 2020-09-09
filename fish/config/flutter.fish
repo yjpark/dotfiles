@@ -3,4 +3,5 @@ if test -d ~/Applications/flutter/bin
     # https://flutter.dev/community/china
     set -x PUB_HOSTED_URL https://pub.flutter-io.cn
     set -x FLUTTER_STORAGE_BASE_URL https://storage.flutter-io.cn
+    set -x ENABLE_FLUTTER_DESKTOP "true"
 end

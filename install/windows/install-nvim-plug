@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd ~/win
+
+mkdir -p AppData/Local/nvim/autoload/
+cd AppData/Local/nvim/autoload/
+wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+mkdir -p ~/win/.config/
+
+cp -r ~/.config/nvim ~/win/.config/
+
+cp ~/.config/nvim/init.vim ~/win/AppData/Local/nvim/

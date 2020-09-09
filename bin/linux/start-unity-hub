@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/
+nohup ./UnityHub.AppImage > /tmp/unity-hub.log &

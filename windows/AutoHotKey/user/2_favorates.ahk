@@ -52,10 +52,10 @@ else
 return
 
 ^!a::
-IfWinActive, ahk_exe Code - Insiders.exe
+IfWinActive, ahk_exe VsCodium.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe Code - Insiders.exe
+    WinActivate ahk_exe VsCodium.exe
 return
 
 ^!v::

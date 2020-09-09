@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-cp ~/.dotfiles/misc/ctags ~/.ctags
-
