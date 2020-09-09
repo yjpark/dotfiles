@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 cp -v ~/.dotfiles/vscode/win/*.json ~/win/AppData/Roaming/Code/User/
-cp -v ~/.dotfiles/vscode/win/*.json ~/win/AppData/Roaming/Code\ -\ Insiders/User/
+cp -v ~/.dotfiles/vscode/win/*.json ~/win/AppData/Roaming/VSCodium/User/
 
