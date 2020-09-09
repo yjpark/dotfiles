@@ -1,4 +1,4 @@
-scoop install starship
+#scoop install starship
 
 Install-Module PSReadLine -Scope CurrentUser
 
