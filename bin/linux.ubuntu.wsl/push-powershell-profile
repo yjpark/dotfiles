@@ -6,7 +6,11 @@
 
 
 # Newer version (cross platform)
+mkdir -p ~/win/Documents/PowerShell/
+
 cp -vr ~/.dotfiles/windows/PowerShell/* ~/win/Documents/PowerShell/
 cp -vr ~/.dotfiles/private/windows/PowerShell/* ~/win/Documents/PowerShell/
 
-
+if test -d ~/win/OneDrive/Documents/PowerShell/
+    cp -vr ~/win/Documents/PowerShell/* ~/win/OneDrive/Documents/PowerShell/
+end
