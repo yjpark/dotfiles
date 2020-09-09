@@ -2,5 +2,7 @@
 
 mkdir -p ~/win/Applications/bin/windows/
 
-cp -vrL ~/.dotfiles/bin/windows/* ~/win/Applications/bin/windows/
+cp -vrL ~/.dotfiles/bin/windows/* ~/win/Applications/bin/
+#cp -vrL ~/.dotfiles/external/bin.windows/* ~/win/Applications/bin/
+cp -vrL ~/.dotfiles/windows/Applications/bin/* ~/win/Applications/bin/
 
