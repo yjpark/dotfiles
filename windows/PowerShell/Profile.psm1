@@ -20,6 +20,8 @@ Set-Item -Path Env:PUB_HOSTED_URL -Value https://pub.flutter-io.cn
 
 Set-Alias -Name cb -Value clear
 
+Set-Item -Path Env:GIT_SSH -Value C:\WINDOWS\System32\OpenSSH\ssh.exe
+
 # Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
 Set-Alias -Name ll -Value ~\Documents\PowerShell\aliases\ll.ps1
 
