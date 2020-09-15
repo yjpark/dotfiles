@@ -75,6 +75,9 @@ Set-Alias -Name msbuild.restore -Value ~\Documents\PowerShell\aliases\msbuild.re
 
 Set-Alias -Name gwp -Value ~\Documents\PowerShell\aliases\gwp.ps1
 
+Set-Alias -Name set-proxy-trojan -Value ~\Documents\PowerShell\aliases\set-proxy-trojan.ps1
+Set-Alias -Name set-proxy-off -Value ~\Documents\PowerShell\aliases\set-proxy-off.ps1
+
 Import-Module '~\Documents\PowerShell\Profile.private.psm1'
 
 if ($host.Name -eq 'ConsoleHost')
