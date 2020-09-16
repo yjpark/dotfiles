@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
+FOLDER=`date +%Y`/`date +%Y-%m`/`date +%Y-%m-%d`
 FILENAME=`date +%Y-%m-%d_%H-%M-%S.md`
 CREATED=`date +%Y-%m-%dT%H:%M:%S%:z`
 
-echo "Creating new note: $FILENAME"
+echo "Creating new note: $FOLDER/$FILENAME"
 
-cat >> ~/Writings/Notes/_Today_/$FILENAME << EOF
+mkdir -p ~/Writings/Notes/$FOLDER/
+
+cat >> ~/Writings/Notes/$FOLDER/$FILENAME << EOF
 ---
 created: $CREATED
 modified: $CREATED
