@@ -1,1 +1,1 @@
-alias protoc '~/.dotfiles/external/bin.linux/protoc-3.10.1/bin/protoc'
+alias protoc '~/.dotfiles/external/bin.linux/protoc-3.13.0/bin/protoc'
