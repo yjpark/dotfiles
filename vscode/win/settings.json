@@ -161,7 +161,10 @@
         "iios",
         "iled",
         "interface",
+        "load",
+        "load metas",
         "luid",
+        "metas",
         "ooui",
         "orientation",
         "platform",
@@ -188,7 +191,7 @@
     },
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "smart",
-    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
     "terminal.integrated.fontFamily": "Cascadia Code",
     "terminal.external.windowsExec": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
     "files.autoSave": "onWindowChange",
@@ -196,7 +199,6 @@
     "insertDateString.formatDate": "YYYY-MM-DD",
     "insertDateString.formatTime": "### hh:mm",
     "workbench.iconTheme": "ayu",
-    "workbench.colorTheme": "Kary Pro Colors － Dark",
     "FSharp.disableFailedProjectNotifications": true,
     "FSharp.smartIndent": true,
     "FSharp.lineLens.enabled": "never",
@@ -209,5 +211,9 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "FSharp.useSdkScripts": true,
-    "remote.SSH.useLocalServer": false
+    "remote.SSH.useLocalServer": false,
+    "dart.flutterSdkPath": "C:\\Users\\yjpark\\Applications\\flutter",
+    "workbench.colorTheme": "Default Light+",
+    "dart.debugExternalLibraries": true,
+    "dart.debugSdkLibraries": false
 }
