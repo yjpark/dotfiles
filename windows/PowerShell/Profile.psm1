@@ -1,6 +1,9 @@
 # Note: can use ~ in alias, but not in path
 
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\python-bin")
+# ~/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0/LocalCache/local-packages/Python38/Scripts
+
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\PowerShell\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutter\bin")
