@@ -2,8 +2,8 @@
 
 curl -vsSL  https://raw.githubusercontent.com/Homebrew/install/master/install > ~/.dotfiles/bootstrap/osx/bootstrap-homebrew
 
-curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh > ~/.dotfiles/bootstrap/osx/bootstrap-alcatraz
+# curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh > ~/.dotfiles/bootstrap/osx/bootstrap-alcatraz
 
-curl -fsSL http://get.pow.cx > ~/.dotfiles/bootstrap/osx/bootstrap-pow
+# curl -fsSL http://get.pow.cx > ~/.dotfiles/bootstrap/osx/bootstrap-pow
 
 chmod 755 ~/.dotfiles/bootstrap/osx/*
