@@ -15,3 +15,5 @@ dotnet tool install --global femto
 dotnet tool install --global ilspycmd
 dotnet tool install --global fantomas-tool
 dotnet tool install --global dotnet-certes
+dotnet tool install --global Microsoft.Tye --version "0.4.0-alpha.20371.1"
+

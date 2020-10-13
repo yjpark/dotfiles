@@ -1,1 +1,1 @@
-&("\Program Files\Git\usr\bin\ls") -l
+&("C:\Program Files\Git\usr\bin\ls") -l

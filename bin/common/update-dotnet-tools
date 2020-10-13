@@ -15,4 +15,5 @@ dotnet tool update --global femto
 dotnet tool update --global ilspycmd
 dotnet tool update --global fantomas-tool
 dotnet tool update --global dotnet-certes
+dotnet tool update --global Microsoft.Tye --version "0.4.0-alpha.20371.1"
 

@@ -1,6 +1,9 @@
 # Note: can use ~ in alias, but not in path
 
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\python-bin")
+# ~/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0/LocalCache/local-packages/Python38/Scripts
+
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\PowerShell\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutter\bin")
@@ -9,6 +12,8 @@ Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Andr
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
 
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Git\usr\bin")
+
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.dapr\bin")
 
 Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
 
@@ -19,6 +24,8 @@ Set-Item -Path Env:FLUTTER_STORAGE_BASE_URL -Value https://storage.flutter-io.cn
 Set-Item -Path Env:PUB_HOSTED_URL -Value https://pub.flutter-io.cn
 
 Set-Alias -Name cb -Value clear
+
+Set-Item -Path Env:GIT_SSH -Value C:\WINDOWS\System32\OpenSSH\ssh.exe
 
 # Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
 Set-Alias -Name ll -Value ~\Documents\PowerShell\aliases\ll.ps1
@@ -72,6 +79,9 @@ Set-Alias -Name msbuild -Value ~\Documents\PowerShell\aliases\msbuild.ps1
 Set-Alias -Name msbuild.restore -Value ~\Documents\PowerShell\aliases\msbuild.restore.ps1
 
 Set-Alias -Name gwp -Value ~\Documents\PowerShell\aliases\gwp.ps1
+
+Set-Alias -Name set-proxy-trojan -Value ~\Documents\PowerShell\aliases\set-proxy-trojan.ps1
+Set-Alias -Name set-proxy-off -Value ~\Documents\PowerShell\aliases\set-proxy-off.ps1
 
 Import-Module '~\Documents\PowerShell\Profile.private.psm1'
 
