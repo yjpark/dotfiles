@@ -226,5 +226,6 @@
     "FSharp.externalAutocomplete": false,
     "workbench.colorTheme": "Kary Pro Colors － Dark",
     "workbench.iconTheme": "ayu",
-    "window.restoreFullscreen": true
+    "window.restoreFullscreen": true,
+    "terminal.integrated.shell.osx": "/Users/yjpark/.nix-profile/bin/fish"
 }
