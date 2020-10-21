@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+
+PORT=8001
+if [ ! -z $1 ] ; then
+        PORT=$1
+fi
+
+HOST=localhost
+if [ ! -z $2 ] ; then
+        HOST=$2
+fi
+
+echo "Kubernetes Dashboard"
+echo ""
+echo "http://$HOST:$PORT/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/"
+echo ""
+echo ""
+
+echo "http://$HOST:$PORT/api/v1/namespaces/dapr-system/services/dapr-dashboard:/proxy/"
