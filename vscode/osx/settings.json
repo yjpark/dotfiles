@@ -230,5 +230,6 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "FSharp.useSdkScripts": true,
-    "remote.SSH.useLocalServer": false
+    "remote.SSH.useLocalServer": false,
+    "terminal.integrated.shell.osx": "/Users/yjpark/.nix-profile/bin/fish"
 }
