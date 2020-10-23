@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+
+kubectl -n kubernetes-dashboard describe secret admin-user-token
