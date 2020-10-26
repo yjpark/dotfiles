@@ -1,4 +1,6 @@
-dotnet tool update --global fake-cli
+dotnet tool update --global paket --version 5.245.1
+dotnet tool update --global fake-cli --version 5.20.0
+dotnet tool update --global dotnet-try
 dotnet tool update --global dotnet-search
 dotnet tool update --global fabulous-cli
 dotnet tool update --global dotMorten.OmdGenerator
