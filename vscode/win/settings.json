@@ -7,7 +7,17 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/*.meta": true,
-        "**/.*.meta": true
+        "**/.*.meta": true,
+        "**/_esy": true,
+        "**/.esy": true
+    },
+    "files.watcherExclude": {
+        "**/_esy/**": true,
+        "**/.esy": true
+    },
+    "search.exclude": {
+        "**/_esy": true,
+        "**/.esy": true
     },
     "workbench.editor.showTabs": true,
     "workbench.editor.enablePreview": false,
