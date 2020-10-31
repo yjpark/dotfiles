@@ -16,4 +16,4 @@ dotnet tool install --global ilspycmd
 dotnet tool install --global fantomas-tool
 dotnet tool install --global dotnet-certes
 dotnet tool install --global Microsoft.Tye --version "0.4.0-alpha.20371.1"
-
+dotnet tool install --global fable --version 3.0.0-nagareyama-beta-004
