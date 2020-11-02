@@ -229,7 +229,7 @@
     {
         "key": "ctrl+shift+`",
         "command": "-workbench.action.terminal.new"
-    }
+    },
     {
         "key": "alt+f",
         "command": "workbench.action.terminal.focusFindWidget",

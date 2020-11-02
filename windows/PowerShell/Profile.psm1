@@ -11,8 +11,6 @@ Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Andr
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\cmdline-tools\tools\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
 
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Git\usr\bin")
-
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.dapr\bin")
 
 Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
@@ -27,8 +25,10 @@ Set-Alias -Name cb -Value clear
 
 Set-Item -Path Env:GIT_SSH -Value C:\WINDOWS\System32\OpenSSH\ssh.exe
 
-# Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
+Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
 Set-Alias -Name ll -Value ~\Documents\PowerShell\aliases\ll.ps1
+
+Set-Alias -Name git-bin -Value ~\Documents\PowerShell\aliases\add-git-bin.ps1
 
 Set-Alias -Name .. -Value ~\Documents\PowerShell\aliases\cd.uu.ps1
 Set-Alias -Name ... -Value ~\Documents\PowerShell\aliases\cd.uuu.ps1
@@ -82,6 +82,9 @@ Set-Alias -Name gwp -Value ~\Documents\PowerShell\aliases\gwp.ps1
 
 Set-Alias -Name set-proxy-trojan -Value ~\Documents\PowerShell\aliases\set-proxy-trojan.ps1
 Set-Alias -Name set-proxy-off -Value ~\Documents\PowerShell\aliases\set-proxy-off.ps1
+
+Set-Alias -Name set-git-proxy-trojan -Value ~\Documents\PowerShell\aliases\set-git-proxy-trojan.ps1
+Set-Alias -Name set-git-proxy-off -Value ~\Documents\PowerShell\aliases\set-git-proxy-off.ps1
 
 Import-Module '~\Documents\PowerShell\Profile.private.psm1'
 
