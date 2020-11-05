@@ -251,6 +251,16 @@
         "when": "terminalFindFocused || terminalFocus"
     },
     {
+        "key": "alt+f",
+        "command": "workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
+    },
+    {
       "key": "shift+alt+n",
       "command": "workbench.action.tasks.runTask",
       "args": "newNote"
