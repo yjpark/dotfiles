@@ -13,6 +13,8 @@ Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android S
 
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.dapr\bin")
 
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.deno\bin")
+
 Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
 
 Set-Item -Path Env:ENABLE_FLUTTER_DESKTOP -Value "true"
