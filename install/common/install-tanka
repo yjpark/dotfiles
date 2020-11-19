@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# https://tanka.dev/install
+
+echo "May need to setup proxy!"
+
+cd /tmp
+GO111MODULE=on go get github.com/grafana/tanka/cmd/tk
+GO111MODULE=on go get github.com/jsonnet-bundler/jsonnet-bundler/cmd/jb
