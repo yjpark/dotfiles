@@ -1,6 +1,6 @@
 dotnet tool install --global paket --version 5.257.0
 dotnet tool install --global fake-cli --version 5.20.3
-dotnet tool install --global dotnet-interactive
+dotnet tool install --global Microsoft.dotnet-interactive
 dotnet tool install --global capnpc-csharp
 dotnet tool install --global dotnet-try
 dotnet tool install --global dotnet-grpc

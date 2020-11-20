@@ -1,6 +1,6 @@
 dotnet tool update --global paket --version 5.257.0
 dotnet tool update --global fake-cli --version 5.20.3
-dotnet tool update --global dotnet-interactive
+dotnet tool update --global Microsoft.dotnet-interactive
 dotnet tool update --global capnpc-csharp
 dotnet tool update --global dotnet-try
 dotnet tool update --global dotnet-grpc
