@@ -4,5 +4,5 @@ cp -v ~/.dotfiles/vscode/osx/*.json ~/Library/Application\ Support/Code/User/
 
 cp -v ~/.dotfiles/vscode/osx/*.json ~/Library/Application\ Support/Code\ -\ Insiders/User/
 
-cp -v ~/.dotfiles/vscode/osx/settings.insiders.json ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
+# cp -v ~/.dotfiles/vscode/osx/settings.insiders.json ~/Library/Application\ Support/Code\ -\ Insiders/User/settings.json
 
