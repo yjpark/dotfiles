@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# https://medium.com/@g.toolit/installing-an-ipa-on-ios-device-from-the-command-line-in-osx-or-linux-b5a05bad7feb
+
+brew install libimobiledevice
+brew install ideviceinstaller
