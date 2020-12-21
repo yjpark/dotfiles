@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd `dirname $0`
+
+cd ../../docker/toolbox
+
+docker build . -t yjpark/toolbox:latest
+
+docker push yjpark/toolbox:latest
