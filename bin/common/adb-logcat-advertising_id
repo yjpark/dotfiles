@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+adb logcat -d | grep -i --color=always advertising_id
+
