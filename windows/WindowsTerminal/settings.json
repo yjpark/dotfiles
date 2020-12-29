@@ -90,7 +90,7 @@
           "fontFace": "Fira Code",
           //"fontFace": "Cascadia Code PL",
           "fontSize": 10,
-          "padding": "0, 0, 0, 0",
+          "padding": "6, 2, 0, 0",
           "historySize": 10240,
           "snapOnInput": true,
           "useAcrylic": false
