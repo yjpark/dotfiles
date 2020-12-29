@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Pulling..."
+pass git pull
+
+echo "Pushing..."
+pass git push
