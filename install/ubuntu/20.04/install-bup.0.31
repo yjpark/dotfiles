@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z $1 ] ; then
-    FOLDER=~/projects/tools
-fi
-    FOLDER=$1
-cd
+FOLDER=~/projects/tools
 
 mkdir -p $FOLDER
 
