@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
 if [ -z $1 ] ; then
-    FOLDER=/tmp
+    FOLDER=~/projects/tools
 fi
     FOLDER=$1
 cd
+
+mkdir -p $FOLDER
 
 if [ -d ${FOLDER}/bup ] ; then
     cd ${FOLDER}/bup
@@ -14,6 +16,8 @@ else
     git clone https://github.com/bup/bup.git
     cd bup
 fi
+
+sudo apt install build-essential python-is-python3 libpython3-dev
 
 git checkout 0.31
 
