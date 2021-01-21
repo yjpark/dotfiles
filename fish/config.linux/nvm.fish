@@ -1,3 +1,5 @@
 if status --is-interactive
-    nvm use default
+    if test -d ~/.nvm
+        nvm use default
+    end
 end
