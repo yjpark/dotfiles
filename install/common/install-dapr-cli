@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ------------------------------------------------------------
-# Copyright (c) Microsoft Corporation.
+# Copyright (c) Microsoft Corporation and Dapr Contributors.
 # Licensed under the MIT License.
 # ------------------------------------------------------------
 
@@ -49,6 +49,14 @@ verifySupported() {
             return
         fi
     done
+
+    if [ "$current_osarch" == "darwin-arm64" ]; then
+        echo "The darwin_arm64 arch has no native binary, however you can use the amd64 version so long as you have rosetta installed"
+        echo "Use 'softwareupdate --install-rosetta' to install rosetta if you don't already have it"
+        ARCH="amd64"
+        return
+    fi
+
 
     echo "No prebuilt binary for ${current_osarch}"
     exit 1
@@ -161,7 +169,7 @@ cleanup() {
 }
 
 installCompleted() {
-    echo -e "\nTo get started with Dapr, please visit https://github.com/dapr/docs/tree/master/getting-started"
+    echo -e "\nTo get started with Dapr, please visit https://docs.dapr.io/getting-started/"
 }
 
 # -----------------------------------------------------------------------------
@@ -174,7 +182,16 @@ verifySupported
 checkExistingDapr
 checkHttpRequestCLI
 
-getLatestRelease
+
+if [ -z "$1" ]; then
+    echo "Getting the latest Dapr CLI..."
+    getLatestRelease
+else
+    ret_val=v$1
+fi
+
+echo "Installing $ret_val Dapr CLI..."
+
 downloadFile $ret_val
 installFile
 cleanup
