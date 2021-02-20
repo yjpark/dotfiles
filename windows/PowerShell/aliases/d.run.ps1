@@ -1,2 +1,2 @@
 clear
-dotnet run --no-build --no-restore $args
+dotnet run --no-build --no-restore -- $args
