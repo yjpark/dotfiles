@@ -14,6 +14,6 @@ dotnet tool update --global femto
 dotnet tool update --global ilspycmd
 dotnet tool update --global fantomas-tool
 dotnet tool update --global dotnet-certes
-dotnet tool update --global Microsoft.Tye --version "0.5.0-alpha.20555.1"
-dotnet tool update --global fable --version "3.0.0-nagareyama-rc-008"
+dotnet tool update --global Microsoft.Tye --version "0.6.0-alpha.21070.5"
+dotnet tool update --global fable
 
