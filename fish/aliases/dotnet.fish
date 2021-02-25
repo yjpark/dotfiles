@@ -9,7 +9,7 @@ alias d.pack.release='cb ; dotnet pack --configuration Release'
 
 alias fsi='dotnet fsi'
 
-alias d.fable='cb ; fable -o .fable --noRestore'
+alias d.fable='cb ; fable -o .fable --extension .fs.js --noRestore'
 
 alias f='cb ; fake build'
 
