@@ -93,11 +93,11 @@ else
     WinActivate ahk_exe zeal.exe
 return
 
-^!e::
-IfWinActive, ahk_exe Evernote.exe
+^!o::
+IfWinActive, ahk_exe Obsidian.exe
     Send !{Tab}
 else
-    WinActivate ahk_exe Evernote.exe
+    WinActivate ahk_exe Obsidian.exe
 return
 
 ^!n::
