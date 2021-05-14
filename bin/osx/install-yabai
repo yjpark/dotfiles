@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
+
+brew install koekeishiya/formulae/yabai
+
+sudo yabai --install-sa
+sudo yabai --load-sa
