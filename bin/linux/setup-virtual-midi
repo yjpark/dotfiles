@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# https://tldp.org/HOWTO/MIDI-HOWTO-10.html
+
+# Let jackd take the midi, and route the usb keyboard to a virtual one, then open it in BitWig
+
+sudo modprobe snd-virmidi snd_index=1
