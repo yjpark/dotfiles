@@ -9,6 +9,6 @@ if grep -q microsoft /proc/version
     # https://www.turek.dev/post/fix-wsl-file-permissions/
     umask 0002
 
-    alias set-proxy-trojan "set -gx https_proxy 172.26.48.1:1102; set -gx http_proxy 172.26.48.1:1102; set -gx ALL_PROXY http://172.26.48.1:1102"
+    alias set-proxy-trojan "set -gx https_proxy windows-host:1102; set -gx http_proxy windows-host:1102; set -gx ALL_PROXY http://windows-host:1102"
 end
 
