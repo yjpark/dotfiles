@@ -59,6 +59,7 @@ alias htop "htop --sort-key PERCENT_CPU"
 alias vimx "vim -u ~/.vimrcx -x"
 alias update-completions "fish_update_completions"
 
-alias gwp git-commit-wip-push
+alias gwp _git-commit-wip-push
+alias gsp _git-commit-sync-push
 
 alias now "date -u \"+%Y-%m-%d %H:%M:%S\""

@@ -80,6 +80,10 @@ Set-Alias -Name fsharpi -Value ~\Documents\PowerShell\aliases\fsharpi.ps1
 Set-Alias -Name msbuild -Value ~\Documents\PowerShell\aliases\msbuild.ps1
 Set-Alias -Name msbuild.restore -Value ~\Documents\PowerShell\aliases\msbuild.restore.ps1
 
+Set-Alias -Name c -Value ~\Documents\PowerShell\aliases\c.ps1
+Set-Alias -Name cn -Value ~\Documents\PowerShell\aliases\cn.ps1
+Set-Alias -Name c.run-example -Value ~\Documents\PowerShell\aliases\c.run-example.ps1
+
 Set-Alias -Name gwp -Value ~\Documents\PowerShell\aliases\gwp.ps1
 
 Set-Alias -Name set-proxy-trojan -Value ~\Documents\PowerShell\aliases\set-proxy-trojan.ps1
