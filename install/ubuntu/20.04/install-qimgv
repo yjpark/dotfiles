@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# https://github.com/easymodo/qimgv
+
+sudo add-apt-repository ppa:easymodo/qimgv
+sudo apt-get update
+sudo apt install qimgv

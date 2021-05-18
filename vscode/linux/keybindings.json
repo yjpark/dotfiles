@@ -264,5 +264,10 @@
       "key": "shift+alt+n",
       "command": "workbench.action.tasks.runTask",
       "args": "newNote"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
     }
 ]
