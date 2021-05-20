@@ -9,13 +9,6 @@ else
     WinActivate ahk_exe WindowsTerminal.exe
 return
 
-^!t::
-IfWinActive, ahk_exe alacritty.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe alacritty.exe
-return
-
 ^!g::
 IfWinActive, ahk_exe msedge.exe
     Send !{Tab}
@@ -98,13 +91,6 @@ IfWinActive, ahk_exe Obsidian.exe
     Send !{Tab}
 else
     WinActivate ahk_exe Obsidian.exe
-return
-
-^!n::
-IfWinActive, ahk_exe MindMaster.exe
-    Send !{Tab}
-else
-    WinActivate ahk_exe MindMaster.exe
 return
 
 ^!d::
