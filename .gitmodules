@@ -7,9 +7,6 @@
 [submodule "linux/xmonad.sample"]
 	path = linux/xmonad.sample
 	url = git@github.com:yjpark/xmonad-config.git
-[submodule "windows/AutoHotKey/virtual-desktop"]
-	path = windows/AutoHotKey/virtual-desktop
-	url = git@github.com:yjpark/win-10-virtual-desktop-enhancer.git
 [submodule "external/guacamole"]
 	path = external/guacamole
 	url = https://github.com/reisbel/guacamole-docker-compose.git
@@ -22,6 +19,3 @@
 [submodule "external/mac-cleanup"]
 	path = external/mac-cleanup
 	url = https://github.com/fwartner/mac-cleanup.git
-[submodule "windows/AutoHotKey/windows-desktop-switcher"]
-	path = windows/AutoHotKey/windows-desktop-switcher
-	url = git@github.com:yjpark/windows-desktop-switcher.git
