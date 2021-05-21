@@ -12,6 +12,11 @@ CapsLock::
         KeyboardLED(4, "off")
 return
 
+^CapsLock::
+    ChineseLayout := 0
+    KeyboardLED(4, "off")
+return
+
 /*
 
     Keyboard LED control for AutoHotkey_L
