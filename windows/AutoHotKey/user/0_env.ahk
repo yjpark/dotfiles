@@ -8,3 +8,4 @@ SetKeyDelay , 30, 30 ; first is delay between keypresses, and second is press du
 #WinActivateForce
 DetectHiddenWindows, On
 
+#MaxHotkeysPerInterval 200
