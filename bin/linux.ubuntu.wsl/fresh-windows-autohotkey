@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 
-rm ~/Applications/_user.ahk
-cat ~/.dotfiles/windows/AutoHotKey/user/0_* >> ~/Applications/_user.ahk
-cat ~/.dotfiles/windows/AutoHotKey/user/1_* >> ~/Applications/_user.ahk
-cat ~/.dotfiles/windows/AutoHotKey/user/2_* >> ~/Applications/_user.ahk
-cat ~/.dotfiles/windows/AutoHotKey/user/3_* >> ~/Applications/_user.ahk
+rm ~/win/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/0_* >> ~/win/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/1_* >> ~/win/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/2_* >> ~/win/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/3_* >> ~/win/Applications/_user.ahk
+cat ~/.dotfiles/windows/AutoHotKey/user/4_* >> ~/win/Applications/_user.ahk
 
 
