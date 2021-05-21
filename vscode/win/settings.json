@@ -225,8 +225,9 @@
     "dart.flutterSdkPath": "C:\\Users\\yjpark\\Applications\\flutter",
     "dart.debugExternalLibraries": true,
     "dart.debugSdkLibraries": false,
-    "workbench.colorTheme": "Kary Pro Colors － Dark",
-    "workbench.preferredDarkColorTheme": "Kary Pro Colors － Dark",
+    "workbench.preferredDarkColorTheme": "Radical",
     "workbench.preferredLightColorTheme": "Kary Pro Colors － Light",
-    "window.autoDetectColorScheme": true
+    "window.autoDetectColorScheme": true,
+    "workbench.colorTheme": "Radical",
+    "workbench.activityBar.visible": false
 }
