@@ -1,3 +1,3 @@
 clear
 
-c $args
+cargo $args
