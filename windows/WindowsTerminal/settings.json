@@ -95,7 +95,7 @@
             "keys": "alt+9"
         }
     ],
-    "launchMode": "fullscreen",
+    "launchMode": "maximized",
     "profiles": 
     {
         "defaults": 
