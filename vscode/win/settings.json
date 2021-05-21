@@ -223,7 +223,10 @@
     "FSharp.useSdkScripts": true,
     "remote.SSH.useLocalServer": false,
     "dart.flutterSdkPath": "C:\\Users\\yjpark\\Applications\\flutter",
-    "workbench.colorTheme": "Default Light+",
     "dart.debugExternalLibraries": true,
-    "dart.debugSdkLibraries": false
+    "dart.debugSdkLibraries": false,
+    "workbench.colorTheme": "Kary Pro Colors － Dark",
+    "workbench.preferredDarkColorTheme": "Kary Pro Colors － Dark",
+    "workbench.preferredLightColorTheme": "Kary Pro Colors － Light",
+    "window.autoDetectColorScheme": true
 }
