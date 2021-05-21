@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-
 rm ~/win/Applications/_user.ahk
 cat ~/.dotfiles/windows/AutoHotKey/user/0_* >> ~/win/Applications/_user.ahk
 cat ~/.dotfiles/windows/AutoHotKey/user/1_* >> ~/win/Applications/_user.ahk
 cat ~/.dotfiles/windows/AutoHotKey/user/2_* >> ~/win/Applications/_user.ahk
 cat ~/.dotfiles/windows/AutoHotKey/user/3_* >> ~/win/Applications/_user.ahk
-cat ~/.dotfiles/windows/AutoHotKey/user/4_* >> ~/win/Applications/_user.ahk
 
-
+cat ~/win/Applications/_user.ahk | wc -l
