@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cp -v ~/.local/share/nvim/site/autoload/plug.vim ~/win/Applications/Neovim/share/nvim/runtime/autoload/
+
+cp -r ~/.config/nvim ~/win/AppData/Local/nvim
+
+cd ~/win/.config
+ln -s ../AppData/Local/nvim .

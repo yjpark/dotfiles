@@ -37,8 +37,10 @@ Set-Alias -Name ... -Value ~\Documents\PowerShell\aliases\cd.uuu.ps1
 Set-Alias -Name .... -Value ~\Documents\PowerShell\aliases\cd.uuuu.ps1
 Set-Alias -Name ..... -Value ~\Documents\PowerShell\aliases\cd.uuuuu.ps1
 
+Set-Alias -Name nvim -Value ~\Applications\Neovim\bin\nvim
+
 Set-Alias -Name a -Value ~\Documents\PowerShell\aliases\a.ps1
-Set-Alias -Name e -Value nvim
+Set-Alias -Name e -Value ~\Applications\Neovim\bin\nvim
 
 Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
