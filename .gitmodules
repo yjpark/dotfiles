@@ -19,3 +19,6 @@
 [submodule "external/mac-cleanup"]
 	path = external/mac-cleanup
 	url = https://github.com/fwartner/mac-cleanup.git
+[submodule "windows/AutoHotKey/windows-desktop-switcher"]
+	path = windows/AutoHotKey/windows-desktop-switcher
+	url = git@github.com:yjpark/windows-desktop-switcher.git
