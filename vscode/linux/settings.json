@@ -202,7 +202,9 @@
     "insertDateString.formatDate": "YYYY-MM-DD",
     "insertDateString.formatTime": "### hh:mm",
     "workbench.iconTheme": "ayu",
-    "workbench.colorTheme": "Brogrammer",
+    "workbench.preferredDarkColorTheme": "Radical",
+    "workbench.preferredLightColorTheme": "Bluloco Light",
+    "window.autoDetectColorScheme": true,
     "FSharp.disableFailedProjectNotifications": true,
     "FSharp.smartIndent": true,
     "FSharp.lineLens.enabled": "never",
@@ -231,6 +233,6 @@
     "editor.selectionClipboard": false,
     "FSharp.useSdkScripts": true,
     "remote.SSH.useLocalServer": false,
-    "workbench.activityBar.visible": false,
-    "java.semanticHighlighting.enabled": true
+    "java.semanticHighlighting.enabled": true,
+    "workbench.activityBar.visible": false
 }
