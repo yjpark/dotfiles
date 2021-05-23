@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
+cp -v ~/win/Applications/_user.ahk ~/.dotfiles/windows/AutoHotKey/user/_backup/
 rm ~/win/Applications/_user.ahk
+
 cat ~/.dotfiles/windows/AutoHotKey/user/0_* >> ~/win/Applications/_user.ahk
 cat ~/.dotfiles/windows/AutoHotKey/user/1_* >> ~/win/Applications/_user.ahk
 cat ~/.dotfiles/windows/AutoHotKey/user/2_* >> ~/win/Applications/_user.ahk

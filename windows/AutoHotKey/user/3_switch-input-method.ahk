@@ -91,3 +91,4 @@ SetUnicodeStr(ByRef out, str_)
   VarSetCapacity(out,2*StrPut(str_,"utf-16"))
   StrPut(str_,&out,"utf-16")
 }
+
