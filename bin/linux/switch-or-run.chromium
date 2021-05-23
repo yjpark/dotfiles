@@ -2,4 +2,4 @@
 
 cd `dirname $0`
 
-./switch-or-run "chromium" "chromium-browser"
+./switch-or-run "chromium" "chromium"
