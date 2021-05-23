@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+cp -v ~/.dotfiles/obsidian/linux ~/Writings/Obsidian/Notes/.obsidian/config
