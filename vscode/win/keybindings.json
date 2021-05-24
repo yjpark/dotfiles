@@ -53,18 +53,6 @@
         "command": "workbench.action.closeOtherEditors"
     },
     {
-        "key": "alt+w",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeActiveEditor"
-    },
-    {
-        "key": "ctrl+f4",
-        "command": "-workbench.action.closeActiveEditor"
-    },
-    {
         "key": "ctrl+k w",
         "command": "-workbench.action.closeEditorsInGroup"
     },
@@ -123,50 +111,6 @@
         "command": "workbench.view.extension.ionide-fsharp"
     },
     {
-        "key": "alt+c",
-        "command": "editor.action.clipboardCopyAction",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "ctrl+insert",
-        "command": "-editor.action.clipboardCopyAction",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "alt+c",
-        "command": "-toggleFindCaseSensitive",
-        "when": "editorFocus"
-    },
-    {
-        "key": "alt+c",
-        "command": "-toggleSearchCaseSensitive",
-        "when": "searchInputBoxFocus && searchViewletVisible"
-    },
-    {
-        "key": "alt+v",
-        "command": "editor.action.clipboardPasteAction",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+insert",
-        "command": "-editor.action.clipboardPasteAction",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+x",
-        "command": "editor.action.clipboardCutAction",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+delete",
-        "command": "-editor.action.clipboardCutAction",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+t",
-        "command": "insertDateString.insertTime"
-    },
-    {
         "key": "alt+u",
         "command": "workbench.action.terminal.toggleTerminal"
     },
@@ -175,27 +119,9 @@
         "command": "-workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "alt+f",
-        "command": "actions.find"
-    },
-    {
-        "key": "ctrl+f",
-        "command": "-actions.find"
-    },
-    {
-        "key": "alt+f",
-        "command": "workbench.action.terminal.focusFindWidget",
-        "when": "terminalFocus"
-    },
-    {
         "key": "ctrl+f",
         "command": "-workbench.action.terminal.focusFindWidget",
         "when": "terminalFocus"
-    },
-    {
-        "key": "alt+f",
-        "command": "workbench.action.terminal.focusFindWidget",
-        "when": "terminalFindWidgetFocused"
     },
     {
         "key": "ctrl+f",
@@ -203,57 +129,28 @@
         "when": "terminalFindWidgetFocused"
     },
     {
-        "key": "alt+c",
+        "key": "ctrl+c",
         "command": "workbench.action.terminal.copySelection",
         "when": "terminalFocus && terminalTextSelected"
     },
     {
-        "key": "ctrl+shift+c",
-        "command": "-workbench.action.terminal.copySelection",
-        "when": "terminalFocus && terminalTextSelected"
-    },
-    {
-        "key": "alt+v",
+        "key": "ctrl+v",
         "command": "workbench.action.terminal.paste",
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+shift+v",
-        "command": "-workbench.action.terminal.paste",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "alt+t",
+        "key": "ctrl+t",
         "command": "workbench.action.terminal.new"
-    },
-    {
-        "key": "ctrl+shift+`",
-        "command": "-workbench.action.terminal.new"
-    },
-    {
-        "key": "alt+f",
-        "command": "workbench.action.terminal.focusFindWidget",
-        "when": "terminalFindWidgetFocused || terminalFocus"
     },
     {
         "key": "ctrl+f",
         "command": "-workbench.action.terminal.focusFindWidget",
         "when": "terminalFindWidgetFocused || terminalFocus"
-    },
-    {
-        "key": "alt+f",
-        "command": "workbench.action.terminal.focusFind",
-        "when": "terminalFindFocused || terminalFocus"
     },
     {
         "key": "ctrl+f",
         "command": "-workbench.action.terminal.focusFind",
         "when": "terminalFindFocused || terminalFocus"
-    },
-    {
-        "key": "alt+f",
-        "command": "workbench.action.terminal.focusFind",
-        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
     },
     {
         "key": "ctrl+f",

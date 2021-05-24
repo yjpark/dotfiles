@@ -7,7 +7,7 @@
     [
         {
             "command": "newTab",
-            "keys": "alt+t"
+            "keys": "ctrl+t"
         },
         // Clipboard Integration
         {
@@ -16,11 +16,11 @@
                 "action": "copy",
                 "singleLine": false
             },
-            "keys": "alt+c"
+            "keys": "ctrl+c"
         },
         {
             "command": "paste",
-            "keys": "alt+v"
+            "keys": "ctrl+v"
         },
         {
             "command": 
