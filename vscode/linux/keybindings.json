@@ -49,4 +49,13 @@
         "key": "shift+alt+w",
         "command": "workbench.action.closeOtherEditors"
     },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    }
 ]
