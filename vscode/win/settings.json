@@ -235,8 +235,9 @@
     "remote.SSH.useLocalServer": false,
     "java.semanticHighlighting.enabled": true,
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Bluloco Light",
-    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "Radical",
     "editor.codeLensFontFamily": "Cascadia Code PL",
-    "vim.neovimConfigPath": "~/.config/nvim/init.vim"
+    "vim.neovimConfigPath": "~/.config/nvim/init.vim",
+    "rust-analyzer.procMacro.enable": false,
+    "window.menuBarVisibility": "compact"
 }
