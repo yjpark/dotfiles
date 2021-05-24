@@ -18,6 +18,7 @@ dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-6 "['<Super>6'
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-7 "['<Super>7']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-8 "['<Super>8']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-9 "['<Super>9']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-10 "['<Super>0']"
 
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-1 "['<Super><Shift>1']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-2 "['<Super><Shift>2']"
