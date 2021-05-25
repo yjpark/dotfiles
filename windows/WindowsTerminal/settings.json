@@ -19,6 +19,10 @@
             "keys": "ctrl+v"
         },
         {
+            "command": "newTab",
+            "keys": "ctrl+t"
+        },
+        {
             "command": 
             {
                 "action": "switchToTab",
