@@ -61,5 +61,15 @@
     {
         "key": "ctrl+shift+o",
         "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFindWidgetFocused"
     }
 ]
