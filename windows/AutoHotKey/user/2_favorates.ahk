@@ -27,14 +27,6 @@ else
     MouseClick
 return
 
-^`::
-IfWinActive, ahk_exe WindowsTerminal.exe
-    sleep, 10
-else
-    WinActivate ahk_exe WindowsTerminal.exe
-    MouseClick
-return
-
 ^!Space::
 Process,close,explorer.exe
 sleep, 50 ;This sleep 5000 is to let you see what actually happens. Decrease it later
