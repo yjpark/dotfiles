@@ -26,10 +26,6 @@
         "command": "workbench.view.explorer"
     },
     {
-        "key": "alt+u",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
         "key": "alt+a",
         "command": "workbench.action.toggleActivityBarVisibility"
     },
@@ -57,5 +53,28 @@
         "key": "ctrl+e",
         "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
         "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "alt+o",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "-workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFindWidget",
+        "when": "terminalFindWidgetFocused"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
     }
 ]
