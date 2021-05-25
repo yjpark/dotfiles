@@ -19,10 +19,6 @@
             "keys": "ctrl+v"
         },
         {
-            "command": "toggleCommandPalette",
-            "keys": "ctrl+v"
-        },
-        {
             "command": 
             {
                 "action": "switchToTab",
