@@ -41,7 +41,7 @@
     "zo": { "type": "zoom.out" },
     "zz": { "type": "zoom.neutral" },
     "f": { "type": "follow.start", "newTab": false },
-    "F": { "type": "follow.start", "newTab": true, "background": false},
+    "F": { "type": "follow.start", "newTab": true, "background": true},
     "m": { "type": "mark.set.prefix" },
     "'": { "type": "mark.jump.prefix" },
     "H": { "type": "navigate.history.prev" },
