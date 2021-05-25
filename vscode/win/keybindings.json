@@ -71,5 +71,10 @@
         "key": "ctrl+f",
         "command": "-workbench.action.terminal.focusFindWidget",
         "when": "terminalFindWidgetFocused"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-workbench.action.terminal.focusFind",
+        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
     }
 ]
