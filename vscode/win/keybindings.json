@@ -26,10 +26,6 @@
         "command": "workbench.view.explorer"
     },
     {
-        "key": "alt+u",
-        "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
         "key": "alt+a",
         "command": "workbench.action.toggleActivityBarVisibility"
     },
