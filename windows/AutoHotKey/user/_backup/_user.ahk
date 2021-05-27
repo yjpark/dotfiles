@@ -8,7 +8,7 @@ SetKeyDelay , 30, 30 ; first is delay between keypresses, and second is press du
 #WinActivateForce
 DetectHiddenWindows, On
 
-#MaxHotkeysPerInterval 200
+;#MaxHotkeysPerInterval 200
 
 Ctrl UP::Send {Escape}
 Ctrl & F13::
@@ -30,7 +30,8 @@ IfWinActive, ahk_exe msedge.exe
 else
     WinShow ahk_exe msedge.exe
     WinActivate ahk_exe msedge.exe
-    MouseClick
+    sleep 10
+    WinSet Top
 return
 
 ^!m::
@@ -39,23 +40,16 @@ IfWinActive, ahk_exe chrome.exe
 else
     WinShow ahk_exe chrome.exe
     WinActivate ahk_exe chrome.exe
-    MouseClick
-return
-
-^`::
-IfWinActive, ahk_exe WindowsTerminal.exe
-    sleep, 10
-else
-    WinActivate ahk_exe WindowsTerminal.exe
-    MouseClick
+    sleep 10
+    WinSet Top
 return
 
 ^!Space::
-    Process,close,explorer.exe
-    sleep, 50 ;This sleep 5000 is to let you see what actually happens. Decrease it later
-    run, explorer.exe
-    WinWait, ahk_class CabinetWClass
-    WinClose ;close the new explorer window
+Process,close,explorer.exe
+sleep, 50 ;This sleep 5000 is to let you see what actually happens. Decrease it later
+run, explorer.exe
+WinWait, ahk_class CabinetWClass
+WinClose ;close the new explorer window
 return
 
 global ChineseLayout := 0
@@ -151,3 +145,4 @@ SetUnicodeStr(ByRef out, str_)
   VarSetCapacity(out,2*StrPut(str_,"utf-16"))
   StrPut(str_,&out,"utf-16")
 }
+
