@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Howdy is the windows hello feature in Linux
+
+# https://github.com/boltgolt/howdy
+
+sudo add-apt-repository ppa:boltgolt/howdy
+sudo apt update
+sudo apt install howdy
