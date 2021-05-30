@@ -12,7 +12,7 @@
 [keybindings]
   zoom_in = <Alt>equal
   zoom_out = <Alt>minus
-  new_tab = <Alt>t
+  new_tab = <Primary>t
   go_up = <Shift>Up
   go_down = <Shift>Down
   go_left = <Shift>Left
