@@ -18,8 +18,8 @@
   go_left = <Shift>Left
   go_right = <Shift>Right
   close_term = <Alt>w
-  copy = <Alt>c
-  paste = <Alt>v
+  copy = <Primary>c
+  paste = <Primary>v
   switch_to_tab_1 = <Primary>1
   switch_to_tab_2 = <Primary>2
   switch_to_tab_3 = <Primary>3
