@@ -24,10 +24,11 @@ return
 IfWinActive, ahk_exe chrome.exe
     sleep 10
 else
-    WinShow ahk_exe chrome.exe
-    WinActivate ahk_exe chrome.exe
-    sleep 10
-    WinSet Top
+;    WinShow ahk_exe msedge.exe
+;    WinActivate ahk_exe msedge.exe
+;    sleep 10
+;    WinSet Top
+;    MouseClick
 return
 
 ^!Space::
