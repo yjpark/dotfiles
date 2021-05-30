@@ -12,14 +12,14 @@
 [keybindings]
   zoom_in = <Alt>equal
   zoom_out = <Alt>minus
-  new_tab = <Alt>t
+  new_tab = <Primary>t
   go_up = <Shift>Up
   go_down = <Shift>Down
   go_left = <Shift>Left
   go_right = <Shift>Right
   close_term = <Alt>w
-  copy = <Alt>c
-  paste = <Alt>v
+  copy = <Primary>c
+  paste = <Primary>v
   switch_to_tab_1 = <Primary>1
   switch_to_tab_2 = <Primary>2
   switch_to_tab_3 = <Primary>3
