@@ -13,11 +13,12 @@ return
 IfWinActive, ahk_exe msedge.exe
     sleep 10
 else
-    WinShow ahk_exe msedge.exe
-    WinActivate ahk_exe msedge.exe
-    sleep 10
-    WinSet Top
-    ;MouseClick
+;    WinShow ahk_exe msedge.exe
+;    WinActivate ahk_exe msedge.exe
+;    sleep 10
+;    WinSet Top
+;    MouseClick
+    Send #0
 return
 
 ^!m::
