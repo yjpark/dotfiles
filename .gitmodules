@@ -19,3 +19,6 @@
 [submodule "external/mac-cleanup"]
 	path = external/mac-cleanup
 	url = https://github.com/fwartner/mac-cleanup.git
+[submodule "external/bin.linux/XMousePasteBlock"]
+	path = external/bin.linux/XMousePasteBlock
+	url = https://github.com/milaq/XMousePasteBlock.git
