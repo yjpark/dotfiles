@@ -1,6 +1,5 @@
 {
     "python.pythonPath": "/anaconda3",
-    "window.zoomLevel": 1,
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -238,5 +237,8 @@
     "workbench.colorTheme": "Bluloco Light",
     "editor.codeLensFontFamily": "Cascadia Code PL",
     "rust-analyzer.procMacro.enable": false,
-    "window.menuBarVisibility": "compact"
+    "remote.SSH.remotePlatform": {
+        "10.0.1.2": "linux"
+    },
+    "http.proxy": "http://127.0.0.1:1102"
 }
