@@ -29,7 +29,7 @@ alias set-proxy-mitm "set -gx https_proxy 127.0.0.1:1111; set -gx http_proxy 127
 
 alias wget "wget --no-check-certificate"
 
-alias ssh "ssh -A"
+alias ssh "ssh -A -Y"
 alias scp "scp -C -p"
 
 alias mosh "mosh --ssh='ssh -A'"
