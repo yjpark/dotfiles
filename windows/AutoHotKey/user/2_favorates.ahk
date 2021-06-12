@@ -6,7 +6,10 @@ return
 IfWinActive, ahk_exe Obsidian.exe
     sleep 10
 else
+    WinShow ahk_exe Obsidian.exe
     WinActivate ahk_exe Obsidian.exe
+    sleep 10
+    WinSet Top
 return
 
 ^!g::
