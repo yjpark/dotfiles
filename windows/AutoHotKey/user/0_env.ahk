@@ -10,3 +10,7 @@ DetectHiddenWindows, On
 
 ;#MaxHotkeysPerInterval 200
 
+; https://stackoverflow.com/questions/49009176/autohotkey-causing-control-key-to-get-stuck
+; https://www.autohotkey.com/docs/commands/_MenuMaskKey.htm
+#MenuMaskKey vkFF
+
