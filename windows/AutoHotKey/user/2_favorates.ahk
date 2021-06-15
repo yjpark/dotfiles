@@ -21,6 +21,7 @@ else
 ;    sleep 10
 ;    WinSet Top
 ;    MouseClick
+    sleep 10
     Send #0
 return
 
