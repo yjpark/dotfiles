@@ -10,6 +10,10 @@ DetectHiddenWindows, On
 
 ;#MaxHotkeysPerInterval 200
 
+; https://stackoverflow.com/questions/49009176/autohotkey-causing-control-key-to-get-stuck
+; https://www.autohotkey.com/docs/commands/_MenuMaskKey.htm
+#MenuMaskKey vkFF
+
 Ctrl UP::Send {Escape}
 Ctrl & F13::
 
@@ -21,18 +25,22 @@ return
 IfWinActive, ahk_exe Obsidian.exe
     sleep 10
 else
+    WinShow ahk_exe Obsidian.exe
     WinActivate ahk_exe Obsidian.exe
+    sleep 10
+    WinSet Top
 return
 
 ^!g::
 IfWinActive, ahk_exe msedge.exe
     sleep 10
 else
-    WinShow ahk_exe msedge.exe
-    WinActivate ahk_exe msedge.exe
-    sleep 10
-    WinSet Top
-    ;MouseClick
+;    WinShow ahk_exe msedge.exe
+;    WinActivate ahk_exe msedge.exe
+;    sleep 10
+;    WinSet Top
+;    MouseClick
+    Send #0
 return
 
 ^!m::

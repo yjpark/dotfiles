@@ -1,5 +1,5 @@
 ^Tab::
-Send #{Tab}
+    Send #{Tab}
 return
 
 ^!o::
