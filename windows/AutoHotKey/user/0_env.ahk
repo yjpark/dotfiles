@@ -14,3 +14,9 @@ DetectHiddenWindows, On
 ; https://www.autohotkey.com/docs/commands/_MenuMaskKey.htm
 #MenuMaskKey vkFF
 
+Return() {
+    For Each, Modifier in ["Shift","Control","LWin","RWin","Alt"]
+        If GetKeyState(Modifier) And !GetKeyState(Modifier,"P")
+            Send, {%Modifier% Up}
+    Exit
+}

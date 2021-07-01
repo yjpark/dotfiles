@@ -10,12 +10,12 @@ CapsLock::
         KeyboardLED(4, "on")
     Else
         KeyboardLED(4, "off")
-return
+return()
 
 ^CapsLock::
     ChineseLayout := 0
     KeyboardLED(4, "off")
-return
+return()
 
 /*
 

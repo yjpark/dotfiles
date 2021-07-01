@@ -14,11 +14,22 @@ DetectHiddenWindows, On
 ; https://www.autohotkey.com/docs/commands/_MenuMaskKey.htm
 #MenuMaskKey vkFF
 
-Ctrl UP::Send {Escape}
+Return() {
+    For Each, Modifier in ["Shift","Control","LWin","RWin","Alt"]
+        If GetKeyState(Modifier) And !GetKeyState(Modifier,"P")
+            Send, {%Modifier% Up}
+    Exit
+}
+
+Ctrl UP::
+    sleep 10
+    Send {Escape}
+return
+
 Ctrl & F13::
 
 ^Tab::
-Send #{Tab}
+    Send #{Tab}
 return
 
 ^!o::
@@ -40,8 +51,9 @@ else
 ;    sleep 10
 ;    WinSet Top
 ;    MouseClick
+    sleep 10
     Send #0
-return
+return()
 
 ^!m::
 IfWinActive, ahk_exe chrome.exe
