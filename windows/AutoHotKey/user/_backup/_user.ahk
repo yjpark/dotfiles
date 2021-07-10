@@ -20,17 +20,16 @@ Return() {
             Send, {%Modifier% Up}
     Exit
 }
-
 Ctrl UP::
     sleep 10
     Send {Escape}
-return
+return()
 
 Ctrl & F13::
 
 ^Tab::
     Send #{Tab}
-return
+return()
 
 ^!o::
 IfWinActive, ahk_exe Obsidian.exe
@@ -40,7 +39,7 @@ else
     WinActivate ahk_exe Obsidian.exe
     sleep 10
     WinSet Top
-return
+return()
 
 ^!g::
 IfWinActive, ahk_exe msedge.exe
@@ -63,7 +62,7 @@ else
     WinActivate ahk_exe chrome.exe
     sleep 10
     WinSet Top
-return
+return()
 
 ^!Space::
 Process,close,explorer.exe
@@ -71,7 +70,7 @@ sleep 50 ;This sleep 5000 is to let you see what actually happens. Decrease it l
 run, explorer.exe
 WinWait, ahk_class CabinetWClass
 WinClose ;close the new explorer window
-return
+return()
 
 global ChineseLayout := 0
 
@@ -85,12 +84,12 @@ CapsLock::
         KeyboardLED(4, "on")
     Else
         KeyboardLED(4, "off")
-return
+return()
 
 ^CapsLock::
     ChineseLayout := 0
     KeyboardLED(4, "off")
-return
+return()
 
 /*
 
