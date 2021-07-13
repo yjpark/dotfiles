@@ -1,0 +1,16 @@
+[alias]
+b = "build"
+c = "check"
+t = "test"
+
+r = "run"
+rr = "run --release"
+
+n = "run --features native"
+s = "make serve"
+
+f = "fix"
+m = "fmt --all"
+
+[build]
+rustc-wrapper = "sccache"
