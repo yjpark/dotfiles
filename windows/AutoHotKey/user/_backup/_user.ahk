@@ -20,12 +20,12 @@ Return() {
             Send, {%Modifier% Up}
     Exit
 }
-Ctrl UP::
+Shift UP::
     sleep 10
     Send {Escape}
 return()
 
-Ctrl & F13::
+Shift & F13::
 
 ^Tab::
     Send #{Tab}
@@ -78,7 +78,7 @@ SetCapsLockState, AlwaysOff
 +CapsLock::CapsLock
 
 CapsLock::
-    Send, {Ctrl Down}{Shift Down}{Shift Up}{Ctrl Up}
+    Send, {Win Down}{Space Down}{Space Up}{Win Up}
     ChineseLayout := !ChineseLayout
     If ChineseLayout = 1
         KeyboardLED(4, "on")

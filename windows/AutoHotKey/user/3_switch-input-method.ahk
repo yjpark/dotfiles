@@ -4,7 +4,7 @@ SetCapsLockState, AlwaysOff
 +CapsLock::CapsLock
 
 CapsLock::
-    Send, {Win Down}{Space Down}{Space Up}{Win Up}
+    Send, #{space}
     ChineseLayout := !ChineseLayout
     If ChineseLayout = 1
         KeyboardLED(4, "on")
