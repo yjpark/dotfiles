@@ -5,7 +5,10 @@ t = "test"
 
 r = "run"
 rr = "run --release"
+rf = "run --features"
+rrf = "run --release --features"
 
+d = "run --features dev"
 n = "run --features native"
 s = "make serve"
 

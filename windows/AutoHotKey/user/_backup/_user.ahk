@@ -78,7 +78,7 @@ SetCapsLockState, AlwaysOff
 +CapsLock::CapsLock
 
 CapsLock::
-    Send, {Alt Down}{Shift Down}{Shift Up}{Alt Up}
+    Send, {Ctrl Down}{Shift Down}{Shift Up}{Ctrl Up}
     ChineseLayout := !ChineseLayout
     If ChineseLayout = 1
         KeyboardLED(4, "on")

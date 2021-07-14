@@ -1,7 +1,7 @@
-Ctrl UP::
+Shift UP::
     sleep 10
     Send {Escape}
 return()
 
-Ctrl & F13::
+Shift & F13::
 
