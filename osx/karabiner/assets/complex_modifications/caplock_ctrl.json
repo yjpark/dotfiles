@@ -1,5 +1,5 @@
 {
-  "title": "Swap Left Control and CapLocks, and Xcape",
+  "title": "[YJ Park] Swap Left Control and CapLocks",
   "rules": [
     {
       "description": "Change caps_lock to control if pressed with other keys, to escape if pressed alone.",
@@ -17,11 +17,6 @@
           "to": [
             {
               "key_code": "left_control"
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code": "escape"
             }
           ]
         }
