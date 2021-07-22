@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-/.external/tools/xcape/xcape -e 'Shift_L=Escape'
+# /.external/tools/xcape/xcape -e 'Shift_L=Escape'
+xcape -e 'Shift_L=Escape'
 
