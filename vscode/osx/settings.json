@@ -231,5 +231,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "FSharp.useSdkScripts": true,
     "remote.SSH.useLocalServer": false,
-    "terminal.integrated.shell.osx": "/usr/local/bin/fish"
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "workbench.activityBar.visible": false
 }

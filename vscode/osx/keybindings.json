@@ -123,5 +123,23 @@
         "key": "cmd+v",
         "command": "editor.action.clipboardPasteAction",
         "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+a",
+        "command": "workbench.action.toggleActivityBarVisibility"
+    },
+    {
+        "key": "cmd+a",
+        "command": "-editor.action.selectAll"
+    },
+    {
+        "key": "cmd+a",
+        "command": "-workbench.action.terminal.selectAll",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+a",
+        "command": "-list.selectAll",
+        "when": "listFocus && listSupportsMultiselect && !inputFocus"
     }
 ]
