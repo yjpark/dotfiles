@@ -6,11 +6,7 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/*.meta": true,
-        "**/.*.meta": true,
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+        "**/.*.meta": true
     },
     "workbench.editor.showTabs": true,
     "workbench.editor.enablePreview": false,
@@ -19,7 +15,7 @@
     "editor.fontLigatures": true,
     "editor.scrollbar.vertical": "hidden",
     "editor.overviewRulerBorder": false,
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
     "editor.minimap.side": "right",
     "editor.minimap.showSlider": "always",
     "editor.minimap.renderCharacters": false,
@@ -80,6 +76,27 @@
                     "args": []
                 }
             ]
+        }, {
+            "before":["<C-s>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before":["<C-s>"],
+            "after":[],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -110,6 +127,8 @@
     "[fsharp]": {
         "editor.useTabStops": true
     },
+    "red.redPath": "/Users/yjpark/bin/red-063",
+    "dart.flutterSdkPath": "/Users/yjpark/Applications/flutter",
     "bracketPairColorizer.forceUniqueOpeningColor": true,
     "bracketPairColorizer.showBracketsInGutter": true,
     "snakeTrail.color": "0,128,128",
@@ -156,7 +175,6 @@
         "autoresizing",
         "autorotate",
         "autosizes",
-        "cache",
         "compat",
         "elif",
         "forms",
@@ -165,14 +183,11 @@
         "iios",
         "iled",
         "interface",
-        "ionicons",
         "luid",
         "ooui",
         "orientation",
         "platform",
         "remove",
-        "repo",
-        "req",
         "should",
         "sizes",
         "sprintf",
@@ -195,15 +210,11 @@
     },
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "smart",
-    "files.autoSave": "off",
+    "files.autoSave": "onWindowChange",
     "terminal.integrated.fontFamily": "Cascadia Code PL",
     "insertDateString.format": "YYYY-MM-DD hh:mm:ss",
     "insertDateString.formatDate": "YYYY-MM-DD",
     "insertDateString.formatTime": "### hh:mm",
-    "workbench.iconTheme": "ayu",
-    "workbench.preferredDarkColorTheme": "Radical",
-    "workbench.preferredLightColorTheme": "Bluloco Light",
-    "window.autoDetectColorScheme": true,
     "FSharp.disableFailedProjectNotifications": true,
     "FSharp.smartIndent": true,
     "FSharp.lineLens.enabled": "never",
@@ -212,33 +223,18 @@
     "FSharp.workspaceMode": "directory",
     "FSharp.resolveNamespaces": false,
     "FSharp.externalAutocomplete": false,
-    "mssql.connections": [
-        {
-            "server": "localhost,11433",
-            "database": "Hangfire",
-            "authenticationType": "SqlLogin",
-            "user": "sa",
-            "password": "",
-            "emptyPasswordInput": false,
-            "savePassword": true,
-            "profileName": "feeds_dev"
-        }
-    ],
+    "window.nativeFullScreen": false,
+    "workbench.colorTheme": "Kary Pro Colors － Dark",
+    "workbench.iconTheme": "ayu",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "vscode-neovim.neovimPath": "/usr/bin/nvim",
-    "keyboard.dispatch": "keyCode",
-    "editor.selectionClipboard": false,
     "FSharp.useSdkScripts": true,
     "remote.SSH.useLocalServer": false,
-    "java.semanticHighlighting.enabled": true,
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
+    "http.proxy": "http://127.0.0.1:1102",
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Bluloco Light",
-    "editor.codeLensFontFamily": "Cascadia Code PL",
-    "rust-analyzer.procMacro.enable": false,
-    "remote.SSH.remotePlatform": {
-        "10.0.1.2": "linux"
-    },
-    "http.proxy": "http://127.0.0.1:1102"
+    "window.zoomLevel": -1,
+    "settingsSync.ignoredSettings": [
+        "editor.codeLensFontFamily"
+    ]
 }
