@@ -15,7 +15,7 @@ DetectHiddenWindows, On
 #MenuMaskKey vkFF
 
 Return() {
-    For Each, Modifier in ["Shift","Control","LWin","RWin","Alt"]
+    For Each, Modifier in ["Shift","LWin","RWin","Alt","LControl", "RControl"]
         If GetKeyState(Modifier) And !GetKeyState(Modifier,"P")
             Send, {%Modifier% Up}
     Exit

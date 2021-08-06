@@ -16,13 +16,14 @@ return()
 IfWinActive, ahk_exe msedge.exe
     sleep 10
 else
-;    WinShow ahk_exe msedge.exe
-;    WinActivate ahk_exe msedge.exe
-;    sleep 10
-;    WinSet Top
-;    MouseClick
+    ; WinShow will cause the search bar in Edge shown
+    ; in about://flags, enable `Use Aura for Find on page`
+    ; can make it better, but still a bit messy, some time not
+    ; getting focus
+    WinShow ahk_exe msedge.exe
+    WinActivate ahk_exe msedge.exe
     sleep 10
-    Send #0
+    WinSet Top
 return()
 
 ^!m::

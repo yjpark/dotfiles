@@ -15,7 +15,7 @@ DetectHiddenWindows, On
 #MenuMaskKey vkFF
 
 Return() {
-    For Each, Modifier in ["Shift","Control","LWin","RWin","Alt"]
+    For Each, Modifier in ["Shift","LWin","RWin","Alt","LControl", "RControl"]
         If GetKeyState(Modifier) And !GetKeyState(Modifier,"P")
             Send, {%Modifier% Up}
     Exit
@@ -45,13 +45,19 @@ return()
 IfWinActive, ahk_exe msedge.exe
     sleep 10
 else
-;    WinShow ahk_exe msedge.exe
-;    WinActivate ahk_exe msedge.exe
-;    sleep 10
-;    WinSet Top
-;    MouseClick
+    ; WinShow will cause the search bar in Edge shown
+    ; very annoying, and can't fix it, so not calling it
+    ; the issue is the lack of focus then
+    WinShow ahk_exe msedge.exe
+    WinActivate ahk_exe msedge.exe
     sleep 10
-    Send #0
+    WinSet Top
+    Send {ctrl down}
+    Send f
+    Sleep 10
+    Send {ctrl up}
+    sleep 10
+    Send {Escape}
 return()
 
 ^!m::
@@ -78,7 +84,7 @@ SetCapsLockState, AlwaysOff
 +CapsLock::CapsLock
 
 CapsLock::
-    Send, {Win Down}{Space Down}{Space Up}{Win Up}
+    Send, #{space}
     ChineseLayout := !ChineseLayout
     If ChineseLayout = 1
         KeyboardLED(4, "on")
