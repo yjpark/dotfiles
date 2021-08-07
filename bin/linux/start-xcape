@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+xcape -e 'Shift_L=Escape'
+xcape -e 'Shift_R=Escape'
