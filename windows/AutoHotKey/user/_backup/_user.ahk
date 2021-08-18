@@ -30,14 +30,14 @@ Loop
         ShiftPressed := 1
         ShiftDownTicks := A_TickCount
     }
-    Sleep, 20
+    Sleep, 50
 }
 
 Shift UP::
     sleep 10
     ElapsedTime := A_TickCount - ShiftDownTicks
     MsgBox %ShiftDownTicks% DOWN %ElapsedTime% Up
-    If ElapsedTime < 120
+    If ElapsedTime < 250
     {
         Send {Escape}
     }
