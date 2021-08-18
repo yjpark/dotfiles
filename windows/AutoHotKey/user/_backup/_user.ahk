@@ -20,9 +20,44 @@ Return() {
             Send, {%Modifier% Up}
     Exit
 }
+global ShiftDownTicks := 0
+global ShiftPressed := 0
+
+Loop
+{
+    if (ShiftPressed = 0) && GetKeyState("Shift")
+    {
+        ShiftPressed := 1
+        ShiftDownTicks := A_TickCount
+    }
+    Sleep, 100
+}
+
+
+;Shift::
+;    ShiftDownTicks := A_TickCount
+;    MsgBox %ShiftDownTicks% DOWN
+    ;Loop
+    ;{
+    ;    If GetKeyState("Shift")
+    ;        Break
+    ;    Sleep, 100
+    ;}
+    ;elapsedTime := A_TimeSinceThisHotkey
+    ;MsgBox %elapsedTime% SHIFT
+    ;If elapsedTime < 1000
+    ;    Send {Escape}
+;return()
+
 Shift UP::
     sleep 10
-    Send {Escape}
+    ElapsedTime := A_TickCount - ShiftDownTicks
+    MsgBox %ShiftDownTicks% DOWN %ElapsedTime% Up
+    If ElapsedTime < 1000
+    {
+        Send {Escape}
+    }
+    ShiftPressed := 0
 return()
 
 Shift & F13::
@@ -46,18 +81,13 @@ IfWinActive, ahk_exe msedge.exe
     sleep 10
 else
     ; WinShow will cause the search bar in Edge shown
-    ; very annoying, and can't fix it, so not calling it
-    ; the issue is the lack of focus then
+    ; in about://flags, enable `Use Aura for Find on page`
+    ; can make it better, but still a bit messy, some time not
+    ; getting focus
     WinShow ahk_exe msedge.exe
     WinActivate ahk_exe msedge.exe
     sleep 10
     WinSet Top
-    Send {ctrl down}
-    Send f
-    Sleep 10
-    Send {ctrl up}
-    sleep 10
-    Send {Escape}
 return()
 
 ^!m::
