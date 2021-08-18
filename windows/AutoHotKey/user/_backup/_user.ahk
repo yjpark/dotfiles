@@ -30,30 +30,14 @@ Loop
         ShiftPressed := 1
         ShiftDownTicks := A_TickCount
     }
-    Sleep, 100
+    Sleep, 20
 }
-
-
-;Shift::
-;    ShiftDownTicks := A_TickCount
-;    MsgBox %ShiftDownTicks% DOWN
-    ;Loop
-    ;{
-    ;    If GetKeyState("Shift")
-    ;        Break
-    ;    Sleep, 100
-    ;}
-    ;elapsedTime := A_TimeSinceThisHotkey
-    ;MsgBox %elapsedTime% SHIFT
-    ;If elapsedTime < 1000
-    ;    Send {Escape}
-;return()
 
 Shift UP::
     sleep 10
     ElapsedTime := A_TickCount - ShiftDownTicks
     MsgBox %ShiftDownTicks% DOWN %ElapsedTime% Up
-    If ElapsedTime < 1000
+    If ElapsedTime < 120
     {
         Send {Escape}
     }
