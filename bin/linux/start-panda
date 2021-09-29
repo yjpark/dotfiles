@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd /tmp
+nohup ~/Applications/panda5.3.1-x86_64.appimage &
