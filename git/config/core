@@ -5,6 +5,13 @@
 [color]
     ui = true
 
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    deleted = red bold strike
+    untracked = cyan
+    branch = green black bold ul
+
 [core]
     quotepath = false
     excludesfile = ~/.gitignore_global
