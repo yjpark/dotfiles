@@ -26,6 +26,8 @@ alias set-proxy-panda "set -gx https_proxy 127.0.0.1:1104; set -gx http_proxy 12
 alias set-proxy-cow "set -gx https_proxy 127.0.0.1:1100; set -gx http_proxy 127.0.0.1:1100; set -gx ALL_PROXY http://127.0.0.1:1100"
 alias set-proxy-mitm "set -gx https_proxy 127.0.0.1:1111; set -gx http_proxy 127.0.0.1:1111; set -gx ALL_PROXY http://127.0.0.1:1111"
 
+alias set-proxy-lan "set -gx https_proxy 10.0.1.5:1102; set -gx http_proxy 10.0.1.5:1102; set -gx ALL_PROXY http://10.0.1.5:1102"
+
 alias wget "wget --no-check-certificate"
 
 alias ssh "ssh -A -Y"
