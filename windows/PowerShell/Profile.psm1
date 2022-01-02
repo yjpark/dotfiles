@@ -112,5 +112,8 @@ if ($host.Name -eq 'ConsoleHost')
     # install with `scoop install starship`
     # -> used forked version in ~/Applications/bin
     Invoke-Expression (&starship init powershell)
+
+    # https://github.com/dahlbyk/posh-git
+    Import-Module posh-git
 }
 
