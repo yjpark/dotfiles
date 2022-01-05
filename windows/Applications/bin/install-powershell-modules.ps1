@@ -5,4 +5,4 @@ Install-Module ZLocation -Scope CurrentUser
 Install-Module PSFzf -Scope CurrentUser
 
 Install-Module DirColors
-Install-Module posh-git -Scope CurrentUser
+Install-Module posh-git -Scope CurrentUser -Force
