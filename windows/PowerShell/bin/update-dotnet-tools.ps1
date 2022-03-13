@@ -1,4 +1,4 @@
-dotnet tool update --global paket
+dotnet tool update --global paket --version "6.2.1"
 dotnet tool update --global fake-cli
 dotnet tool update --global Microsoft.dotnet-interactive
 dotnet tool update --global capnpc-csharp
