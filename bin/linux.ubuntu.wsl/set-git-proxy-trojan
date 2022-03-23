@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-git config --global http.proxy http://172.22.1.9:1102
+git config --global http.proxy http://windows-host:1102
