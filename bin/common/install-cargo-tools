@@ -35,3 +35,4 @@ cargo install fblog
 
 cargo install du-dust
 cargo install fd-find
+cargo install broot
