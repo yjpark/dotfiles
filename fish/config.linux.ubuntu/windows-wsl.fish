@@ -10,5 +10,6 @@ if grep -q microsoft /proc/version
     umask 0002
 
     alias set-proxy-trojan "set -gx https_proxy windows-host:1102; set -gx http_proxy windows-host:1102; set -gx ALL_PROXY http://windows-host:1102"
+    alias set-proxy-panda "set -gx https_proxy windows-host:1104; set -gx http_proxy windows-host:1104; set -gx ALL_PROXY http://windows-host:1104"
 end
 
