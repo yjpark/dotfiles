@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd ~/Applications/notation_viewer
+nohup ./notation_viewer --lang cn > /tmp/notation_viewer.log &
