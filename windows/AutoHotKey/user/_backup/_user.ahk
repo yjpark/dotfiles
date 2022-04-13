@@ -14,12 +14,23 @@ DetectHiddenWindows, On
 ; https://www.autohotkey.com/docs/commands/_MenuMaskKey.htm
 #MenuMaskKey vkFF
 
-Return() {
+return() {
     For Each, Modifier in ["Shift","LWin","RWin","Alt","LControl", "RControl"]
-        If GetKeyState(Modifier) And !GetKeyState(Modifier,"P")
+        ; If GetKeyState(Modifier) And !GetKeyState(Modifier,"P")
+        If GetKeyState(Modifier)
             Send, {%Modifier% Up}
     Exit
 }
+; https://www.autohotkey.com/board/topic/15919-ahk-script-for-pointermouse-focus/
+
+#Persistent
+SetTimer, WatchCursor, 100
+return
+
+WatchCursor:
+MouseGetPos, , , id
+WinActivate,ahk_id %id%
+return
 global ShiftDownTicks := 0
 global ShiftPressed := 0
 

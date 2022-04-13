@@ -154,6 +154,7 @@ fresh 'tmux/common.tpm/*' --file='~/.tmux.conf'
 
 # =====================================================
 # starship
+fresh 'common/starship/.*' --file='~/.config/starship.toml'
 fresh 'common/starship/*' --file='~/.config/starship.toml'
 
 # =====================================================

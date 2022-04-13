@@ -1,18 +1,3 @@
-[submodule "fresh/yjpark/mu-repo"]
-	path = fresh/yjpark/mu-repo
-	url = git@github.com:yjpark/mu-repo.git
-[submodule "fresh/yjpark/dayone2evernote"]
-	path = fresh/yjpark/dayone2evernote
-	url = git@github.com:yjpark/dayone2evernote.git
-[submodule "linux/xmonad.sample"]
-	path = linux/xmonad.sample
-	url = git@github.com:yjpark/xmonad-config.git
-[submodule "external/guacamole"]
-	path = external/guacamole
-	url = https://github.com/reisbel/guacamole-docker-compose.git
-[submodule "external/ufw-docker"]
-	path = external/ufw-docker
-	url = git@github.com:chaifeng/ufw-docker.git
 [submodule "external/kubectx"]
 	path = external/kubectx
 	url = https://github.com/ahmetb/kubectx

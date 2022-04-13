@@ -2,6 +2,7 @@
 
 install-cargo-tools.libs
 
+cargo install cargo-workspace
 cargo install cargo-watch
 cargo install fmt
 cargo install fix
@@ -20,7 +21,7 @@ cargo install --features=ssl websocat
 # rustup target add wasm32-unknown-unknown
 
 # orbtk
-cargo install cargo-node
+# cargo install cargo-node
 
 # Diesel
 # cargo install diesel_cli
@@ -33,3 +34,7 @@ cargo install broot
 cargo install pier
 cargo install fblog
 
+cargo install du-dust
+cargo install fd-find
+cargo install broot
+cargo install cntr

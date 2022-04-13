@@ -1,4 +1,4 @@
-dotnet tool update --global paket
+dotnet tool update --global paket --version "6.2.1"
 dotnet tool update --global fake-cli
 dotnet tool update --global Microsoft.dotnet-interactive
 dotnet tool update --global capnpc-csharp
@@ -14,6 +14,6 @@ dotnet tool update --global femto
 dotnet tool update --global ilspycmd
 dotnet tool update --global fantomas-tool
 dotnet tool update --global dotnet-certes
-dotnet tool update --global Microsoft.Tye --version "0.6.0-alpha.21070.5"
+dotnet tool update --global Microsoft.Tye --version "0.11.0-alpha.22111.1"
 dotnet tool update --global fable
 

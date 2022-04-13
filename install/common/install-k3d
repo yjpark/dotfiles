@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 APP_NAME="k3d"
-REPO_URL="https://github.com/rancher/k3d"
+REPO_URL="https://github.com/k3d-io/k3d"
 
 : ${USE_SUDO:="true"}
 : ${K3D_INSTALL_DIR:="/usr/local/bin"}
@@ -42,10 +42,22 @@ runAsRoot() {
   $CMD
 }
 
+# scurl invokes `curl` with secure defaults
+scurl() {
+  # - `--proto =https` requires that all URLs use HTTPS. Attempts to call http://
+  #   URLs will fail.
+  # - `--tlsv1.2` ensures that at least TLS v1.2 is used, disabling less secure
+  #   prior TLS versions.
+  # - `--fail` ensures that the command fails if HTTP response is not 2xx.
+  # - `--show-error` causes curl to output error messages when it fails (when
+  #   also invoked with -s|--silent).
+  curl --proto "=https" --tlsv1.2 --fail --show-error "$@"
+}
+
 # verifySupported checks that the os/arch combination is supported for
 # binary builds.
 verifySupported() {
-  local supported="darwin-386\ndarwin-amd64\nlinux-386\nlinux-amd64\nlinux-arm\nlinux-arm64\nwindows-386\nwindows-amd64"
+  local supported="darwin-386\ndarwin-amd64\ndarwin-arm64\nlinux-386\nlinux-amd64\nlinux-arm\nlinux-arm64\nwindows-386\nwindows-amd64"
   if ! echo "${supported}" | grep -q "${OS}-${ARCH}"; then
     echo "No prebuilt binary for ${OS}-${ARCH}."
     echo "To build from source, go to $REPO_URL"
@@ -84,9 +96,9 @@ checkTagProvided() {
 checkLatestVersion() {
   local latest_release_url="$REPO_URL/releases/latest"
   if type "curl" > /dev/null; then
-    TAG=$(curl -Ls -o /dev/null -w %{url_effective} $latest_release_url | grep -oE "[^/]+$" )
+    TAG=$(scurl -Ls -o /dev/null -w %{url_effective} $latest_release_url | grep -oE "[^/]+$" )
   elif type "wget" > /dev/null; then
-    TAG=$(wget $latest_release_url --server-response -O /dev/null 2>&1 | awk '/^  Location: /{DEST=$2} END{ print DEST}' | grep -oE "[^/]+$")
+    TAG=$(wget $latest_release_url --server-response -O /dev/null 2>&1 | awk '/^\s*Location: /{DEST=$2} END{ print DEST}' | grep -oE "[^/]+$")
   fi
 }
 
@@ -98,7 +110,7 @@ downloadFile() {
   K3D_TMP_ROOT="$(mktemp -dt k3d-binary-XXXXXX)"
   K3D_TMP_FILE="$K3D_TMP_ROOT/$K3D_DIST"
   if type "curl" > /dev/null; then
-    curl -SsL "$DOWNLOAD_URL" -o "$K3D_TMP_FILE"
+    scurl -sL "$DOWNLOAD_URL" -o "$K3D_TMP_FILE"
   elif type "wget" > /dev/null; then
     wget -q -O "$K3D_TMP_FILE" "$DOWNLOAD_URL"
   fi
