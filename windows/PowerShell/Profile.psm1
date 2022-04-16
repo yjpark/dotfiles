@@ -11,6 +11,7 @@ Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Andr
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\cmdline-tools\tools\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
 
+Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.cargo\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.dapr\bin")
 
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.deno\bin")
