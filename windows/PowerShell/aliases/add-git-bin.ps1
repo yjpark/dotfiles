@@ -1,3 +1,3 @@
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Git\usr\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\scoop\apps\git\current\usr\bin")
 
 

@@ -1,1 +1,1 @@
-&("C:\Program Files\Git\usr\bin\bash") ~/Applications/bin/git-commit-wip-push
+&("~\scoop\apps\git\current\usr\bin\bash") ~/Applications/bin/git-commit-wip-push

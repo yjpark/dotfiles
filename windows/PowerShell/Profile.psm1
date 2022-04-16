@@ -28,6 +28,9 @@ Set-Alias -Name cb -Value clear
 
 Set-Item -Path Env:GIT_SSH -Value C:\WINDOWS\System32\OpenSSH\ssh.exe
 
+Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
+Set-Alias -Name ll -Value ~\Documents\PowerShell\aliases\ll.ps1
+
 Set-Alias -Name .. -Value ~\Documents\PowerShell\aliases\cd.uu.ps1
 Set-Alias -Name ... -Value ~\Documents\PowerShell\aliases\cd.uuu.ps1
 Set-Alias -Name .... -Value ~\Documents\PowerShell\aliases\cd.uuuu.ps1
@@ -38,6 +41,8 @@ Set-Alias -Name e -Value ~\scoop\shims\nvim
 
 Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
+
+Set-Alias -Name git-bin -Value ~\Documents\PowerShell\aliases\add-git-bin.ps1
 
 # PSBookmark https://www.powershellmagazine.com/2016/05/06/powershell-location-bookmark-for-easy-and-faster-navigation/
 Set-Alias -Name gg -Value Set-LocationBookmarkAsPWD
