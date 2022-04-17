@@ -30,11 +30,12 @@ cargo install --features=ssl websocat
 cargo install tokei
 cargo install dua-cli
 cargo install broot
+cargo install hexyl
 
 cargo install pier
 cargo install fblog
 
 cargo install du-dust
 cargo install fd-find
-cargo install broot
 cargo install cntr
+
