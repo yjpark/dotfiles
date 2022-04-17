@@ -1,20 +1,20 @@
 # Note: can use ~ in alias, but not in path
 
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\bin")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\python-bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\Applications\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\Applications\python-bin")
 # ~/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0/LocalCache/local-packages/Python38/Scripts
 
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\scoop\shims")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Documents\PowerShell\bin")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\Applications\flutter\bin")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\platform-tools")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\AppData\Local\Android\Sdk\cmdline-tools\tools\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\scoop\shims")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\Documents\PowerShell\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\Applications\flutter\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\AppData\Local\Android\Sdk\platform-tools")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\AppData\Local\Android\Sdk\cmdline-tools\tools\bin")
 Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Program Files\Android\Android Studio\gradle\gradle-4.10.1\bin")
 
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.cargo\bin")
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.dapr\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\.cargo\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\.dapr\bin")
 
-Set-Item -Path Env:Path -Value ($Env:Path + ";C:\Users\yjpark\.deno\bin")
+Set-Item -Path Env:Path -Value ($Env:Path + ";~\.deno\bin")
 
 Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
 
@@ -28,7 +28,7 @@ Set-Alias -Name cb -Value clear
 
 Set-Item -Path Env:GIT_SSH -Value C:\WINDOWS\System32\OpenSSH\ssh.exe
 
-Set-Alias -Name ls -Value "C:\Program Files\Git\usr\bin\ls"
+Set-Alias -Name ls -Value "~\scoop\apps\git\current\usr\bin\ls"
 Set-Alias -Name ll -Value ~\Documents\PowerShell\aliases\ll.ps1
 
 Set-Alias -Name .. -Value ~\Documents\PowerShell\aliases\cd.uu.ps1
@@ -41,8 +41,6 @@ Set-Alias -Name e -Value ~\scoop\shims\nvim
 
 Set-Alias -Name g -Value git
 Set-Alias -Name d -Value docker
-
-Set-Alias -Name git-bin -Value ~\Documents\PowerShell\aliases\add-git-bin.ps1
 
 # PSBookmark https://www.powershellmagazine.com/2016/05/06/powershell-location-bookmark-for-easy-and-faster-navigation/
 Set-Alias -Name gg -Value Set-LocationBookmarkAsPWD
