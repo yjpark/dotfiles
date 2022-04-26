@@ -16,6 +16,8 @@ Set-Item -Path Env:Path -Value ($Env:Path + ";~\.dapr\bin")
 
 Set-Item -Path Env:Path -Value ($Env:Path + ";~\.deno\bin")
 
+Set-Item -Path Env:Path -Value ($Env:Path + "C:\Users\yjpark\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\Scripts")
+
 Set-Item -Path Env:ANDROID_HOME -Value ~\AppData\Local\Android\Sdk
 
 Set-Item -Path Env:ENABLE_FLUTTER_DESKTOP -Value "true"
