@@ -39,3 +39,4 @@ cargo install du-dust
 cargo install fd-find
 cargo install cntr
 
+cargo install bore
