@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd /tmp
-nohup ~/Applications/panda5.3.1-x86_64.appimage &
+nohup ~/Applications/panda6.1.0-x86_64.appimage &
