@@ -9,6 +9,7 @@ curl -vsSL https://github.com/liquidata-inc/dolt/releases/latest/download/instal
 curl -vsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh > ~/.dotfiles/install/common/install-nvm
 curl -vsSL https://raw.githubusercontent.com/dapr/cli/master/install/install.sh > ~/.dotfiles/install/common/install-dapr-cli
 curl -vsSL https://raw.githubusercontent.com/rancher/k3d/main/install.sh > ~/.dotfiles/install/common/install-k3d
+curl -sSLf https://get.k0s.sh > ~/.dotfiles/install/common/install-k0s
 
 #curl -vsSL https://get.rvm.io > ~/.dotfiles/install/common/install-rvm
 
