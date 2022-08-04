@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# https://www.zerotier.com/product-one.shtml
+
+curl -s https://install.zerotier.com/ | sudo bash
+
+# https://github.com/zerotier/ZeroTierOne
+sudo ufw allow 9993/udp
