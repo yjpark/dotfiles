@@ -1,8 +1,6 @@
 YJ Park's dotfiles
 ==================
 
-Structure
----------
-Using freshshell to manage these files
+Deprecated, migrated to use Nix to manage all system and user configurations 
 
-- https://github.com/freshshell/fresh
+https://github.com/yjpark/dotnix
